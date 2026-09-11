@@ -28,11 +28,17 @@ go-learn/
 
 ## How to install
 
+Avval repo'ni klon qiling, so'ng ichidan o'rnating (`./cmd/go-learn` — nisbiy yo'l, shuning uchun repo papkasi ichida turib ishga tushirish kerak):
+
 ```bash
+git clone https://github.com/Go-Dasturchi/go-learn.git
+cd go-learn
 go install ./cmd/go-learn
 ```
 
-Yoki lokal build:
+Bu buyruq `go-learn` binary'sini `$(go env GOPATH)/bin` (odatda `~/go/bin`) papkasiga qo'yadi — o'sha papka `$PATH`da bo'lsa, `go-learn` buyrug'i istalgan joydan ishlaydi.
+
+Yoki klon qilingan papka ichida lokal build:
 
 ```bash
 make build
