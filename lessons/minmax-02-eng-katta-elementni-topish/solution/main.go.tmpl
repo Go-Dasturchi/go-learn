@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func findMax(N int, nums []int) int {
+	max := nums[0]
+	for i := 1; i < N; i++ {
+		if nums[i] > max {
+			max = nums[i]
+		}
+	}
+	return max
+}
+
+func main() {
+	fmt.Println(findMax(5, []int{3, 7, 2, 9, 1}))
+}

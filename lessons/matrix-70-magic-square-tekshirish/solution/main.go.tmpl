@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+func isMagicSquare(N int, matrix [][]int) bool {
+	target := 0
+	for j := 0; j < N; j++ {
+		target += matrix[0][j]
+	}
+	for i := 0; i < N; i++ {
+		sum := 0
+		for j := 0; j < N; j++ {
+			sum += matrix[i][j]
+		}
+		if sum != target {
+			return false
+		}
+	}
+	for j := 0; j < N; j++ {
+		sum := 0
+		for i := 0; i < N; i++ {
+			sum += matrix[i][j]
+		}
+		if sum != target {
+			return false
+		}
+	}
+	diag1, diag2 := 0, 0
+	for i := 0; i < N; i++ {
+		diag1 += matrix[i][i]
+		diag2 += matrix[i][N-1-i]
+	}
+	if diag1 != target || diag2 != target {
+		return false
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(isMagicSquare(3, [][]int{[]int{2, 7, 6}, []int{9, 5, 1}, []int{4, 3, 8}}))
+}

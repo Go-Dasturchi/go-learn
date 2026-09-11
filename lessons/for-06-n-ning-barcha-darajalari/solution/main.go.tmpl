@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func allPowers(N int) string {
+	result := ""
+	power := N
+	for k := 2; k <= 5; k++ {
+		power *= N
+		if k > 2 {
+			result += ", "
+		}
+		result += strconv.Itoa(power)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(allPowers(2))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSecondMaxCase1(t *testing.T) {
+	got := secondMax(5, []int{3, 7, 2, 9, 1})
+	want := 7
+	if got != want {
+		t.Errorf("secondMax(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondMaxCase2(t *testing.T) {
+	got := secondMax(4, []int{10, 5, 15, 8})
+	want := 10
+	if got != want {
+		t.Errorf("secondMax(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondMaxCase3(t *testing.T) {
+	got := secondMax(6, []int{4, 1, 8, 3, 9, 2})
+	want := 8
+	if got != want {
+		t.Errorf("secondMax(N=6, nums=[4, 1, 8, 3, 9, 2]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

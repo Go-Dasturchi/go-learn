@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(nums []int, k int) int {
+	sorted := make([]int, len(nums))
+	copy(sorted, nums)
+	sort.Sort(sort.Reverse(sort.IntSlice(sorted)))
+	return sorted[k-1]
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 2, 1, 5, 6, 4}, 2))
+}

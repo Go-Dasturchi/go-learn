@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func prevAndNextFib(N int) string {
+	a, b := 0, 1
+	for b != N {
+		a, b = b, a+b
+	}
+	prev := a
+	next := a + b
+	return fmt.Sprintf("prev=%d, next=%d", prev, next)
+}
+
+func main() {
+	fmt.Println(prevAndNextFib(8))
+}

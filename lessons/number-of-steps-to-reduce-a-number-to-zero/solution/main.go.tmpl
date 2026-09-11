@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func solve(num int) int {
+	steps := 0
+	for num > 0 {
+		if num%2 == 0 {
+			num /= 2
+		} else {
+			num--
+		}
+		steps++
+	}
+	return steps
+}
+
+func main() {
+	fmt.Println(solve(14))
+}

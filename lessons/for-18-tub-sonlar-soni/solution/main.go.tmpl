@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func isPrimeF18(n int) bool {
+	if n < 2 {
+		return false
+	}
+	for i := 2; i*i <= n; i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func countPrimes(A int, B int) int {
+	count := 0
+	for i := A; i <= B; i++ {
+		if isPrimeF18(i) {
+			count++
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(countPrimes(10, 20))
+}

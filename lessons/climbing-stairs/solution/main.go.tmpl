@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(n int) int {
+	if n <= 2 {
+		return n
+	}
+	prev1, prev2 := 2, 1
+	for i := 3; i <= n; i++ {
+		prev1, prev2 = prev1+prev2, prev1
+	}
+	return prev1
+}
+
+func main() {
+	fmt.Println(solve(2))
+}

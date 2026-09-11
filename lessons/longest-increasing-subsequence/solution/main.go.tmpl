@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	tails := []int{}
+	for _, n := range nums {
+		lo, hi := 0, len(tails)
+		for lo < hi {
+			mid := (lo + hi) / 2
+			if tails[mid] < n {
+				lo = mid + 1
+			} else {
+				hi = mid
+			}
+		}
+		if lo == len(tails) {
+			tails = append(tails, n)
+		} else {
+			tails[lo] = n
+		}
+	}
+	return len(tails)
+}
+
+func main() {
+	fmt.Println(solve([]int{10, 9, 2, 5, 3, 7, 101, 18}))
+}

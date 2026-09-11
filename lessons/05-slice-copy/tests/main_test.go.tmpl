@@ -1,0 +1,32 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestNusxalaSameContent(t *testing.T) {
+	asl := []int{1, 2, 3}
+	got := nusxala(asl)
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("nusxala([1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestNusxalaIsIndependent(t *testing.T) {
+	asl := []int{1, 2, 3}
+	nusxa := nusxala(asl)
+	nusxa[0] = 999
+	if asl[0] == 999 {
+		t.Errorf("nusxala natijasini o'zgartirish asl slice'ga ta'sir qilmasligi kerak edi, lekin asl[0] = %d bo'lib qoldi", asl[0])
+	}
+}
+
+func TestNusxalaEmpty(t *testing.T) {
+	got := nusxala([]int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("nusxala([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

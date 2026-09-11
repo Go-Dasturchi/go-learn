@@ -1,0 +1,24 @@
+package main
+
+import "testing"
+
+func TestMinMaxMixed(t *testing.T) {
+	kichik, katta := minMax([]int{5, 2, 9, 1, 7})
+	if kichik != 1 || katta != 9 {
+		t.Errorf("minMax([5,2,9,1,7]):\nExpected:\n1 9\n\nGot:\n%d %d", kichik, katta)
+	}
+}
+
+func TestMinMaxSingleElement(t *testing.T) {
+	kichik, katta := minMax([]int{4})
+	if kichik != 4 || katta != 4 {
+		t.Errorf("minMax([4]):\nExpected:\n4 4\n\nGot:\n%d %d", kichik, katta)
+	}
+}
+
+func TestMinMaxAllNegative(t *testing.T) {
+	kichik, katta := minMax([]int{-5, -1, -9})
+	if kichik != -9 || katta != -1 {
+		t.Errorf("minMax([-5,-1,-9]):\nExpected:\n-9 -1\n\nGot:\n%d %d", kichik, katta)
+	}
+}

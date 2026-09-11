@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsSortedAscCase1(t *testing.T) {
+	got := isSortedAsc(123)
+	want := true
+	if got != want {
+		t.Errorf("isSortedAsc(A=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsSortedAscCase2(t *testing.T) {
+	got := isSortedAsc(134)
+	want := true
+	if got != want {
+		t.Errorf("isSortedAsc(A=134):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsSortedAscCase3(t *testing.T) {
+	got := isSortedAsc(321)
+	want := false
+	if got != want {
+		t.Errorf("isSortedAsc(A=321):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

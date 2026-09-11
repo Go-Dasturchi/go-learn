@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDigitSumCase1(t *testing.T) {
+	got := digitSum(3, []int{123, 456, 789})
+	want := "6, 15, 24"
+	if got != want {
+		t.Errorf("digitSum(N=3, nums=[123, 456, 789]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitSumCase2(t *testing.T) {
+	got := digitSum(4, []int{100, 200, 345, 678})
+	want := "1, 2, 12, 21"
+	if got != want {
+		t.Errorf("digitSum(N=4, nums=[100, 200, 345, 678]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitSumCase3(t *testing.T) {
+	got := digitSum(2, []int{999, 111})
+	want := "27, 3"
+	if got != want {
+		t.Errorf("digitSum(N=2, nums=[999, 111]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func canFormTriangle(A int, B int, C int) bool {
+	return A+B > C && A+C > B && B+C > A
+}
+
+func main() {
+	fmt.Println(canFormTriangle(3, 4, 5))
+}

@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func fibonacci(N int) string {
+	result := ""
+	a, b := 1, 1
+	for i := 1; i <= N; i++ {
+		if i > 1 {
+			result += ", "
+		}
+		result += strconv.Itoa(a)
+		a, b = b, a+b
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(fibonacci(7))
+}

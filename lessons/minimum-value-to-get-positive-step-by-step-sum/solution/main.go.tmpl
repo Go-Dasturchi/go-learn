@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	sum, min := 0, 0
+	for _, n := range nums {
+		sum += n
+		if sum < min {
+			min = sum
+		}
+	}
+	return 1 - min
+}
+
+func main() {
+	fmt.Println(solve([]int{-3, 2, -3, 4, 2}))
+}

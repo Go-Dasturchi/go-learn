@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestRemoveDuplicatesCase1(t *testing.T) {
+	got := removeDuplicates(7, []int{1, 2, 3, 2, 4, 3, 5})
+	want := []int{1, 2, 3, 4, 5}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("removeDuplicates(N=7, arr=[1,2,3,2,4,3,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRemoveDuplicatesCase2(t *testing.T) {
+	got := removeDuplicates(5, []int{5, 5, 5, 5, 5})
+	want := []int{5}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("removeDuplicates(N=5, arr=[5,5,5,5,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRemoveDuplicatesCase3(t *testing.T) {
+	got := removeDuplicates(6, []int{10, 20, 30, 10, 40, 20})
+	want := []int{10, 20, 30, 40}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("removeDuplicates(N=6, arr=[10,20,30,10,40,20]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

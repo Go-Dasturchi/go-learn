@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, k int) bool {
+	lastIndex := make(map[int]int)
+	for i, n := range nums {
+		if idx, ok := lastIndex[n]; ok && i-idx <= k {
+			return true
+		}
+		lastIndex[n] = i
+	}
+	return false
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3, 1}, 3))
+}

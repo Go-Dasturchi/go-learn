@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func solve(s string, t string, maxCost int) int {
+	abs := func(x int) int {
+		if x < 0 {
+			return -x
+		}
+		return x
+	}
+	n := len(s)
+	costs := make([]int, n)
+	for i := 0; i < n; i++ {
+		costs[i] = abs(int(s[i]) - int(t[i]))
+	}
+	best := 0
+	cur := 0
+	left := 0
+	for right := 0; right < n; right++ {
+		cur += costs[right]
+		for cur > maxCost {
+			cur -= costs[left]
+			left++
+		}
+		if right-left+1 > best {
+			best = right - left + 1
+		}
+	}
+	return best
+}
+
+func main() {
+	fmt.Println(solve("abcd", "bcdf", 3))
+}

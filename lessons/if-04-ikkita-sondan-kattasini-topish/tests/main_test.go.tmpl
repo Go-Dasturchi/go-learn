@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMaxOfTwoCase1(t *testing.T) {
+	got := maxOfTwo(10, 5)
+	want := 10
+	if got != want {
+		t.Errorf("maxOfTwo(A=10, B=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxOfTwoCase2(t *testing.T) {
+	got := maxOfTwo(3, 8)
+	want := 8
+	if got != want {
+		t.Errorf("maxOfTwo(A=3, B=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxOfTwoCase3(t *testing.T) {
+	got := maxOfTwo(7, 7)
+	want := 7
+	if got != want {
+		t.Errorf("maxOfTwo(A=7, B=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

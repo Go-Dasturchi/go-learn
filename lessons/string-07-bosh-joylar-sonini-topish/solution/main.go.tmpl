@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(s string) int {
+	return strings.Count(s, " ")
+}
+
+func main() {
+	fmt.Println(solve("Hello World"))
+}

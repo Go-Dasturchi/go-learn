@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func factorial(N int) int {
+	result := 1
+	for i := 2; i <= N; i++ {
+		result *= i
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(factorial(5))
+}

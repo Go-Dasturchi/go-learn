@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSelectionSortCase1(t *testing.T) {
+	got := selectionSort(5, []int{5, 2, 8, 1, 9})
+	want := []int{9, 8, 5, 2, 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("selectionSort(N=5, arr=[5,2,8,1,9]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSelectionSortCase2(t *testing.T) {
+	got := selectionSort(4, []int{10, 5, 15, 8})
+	want := []int{15, 10, 8, 5}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("selectionSort(N=4, arr=[10,5,15,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSelectionSortCase3(t *testing.T) {
+	got := selectionSort(6, []int{3, 7, 2, 9, 1, 8})
+	want := []int{9, 8, 7, 3, 2, 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("selectionSort(N=6, arr=[3,7,2,9,1,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

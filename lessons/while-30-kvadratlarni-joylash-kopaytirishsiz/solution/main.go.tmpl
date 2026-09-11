@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func placeSquaresNoMult(A int, B int, C int) int {
+	// how many times C fits along A (without using / or *)
+	countA := 0
+	remaining := A
+	for remaining >= C {
+		remaining -= C
+		countA++
+	}
+
+	countB := 0
+	remaining = B
+	for remaining >= C {
+		remaining -= C
+		countB++
+	}
+
+	// total squares = countA * countB, computed via repeated addition
+	total := 0
+	for i := 0; i < countB; i++ {
+		total += countA
+	}
+	return total
+}
+
+func main() {
+	fmt.Println(placeSquaresNoMult(10, 8, 3))
+}

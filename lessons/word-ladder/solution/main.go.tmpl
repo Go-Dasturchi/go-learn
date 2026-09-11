@@ -1,0 +1,50 @@
+package main
+
+import "fmt"
+
+func solve(beginWord string, endWord string, wordList []string) int {
+	wordSet := make(map[string]bool)
+	for _, w := range wordList {
+		wordSet[w] = true
+	}
+	if !wordSet[endWord] {
+		return 0
+	}
+
+	queue := []string{beginWord}
+	visited := map[string]bool{beginWord: true}
+	steps := 1
+
+	for len(queue) > 0 {
+		next := []string{}
+		for _, word := range queue {
+			if word == endWord {
+				return steps
+			}
+			wordBytes := []byte(word)
+			for i := 0; i < len(wordBytes); i++ {
+				orig := wordBytes[i]
+				for c := byte('a'); c <= 'z'; c++ {
+					if c == orig {
+						continue
+					}
+					wordBytes[i] = c
+					candidate := string(wordBytes)
+					if wordSet[candidate] && !visited[candidate] {
+						visited[candidate] = true
+						next = append(next, candidate)
+					}
+				}
+				wordBytes[i] = orig
+			}
+		}
+		queue = next
+		steps++
+	}
+
+	return 0
+}
+
+func main() {
+	fmt.Println(solve("hit", "cog", []string{"hot", "dot", "dog", "lot", "log", "cog"}))
+}

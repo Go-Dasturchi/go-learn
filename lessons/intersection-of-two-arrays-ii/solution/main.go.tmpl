@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func solve(nums1 []int, nums2 []int) []int {
+	count := make(map[int]int)
+	for _, n := range nums2 {
+		count[n]++
+	}
+	result := []int{}
+	for _, n := range nums1 {
+		if count[n] > 0 {
+			result = append(result, n)
+			count[n]--
+		}
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 2, 1}, []int{2, 2}))
+}

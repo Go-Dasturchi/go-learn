@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func cyclicShift(N int, K int, arr []int) []int {
+	natija := make([]int, N)
+	if N == 0 {
+		return []int{}
+	}
+	k := K % N
+	if k < 0 {
+		k += N
+	}
+	for i := 0; i < N; i++ {
+		natija[(i+k)%N] = arr[i]
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(cyclicShift(5, 2, []int{1, 2, 3, 4, 5}))
+}

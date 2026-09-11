@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// nusxala sonlarning mustaqil, haqiqiy nusxasini qaytaradi — qaytgan
+// slice'ni o'zgartirish asl sonlarga ta'sir qilmasligi kerak.
+func nusxala(sonlar []int) []int {
+	nusxa := make([]int, len(sonlar))
+	copy(nusxa, sonlar)
+	return nusxa
+}
+
+func main() {
+	asl := []int{1, 2, 3}
+	nusxa := nusxala(asl)
+	nusxa[0] = 999
+	fmt.Println(asl)
+	fmt.Println(nusxa)
+}

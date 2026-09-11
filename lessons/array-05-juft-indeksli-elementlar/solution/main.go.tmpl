@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func evenIndexElements(N int, arr []int) string {
+	natija := ""
+	for i := 0; i < N; i += 2 {
+		if natija != "" {
+			natija += ", "
+		}
+		natija += fmt.Sprintf("%d", arr[i])
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(evenIndexElements(6, []int{1, 2, 3, 4, 5, 6}))
+}

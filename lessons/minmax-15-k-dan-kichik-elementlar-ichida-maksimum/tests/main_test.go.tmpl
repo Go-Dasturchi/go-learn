@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMaxLessThanKCase1(t *testing.T) {
+	got := maxLessThanK(6, 10, []int{3, 15, 7, 20, 5, 12})
+	want := 7
+	if got != want {
+		t.Errorf("maxLessThanK(N=6, K=10, nums=[3, 15, 7, 20, 5, 12]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxLessThanKCase2(t *testing.T) {
+	got := maxLessThanK(5, 5, []int{1, 2, 3, 4, 6})
+	want := 4
+	if got != want {
+		t.Errorf("maxLessThanK(N=5, K=5, nums=[1, 2, 3, 4, 6]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxLessThanKCase3(t *testing.T) {
+	got := maxLessThanK(4, 3, []int{5, 10, 15, 20})
+	want := 0
+	if got != want {
+		t.Errorf("maxLessThanK(N=4, K=3, nums=[5, 10, 15, 20]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

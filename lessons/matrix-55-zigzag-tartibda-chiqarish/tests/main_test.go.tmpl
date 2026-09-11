@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestZigzagOrderCase1(t *testing.T) {
+	got := zigzagOrder(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	want := "1,2,3,6,5,4,7,8,9"
+	if got != want {
+		t.Errorf("zigzagOrder(M=3, N=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestZigzagOrderCase2(t *testing.T) {
+	got := zigzagOrder(2, 4, [][]int{[]int{1, 2, 3, 4}, []int{5, 6, 7, 8}})
+	want := "1,2,3,4,8,7,6,5"
+	if got != want {
+		t.Errorf("zigzagOrder(M=2, N=4, matrix=[[1,2,3,4],[5,6,7,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestZigzagOrderCase3(t *testing.T) {
+	got := zigzagOrder(4, 2, [][]int{[]int{1, 2}, []int{3, 4}, []int{5, 6}, []int{7, 8}})
+	want := "1,2,4,3,5,6,8,7"
+	if got != want {
+		t.Errorf("zigzagOrder(M=4, N=2, matrix=[[1,2],[3,4],[5,6],[7,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

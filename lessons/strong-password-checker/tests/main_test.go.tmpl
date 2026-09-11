@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("a")
+	var want int = 5
+	if got != want {
+		t.Errorf("solve(password = \"a\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("aA1")
+	var want int = 3
+	if got != want {
+		t.Errorf("solve(password = \"aA1\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve("1337C0d3")
+	var want int = 0
+	if got != want {
+		t.Errorf("solve(password = \"1337C0d3\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

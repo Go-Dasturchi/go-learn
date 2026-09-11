@@ -1,0 +1,17 @@
+package main
+
+import "testing"
+
+func TestBolishVaQoldiqSeventeenFive(t *testing.T) {
+	b, q := bolishVaQoldiq(17, 5)
+	if b != 3 || q != 2 {
+		t.Errorf("bolishVaQoldiq(17, 5):\nExpected:\n3 2\n\nGot:\n%d %d", b, q)
+	}
+}
+
+func TestBolishVaQoldiqExactDivision(t *testing.T) {
+	b, q := bolishVaQoldiq(10, 2)
+	if b != 5 || q != 0 {
+		t.Errorf("bolishVaQoldiq(10, 2):\nExpected:\n5 0\n\nGot:\n%d %d", b, q)
+	}
+}

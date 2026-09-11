@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func mostFrequent(N int, nums []int) string {
+	counts := map[int]int{}
+	order := []int{}
+	for i := 0; i < N; i++ {
+		if counts[nums[i]] == 0 {
+			order = append(order, nums[i])
+		}
+		counts[nums[i]]++
+	}
+	bestVal := order[0]
+	bestCount := counts[bestVal]
+	for _, v := range order {
+		if counts[v] > bestCount {
+			bestVal = v
+			bestCount = counts[v]
+		}
+	}
+	return fmt.Sprintf("element=%d, count=%d", bestVal, bestCount)
+}
+
+func main() {
+	fmt.Println(mostFrequent(8, []int{3, 5, 3, 7, 3, 9, 5, 3}))
+}

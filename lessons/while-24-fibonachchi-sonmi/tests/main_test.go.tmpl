@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsFibonacciCase1(t *testing.T) {
+	got := isFibonacci(8)
+	want := true
+	if got != want {
+		t.Errorf("isFibonacci(N=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsFibonacciCase2(t *testing.T) {
+	got := isFibonacci(10)
+	want := false
+	if got != want {
+		t.Errorf("isFibonacci(N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsFibonacciCase3(t *testing.T) {
+	got := isFibonacci(21)
+	want := true
+	if got != want {
+		t.Errorf("isFibonacci(N=21):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

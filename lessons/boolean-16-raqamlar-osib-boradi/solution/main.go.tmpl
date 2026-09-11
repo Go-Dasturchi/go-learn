@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func digitsIncreasing(A int) bool {
+	first := A / 10
+	second := A % 10
+	return first < second
+}
+
+func main() {
+	fmt.Println(digitsIncreasing(23))
+}

@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func solve(num1 string, num2 string) string {
+	i, j := len(num1)-1, len(num2)-1
+	carry := 0
+	result := make([]byte, 0, len(num1)+len(num2))
+	for i >= 0 || j >= 0 || carry > 0 {
+		sum := carry
+		if i >= 0 {
+			sum += int(num1[i] - '0')
+			i--
+		}
+		if j >= 0 {
+			sum += int(num2[j] - '0')
+			j--
+		}
+		result = append(result, byte(sum%10)+'0')
+		carry = sum / 10
+	}
+	for l, r := 0, len(result)-1; l < r; l, r = l+1, r-1 {
+		result[l], result[r] = result[r], result[l]
+	}
+	return string(result)
+}
+
+func main() {
+	fmt.Println(solve("11", "123"))
+}

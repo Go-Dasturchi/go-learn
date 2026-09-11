@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPriceAndQuantityCase1(t *testing.T) {
+	got := priceAndQuantity(5)
+	want := "5, 10, 15, 20, 25, 30, 35, 40, 45, 50"
+	if got != want {
+		t.Errorf("priceAndQuantity(A=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPriceAndQuantityCase2(t *testing.T) {
+	got := priceAndQuantity(10)
+	want := "10, 20, 30, 40, 50, 60, 70, 80, 90, 100"
+	if got != want {
+		t.Errorf("priceAndQuantity(A=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPriceAndQuantityCase3(t *testing.T) {
+	got := priceAndQuantity(3)
+	want := "3, 6, 9, 12, 15, 18, 21, 24, 27, 30"
+	if got != want {
+		t.Errorf("priceAndQuantity(A=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

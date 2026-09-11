@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsPositiveCase1(t *testing.T) {
+	got := isPositive(5)
+	want := true
+	if got != want {
+		t.Errorf("isPositive(A=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPositiveCase2(t *testing.T) {
+	got := isPositive(-3)
+	want := false
+	if got != want {
+		t.Errorf("isPositive(A=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPositiveCase3(t *testing.T) {
+	got := isPositive(0)
+	want := false
+	if got != want {
+		t.Errorf("isPositive(A=0):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

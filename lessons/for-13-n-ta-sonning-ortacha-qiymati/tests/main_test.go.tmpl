@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestAverageCase1(t *testing.T) {
+	got := average(4, []int{10, 20, 30, 40})
+	want := 25
+	if got != want {
+		t.Errorf("average(N=4, nums=[10, 20, 30, 40]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAverageCase2(t *testing.T) {
+	got := average(3, []int{5, 10, 15})
+	want := 10
+	if got != want {
+		t.Errorf("average(N=3, nums=[5, 10, 15]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAverageCase3(t *testing.T) {
+	got := average(5, []int{2, 4, 6, 8, 10})
+	want := 6
+	if got != want {
+		t.Errorf("average(N=5, nums=[2, 4, 6, 8, 10]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

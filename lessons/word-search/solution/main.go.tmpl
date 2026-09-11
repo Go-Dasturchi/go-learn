@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+func solve(board [][]string, word string) bool {
+	if len(board) == 0 || len(board[0]) == 0 {
+		return len(word) == 0
+	}
+	rows, cols := len(board), len(board[0])
+	visited := make([][]bool, rows)
+	for i := range visited {
+		visited[i] = make([]bool, cols)
+	}
+	var dfs func(r, c, idx int) bool
+	dfs = func(r, c, idx int) bool {
+		if idx == len(word) {
+			return true
+		}
+		if r < 0 || r >= rows || c < 0 || c >= cols || visited[r][c] || board[r][c] != string(word[idx]) {
+			return false
+		}
+		visited[r][c] = true
+		found := dfs(r+1, c, idx+1) || dfs(r-1, c, idx+1) || dfs(r, c+1, idx+1) || dfs(r, c-1, idx+1)
+		visited[r][c] = false
+		return found
+	}
+	for r := 0; r < rows; r++ {
+		for c := 0; c < cols; c++ {
+			if dfs(r, c, 0) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func main() {
+	fmt.Println(solve([][]string{[]string{"A", "B", "C", "E"}, []string{"S", "F", "C", "S"}, []string{"A", "D", "E", "E"}}, "ABCCED"))
+}

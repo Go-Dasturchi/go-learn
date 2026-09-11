@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func maxIndex(N int, nums []int) int {
+	idx := 0
+	for i := 1; i < N; i++ {
+		if nums[i] > nums[idx] {
+			idx = i
+		}
+	}
+	return idx + 1
+}
+
+func main() {
+	fmt.Println(maxIndex(5, []int{3, 7, 2, 9, 1}))
+}

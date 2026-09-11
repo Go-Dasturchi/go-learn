@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCountBySignCase1(t *testing.T) {
+	got := countBySign(5, []int{1, -2, 0, 3, -4})
+	want := "musbat=2, manfiy=2, nol=1"
+	if got != want {
+		t.Errorf("countBySign(N=5, nums=[1,-2,0,3,-4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountBySignCase2(t *testing.T) {
+	got := countBySign(4, []int{5, 10, -3, 0})
+	want := "musbat=2, manfiy=1, nol=1"
+	if got != want {
+		t.Errorf("countBySign(N=4, nums=[5,10,-3,0]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountBySignCase3(t *testing.T) {
+	got := countBySign(3, []int{-1, -2, -3})
+	want := "musbat=0, manfiy=3, nol=0"
+	if got != want {
+		t.Errorf("countBySign(N=3, nums=[-1,-2,-3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

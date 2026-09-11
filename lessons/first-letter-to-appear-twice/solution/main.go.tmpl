@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	var seen [26]bool
+	for i := 0; i < len(s); i++ {
+		idx := s[i] - 'a'
+		if seen[idx] {
+			return string(s[i])
+		}
+		seen[idx] = true
+	}
+	return ""
+}
+
+func main() {
+	fmt.Println(solve("abccbaacz"))
+}

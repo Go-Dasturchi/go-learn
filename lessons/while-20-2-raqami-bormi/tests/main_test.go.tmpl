@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestHasDigit2Case1(t *testing.T) {
+	got := hasDigit2(12345)
+	want := true
+	if got != want {
+		t.Errorf("hasDigit2(N=12345):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHasDigit2Case2(t *testing.T) {
+	got := hasDigit2(789)
+	want := false
+	if got != want {
+		t.Errorf("hasDigit2(N=789):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHasDigit2Case3(t *testing.T) {
+	got := hasDigit2(2000)
+	want := true
+	if got != want {
+		t.Errorf("hasDigit2(N=2000):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

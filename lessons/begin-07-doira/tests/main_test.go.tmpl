@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestYuziCase1(t *testing.T) {
+	got := yuzi(5)
+	want := 78.5
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("yuzi(R=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestYuziCase2(t *testing.T) {
+	got := yuzi(10)
+	want := 314.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("yuzi(R=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestYuziCase3(t *testing.T) {
+	got := yuzi(3)
+	want := 28.26
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("yuzi(R=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

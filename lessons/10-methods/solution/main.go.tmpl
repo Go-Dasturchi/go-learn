@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// Hisob — balansni saqlovchi oddiy struct.
+type Hisob struct {
+	Balans int
+}
+
+// Tolda Hisobning Balansiga summani qo'shadi (asl obyektni o'zgartiradi).
+func (h *Hisob) Tolda(summa int) {
+	h.Balans += summa
+}
+
+func main() {
+	mening := Hisob{Balans: 1000}
+	mening.Tolda(500)
+	fmt.Println(mening.Balans)
+}

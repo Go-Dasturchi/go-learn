@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(s string) int {
+	count := 0
+	insidePair := false
+	for i := 0; i < len(s); i++ {
+		switch s[i] {
+		case '|':
+			insidePair = !insidePair
+		case '*':
+			if !insidePair {
+				count++
+			}
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve("l|*e*et|c**o|*de|"))
+}

@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(keys []int, values []int, queryKey int) int {
+	m := make(map[int]int)
+	for i, k := range keys {
+		m[k] = values[i]
+	}
+	if v, ok := m[queryKey]; ok {
+		return v
+	}
+	return -1
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3}, []int{10, 20, 30}, 2))
+}

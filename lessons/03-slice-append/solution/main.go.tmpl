@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// juftSonlar 1 dan n gacha bo'lgan barcha juft sonlarni qaytaradi.
+func juftSonlar(n int) []int {
+	natija := []int{}
+	for son := 1; son <= n; son++ {
+		if son%2 == 0 {
+			natija = append(natija, son)
+		}
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(juftSonlar(10))
+	fmt.Println(juftSonlar(5))
+}

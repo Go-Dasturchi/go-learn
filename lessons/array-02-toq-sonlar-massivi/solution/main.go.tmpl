@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func oddNumbers(N int) []int {
+	natija := []int{}
+	num := 1
+	for i := 0; i < N; i++ {
+		natija = append(natija, num)
+		num += 2
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(oddNumbers(5))
+}

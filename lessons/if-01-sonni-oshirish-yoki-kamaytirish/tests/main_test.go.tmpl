@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestAdjustNumberCase1(t *testing.T) {
+	got := adjustNumber(5)
+	want := 6
+	if got != want {
+		t.Errorf("adjustNumber(n=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAdjustNumberCase2(t *testing.T) {
+	got := adjustNumber(-3)
+	want := -5
+	if got != want {
+		t.Errorf("adjustNumber(n=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAdjustNumberCase3(t *testing.T) {
+	got := adjustNumber(0)
+	want := -2
+	if got != want {
+		t.Errorf("adjustNumber(n=0):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

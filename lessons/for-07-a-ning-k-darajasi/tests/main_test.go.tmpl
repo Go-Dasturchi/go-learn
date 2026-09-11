@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPowerCase1(t *testing.T) {
+	got := power(2, 5)
+	want := "2, 4, 8, 16, 32"
+	if got != want {
+		t.Errorf("power(A=2, K=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPowerCase2(t *testing.T) {
+	got := power(3, 4)
+	want := "3, 9, 27, 81"
+	if got != want {
+		t.Errorf("power(A=3, K=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPowerCase3(t *testing.T) {
+	got := power(5, 3)
+	want := "5, 25, 125"
+	if got != want {
+		t.Errorf("power(A=5, K=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

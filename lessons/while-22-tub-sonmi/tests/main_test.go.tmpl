@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsPrimeCase1(t *testing.T) {
+	got := isPrime(7)
+	want := true
+	if got != want {
+		t.Errorf("isPrime(N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPrimeCase2(t *testing.T) {
+	got := isPrime(15)
+	want := false
+	if got != want {
+		t.Errorf("isPrime(N=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPrimeCase3(t *testing.T) {
+	got := isPrime(29)
+	want := true
+	if got != want {
+		t.Errorf("isPrime(N=29):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestBinarySearchCase1(t *testing.T) {
+	got := binarySearch(7, 5, []int{1, 2, 3, 5, 7, 9, 11})
+	want := 3
+	if got != want {
+		t.Errorf("binarySearch(N=7, K=5, arr=[1,2,3,5,7,9,11]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestBinarySearchCase2(t *testing.T) {
+	got := binarySearch(5, 10, []int{2, 5, 8, 10, 15})
+	want := 3
+	if got != want {
+		t.Errorf("binarySearch(N=5, K=10, arr=[2,5,8,10,15]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestBinarySearchCase3(t *testing.T) {
+	got := binarySearch(6, 4, []int{1, 2, 3, 5, 7, 9})
+	want := -1
+	if got != want {
+		t.Errorf("binarySearch(N=6, K=4, arr=[1,2,3,5,7,9]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"math/bits"
+)
+
+func solve(x int, y int) int {
+	return bits.OnesCount(uint(x ^ y))
+}
+
+func main() {
+	fmt.Println(solve(1, 4))
+}

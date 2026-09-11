@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	var first, second, third *int
+	for _, n := range nums {
+		if first != nil && n == *first {
+			continue
+		}
+		if second != nil && n == *second {
+			continue
+		}
+		if third != nil && n == *third {
+			continue
+		}
+		v := n
+		switch {
+		case first == nil || v > *first:
+			first, second, third = &v, first, second
+		case second == nil || v > *second:
+			second, third = &v, second
+		case third == nil || v > *third:
+			third = &v
+		}
+	}
+	if third != nil {
+		return *third
+	}
+	return *first
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 2, 1}))
+}

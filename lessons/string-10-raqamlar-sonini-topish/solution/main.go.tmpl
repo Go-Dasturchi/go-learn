@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func solve(s string) int {
+	count := 0
+	for _, r := range s {
+		if r >= '0' && r <= '9' {
+			count++
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve("Hello123"))
+}

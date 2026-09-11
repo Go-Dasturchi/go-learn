@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func maxSquareSubmatrix(M int, N int, K int, matrix [][]int) string {
+	bestSum := 0
+	bestI, bestJ := 0, 0
+	first := true
+	for i := 0; i+K <= M; i++ {
+		for j := 0; j+K <= N; j++ {
+			sum := 0
+			for di := 0; di < K; di++ {
+				for dj := 0; dj < K; dj++ {
+					sum += matrix[i+di][j+dj]
+				}
+			}
+			if first || sum > bestSum {
+				bestSum = sum
+				bestI, bestJ = i, j
+				first = false
+			}
+		}
+	}
+	return fmt.Sprintf("max=%d, pos=(%d,%d)", bestSum, bestI, bestJ)
+}
+
+func main() {
+	fmt.Println(maxSquareSubmatrix(4, 5, 2, [][]int{[]int{1, 2, 3, 4, 5}, []int{2, 3, 4, 5, 6}, []int{3, 4, 5, 6, 7}, []int{4, 5, 6, 7, 8}}))
+}

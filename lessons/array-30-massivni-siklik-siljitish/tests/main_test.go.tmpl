@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestCyclicShiftCase1(t *testing.T) {
+	got := cyclicShift(5, 2, []int{1, 2, 3, 4, 5})
+	want := []int{4, 5, 1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("cyclicShift(N=5, K=2, arr=[1,2,3,4,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCyclicShiftCase2(t *testing.T) {
+	got := cyclicShift(4, 1, []int{10, 20, 30, 40})
+	want := []int{40, 10, 20, 30}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("cyclicShift(N=4, K=1, arr=[10,20,30,40]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCyclicShiftCase3(t *testing.T) {
+	got := cyclicShift(6, 3, []int{1, 2, 3, 4, 5, 6})
+	want := []int{4, 5, 6, 1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("cyclicShift(N=6, K=3, arr=[1,2,3,4,5,6]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

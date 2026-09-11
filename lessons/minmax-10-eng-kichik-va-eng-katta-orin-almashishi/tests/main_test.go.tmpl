@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSwapMinMaxPositionsCase1(t *testing.T) {
+	got := swapMinMaxPositions(5, []int{3, 7, 2, 9, 1})
+	want := []int{3, 7, 2, 1, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapMinMaxPositions(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapMinMaxPositionsCase2(t *testing.T) {
+	got := swapMinMaxPositions(4, []int{10, 5, 15, 8})
+	want := []int{10, 15, 5, 8}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapMinMaxPositions(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapMinMaxPositionsCase3(t *testing.T) {
+	got := swapMinMaxPositions(3, []int{4, 1, 8})
+	want := []int{4, 8, 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapMinMaxPositions(N=3, nums=[4, 1, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

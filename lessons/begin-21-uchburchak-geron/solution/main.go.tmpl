@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func yuza(x1 int, y1 int, x2 int, y2 int, x3 int, y3 int) string {
+	dist := func(ax, ay, bx, by int) float64 {
+		dx := float64(bx - ax)
+		dy := float64(by - ay)
+		return math.Sqrt(dx*dx + dy*dy)
+	}
+	a := dist(x1, y1, x2, y2)
+	b := dist(x2, y2, x3, y3)
+	c := dist(x3, y3, x1, y1)
+	p := a + b + c
+	s := p / 2
+	area := math.Sqrt(s * (s - a) * (s - b) * (s - c))
+	return fmt.Sprintf("P=%.1f, S=%.1f", p, area)
+}
+
+func main() {
+	fmt.Println(yuza(0, 0, 4, 0, 0, 3))
+}

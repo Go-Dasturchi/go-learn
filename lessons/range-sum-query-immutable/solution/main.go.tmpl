@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, left int, right int) int {
+	sum := 0
+	for i := left; i <= right; i++ {
+		sum += nums[i]
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(solve([]int{-2, 0, 3, -5, 2, -1}, 0, 2))
+}

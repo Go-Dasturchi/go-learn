@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestExactlyOnePositiveCase1(t *testing.T) {
+	got := exactlyOnePositive(-1, 5, -3)
+	want := true
+	if got != want {
+		t.Errorf("exactlyOnePositive(A=-1, B=5, C=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestExactlyOnePositiveCase2(t *testing.T) {
+	got := exactlyOnePositive(1, 2, -3)
+	want := false
+	if got != want {
+		t.Errorf("exactlyOnePositive(A=1, B=2, C=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestExactlyOnePositiveCase3(t *testing.T) {
+	got := exactlyOnePositive(-1, -2, -3)
+	want := false
+	if got != want {
+		t.Errorf("exactlyOnePositive(A=-1, B=-2, C=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

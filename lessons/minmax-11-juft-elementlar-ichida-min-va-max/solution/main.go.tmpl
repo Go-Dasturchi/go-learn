@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func minMaxEven(N int, nums []int) string {
+	min := 0
+	max := 0
+	found := false
+	for i := 0; i < N; i++ {
+		if nums[i]%2 == 0 {
+			if !found {
+				min = nums[i]
+				max = nums[i]
+				found = true
+			} else {
+				if nums[i] < min {
+					min = nums[i]
+				}
+				if nums[i] > max {
+					max = nums[i]
+				}
+			}
+		}
+	}
+	return fmt.Sprintf("min=%d, max=%d", min, max)
+}
+
+func main() {
+	fmt.Println(minMaxEven(6, []int{3, 8, 2, 9, 4, 10}))
+}

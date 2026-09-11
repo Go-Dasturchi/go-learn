@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func reverseNum(N int) int {
+	result := 0
+	n := N
+	for n > 0 {
+		result = result*10 + n%10
+		n /= 10
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(reverseNum(12345))
+}

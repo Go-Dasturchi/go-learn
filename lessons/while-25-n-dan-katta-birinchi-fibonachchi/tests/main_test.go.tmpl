@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestNextFibGreaterNCase1(t *testing.T) {
+	got := nextFibGreaterN(10)
+	want := 13
+	if got != want {
+		t.Errorf("nextFibGreaterN(N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestNextFibGreaterNCase2(t *testing.T) {
+	got := nextFibGreaterN(50)
+	want := 55
+	if got != want {
+		t.Errorf("nextFibGreaterN(N=50):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestNextFibGreaterNCase3(t *testing.T) {
+	got := nextFibGreaterN(100)
+	want := 144
+	if got != want {
+		t.Errorf("nextFibGreaterN(N=100):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

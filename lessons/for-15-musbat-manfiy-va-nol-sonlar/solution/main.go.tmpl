@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func countBySign(N int, nums []int) string {
+	positive, negative, zero := 0, 0, 0
+	for i := 0; i < N && i < len(nums); i++ {
+		if nums[i] > 0 {
+			positive++
+		} else if nums[i] < 0 {
+			negative++
+		} else {
+			zero++
+		}
+	}
+	return fmt.Sprintf("musbat=%d, manfiy=%d, nol=%d", positive, negative, zero)
+}
+
+func main() {
+	fmt.Println(countBySign(5, []int{1, -2, 0, 3, -4}))
+}

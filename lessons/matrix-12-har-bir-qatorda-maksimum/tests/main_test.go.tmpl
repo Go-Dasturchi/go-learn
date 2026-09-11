@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestRowMaximumsCase1(t *testing.T) {
+	got := rowMaximums(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 9, 6}, []int{7, 8, 5}})
+	want := "3, 9, 8"
+	if got != want {
+		t.Errorf("rowMaximums(M=3, N=3, matrix=[[1,2,3],[4,9,6],[7,8,5]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRowMaximumsCase2(t *testing.T) {
+	got := rowMaximums(2, 4, [][]int{[]int{10, 20, 30, 40}, []int{50, 60, 70, 80}})
+	want := "40, 80"
+	if got != want {
+		t.Errorf("rowMaximums(M=2, N=4, matrix=[[10,20,30,40],[50,60,70,80]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRowMaximumsCase3(t *testing.T) {
+	got := rowMaximums(4, 2, [][]int{[]int{10, 20}, []int{5, 15}, []int{30, 25}, []int{40, 35}})
+	want := "20, 15, 30, 40"
+	if got != want {
+		t.Errorf("rowMaximums(M=4, N=2, matrix=[[10,20],[5,15],[30,25],[40,35]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

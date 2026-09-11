@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, x int) int {
+	total := 0
+	for _, n := range nums {
+		total += n
+	}
+	target := total - x
+	if target < 0 {
+		return -1
+	}
+	if target == 0 {
+		return len(nums)
+	}
+	best := -1
+	sum := 0
+	left := 0
+	for right := 0; right < len(nums); right++ {
+		sum += nums[right]
+		for sum > target && left <= right {
+			sum -= nums[left]
+			left++
+		}
+		if sum == target {
+			length := right - left + 1
+			if length > best {
+				best = length
+			}
+		}
+	}
+	if best == -1 {
+		return -1
+	}
+	return len(nums) - best
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 1, 4, 2, 3}, 5))
+}

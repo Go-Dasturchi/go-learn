@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func selectionSort(N int, arr []int) []int {
+	natija := make([]int, N)
+	copy(natija, arr)
+	for i := 0; i < N-1; i++ {
+		maxIdx := i
+		for j := i + 1; j < N; j++ {
+			if natija[j] > natija[maxIdx] {
+				maxIdx = j
+			}
+		}
+		natija[i], natija[maxIdx] = natija[maxIdx], natija[i]
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(selectionSort(5, []int{5, 2, 8, 1, 9}))
+}

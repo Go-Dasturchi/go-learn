@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSwapRowsCase1(t *testing.T) {
+	got := swapRows(3, 3, 0, 2, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	want := [][]int{[]int{7, 8, 9}, []int{4, 5, 6}, []int{1, 2, 3}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapRows(M=3, N=3, K1=0, K2=2, matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapRowsCase2(t *testing.T) {
+	got := swapRows(4, 2, 1, 3, [][]int{[]int{10, 20}, []int{30, 40}, []int{50, 60}, []int{70, 80}})
+	want := [][]int{[]int{10, 20}, []int{70, 80}, []int{50, 60}, []int{30, 40}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapRows(M=4, N=2, K1=1, K2=3, matrix=[[10,20],[30,40],[50,60],[70,80]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapRowsCase3(t *testing.T) {
+	got := swapRows(2, 4, 0, 1, [][]int{[]int{1, 2, 3, 4}, []int{5, 6, 7, 8}})
+	want := [][]int{[]int{5, 6, 7, 8}, []int{1, 2, 3, 4}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("swapRows(M=2, N=4, K1=0, K2=1, matrix=[[1,2,3,4],[5,6,7,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

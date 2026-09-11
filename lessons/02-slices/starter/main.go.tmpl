@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+// oraliq sonlar slice'ining boshlanish (kiritilgan) dan tugash
+// (kiritilmagan) gacha bo'lgan qismini qaytaradi.
+func oraliq(sonlar []int, boshlanish, tugash int) []int {
+	// TODO: Go'ning slicing sintaksisidan foydalaning: sonlar[boshlanish:tugash]
+	return nil
+}
+
+func main() {
+	sonlar := []int{10, 20, 30, 40, 50}
+	fmt.Println(oraliq(sonlar, 1, 3))
+	fmt.Println(oraliq(sonlar, 0, 2))
+}

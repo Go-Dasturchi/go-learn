@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCountPosNegCase1(t *testing.T) {
+	got := countPosNeg(6, []int{3, -7, 2, -9, 1, 8})
+	want := "pos=4, neg=2"
+	if got != want {
+		t.Errorf("countPosNeg(N=6, arr=[3,-7,2,-9,1,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountPosNegCase2(t *testing.T) {
+	got := countPosNeg(5, []int{-5, 15, -8, 20, -12})
+	want := "pos=2, neg=3"
+	if got != want {
+		t.Errorf("countPosNeg(N=5, arr=[-5,15,-8,20,-12]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountPosNegCase3(t *testing.T) {
+	got := countPosNeg(4, []int{1, 2, 3, 4})
+	want := "pos=4, neg=0"
+	if got != want {
+		t.Errorf("countPosNeg(N=4, arr=[1,2,3,4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

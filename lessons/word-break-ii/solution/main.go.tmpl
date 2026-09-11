@@ -1,0 +1,46 @@
+package main
+
+import "fmt"
+
+func solve(s string, wordDict []string) []string {
+	wordSet := make(map[string]bool)
+	for _, w := range wordDict {
+		wordSet[w] = true
+	}
+	memo := make(map[int][]string)
+
+	var dfs func(start int) []string
+	dfs = func(start int) []string {
+		if cached, ok := memo[start]; ok {
+			return cached
+		}
+		res := []string{}
+		if start == len(s) {
+			res = append(res, "")
+			memo[start] = res
+			return res
+		}
+		for end := start + 1; end <= len(s); end++ {
+			word := s[start:end]
+			if !wordSet[word] {
+				continue
+			}
+			rest := dfs(end)
+			for _, sub := range rest {
+				if sub == "" {
+					res = append(res, word)
+				} else {
+					res = append(res, word+" "+sub)
+				}
+			}
+		}
+		memo[start] = res
+		return res
+	}
+
+	return dfs(0)
+}
+
+func main() {
+	fmt.Println(solve("catsanddog", []string{"cat", "cats", "and", "sand", "dog"}))
+}

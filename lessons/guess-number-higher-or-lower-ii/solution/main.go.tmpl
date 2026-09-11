@@ -1,0 +1,43 @@
+package main
+
+import "fmt"
+
+func solve(n int) int {
+	dp := make([][]int, n+2)
+	for i := range dp {
+		dp[i] = make([]int, n+2)
+	}
+	for length := 2; length <= n; length++ {
+		for lo := 1; lo+length-1 <= n; lo++ {
+			hi := lo + length - 1
+			best := 1 << 30
+			for x := lo; x <= hi; x++ {
+				left := 0
+				if x-1 >= lo {
+					left = dp[lo][x-1]
+				}
+				right := 0
+				if x+1 <= hi {
+					right = dp[x+1][hi]
+				}
+				cost := x + max(left, right)
+				if cost < best {
+					best = cost
+				}
+			}
+			dp[lo][hi] = best
+		}
+	}
+	return dp[1][n]
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	fmt.Println(solve(10))
+}

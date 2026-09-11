@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func isFibonacci(N int) bool {
+	a, b := 1, 1
+	for b < N {
+		a, b = b, a+b
+	}
+	return b == N
+}
+
+func main() {
+	fmt.Println(isFibonacci(8))
+}

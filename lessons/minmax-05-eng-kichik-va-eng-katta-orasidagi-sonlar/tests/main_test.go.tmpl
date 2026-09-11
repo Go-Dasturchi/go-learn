@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestElementsBetweenMinMaxCase1(t *testing.T) {
+	got := elementsBetweenMinMax(5, []int{3, 7, 2, 9, 1})
+	want := 3
+	if got != want {
+		t.Errorf("elementsBetweenMinMax(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestElementsBetweenMinMaxCase2(t *testing.T) {
+	got := elementsBetweenMinMax(6, []int{10, 5, 15, 8, 3, 20})
+	want := 4
+	if got != want {
+		t.Errorf("elementsBetweenMinMax(N=6, nums=[10, 5, 15, 8, 3, 20]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestElementsBetweenMinMaxCase3(t *testing.T) {
+	got := elementsBetweenMinMax(4, []int{1, 10, 5, 8})
+	want := 2
+	if got != want {
+		t.Errorf("elementsBetweenMinMax(N=4, nums=[1, 10, 5, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

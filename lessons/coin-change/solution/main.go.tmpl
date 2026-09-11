@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func solve(coins []int, amount int) int {
+	const inf = 1 << 30
+	dp := make([]int, amount+1)
+	for i := 1; i <= amount; i++ {
+		dp[i] = inf
+	}
+	for i := 1; i <= amount; i++ {
+		for _, c := range coins {
+			if c <= i && dp[i-c]+1 < dp[i] {
+				dp[i] = dp[i-c] + 1
+			}
+		}
+	}
+	if dp[amount] == inf {
+		return -1
+	}
+	return dp[amount]
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 5, 11}, 11))
+}

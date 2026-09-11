@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGetDirectionCase1(t *testing.T) {
+	got := getDirection(1, 1)
+	want := "Sharq"
+	if got != want {
+		t.Errorf("getDirection(N1=1, K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetDirectionCase2(t *testing.T) {
+	got := getDirection(2, 2)
+	want := "Sharq"
+	if got != want {
+		t.Errorf("getDirection(N1=2, K=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetDirectionCase3(t *testing.T) {
+	got := getDirection(3, -1)
+	want := "Sharq"
+	if got != want {
+		t.Errorf("getDirection(N1=3, K=-1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,66 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	n := len(nums)
+	if n < 2 {
+		return 0
+	}
+	minVal, maxVal := nums[0], nums[0]
+	for _, v := range nums {
+		if v < minVal {
+			minVal = v
+		}
+		if v > maxVal {
+			maxVal = v
+		}
+	}
+	if minVal == maxVal {
+		return 0
+	}
+
+	bucketSize := (maxVal - minVal) / (n - 1)
+	if bucketSize < 1 {
+		bucketSize = 1
+	}
+	bucketCount := (maxVal-minVal)/bucketSize + 1
+
+	bucketMin := make([]int, bucketCount)
+	bucketMax := make([]int, bucketCount)
+	bucketUsed := make([]bool, bucketCount)
+	for i := range bucketMin {
+		bucketMin[i] = 1<<62 - 1
+		bucketMax[i] = -(1<<62 - 1)
+	}
+
+	for _, v := range nums {
+		idx := (v - minVal) / bucketSize
+		if v < bucketMin[idx] {
+			bucketMin[idx] = v
+		}
+		if v > bucketMax[idx] {
+			bucketMax[idx] = v
+		}
+		bucketUsed[idx] = true
+	}
+
+	maxGapVal := 0
+	prevMax := minVal
+	for i := 0; i < bucketCount; i++ {
+		if !bucketUsed[i] {
+			continue
+		}
+		gap := bucketMin[i] - prevMax
+		if gap > maxGapVal {
+			maxGapVal = gap
+		}
+		prevMax = bucketMax[i]
+	}
+
+	return maxGapVal
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 6, 9, 1}))
+}

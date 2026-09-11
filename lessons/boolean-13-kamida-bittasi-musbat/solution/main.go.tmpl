@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func atLeastOnePositive(A int, B int, C int) bool {
+	return A > 0 || B > 0 || C > 0
+}
+
+func main() {
+	fmt.Println(atLeastOnePositive(-1, 5, -3))
+}

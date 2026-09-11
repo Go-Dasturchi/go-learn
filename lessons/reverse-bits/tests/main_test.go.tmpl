@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve(43261596)
+	var want int = 964176192
+	if got != want {
+		t.Errorf("solve(n = 43261596):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve(0)
+	var want int = 0
+	if got != want {
+		t.Errorf("solve(n = 0):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

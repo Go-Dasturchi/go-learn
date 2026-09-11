@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+// oshir son ko'rsatib turgan qiymatga qiymatni qo'shadi — chaqiruvchi
+// tomondagi asl o'zgaruvchi o'zgarishi kerak.
+func oshir(son *int, qiymat int) {
+	*son = *son + qiymat
+}
+
+func main() {
+	x := 5
+	oshir(&x, 10)
+	fmt.Println(x)
+}

@@ -1,0 +1,30 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSozSoniBasic(t *testing.T) {
+	got := sozSoni([]string{"olma", "banan", "olma"})
+	want := map[string]int{"olma": 2, "banan": 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sozSoni([olma,banan,olma]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSozSoniMultiple(t *testing.T) {
+	got := sozSoni([]string{"a", "b", "a", "a", "b"})
+	want := map[string]int{"a": 3, "b": 2}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sozSoni([a,b,a,a,b]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSozSoniEmpty(t *testing.T) {
+	got := sozSoni([]string{})
+	want := map[string]int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sozSoni([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

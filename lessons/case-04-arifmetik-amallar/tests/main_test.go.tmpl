@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCalculateCase1(t *testing.T) {
+	got := calculate(10, 5, 1)
+	want := 15
+	if got != want {
+		t.Errorf("calculate(a=10, b=5, N=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCalculateCase2(t *testing.T) {
+	got := calculate(10, 5, 3)
+	want := 50
+	if got != want {
+		t.Errorf("calculate(a=10, b=5, N=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCalculateCase3(t *testing.T) {
+	got := calculate(10, 5, 4)
+	want := 2
+	if got != want {
+		t.Errorf("calculate(a=10, b=5, N=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

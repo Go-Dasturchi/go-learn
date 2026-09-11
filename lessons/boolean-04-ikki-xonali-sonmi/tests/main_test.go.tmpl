@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsTwoDigitCase1(t *testing.T) {
+	got := isTwoDigit(47)
+	want := true
+	if got != want {
+		t.Errorf("isTwoDigit(A=47):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsTwoDigitCase2(t *testing.T) {
+	got := isTwoDigit(5)
+	want := false
+	if got != want {
+		t.Errorf("isTwoDigit(A=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsTwoDigitCase3(t *testing.T) {
+	got := isTwoDigit(100)
+	want := false
+	if got != want {
+		t.Errorf("isTwoDigit(A=100):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

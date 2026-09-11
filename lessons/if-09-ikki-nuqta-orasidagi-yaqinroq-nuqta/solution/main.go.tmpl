@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func abs09(n int) int {
+	if n < 0 {
+		return -n
+	}
+	return n
+}
+
+func closerPoint(A int, B int) int {
+	if abs09(A) < abs09(B) {
+		return A
+	}
+	return B
+}
+
+func main() {
+	fmt.Println(closerPoint(5, 3))
+}

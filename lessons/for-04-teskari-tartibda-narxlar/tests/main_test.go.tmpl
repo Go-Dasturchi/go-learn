@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestReversePricesCase1(t *testing.T) {
+	got := reversePrices(5)
+	want := "50, 45, 40, 35, 30, 25, 20, 15, 10, 5"
+	if got != want {
+		t.Errorf("reversePrices(A=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReversePricesCase2(t *testing.T) {
+	got := reversePrices(10)
+	want := "100, 90, 80, 70, 60, 50, 40, 30, 20, 10"
+	if got != want {
+		t.Errorf("reversePrices(A=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReversePricesCase3(t *testing.T) {
+	got := reversePrices(3)
+	want := "30, 27, 24, 21, 18, 15, 12, 9, 6, 3"
+	if got != want {
+		t.Errorf("reversePrices(A=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

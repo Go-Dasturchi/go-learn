@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func rowMaximums(M int, N int, matrix [][]int) string {
+	parts := make([]string, M)
+	for i := 0; i < M; i++ {
+		maxVal := matrix[i][0]
+		for j := 1; j < N; j++ {
+			if matrix[i][j] > maxVal {
+				maxVal = matrix[i][j]
+			}
+		}
+		parts[i] = strconv.Itoa(maxVal)
+	}
+	return strings.Join(parts, ", ")
+}
+
+func main() {
+	fmt.Println(rowMaximums(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 9, 6}, []int{7, 8, 5}}))
+}

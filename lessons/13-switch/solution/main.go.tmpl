@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+// kunNomi berilgan kun raqamiga mos nomni qaytaradi.
+func kunNomi(kun int) string {
+	switch kun {
+	case 1:
+		return "Dushanba"
+	case 6, 7:
+		return "Dam olish kuni"
+	default:
+		return "Oddiy kun"
+	}
+}
+
+func main() {
+	fmt.Println(kunNomi(1))
+	fmt.Println(kunNomi(6))
+	fmt.Println(kunNomi(3))
+}

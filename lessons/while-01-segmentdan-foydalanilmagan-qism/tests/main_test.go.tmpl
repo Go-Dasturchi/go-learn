@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestUnusedSegmentCase1(t *testing.T) {
+	got := unusedSegment(10, 3)
+	want := 1
+	if got != want {
+		t.Errorf("unusedSegment(A=10, B=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestUnusedSegmentCase2(t *testing.T) {
+	got := unusedSegment(15, 4)
+	want := 3
+	if got != want {
+		t.Errorf("unusedSegment(A=15, B=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestUnusedSegmentCase3(t *testing.T) {
+	got := unusedSegment(20, 6)
+	want := 2
+	if got != want {
+		t.Errorf("unusedSegment(A=20, B=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

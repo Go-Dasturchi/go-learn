@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve(10)
+	want := 31.4
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("solve(d=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve(5)
+	want := 15.7
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("solve(d=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve(20)
+	want := 62.8
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("solve(d=20):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

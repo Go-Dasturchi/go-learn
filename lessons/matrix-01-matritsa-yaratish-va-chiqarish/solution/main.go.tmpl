@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func createMatrix(M int, N int) [][]int {
+	result := make([][]int, M)
+	val := 1
+	for i := 0; i < M; i++ {
+		row := make([]int, N)
+		for j := 0; j < N; j++ {
+			row[j] = val
+			val++
+		}
+		result[i] = row
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(createMatrix(2, 3))
+}

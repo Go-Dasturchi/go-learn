@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFindSaddlePointCase1(t *testing.T) {
+	got := findSaddlePoint([][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	var want string = "value=7, pos=(2,0)"
+	if got != want {
+		t.Errorf("findSaddlePoint(matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindSaddlePointCase2(t *testing.T) {
+	got := findSaddlePoint([][]int{[]int{1, 2}, []int{3, 4}})
+	var want string = "value=3, pos=(1,0)"
+	if got != want {
+		t.Errorf("findSaddlePoint(matrix=[[1,2],[3,4]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindSaddlePointCase3(t *testing.T) {
+	got := findSaddlePoint([][]int{[]int{9, 8, 7}, []int{6, 5, 4}, []int{3, 2, 1}})
+	var want string = "value=7, pos=(0,2)"
+	if got != want {
+		t.Errorf("findSaddlePoint(matrix=[[9,8,7],[6,5,4],[3,2,1]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

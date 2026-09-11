@@ -1,0 +1,132 @@
+package main
+
+import "fmt"
+
+type lfuNode struct {
+	key, value, freq int
+	prev, next       *lfuNode
+}
+
+type freqList struct {
+	head, tail *lfuNode
+	size       int
+}
+
+func newFreqList() *freqList {
+	head := &lfuNode{}
+	tail := &lfuNode{}
+	head.next = tail
+	tail.prev = head
+	return &freqList{head: head, tail: tail}
+}
+
+func (fl *freqList) pushFront(n *lfuNode) {
+	n.next = fl.head.next
+	n.prev = fl.head
+	fl.head.next.prev = n
+	fl.head.next = n
+	fl.size++
+}
+
+func (fl *freqList) remove(n *lfuNode) {
+	n.prev.next = n.next
+	n.next.prev = n.prev
+	n.prev = nil
+	n.next = nil
+	fl.size--
+}
+
+func (fl *freqList) removeLast() *lfuNode {
+	if fl.size == 0 {
+		return nil
+	}
+	last := fl.tail.prev
+	fl.remove(last)
+	return last
+}
+
+type lfuCache struct {
+	capacity int
+	minFreq  int
+	nodes    map[int]*lfuNode
+	freqs    map[int]*freqList
+}
+
+func newLFUCache(capacity int) *lfuCache {
+	return &lfuCache{
+		capacity: capacity,
+		nodes:    make(map[int]*lfuNode),
+		freqs:    make(map[int]*freqList),
+	}
+}
+
+func (c *lfuCache) touch(n *lfuNode) {
+	oldFreq := n.freq
+	c.freqs[oldFreq].remove(n)
+	if c.freqs[oldFreq].size == 0 {
+		delete(c.freqs, oldFreq)
+		if c.minFreq == oldFreq {
+			c.minFreq++
+		}
+	}
+	n.freq++
+	if c.freqs[n.freq] == nil {
+		c.freqs[n.freq] = newFreqList()
+	}
+	c.freqs[n.freq].pushFront(n)
+}
+
+func (c *lfuCache) Get(key int) int {
+	n, ok := c.nodes[key]
+	if !ok {
+		return -1
+	}
+	c.touch(n)
+	return n.value
+}
+
+func (c *lfuCache) Put(key, value int) {
+	if c.capacity <= 0 {
+		return
+	}
+	if n, ok := c.nodes[key]; ok {
+		n.value = value
+		c.touch(n)
+		return
+	}
+	if len(c.nodes) >= c.capacity {
+		list := c.freqs[c.minFreq]
+		evicted := list.removeLast()
+		if evicted != nil {
+			delete(c.nodes, evicted.key)
+		}
+		if list.size == 0 {
+			delete(c.freqs, c.minFreq)
+		}
+	}
+	n := &lfuNode{key: key, value: value, freq: 1}
+	c.nodes[key] = n
+	if c.freqs[1] == nil {
+		c.freqs[1] = newFreqList()
+	}
+	c.freqs[1].pushFront(n)
+	c.minFreq = 1
+}
+
+func solve(capacity int, ops []string, args [][]int) []int {
+	cache := newLFUCache(capacity)
+	result := []int{}
+	for i, op := range ops {
+		switch op {
+		case "put":
+			cache.Put(args[i][0], args[i][1])
+		case "get":
+			result = append(result, cache.Get(args[i][0]))
+		}
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve(2, []string{"put", "put", "get", "put", "get", "get", "put", "get", "get", "get"}, [][]int{[]int{1, 1}, []int{2, 2}, []int{1}, []int{3, 3}, []int{2}, []int{3}, []int{4, 4}, []int{1}, []int{3}, []int{4}}))
+}

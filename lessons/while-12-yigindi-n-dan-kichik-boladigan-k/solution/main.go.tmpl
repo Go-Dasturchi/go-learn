@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func kSumLessN(N int) string {
+	K := 0
+	sum := 0
+	for sum+K+1 <= N {
+		K++
+		sum += K
+	}
+	return fmt.Sprintf("K=%d, sum=%d", K, sum)
+}
+
+func main() {
+	fmt.Println(kSumLessN(10))
+}

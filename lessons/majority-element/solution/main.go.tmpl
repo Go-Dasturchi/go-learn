@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	count := 0
+	candidate := 0
+	for _, n := range nums {
+		if count == 0 {
+			candidate = n
+		}
+		if n == candidate {
+			count++
+		} else {
+			count--
+		}
+	}
+	return candidate
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 2, 3}))
+}

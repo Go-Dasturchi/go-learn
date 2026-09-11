@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(sentence string) bool {
+	var seen [26]bool
+	count := 0
+	for i := 0; i < len(sentence); i++ {
+		c := sentence[i]
+		if c >= 'a' && c <= 'z' {
+			idx := c - 'a'
+			if !seen[idx] {
+				seen[idx] = true
+				count++
+			}
+		}
+	}
+	return count == 26
+}
+
+func main() {
+	fmt.Println(solve("thequickbrownfoxjumpsoverthelazydog"))
+}

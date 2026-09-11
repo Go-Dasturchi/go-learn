@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func sumSquares(K int, N int) int {
+	sum := 0
+	for i := K; i <= N; i++ {
+		sum += i * i
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(sumSquares(1, 5))
+}

@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func isInsideRect(x1 int, y1 int, x2 int, y2 int, x int, y int) string {
+	minX, maxX := x1, x2
+	if minX > maxX {
+		minX, maxX = maxX, minX
+	}
+	minY, maxY := y1, y2
+	if minY > maxY {
+		minY, maxY = maxY, minY
+	}
+
+	if x < minX || x > maxX || y < minY || y > maxY {
+		return "Tashqarida"
+	}
+	if x == minX || x == maxX || y == minY || y == maxY {
+		return "Chekkada"
+	}
+	return "Ichida"
+}
+
+func main() {
+	fmt.Println(isInsideRect(0, 0, 10, 10, 5, 5))
+}

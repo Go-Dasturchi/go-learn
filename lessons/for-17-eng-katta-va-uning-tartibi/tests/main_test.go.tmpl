@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMaxAndIndexCase1(t *testing.T) {
+	got := maxAndIndex(5, []int{3, 7, 2, 9, 1})
+	want := "max=9, index=4"
+	if got != want {
+		t.Errorf("maxAndIndex(N=5, nums=[3,7,2,9,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxAndIndexCase2(t *testing.T) {
+	got := maxAndIndex(4, []int{10, 5, 15, 8})
+	want := "max=15, index=3"
+	if got != want {
+		t.Errorf("maxAndIndex(N=4, nums=[10,5,15,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMaxAndIndexCase3(t *testing.T) {
+	got := maxAndIndex(3, []int{4, 6, 2})
+	want := "max=6, index=2"
+	if got != want {
+		t.Errorf("maxAndIndex(N=3, nums=[4,6,2]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

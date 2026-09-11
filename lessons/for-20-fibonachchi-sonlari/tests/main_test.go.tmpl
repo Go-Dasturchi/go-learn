@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFibonacciCase1(t *testing.T) {
+	got := fibonacci(7)
+	want := "1, 1, 2, 3, 5, 8, 13"
+	if got != want {
+		t.Errorf("fibonacci(N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFibonacciCase2(t *testing.T) {
+	got := fibonacci(5)
+	want := "1, 1, 2, 3, 5"
+	if got != want {
+		t.Errorf("fibonacci(N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFibonacciCase3(t *testing.T) {
+	got := fibonacci(10)
+	want := "1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
+	if got != want {
+		t.Errorf("fibonacci(N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(salary []int) float64 {
+	min, max := salary[0], salary[0]
+	sum := 0
+	for _, s := range salary {
+		if s < min {
+			min = s
+		}
+		if s > max {
+			max = s
+		}
+		sum += s
+	}
+	sum -= min + max
+	return float64(sum) / float64(len(salary)-2)
+}
+
+func main() {
+	fmt.Println(solve([]int{4000, 3000, 1000, 2000}))
+}

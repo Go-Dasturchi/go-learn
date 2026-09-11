@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDaysInMonthCaseCase1(t *testing.T) {
+	got := daysInMonthCase(2)
+	want := 28
+	if got != want {
+		t.Errorf("daysInMonthCase(K=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDaysInMonthCaseCase2(t *testing.T) {
+	got := daysInMonthCase(4)
+	want := 30
+	if got != want {
+		t.Errorf("daysInMonthCase(K=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDaysInMonthCaseCase3(t *testing.T) {
+	got := daysInMonthCase(7)
+	want := 31
+	if got != want {
+		t.Errorf("daysInMonthCase(K=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

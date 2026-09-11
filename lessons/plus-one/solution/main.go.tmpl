@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func solve(digits []int) []int {
+	result := append([]int{}, digits...)
+	for i := len(result) - 1; i >= 0; i-- {
+		if result[i] < 9 {
+			result[i]++
+			return result
+		}
+		result[i] = 0
+	}
+	return append([]int{1}, result...)
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3}))
+}

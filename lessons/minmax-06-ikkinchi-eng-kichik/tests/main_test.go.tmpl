@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSecondMinCase1(t *testing.T) {
+	got := secondMin(5, []int{3, 7, 2, 9, 1})
+	want := 2
+	if got != want {
+		t.Errorf("secondMin(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondMinCase2(t *testing.T) {
+	got := secondMin(4, []int{10, 5, 15, 8})
+	want := 8
+	if got != want {
+		t.Errorf("secondMin(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondMinCase3(t *testing.T) {
+	got := secondMin(6, []int{4, 1, 8, 3, 9, 2})
+	want := 2
+	if got != want {
+		t.Errorf("secondMin(N=6, nums=[4, 1, 8, 3, 9, 2]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

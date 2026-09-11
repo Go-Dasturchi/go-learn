@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func maxAndIndex(N int, nums []int) string {
+	max := nums[0]
+	index := 1
+	for i := 1; i < N && i < len(nums); i++ {
+		if nums[i] > max {
+			max = nums[i]
+			index = i + 1
+		}
+	}
+	return fmt.Sprintf("max=%d, index=%d", max, index)
+}
+
+func main() {
+	fmt.Println(maxAndIndex(5, []int{3, 7, 2, 9, 1}))
+}

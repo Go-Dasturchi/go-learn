@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	upper, lower := 0, 0
+	for _, r := range s {
+		if r >= 'A' && r <= 'Z' {
+			upper++
+		} else if r >= 'a' && r <= 'z' {
+			lower++
+		}
+	}
+	return fmt.Sprintf("upper=%d, lower=%d", upper, lower)
+}
+
+func main() {
+	fmt.Println(solve("Hello World"))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDiagonalPartSumsCase1(t *testing.T) {
+	got := diagonalPartSums(3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	var want int = 25
+	if got != want {
+		t.Errorf("diagonalPartSums(N=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDiagonalPartSumsCase2(t *testing.T) {
+	got := diagonalPartSums(4, [][]int{[]int{1, 2, 3, 4}, []int{5, 6, 7, 8}, []int{9, 10, 11, 12}, []int{13, 14, 15, 16}})
+	var want int = 68
+	if got != want {
+		t.Errorf("diagonalPartSums(N=4, matrix=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDiagonalPartSumsCase3(t *testing.T) {
+	got := diagonalPartSums(5, [][]int{[]int{1, 2, 3, 4, 5}, []int{6, 7, 8, 9, 10}, []int{11, 12, 13, 14, 15}, []int{16, 17, 18, 19, 20}, []int{21, 22, 23, 24, 25}})
+	var want int = 117
+	if got != want {
+		t.Errorf("diagonalPartSums(N=5, matrix=[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

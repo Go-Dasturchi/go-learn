@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func twoPositive(A int, B int, C int) bool {
+	count := 0
+	if A > 0 {
+		count++
+	}
+	if B > 0 {
+		count++
+	}
+	if C > 0 {
+		count++
+	}
+	return count == 2
+}
+
+func main() {
+	fmt.Println(twoPositive(1, 5, -3))
+}

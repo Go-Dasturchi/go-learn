@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinDistanceCase1(t *testing.T) {
+	got := minDistance(5, []int{10, 5, 8, 12, 3})
+	var want int = 2
+	if got != want {
+		t.Errorf("minDistance(N=5, nums=[10, 5, 8, 12, 3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinDistanceCase2(t *testing.T) {
+	got := minDistance(6, []int{1, 10, 5, 20, 15, 8})
+	var want int = 2
+	if got != want {
+		t.Errorf("minDistance(N=6, nums=[1, 10, 5, 20, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinDistanceCase3(t *testing.T) {
+	got := minDistance(4, []int{100, 50, 25, 75})
+	var want int = 25
+	if got != want {
+		t.Errorf("minDistance(N=4, nums=[100, 50, 25, 75]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

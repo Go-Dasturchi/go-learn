@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGetQuadrantCase1(t *testing.T) {
+	got := getQuadrant(5, 3)
+	want := 1
+	if got != want {
+		t.Errorf("getQuadrant(x=5, y=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetQuadrantCase2(t *testing.T) {
+	got := getQuadrant(-2, 4)
+	want := 2
+	if got != want {
+		t.Errorf("getQuadrant(x=-2, y=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetQuadrantCase3(t *testing.T) {
+	got := getQuadrant(-3, -1)
+	want := 3
+	if got != want {
+		t.Errorf("getQuadrant(x=-3, y=-1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

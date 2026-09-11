@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func hasOddDigit(A int) bool {
+	d1 := A / 100
+	d2 := (A / 10) % 10
+	d3 := A % 10
+	return d1%2 != 0 || d2%2 != 0 || d3%2 != 0
+}
+
+func main() {
+	fmt.Println(hasOddDigit(123))
+}

@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, n int) int {
+	patches := 0
+	miss := int64(1)
+	i := 0
+	for miss <= int64(n) {
+		if i < len(nums) && int64(nums[i]) <= miss {
+			miss += int64(nums[i])
+			i++
+		} else {
+			miss += miss
+			patches++
+		}
+	}
+	return patches
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 3}, 6))
+}

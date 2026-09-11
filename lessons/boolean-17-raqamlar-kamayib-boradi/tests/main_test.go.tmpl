@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDigitsDecreasingCase1(t *testing.T) {
+	got := digitsDecreasing(32)
+	want := true
+	if got != want {
+		t.Errorf("digitsDecreasing(A=32):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitsDecreasingCase2(t *testing.T) {
+	got := digitsDecreasing(23)
+	want := false
+	if got != want {
+		t.Errorf("digitsDecreasing(A=23):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitsDecreasingCase3(t *testing.T) {
+	got := digitsDecreasing(55)
+	want := false
+	if got != want {
+		t.Errorf("digitsDecreasing(A=55):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

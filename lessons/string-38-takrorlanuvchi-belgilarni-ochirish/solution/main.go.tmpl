@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	r := []rune(s)
+	if len(r) == 0 {
+		return ""
+	}
+	result := []rune{r[0]}
+	for i := 1; i < len(r); i++ {
+		if r[i] != r[i-1] {
+			result = append(result, r[i])
+		}
+	}
+	return string(result)
+}
+
+func main() {
+	fmt.Println(solve("Hellooo"))
+}

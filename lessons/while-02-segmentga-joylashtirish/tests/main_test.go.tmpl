@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFitInSegmentCase1(t *testing.T) {
+	got := fitInSegment(10, 3)
+	want := 3
+	if got != want {
+		t.Errorf("fitInSegment(A=10, B=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFitInSegmentCase2(t *testing.T) {
+	got := fitInSegment(15, 4)
+	want := 3
+	if got != want {
+		t.Errorf("fitInSegment(A=15, B=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFitInSegmentCase3(t *testing.T) {
+	got := fitInSegment(20, 6)
+	want := 3
+	if got != want {
+		t.Errorf("fitInSegment(A=20, B=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

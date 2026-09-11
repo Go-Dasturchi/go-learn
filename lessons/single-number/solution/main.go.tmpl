@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	result := 0
+	for _, n := range nums {
+		result ^= n
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{2, 2, 1}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFarthestPairCase1(t *testing.T) {
+	got := farthestPair(5, []int{3, 7, 2, 9, 1})
+	want := "1, 9"
+	if got != want {
+		t.Errorf("farthestPair(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFarthestPairCase2(t *testing.T) {
+	got := farthestPair(6, []int{10, 1, 5, 3, 20, 4})
+	want := "1, 20"
+	if got != want {
+		t.Errorf("farthestPair(N=6, nums=[10, 1, 5, 3, 20, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFarthestPairCase3(t *testing.T) {
+	got := farthestPair(4, []int{100, 50, 75, 25})
+	want := "25, 100"
+	if got != want {
+		t.Errorf("farthestPair(N=4, nums=[100, 50, 75, 25]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

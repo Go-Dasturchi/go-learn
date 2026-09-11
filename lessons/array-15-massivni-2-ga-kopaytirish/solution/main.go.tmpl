@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func multiplyByTwo(N int, arr []int) []int {
+	natija := []int{}
+	for i := 0; i < N; i++ {
+		natija = append(natija, arr[i]*2)
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(multiplyByTwo(5, []int{1, 2, 3, 4, 5}))
+}

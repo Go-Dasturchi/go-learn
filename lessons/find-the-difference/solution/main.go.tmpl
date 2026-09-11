@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(s string, t string) string {
+	var count [26]int
+	for i := 0; i < len(s); i++ {
+		count[s[i]-'a']++
+	}
+	for i := 0; i < len(t); i++ {
+		count[t[i]-'a']--
+	}
+	for i := 0; i < 26; i++ {
+		if count[i] < 0 {
+			return string(rune('a' + i))
+		}
+	}
+	return ""
+}
+
+func main() {
+	fmt.Println(solve("abcd", "abcde"))
+}

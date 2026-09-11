@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("Hellooo")
+	want := "Helo"
+	if got != want {
+		t.Errorf("solve(S='Hellooo'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("Boooook")
+	want := "Bok"
+	if got != want {
+		t.Errorf("solve(S='Boooook'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve("aabbccdd")
+	want := "abcd"
+	if got != want {
+		t.Errorf("solve(S='aabbccdd'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

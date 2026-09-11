@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func priceAndQuantity(A int) string {
+	result := ""
+	for i := 1; i <= 10; i++ {
+		if i > 1 {
+			result += ", "
+		}
+		result += strconv.Itoa(A * i)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(priceAndQuantity(5))
+}

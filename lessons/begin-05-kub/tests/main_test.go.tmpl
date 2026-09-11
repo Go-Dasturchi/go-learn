@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestHajmiCase1(t *testing.T) {
+	got := hajmi(3)
+	want := 27.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("hajmi(a=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHajmiCase2(t *testing.T) {
+	got := hajmi(5)
+	want := 125.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("hajmi(a=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHajmiCase3(t *testing.T) {
+	got := hajmi(2)
+	want := 8.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("hajmi(a=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

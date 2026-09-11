@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestToMinutesCase1(t *testing.T) {
+	got := toMinutes(3600)
+	want := 60
+	if got != want {
+		t.Errorf("toMinutes(N=3600):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToMinutesCase2(t *testing.T) {
+	got := toMinutes(150)
+	want := 2
+	if got != want {
+		t.Errorf("toMinutes(N=150):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToMinutesCase3(t *testing.T) {
+	got := toMinutes(59)
+	want := 0
+	if got != want {
+		t.Errorf("toMinutes(N=59):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

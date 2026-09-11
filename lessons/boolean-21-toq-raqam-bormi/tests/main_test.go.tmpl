@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestHasOddDigitCase1(t *testing.T) {
+	got := hasOddDigit(123)
+	want := true
+	if got != want {
+		t.Errorf("hasOddDigit(A=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHasOddDigitCase2(t *testing.T) {
+	got := hasOddDigit(246)
+	want := false
+	if got != want {
+		t.Errorf("hasOddDigit(A=246):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestHasOddDigitCase3(t *testing.T) {
+	got := hasOddDigit(802)
+	want := false
+	if got != want {
+		t.Errorf("hasOddDigit(A=802):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,31 @@
+package main
+
+import "testing"
+
+func TestToldaBasic(t *testing.T) {
+	h := Hisob{Balans: 1000}
+	h.Tolda(500)
+	want := 1500
+	if h.Balans != want {
+		t.Errorf("Tolda(500) 1000 balansga qo'shilganda:\nExpected:\n%d\n\nGot:\n%d", want, h.Balans)
+	}
+}
+
+func TestToldaMultipleCalls(t *testing.T) {
+	h := Hisob{Balans: 0}
+	h.Tolda(100)
+	h.Tolda(250)
+	want := 350
+	if h.Balans != want {
+		t.Errorf("Tolda(100) va Tolda(250) ketma-ket chaqirilganda:\nExpected:\n%d\n\nGot:\n%d", want, h.Balans)
+	}
+}
+
+func TestToldaNegative(t *testing.T) {
+	h := Hisob{Balans: 1000}
+	h.Tolda(-300)
+	want := 700
+	if h.Balans != want {
+		t.Errorf("Tolda(-300) 1000 balansga qo'shilganda:\nExpected:\n%d\n\nGot:\n%d", want, h.Balans)
+	}
+}

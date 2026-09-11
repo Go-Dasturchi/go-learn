@@ -1,0 +1,53 @@
+package main
+
+import "fmt"
+
+func solve(s string) bool {
+	n := len(s)
+	i := 0
+
+	// optional sign
+	if i < n && (s[i] == '+' || s[i] == '-') {
+		i++
+	}
+
+	digitsBeforeDot := 0
+	for i < n && s[i] >= '0' && s[i] <= '9' {
+		i++
+		digitsBeforeDot++
+	}
+
+	digitsAfterDot := 0
+	if i < n && s[i] == '.' {
+		i++
+		for i < n && s[i] >= '0' && s[i] <= '9' {
+			i++
+			digitsAfterDot++
+		}
+	}
+
+	if digitsBeforeDot == 0 && digitsAfterDot == 0 {
+		return false
+	}
+
+	if i < n && (s[i] == 'e' || s[i] == 'E') {
+		i++
+		if i < n && (s[i] == '+' || s[i] == '-') {
+			i++
+		}
+		expDigits := 0
+		for i < n && s[i] >= '0' && s[i] <= '9' {
+			i++
+			expDigits++
+		}
+		if expDigits == 0 {
+			return false
+		}
+	}
+
+	return i == n
+}
+
+func main() {
+	fmt.Println(solve("0"))
+}

@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func triangleType(A int, B int, C int) string {
+	if A == B && B == C {
+		return "Teng tomonli"
+	}
+	if A == B || B == C || A == C {
+		return "Teng yonli"
+	}
+	return "Turli tomonli"
+}
+
+func main() {
+	fmt.Println(triangleType(5, 5, 5))
+}

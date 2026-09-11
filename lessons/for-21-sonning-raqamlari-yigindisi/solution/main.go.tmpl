@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func digitSum(N int, nums []int) string {
+	result := ""
+	for i := 0; i < N && i < len(nums); i++ {
+		n := nums[i]
+		if n < 0 {
+			n = -n
+		}
+		sum := 0
+		for n > 0 {
+			sum += n % 10
+			n /= 10
+		}
+		if i > 0 {
+			result += ", "
+		}
+		result += strconv.Itoa(sum)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(digitSum(3, []int{123, 456, 789}))
+}

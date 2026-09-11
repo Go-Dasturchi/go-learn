@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func minAndMaxN(N int, nums []int) string {
+	max, min := nums[0], nums[0]
+	for i := 1; i < N && i < len(nums); i++ {
+		if nums[i] > max {
+			max = nums[i]
+		}
+		if nums[i] < min {
+			min = nums[i]
+		}
+	}
+	return fmt.Sprintf("max=%d, min=%d", max, min)
+}
+
+func main() {
+	fmt.Println(minAndMaxN(5, []int{3, 7, 2, 9, 1}))
+}

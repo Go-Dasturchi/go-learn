@@ -1,0 +1,78 @@
+package main
+
+import (
+	"container/heap"
+	"fmt"
+)
+
+type cellItem struct {
+	height, row, col int
+}
+
+type cellHeap []cellItem
+
+func (h cellHeap) Len() int            { return len(h) }
+func (h cellHeap) Less(i, j int) bool  { return h[i].height < h[j].height }
+func (h cellHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
+func (h *cellHeap) Push(x interface{}) { *h = append(*h, x.(cellItem)) }
+func (h *cellHeap) Pop() interface{} {
+	old := *h
+	n := len(old)
+	item := old[n-1]
+	*h = old[:n-1]
+	return item
+}
+
+func solve(heightMap [][]int) int {
+	rows := len(heightMap)
+	if rows < 3 {
+		return 0
+	}
+	cols := len(heightMap[0])
+	if cols < 3 {
+		return 0
+	}
+
+	visited := make([][]bool, rows)
+	for i := range visited {
+		visited[i] = make([]bool, cols)
+	}
+
+	h := &cellHeap{}
+	heap.Init(h)
+
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			if i == 0 || i == rows-1 || j == 0 || j == cols-1 {
+				heap.Push(h, cellItem{height: heightMap[i][j], row: i, col: j})
+				visited[i][j] = true
+			}
+		}
+	}
+
+	dirs := [4][2]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}
+	water := 0
+
+	for h.Len() > 0 {
+		cell := heap.Pop(h).(cellItem)
+		for _, d := range dirs {
+			nr, nc := cell.row+d[0], cell.col+d[1]
+			if nr < 0 || nr >= rows || nc < 0 || nc >= cols || visited[nr][nc] {
+				continue
+			}
+			visited[nr][nc] = true
+			if heightMap[nr][nc] < cell.height {
+				water += cell.height - heightMap[nr][nc]
+				heap.Push(h, cellItem{height: cell.height, row: nr, col: nc})
+			} else {
+				heap.Push(h, cellItem{height: heightMap[nr][nc], row: nr, col: nc})
+			}
+		}
+	}
+
+	return water
+}
+
+func main() {
+	fmt.Println(solve([][]int{{1, 4, 3, 1, 3, 2}, {3, 2, 1, 3, 2, 4}, {2, 3, 3, 2, 3, 1}}))
+}

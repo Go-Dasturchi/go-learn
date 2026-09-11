@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+// mosKeladimi yosh kamida 18 va ball kamida 60 bo'lsa true qaytaradi.
+func mosKeladimi(yosh, ball int) bool {
+	return yosh >= 18 && ball >= 60
+}
+
+func main() {
+	fmt.Println(mosKeladimi(20, 70))
+	fmt.Println(mosKeladimi(16, 90))
+}

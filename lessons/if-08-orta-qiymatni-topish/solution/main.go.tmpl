@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func middleValue(A int, B int, C int) int {
+	if (A >= B && A <= C) || (A >= C && A <= B) {
+		return A
+	}
+	if (B >= A && B <= C) || (B >= C && B <= A) {
+		return B
+	}
+	return C
+}
+
+func main() {
+	fmt.Println(middleValue(5, 3, 7))
+}

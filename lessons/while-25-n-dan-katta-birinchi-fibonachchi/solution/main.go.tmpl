@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func nextFibGreaterN(N int) int {
+	a, b := 1, 1
+	for b <= N {
+		a, b = b, a+b
+	}
+	return b
+}
+
+func main() {
+	fmt.Println(nextFibGreaterN(10))
+}

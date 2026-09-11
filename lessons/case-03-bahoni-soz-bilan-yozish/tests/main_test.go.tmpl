@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGradeToWordCase1(t *testing.T) {
+	got := gradeToWord(1)
+	want := "yomon"
+	if got != want {
+		t.Errorf("gradeToWord(K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGradeToWordCase2(t *testing.T) {
+	got := gradeToWord(3)
+	want := "qoniqarli"
+	if got != want {
+		t.Errorf("gradeToWord(K=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGradeToWordCase3(t *testing.T) {
+	got := gradeToWord(5)
+	want := "a'lo"
+	if got != want {
+		t.Errorf("gradeToWord(K=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

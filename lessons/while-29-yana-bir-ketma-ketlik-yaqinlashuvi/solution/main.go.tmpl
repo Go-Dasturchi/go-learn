@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func anotherSequence(eps float64) string {
+	aPrev2 := 1.0
+	aPrev1 := 2.0
+	k := 2
+	for {
+		next := (aPrev2 + 2*aPrev1) / 3
+		k++
+		if math.Abs(next-aPrev1) < eps {
+			return fmt.Sprintf("K=%d, A%d=%.6f, A%d=%.6f", k, k-1, aPrev1, k, next)
+		}
+		aPrev2, aPrev1 = aPrev1, next
+	}
+}
+
+func main() {
+	fmt.Println(anotherSequence(0.1))
+}

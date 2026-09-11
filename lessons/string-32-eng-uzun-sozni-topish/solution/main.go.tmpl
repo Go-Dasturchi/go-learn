@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(s string) string {
+	words := strings.Fields(s)
+	longest := ""
+	for _, w := range words {
+		if len(w) > len(longest) {
+			longest = w
+		}
+	}
+	return longest
+}
+
+func main() {
+	fmt.Println(solve("Hello World Programming"))
+}

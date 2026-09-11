@@ -1,0 +1,78 @@
+package main
+
+import "fmt"
+
+const nullMarker = -9999
+
+type treeNode struct {
+	Val   int
+	Left  *treeNode
+	Right *treeNode
+}
+
+func buildTree(nodes []int) *treeNode {
+	if len(nodes) == 0 || nodes[0] == nullMarker {
+		return nil
+	}
+	root := &treeNode{Val: nodes[0]}
+	queue := []*treeNode{root}
+	idx := 1
+	for idx < len(nodes) && len(queue) > 0 {
+		cur := queue[0]
+		queue = queue[1:]
+		if idx < len(nodes) {
+			v := nodes[idx]
+			idx++
+			if v != nullMarker {
+				cur.Left = &treeNode{Val: v}
+				queue = append(queue, cur.Left)
+			}
+		}
+		if idx < len(nodes) {
+			v := nodes[idx]
+			idx++
+			if v != nullMarker {
+				cur.Right = &treeNode{Val: v}
+				queue = append(queue, cur.Right)
+			}
+		}
+	}
+	return root
+}
+
+func solve(nodes []int) int {
+	root := buildTree(nodes)
+	best := nodes[0]
+	var maxGain func(node *treeNode) int
+	maxGain = func(node *treeNode) int {
+		if node == nil {
+			return 0
+		}
+		leftGain := maxGain(node.Left)
+		if leftGain < 0 {
+			leftGain = 0
+		}
+		rightGain := maxGain(node.Right)
+		if rightGain < 0 {
+			rightGain = 0
+		}
+		priceNewPath := node.Val + leftGain + rightGain
+		if priceNewPath > best {
+			best = priceNewPath
+		}
+		return node.Val + max(leftGain, rightGain)
+	}
+	maxGain(root)
+	return best
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	fmt.Println(solve([]int{-10, 9, 20, -9999, -9999, 15, 7}))
+}

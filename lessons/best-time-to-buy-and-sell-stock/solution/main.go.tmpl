@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(prices []int) int {
+	if len(prices) == 0 {
+		return 0
+	}
+	minPrice := prices[0]
+	maxProfit := 0
+	for _, p := range prices {
+		if p < minPrice {
+			minPrice = p
+		} else if p-minPrice > maxProfit {
+			maxProfit = p - minPrice
+		}
+	}
+	return maxProfit
+}
+
+func main() {
+	fmt.Println(solve([]int{7, 1, 5, 3, 6, 4}))
+}

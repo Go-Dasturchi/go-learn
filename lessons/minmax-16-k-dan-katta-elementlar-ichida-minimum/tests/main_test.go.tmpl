@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinGreaterThanKCase1(t *testing.T) {
+	got := minGreaterThanK(6, 10, []int{3, 15, 7, 20, 5, 12})
+	want := 12
+	if got != want {
+		t.Errorf("minGreaterThanK(N=6, K=10, nums=[3, 15, 7, 20, 5, 12]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinGreaterThanKCase2(t *testing.T) {
+	got := minGreaterThanK(5, 5, []int{6, 7, 8, 9, 10})
+	want := 6
+	if got != want {
+		t.Errorf("minGreaterThanK(N=5, K=5, nums=[6, 7, 8, 9, 10]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinGreaterThanKCase3(t *testing.T) {
+	got := minGreaterThanK(4, 25, []int{5, 10, 15, 20})
+	want := 0
+	if got != want {
+		t.Errorf("minGreaterThanK(N=4, K=25, nums=[5, 10, 15, 20]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

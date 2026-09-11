@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinMaxPosNegCase1(t *testing.T) {
+	got := minMaxPosNeg(6, []int{3, -8, 2, -9, 10, -4})
+	want := "minPos=2, maxNeg=-4"
+	if got != want {
+		t.Errorf("minMaxPosNeg(N=6, nums=[3, -8, 2, -9, 10, -4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinMaxPosNegCase2(t *testing.T) {
+	got := minMaxPosNeg(5, []int{-1, -5, 10, -2, 5})
+	want := "minPos=5, maxNeg=-1"
+	if got != want {
+		t.Errorf("minMaxPosNeg(N=5, nums=[-1, -5, 10, -2, 5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinMaxPosNegCase3(t *testing.T) {
+	got := minMaxPosNeg(4, []int{1, 2, 3, 4})
+	want := "minPos=1, maxNeg=yoq"
+	if got != want {
+		t.Errorf("minMaxPosNeg(N=4, nums=[1, 2, 3, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

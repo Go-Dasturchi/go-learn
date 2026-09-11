@@ -1,0 +1,89 @@
+package main
+
+import "fmt"
+
+func solve(password string) int {
+	n := len(password)
+
+	hasLower, hasUpper, hasDigit := false, false, false
+	for i := 0; i < n; i++ {
+		c := password[i]
+		switch {
+		case c >= 'a' && c <= 'z':
+			hasLower = true
+		case c >= 'A' && c <= 'Z':
+			hasUpper = true
+		case c >= '0' && c <= '9':
+			hasDigit = true
+		}
+	}
+	missingTypes := 0
+	if !hasLower {
+		missingTypes++
+	}
+	if !hasUpper {
+		missingTypes++
+	}
+	if !hasDigit {
+		missingTypes++
+	}
+
+	// Find repeating sequences of length >= 3.
+	replaces := 0
+	oneCount := 0
+	twoCount := 0
+	i := 0
+	for i < n {
+		j := i
+		for j < n && password[j] == password[i] {
+			j++
+		}
+		length := j - i
+		if length >= 3 {
+			replaces += length / 3
+			if length%3 == 0 {
+				oneCount++
+			} else if length%3 == 1 {
+				twoCount++
+			}
+		}
+		i = j
+	}
+
+	if n < 6 {
+		need := 6 - n
+		if missingTypes > need {
+			return missingTypes
+		}
+		return need
+	} else if n <= 20 {
+		if replaces < missingTypes {
+			return missingTypes
+		}
+		return replaces
+	}
+
+	// n > 20: must delete n-20 characters.
+	deletes := n - 20
+
+	if deletes < oneCount {
+		replaces -= deletes
+	} else if deletes < oneCount+twoCount*2 {
+		replaces -= oneCount
+		replaces -= (deletes - oneCount) / 2
+	} else {
+		replaces -= oneCount + twoCount
+		remaining := deletes - oneCount - twoCount*2
+		replaces -= remaining / 3
+	}
+
+	if replaces < missingTypes {
+		replaces = missingTypes
+	}
+
+	return deletes + replaces
+}
+
+func main() {
+	fmt.Println(solve("a"))
+}

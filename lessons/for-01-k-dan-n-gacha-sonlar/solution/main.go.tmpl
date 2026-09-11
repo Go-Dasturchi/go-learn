@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func rangeKtoN(K int, N int) string {
+	result := ""
+	for i := K; i <= N; i++ {
+		if i > K {
+			result += " "
+		}
+		result += strconv.Itoa(i)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(rangeKtoN(3, 7))
+}

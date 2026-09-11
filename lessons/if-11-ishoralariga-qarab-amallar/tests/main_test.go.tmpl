@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSignActionCase1(t *testing.T) {
+	got := signAction(3, 5)
+	want := 15
+	if got != want {
+		t.Errorf("signAction(A=3, B=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSignActionCase2(t *testing.T) {
+	got := signAction(-2, -4)
+	want := 8
+	if got != want {
+		t.Errorf("signAction(A=-2, B=-4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSignActionCase3(t *testing.T) {
+	got := signAction(3, -5)
+	want := -2
+	if got != want {
+		t.Errorf("signAction(A=3, B=-5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

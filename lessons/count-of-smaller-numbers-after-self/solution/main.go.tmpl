@@ -1,0 +1,54 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) []int {
+	n := len(nums)
+	counts := make([]int, n)
+	indices := make([]int, n)
+	for i := range indices {
+		indices[i] = i
+	}
+
+	var mergeSort func(lo, hi int)
+	mergeSort = func(lo, hi int) {
+		if hi-lo <= 1 {
+			return
+		}
+		mid := (lo + hi) / 2
+		mergeSort(lo, mid)
+		mergeSort(mid, hi)
+
+		merged := make([]int, 0, hi-lo)
+		i, j := lo, mid
+		rightCount := 0
+		for i < mid && j < hi {
+			if nums[indices[j]] < nums[indices[i]] {
+				rightCount++
+				merged = append(merged, indices[j])
+				j++
+			} else {
+				counts[indices[i]] += rightCount
+				merged = append(merged, indices[i])
+				i++
+			}
+		}
+		for i < mid {
+			counts[indices[i]] += rightCount
+			merged = append(merged, indices[i])
+			i++
+		}
+		for j < hi {
+			merged = append(merged, indices[j])
+			j++
+		}
+		copy(indices[lo:hi], merged)
+	}
+
+	mergeSort(0, n)
+	return counts
+}
+
+func main() {
+	fmt.Println(solve([]int{5, 2, 6, 1}))
+}

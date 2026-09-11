@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestToMetersCase1(t *testing.T) {
+	got := toMeters(250)
+	want := 2
+	if got != want {
+		t.Errorf("toMeters(L=250):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToMetersCase2(t *testing.T) {
+	got := toMeters(780)
+	want := 7
+	if got != want {
+		t.Errorf("toMeters(L=780):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToMetersCase3(t *testing.T) {
+	got := toMeters(99)
+	want := 0
+	if got != want {
+		t.Errorf("toMeters(L=99):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

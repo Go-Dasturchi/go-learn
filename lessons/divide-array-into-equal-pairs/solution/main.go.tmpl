@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) bool {
+	count := make(map[int]int)
+	for _, n := range nums {
+		count[n]++
+	}
+	for _, c := range count {
+		if c%2 != 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 2, 3, 2, 2, 2}))
+}

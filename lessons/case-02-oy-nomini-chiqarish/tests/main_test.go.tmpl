@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMonthNameCase1(t *testing.T) {
+	got := monthName(1)
+	want := "Yanvar"
+	if got != want {
+		t.Errorf("monthName(K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMonthNameCase2(t *testing.T) {
+	got := monthName(6)
+	want := "Iyun"
+	if got != want {
+		t.Errorf("monthName(K=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMonthNameCase3(t *testing.T) {
+	got := monthName(12)
+	want := "Dekabr"
+	if got != want {
+		t.Errorf("monthName(K=12):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

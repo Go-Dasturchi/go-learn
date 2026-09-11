@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestShapeAreaCase1(t *testing.T) {
+	got := shapeArea(1, 6, 4, 0)
+	want := 12
+	if got != want {
+		t.Errorf("shapeArea(N=1, a=6, h=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestShapeAreaCase2(t *testing.T) {
+	got := shapeArea(2, 5, 0, 0)
+	want := 25
+	if got != want {
+		t.Errorf("shapeArea(N=2, a=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestShapeAreaCase3(t *testing.T) {
+	got := shapeArea(3, 4, 0, 6)
+	want := 24
+	if got != want {
+		t.Errorf("shapeArea(N=3, a=4, b=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

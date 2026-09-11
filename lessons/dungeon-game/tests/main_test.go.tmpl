@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([][]int{[]int{-2, -3, 3}, []int{-5, -10, 1}, []int{10, 30, -5}})
+	var want int = 7
+	if got != want {
+		t.Errorf("solve(dungeon = [[-2,-3,3],[-5,-10,1],[10,30,-5]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([][]int{[]int{0}})
+	var want int = 1
+	if got != want {
+		t.Errorf("solve(dungeon = [[0]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve([][]int{[]int{100}})
+	var want int = 1
+	if got != want {
+		t.Errorf("solve(dungeon = [[100]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

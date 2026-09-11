@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestLocalMaxCountCase1(t *testing.T) {
+	got := localMaxCount(7, []int{5, 2, 8, 1, 9, 3, 7})
+	want := 3
+	if got != want {
+		t.Errorf("localMaxCount(N=7, nums=[5, 2, 8, 1, 9, 3, 7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestLocalMaxCountCase2(t *testing.T) {
+	got := localMaxCount(5, []int{1, 3, 2, 4, 3})
+	want := 2
+	if got != want {
+		t.Errorf("localMaxCount(N=5, nums=[1, 3, 2, 4, 3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestLocalMaxCountCase3(t *testing.T) {
+	got := localMaxCount(6, []int{6, 5, 4, 3, 2, 1})
+	want := 0
+	if got != want {
+		t.Errorf("localMaxCount(N=6, nums=[6, 5, 4, 3, 2, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

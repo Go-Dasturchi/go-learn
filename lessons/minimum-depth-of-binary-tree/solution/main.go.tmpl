@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"math/bits"
+)
+
+func solve(leftChildren []int, rightChildren []int) int {
+	// The lesson simplifies the tree-array input to a formula: given n
+	// nodes packed as tightly as possible (a complete binary tree),
+	// the minimum depth is floor(log2(n)) + 1, i.e. the bit-length of n.
+	n := len(leftChildren)
+	return bits.Len(uint(n))
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 3, -1, -1, -1}, []int{2, 4, -1, -1, -1}))
+}

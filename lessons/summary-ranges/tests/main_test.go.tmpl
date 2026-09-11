@@ -1,0 +1,21 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([]int{0, 1, 2, 4, 5, 7})
+	var want []string = []string{"0->2", "4->5", "7"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(nums = [0,1,2,4,5,7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([]int{0, 2, 3, 4, 6, 8, 9})
+	var want []string = []string{"0", "2->4", "6", "8->9"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(nums = [0,2,3,4,6,8,9]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

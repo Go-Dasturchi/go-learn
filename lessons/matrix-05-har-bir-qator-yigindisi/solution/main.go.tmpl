@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func rowSums(M int, N int, matrix [][]int) string {
+	parts := make([]string, M)
+	for i := 0; i < M; i++ {
+		sum := 0
+		for j := 0; j < N; j++ {
+			sum += matrix[i][j]
+		}
+		parts[i] = strconv.Itoa(sum)
+	}
+	return strings.Join(parts, ", ")
+}
+
+func main() {
+	fmt.Println(rowSums(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}}))
+}

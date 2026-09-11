@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestRemainingSecondsCase1(t *testing.T) {
+	got := remainingSeconds(150)
+	want := 30
+	if got != want {
+		t.Errorf("remainingSeconds(N=150):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRemainingSecondsCase2(t *testing.T) {
+	got := remainingSeconds(3661)
+	want := 1
+	if got != want {
+		t.Errorf("remainingSeconds(N=3661):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRemainingSecondsCase3(t *testing.T) {
+	got := remainingSeconds(120)
+	want := 0
+	if got != want {
+		t.Errorf("remainingSeconds(N=120):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

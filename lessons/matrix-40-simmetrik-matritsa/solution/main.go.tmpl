@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func isSymmetric(N int, matrix [][]int) bool {
+	for i := 0; i < N; i++ {
+		for j := 0; j < N; j++ {
+			if matrix[i][j] != matrix[j][i] {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(isSymmetric(3, [][]int{[]int{1, 2, 3}, []int{2, 4, 5}, []int{3, 5, 6}}))
+}

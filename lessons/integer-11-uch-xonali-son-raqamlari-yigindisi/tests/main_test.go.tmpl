@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSumAndProduct3Case1(t *testing.T) {
+	got := sumAndProduct3(123)
+	want := "6, 6"
+	if got != want {
+		t.Errorf("sumAndProduct3(n=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumAndProduct3Case2(t *testing.T) {
+	got := sumAndProduct3(456)
+	want := "15, 120"
+	if got != want {
+		t.Errorf("sumAndProduct3(n=456):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumAndProduct3Case3(t *testing.T) {
+	got := sumAndProduct3(999)
+	want := "27, 729"
+	if got != want {
+		t.Errorf("sumAndProduct3(n=999):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

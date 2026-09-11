@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func bubbleSort(N int, arr []int) []int {
+	natija := make([]int, N)
+	copy(natija, arr)
+	for i := 0; i < N-1; i++ {
+		for j := 0; j < N-1-i; j++ {
+			if natija[j] > natija[j+1] {
+				natija[j], natija[j+1] = natija[j+1], natija[j]
+			}
+		}
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(bubbleSort(5, []int{5, 2, 8, 1, 9}))
+}

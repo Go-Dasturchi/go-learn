@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(people [][]int) [][]int {
+	sorted := make([][]int, len(people))
+	copy(sorted, people)
+	sort.Slice(sorted, func(i, j int) bool {
+		if sorted[i][0] != sorted[j][0] {
+			return sorted[i][0] > sorted[j][0]
+		}
+		return sorted[i][1] < sorted[j][1]
+	})
+	res := [][]int{}
+	for _, p := range sorted {
+		k := p[1]
+		res = append(res, nil)
+		copy(res[k+1:], res[k:])
+		res[k] = p
+	}
+	return res
+}
+
+func main() {
+	fmt.Println(solve([][]int{[]int{7, 0}, []int{4, 4}, []int{7, 1}, []int{5, 0}, []int{6, 1}, []int{5, 2}}))
+}

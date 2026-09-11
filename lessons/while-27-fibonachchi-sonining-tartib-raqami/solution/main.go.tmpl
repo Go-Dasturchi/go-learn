@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func fibIndex(N int) int {
+	a, b := 1, 1
+	k := 2 // b already holds F2 at the start
+	for b != N {
+		a, b = b, a+b
+		k++
+	}
+	return k
+}
+
+func main() {
+	fmt.Println(fibIndex(8))
+}

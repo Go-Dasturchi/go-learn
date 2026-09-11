@@ -1,0 +1,3022 @@
+[
+  {
+    "id": "01-hello",
+    "title": "Hello World",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "02-variables",
+    "title": "Variables",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "03-types",
+    "title": "Types",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "04-if-else",
+    "title": "If / Else",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "05-for",
+    "title": "For Loop",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "06-functions",
+    "title": "Functions",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "07-constants",
+    "title": "Constants",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "08-strings",
+    "title": "Strings",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "09-numbers",
+    "title": "Numbers",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "10-boolean",
+    "title": "Boolean",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "11-operators",
+    "title": "Operators",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "12-type-conversion",
+    "title": "Type Conversion",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "13-switch",
+    "title": "Switch",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "14-nested-loops",
+    "title": "Nested Loops",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "15-multiple-return-values",
+    "title": "Multiple Return Values",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "16-named-return-values",
+    "title": "Named Return Values",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "17-defer",
+    "title": "Defer",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "18-scope",
+    "title": "Scope",
+    "category": "Fundamentals"
+  },
+  {
+    "id": "01-arrays",
+    "title": "Arrays",
+    "category": "Data Structures"
+  },
+  {
+    "id": "02-slices",
+    "title": "Slices",
+    "category": "Data Structures"
+  },
+  {
+    "id": "03-slice-append",
+    "title": "Slice Append",
+    "category": "Data Structures"
+  },
+  {
+    "id": "04-slice-indexing",
+    "title": "Slice Indexing",
+    "category": "Data Structures"
+  },
+  {
+    "id": "05-slice-copy",
+    "title": "Slice Copy",
+    "category": "Data Structures"
+  },
+  {
+    "id": "06-maps",
+    "title": "Maps",
+    "category": "Data Structures"
+  },
+  {
+    "id": "07-structs",
+    "title": "Structs",
+    "category": "Data Structures"
+  },
+  {
+    "id": "08-nested-structs",
+    "title": "Nested Structs",
+    "category": "Data Structures"
+  },
+  {
+    "id": "09-pointers",
+    "title": "Pointers",
+    "category": "Data Structures"
+  },
+  {
+    "id": "10-methods",
+    "title": "Methods",
+    "category": "Data Structures"
+  },
+  {
+    "id": "11-interfaces",
+    "title": "Interfaces",
+    "category": "Data Structures"
+  },
+  {
+    "id": "12-custom-types",
+    "title": "Custom Types",
+    "category": "Data Structures"
+  },
+  {
+    "id": "begin-01-kvadrat-perimetri",
+    "title": "Kvadrat perimetri",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-02-kvadrat-yuzi",
+    "title": "Kvadrat yuzi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-03-tortburchak",
+    "title": "To'g'ri to'rtburchak perimetri",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-04-aylana-uzunligi",
+    "title": "Aylana uzunligi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-05-kub",
+    "title": "Kub hajmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-07-doira",
+    "title": "Doira yuzi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-08-orta-arifmetik",
+    "title": "O'rta arifmetik",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-09-geometrik-orta",
+    "title": "Geometrik o'rta",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-12-uchburchak",
+    "title": "To'g'ri burchakli uchburchak",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-16-nuqtalar-masofasi",
+    "title": "Ikki nuqta orasidagi masofa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-20-tekislik-masofa",
+    "title": "Tekislikda ikki nuqta orasidagi masofa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-21-uchburchak-geron",
+    "title": "Uchburchak perimetri va yuzi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-25-funktsiya",
+    "title": "Funktsiya qiymatini hisoblash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "begin-38-chiziqli-tenglama",
+    "title": "Chiziqli tenglama yechish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Begin"
+  },
+  {
+    "id": "integer-01-metrlarni-santimetrlarga-aylantirish",
+    "title": "Metrlarni santimetrlarga aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-02-kilogrammlarni-tonnalarga-aylantirish",
+    "title": "Kilogrammlarni tonnalarga aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-03-fayl-hajmi",
+    "title": "Fayl hajmini kilobaytlarga aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-07-raqamlar-yigindisi-va-kopaytmasi",
+    "title": "Raqamlar yigindisi va ko'paytmasi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-08-raqamlarni-almashtirish",
+    "title": "Raqamlarni almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-09-uch-xonali-sonning-birinchi-raqami",
+    "title": "Uch xonali sonning birinchi raqami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-11-uch-xonali-son-raqamlari-yigindisi",
+    "title": "Uch xonali son raqamlari yigindisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-12-sonni-teskari-oqish",
+    "title": "Sonni teskari oqish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-13-onliklar-va-yuzliklar-ornini-almashtirish",
+    "title": "Onliklar va yuzliklar o'rnini almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-14-birliklar-va-onliklar-ornini-almashtirish",
+    "title": "Birliklar va onliklar o'rnini almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-17-yuzliklar-raqamini-topish",
+    "title": "Yuzliklar raqamini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-18-mingliklar-raqamini-topish",
+    "title": "Mingliklar raqamini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-19-kun-boshidan-otgan-daqiqalar",
+    "title": "Kun boshidan otgan daqiqalar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-20-kun-boshidan-otgan-soatlar",
+    "title": "Kun boshidan otgan soatlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-21-oxirgi-daqiqadan-otgan-sekundlar",
+    "title": "Oxirgi daqiqadan otgan sekundlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-22-oxirgi-soatdan-otgan-sekundlar",
+    "title": "Oxirgi soatdan otgan sekundlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-23-oxirgi-soatdan-otgan-daqiqalar",
+    "title": "Oxirgi soatdan otgan daqiqalar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-29-tortburchakka-kvadratlar-joylashtirish",
+    "title": "Tortburchakka kvadratlar joylashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "integer-30-asrni-aniqlash",
+    "title": "Asrni aniqlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Integer"
+  },
+  {
+    "id": "boolean-01-musbat-sonmi",
+    "title": "Musbat sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-02-toq-sonmi",
+    "title": "Toq sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-03-juft-sonmi",
+    "title": "Juft sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-04-ikki-xonali-sonmi",
+    "title": "Ikki xonali sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-05-uch-xonali-sonmi",
+    "title": "Uch xonali sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-06-oraliqda-joylashganmi-ikkala-uchini-qoshib",
+    "title": "Oraliqda joylashganmi (ikkala uchini qo'shib)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-07-oraliqda-joylashganmi-uchlarni-qoshmasdan",
+    "title": "Oraliqda joylashganmi (uchlarni qo'shmasdan)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-10-kamida-bittasi-toq",
+    "title": "Kamida bittasi toq",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-11-faqat-bittasi-toq",
+    "title": "Faqat bittasi toq",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-12-bir-xil-juftlik",
+    "title": "Bir xil juftlik",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-13-kamida-bittasi-musbat",
+    "title": "Kamida bittasi musbat",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-14-faqat-bittasi-musbat",
+    "title": "Faqat bittasi musbat",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-15-ikkitasi-musbat",
+    "title": "Ikkitasi musbat",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-16-raqamlar-osib-boradi",
+    "title": "Raqamlar o'sib boradi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-17-raqamlar-kamayib-boradi",
+    "title": "Raqamlar kamayib boradi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-20-uchburchak-yasash-mumkinmi",
+    "title": "Uchburchak yasash mumkinmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-21-toq-raqam-bormi",
+    "title": "Toq raqam bormi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-22-hamma-raqamlar-turlicha",
+    "title": "Hamma raqamlar turlicha",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-23-osuvchi-tartibdami",
+    "title": "O'suvchi tartibdami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-24-kamayuvchi-tartibdami",
+    "title": "Kamayuvchi tartibdami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "boolean-25-palindrom-sonmi",
+    "title": "Palindrom sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Boolean"
+  },
+  {
+    "id": "if-01-sonni-oshirish-yoki-kamaytirish",
+    "title": "Sonni oshirish yoki kamaytirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-02-sonning-ishorasini-aniqlash",
+    "title": "Sonning ishorasini aniqlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-04-ikkita-sondan-kattasini-topish",
+    "title": "Ikkita sondan kattasini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-05-qaysi-chorakda",
+    "title": "Qaysi chorakda",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-07-eng-katta-va-eng-kichikni-topish",
+    "title": "Eng katta va eng kichikni topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-08-orta-qiymatni-topish",
+    "title": "O'rta qiymatni topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-09-ikki-nuqta-orasidagi-yaqinroq-nuqta",
+    "title": "Ikki nuqta orasidagi yaqinroq nuqta",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-10-juft-toqligiga-qarab-amallar",
+    "title": "Juft-toqligiga qarab amallar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-11-ishoralariga-qarab-amallar",
+    "title": "Ishoralariga qarab amallar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-15-uchburchak-turini-aniqlash",
+    "title": "Uchburchak turini aniqlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-20-kvadrat-tenglama-yechish",
+    "title": "Kvadrat tenglama yechish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-23-togri-tortburchak-ichidami",
+    "title": "To'g'ri to'rtburchak ichidami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "if-24-yil-va-oy-boyicha-kunlar-soni",
+    "title": "Yil va oy bo'yicha kunlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "If"
+  },
+  {
+    "id": "case-01-hafta-kuni-nomini-chiqarish",
+    "title": "Hafta kuni nomini chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-02-oy-nomini-chiqarish",
+    "title": "Oy nomini chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-03-bahoni-soz-bilan-yozish",
+    "title": "Bahoni so'z bilan yozish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-04-arifmetik-amallar",
+    "title": "Arifmetik amallar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-05-olchov-birligini-aylantirish",
+    "title": "O'lchov birligini aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-06-massa-birligini-aylantirish",
+    "title": "Massa birligini aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-07-faslni-aniqlash",
+    "title": "Faslni aniqlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-08-oydagi-kunlar-soni",
+    "title": "Oydagi kunlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-09-oldingi-oy",
+    "title": "Oldingi oy",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-10-geometrik-shakl-yuzi",
+    "title": "Geometrik shakl yuzi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-11-yonalishni-aniqlash",
+    "title": "Yo'nalishni aniqlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-14-shaxmat-figurasi-yurishini-tekshirish",
+    "title": "Shaxmat figurasi yurishini tekshirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "case-15-onli-son-sistemalarini-aylantirish",
+    "title": "O'nli son sistemalarini aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Case"
+  },
+  {
+    "id": "for-01-k-dan-n-gacha-sonlar",
+    "title": "K dan N gacha sonlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-02-n-dan-k-gacha-kamayish-tartibida",
+    "title": "N dan K gacha kamayish tartibida",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-03-narx-va-miqdor",
+    "title": "Narx va miqdor",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-04-teskari-tartibda-narxlar",
+    "title": "Teskari tartibda narxlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-05-non-narxlari",
+    "title": "Non narxlari",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-06-n-ning-barcha-darajalari",
+    "title": "N ning barcha darajalari",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-07-a-ning-k-darajasi",
+    "title": "A ning K darajasi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-08-k-dan-n-gacha-yigindi",
+    "title": "K dan N gacha yig'indi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-09-k-dan-n-gacha-kopaytma",
+    "title": "K dan N gacha ko'paytma",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-10-k-dan-n-gacha-kvadratlar-yigindisi",
+    "title": "K dan N gacha kvadratlar yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-11-n-ta-sonning-yigindisi",
+    "title": "N ta sonning yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-13-n-ta-sonning-ortacha-qiymati",
+    "title": "N ta sonning o'rtacha qiymati",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-14-oraliqda-nechta-son",
+    "title": "Oraliqda nechta son",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-15-musbat-manfiy-va-nol-sonlar",
+    "title": "Musbat, manfiy va nol sonlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-16-eng-katta-va-eng-kichik",
+    "title": "Eng katta va eng kichik",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-17-eng-katta-va-uning-tartibi",
+    "title": "Eng katta va uning tartibi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-18-tub-sonlar-soni",
+    "title": "Tub sonlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-19-faktorial",
+    "title": "Faktorial",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-20-fibonachchi-sonlari",
+    "title": "Fibonachchi sonlari",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "for-21-sonning-raqamlari-yigindisi",
+    "title": "Sonning raqamlari yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "For"
+  },
+  {
+    "id": "while-01-segmentdan-foydalanilmagan-qism",
+    "title": "Segmentdan foydalanilmagan qism",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-02-segmentga-joylashtirish",
+    "title": "Segmentga joylashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-03-butun-bolish-va-qoldiq-qoshish-va-ayirishda",
+    "title": "Butun bo'lish va qoldiq (qo'shish va ayirishda)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-07-kvadrat-ildizdan-kichik-eng-katta-son",
+    "title": "Kvadrat ildizdan kichik eng katta son",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-08-kvadrat-ildizdan-katta-eng-kichik-son",
+    "title": "Kvadrat ildizdan katta eng kichik son",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-11-yigindi-n-dan-katta-boladigan-k",
+    "title": "Yig'indi N dan katta bo'ladigan K",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-12-yigindi-n-dan-kichik-boladigan-k",
+    "title": "Yig'indi N dan kichik bo'ladigan K",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-17-raqamlarni-ongdan-chiqarish",
+    "title": "Raqamlarni o'ngdan chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-18-raqamlar-soni-va-yigindisi",
+    "title": "Raqamlar soni va yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-19-sonni-teskari-oqish",
+    "title": "Sonni teskari o'qish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-20-2-raqami-bormi",
+    "title": "2 raqami bormi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-21-toq-raqam-bormi",
+    "title": "Toq raqam bormi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-22-tub-sonmi",
+    "title": "Tub sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-23-eng-katta-umumiy-boluvchi-ekub",
+    "title": "Eng katta umumiy bo'luvchi (EKUB)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-24-fibonachchi-sonmi",
+    "title": "Fibonachchi sonmi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-25-n-dan-katta-birinchi-fibonachchi",
+    "title": "N dan katta birinchi Fibonachchi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-26-oldingi-va-keyingi-fibonachchi",
+    "title": "Oldingi va keyingi Fibonachchi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-27-fibonachchi-sonining-tartib-raqami",
+    "title": "Fibonachchi sonining tartib raqami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-28-ketma-ketlikning-yaqinlashuvi",
+    "title": "Ketma-ketlikning yaqinlashuvi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-29-yana-bir-ketma-ketlik-yaqinlashuvi",
+    "title": "Yana bir ketma-ketlik yaqinlashuvi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "while-30-kvadratlarni-joylash-kopaytirishsiz",
+    "title": "Kvadratlarni joylash (ko'paytirishsiz)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "While"
+  },
+  {
+    "id": "minmax-01-eng-kichik-elementni-topish",
+    "title": "Eng kichik elementni topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-02-eng-katta-elementni-topish",
+    "title": "Eng katta elementni topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-03-eng-kichik-tartib-raqami",
+    "title": "Eng kichik tartib raqami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-04-eng-katta-tartib-raqami",
+    "title": "Eng katta tartib raqami",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-05-eng-kichik-va-eng-katta-orasidagi-sonlar",
+    "title": "Eng kichik va eng katta orasidagi sonlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-06-ikkinchi-eng-kichik",
+    "title": "Ikkinchi eng kichik",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-07-ikkinchi-eng-katta",
+    "title": "Ikkinchi eng katta",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-10-eng-kichik-va-eng-katta-orin-almashishi",
+    "title": "Eng kichik va eng katta o'rin almashishi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-11-juft-elementlar-ichida-min-va-max",
+    "title": "Juft elementlar ichida min va max",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-12-toq-elementlar-ichida-min-va-max",
+    "title": "Toq elementlar ichida min va max",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-15-k-dan-kichik-elementlar-ichida-maksimum",
+    "title": "K dan kichik elementlar ichida maksimum",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-16-k-dan-katta-elementlar-ichida-minimum",
+    "title": "K dan katta elementlar ichida minimum",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-20-musbat-va-manfiylar-ichida-min-va-max",
+    "title": "Musbat va manfiylar ichida min va max",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-21-eng-yaqin-ikkita-son",
+    "title": "Eng yaqin ikkita son",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-22-eng-uzoq-ikkita-son",
+    "title": "Eng uzoq ikkita son",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-23-local-minimumlar-soni",
+    "title": "Local minimumlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-24-local-maksimumlar-soni",
+    "title": "Local maksimumlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-25-eng-kop-takrorlangan-element",
+    "title": "Eng ko'p takrorlangan element",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-26-minimal-masofa",
+    "title": "Minimal masofa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-27-maksimal-masofa",
+    "title": "Maksimal masofa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "minmax-30-median-topish",
+    "title": "Median topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "MinMax"
+  },
+  {
+    "id": "array-01-massivni-toldirish-va-chiqarish",
+    "title": "Massivni to'ldirish va chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-02-toq-sonlar-massivi",
+    "title": "Toq sonlar massivi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-03-massiv-elementlarini-teskari-tartibda-chiqarish",
+    "title": "Massiv elementlarini teskari tartibda chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-05-juft-indeksli-elementlar",
+    "title": "Juft indeksli elementlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-06-toq-indeksli-elementlar",
+    "title": "Toq indeksli elementlar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-10-k-dan-katta-elementlar-soni",
+    "title": "K dan katta elementlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-12-musbat-va-manfiy-elementlar-soni",
+    "title": "Musbat va manfiy elementlar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-15-massivni-2-ga-kopaytirish",
+    "title": "Massivni 2 ga ko'paytirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-18-eng-katta-va-eng-kichik-indekslarini-almashtirish",
+    "title": "Eng katta va eng kichik indekslarini almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-20-birinchi-va-oxirgi-musbat-indekslari",
+    "title": "Birinchi va oxirgi musbat indekslari",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-25-yigindi-k-ga-teng-bolgan-juftliklar",
+    "title": "Yig'indi K ga teng bo'lgan juftliklar",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-30-massivni-siklik-siljitish",
+    "title": "Massivni siklik siljitish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-35-dublikatlarni-ochirish",
+    "title": "Dublikatlarni o'chirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-40-massivni-teskari-aylantirish",
+    "title": "Massivni teskari aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-45-juft-va-toqlarni-ajratish",
+    "title": "Juft va toqlarni ajratish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-50-massivni-qismlarga-bolish",
+    "title": "Massivni qismlarga bo'lish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-55-eng-uzun-osuvchi-ketma-ketlik",
+    "title": "Eng uzun o'suvchi ketma-ketlik",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-60-massivni-tartiblamasdan-median",
+    "title": "Massivni tartiblamasdan median",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-65-bubble-sort",
+    "title": "Bubble Sort",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-70-selection-sort",
+    "title": "Selection Sort",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "array-75-binary-search",
+    "title": "Binary Search",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Array"
+  },
+  {
+    "id": "matrix-01-matritsa-yaratish-va-chiqarish",
+    "title": "Matritsa yaratish va chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-02-matritsa-yigindisi",
+    "title": "Matritsa yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-03-diagonal-elementlar-yigindisi",
+    "title": "Diagonal elementlar yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-05-har-bir-qator-yigindisi",
+    "title": "Har bir qator yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-06-har-bir-ustun-yigindisi",
+    "title": "Har bir ustun yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-10-eng-katta-element-va-joylashuvi",
+    "title": "Eng katta element va joylashuvi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-12-har-bir-qatorda-maksimum",
+    "title": "Har bir qatorda maksimum",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-15-matritsani-transponirlash",
+    "title": "Matritsani transponirlash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-20-ikki-matritsa-yigindisi",
+    "title": "Ikki matritsa yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-25-ikki-matritsa-kopaytmasi",
+    "title": "Ikki matritsa ko'paytmasi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-30-qatorlarni-almashtirish",
+    "title": "Qatorlarni almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-35-ustunlarni-almashtirish",
+    "title": "Ustunlarni almashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-40-simmetrik-matritsa",
+    "title": "Simmetrik matritsa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-45-spiralga-chiqarish",
+    "title": "Spiralga chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-50-diagonal-boylab-aylantirish",
+    "title": "Diagonal bo'ylab aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-55-zigzag-tartibda-chiqarish",
+    "title": "Zigzag tartibda chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-60-diagonal-qismlarning-yigindisi",
+    "title": "Diagonal qismlarning yig'indisi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-65-saddle-point-topish",
+    "title": "Saddle point topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-70-magic-square-tekshirish",
+    "title": "Magic Square tekshirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-75-eng-katta-pastki-kvadrat-matritsa",
+    "title": "Eng katta pastki kvadrat matritsa",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "matrix-80-matritsa-determinantini-hisoblash",
+    "title": "Matritsa determinantini hisoblash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "Matrix"
+  },
+  {
+    "id": "string-01-satr-uzunligini-topish",
+    "title": "Satr uzunligini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-02-har-bir-belgini-alohida-chiqarish",
+    "title": "Har bir belgini alohida chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-03-birinchi-va-oxirgi-belgini-chiqarish",
+    "title": "Birinchi va oxirgi belgini chiqarish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-05-satrni-teskari-aylantirish",
+    "title": "Satrni teskari aylantirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-07-bosh-joylar-sonini-topish",
+    "title": "Bo'sh joylar sonini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-10-raqamlar-sonini-topish",
+    "title": "Raqamlar sonini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-12-katta-va-kichik-harflar-soni",
+    "title": "Katta va kichik harflar soni",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-15-palindrom-tekshirish",
+    "title": "Palindrom tekshirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-18-belgini-topish-va-sanash",
+    "title": "Belgini topish va sanash",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-20-sozlar-sonini-topish",
+    "title": "So'zlar sonini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-22-unli-harflar-sonini-topish",
+    "title": "Unli harflar sonini topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-25-ikki-satrni-birlashtirish",
+    "title": "Ikki satrni birlashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-28-pastki-satr-topish",
+    "title": "Pastki satr topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-30-anagram-tekshirish",
+    "title": "Anagram tekshirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-32-eng-uzun-sozni-topish",
+    "title": "Eng uzun so'zni topish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-35-satrni-sozlarga-bolish",
+    "title": "Satrni so'zlarga bo'lish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-38-takrorlanuvchi-belgilarni-ochirish",
+    "title": "Takrorlanuvchi belgilarni o'chirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-40-caesar-cipher-shifrlash",
+    "title": "Caesar cipher (shifrlash)",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-42-sozlarni-teskari-tartibda-joylashtirish",
+    "title": "So'zlarni teskari tartibda joylashtirish",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-45-eng-kop-takrorlangan-belgi",
+    "title": "Eng ko'p takrorlangan belgi",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "string-48-run-length-encoding",
+    "title": "Run-length encoding",
+    "category": "Problems",
+    "group": "Abramyan",
+    "subgroup": "String"
+  },
+  {
+    "id": "add-binary",
+    "title": "Add Binary",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "add-strings",
+    "title": "Add Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "average-salary-excluding-the-minimum-and-maximum-salary",
+    "title": "Average Salary Excluding the Minimum and Maximum Salary",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-matrix-is-x-matrix",
+    "title": "Check if Matrix Is X-Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-the-sentence-is-pangram",
+    "title": "Check if the Sentence Is Pangram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-two-string-arrays-are-equivalent",
+    "title": "Check if Two String Arrays are Equivalent",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "climbing-stairs",
+    "title": "Climbing stairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "contains-duplicate-ii",
+    "title": "Contains Duplicate II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "contains-duplicate",
+    "title": "Contains duplicate",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-asterisks",
+    "title": "Count Asterisks",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-items-matching-a-rule",
+    "title": "Count Items Matching a Rule",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-odd-numbers-in-an-interval-range",
+    "title": "Count Odd Numbers in an Interval Range",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-operations-to-obtain-zero",
+    "title": "Count Operations to Obtain Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-primes",
+    "title": "Count Primes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-the-number-of-consistent-strings",
+    "title": "Count the Number of Consistent Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "counting-bits",
+    "title": "Counting Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "counting-numbers",
+    "title": "Counting Numbers",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "decode-the-message",
+    "title": "Decode the Message",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "defanging-an-ip-address",
+    "title": "Defanging an IP Address",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "design-hashmap",
+    "title": "Design HashMap",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "divide-array-into-equal-pairs",
+    "title": "Divide Array Into Equal Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "excel-sheet-column-number",
+    "title": "Excel Sheet Column Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "excel-sheet-column-title",
+    "title": "Excel Sheet Column Title",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "final-value-of-variable-after-performing-operations",
+    "title": "Final Value of Variable After Performing Operations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-all-numbers-disappeared-in-an-array",
+    "title": "Find All Numbers Disappeared in an Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-center-of-star-graph",
+    "title": "Find Center of Star Graph",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-gcd",
+    "title": "Teapot",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-resultant-array-after-removing-anagrams",
+    "title": "Find Resultant Array After Removing Anagrams",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-the-difference",
+    "title": "Find the Difference",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-the-index-of-the-first-occurrence-in-a-string",
+    "title": "Find the Index of the First Occurrence in a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-bad-version",
+    "title": "First Bad Version",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-letter-to-appear-twice",
+    "title": "First Letter to Appear Twice",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-unique-character-in-a-string",
+    "title": "First Unique Character in a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "fizz-buzz",
+    "title": "Fizz Buzz",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "goal-parser-interpretation",
+    "title": "Goal Parser Interpretation",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "guess-number-higher-or-lower",
+    "title": "Guess Number Higher or Lower",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "hamming-distance",
+    "title": "Hamming Distance",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "happy-number",
+    "title": "Happy Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "how-many-numbers-are-smaller-than-the-current-number",
+    "title": "How Many Numbers Are Smaller Than the Current Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "intersection-of-two-arrays-ii",
+    "title": "Intersection of Two Arrays II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "intersection-of-two-arrays",
+    "title": "Intersection of Two Arrays",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "is-subsequence",
+    "title": "Is Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "isomorphic-strings",
+    "title": "Isomorphic strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "jewels-and-stones",
+    "title": "Jewels and Stones",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "keep-multiplying-found-values-by-two",
+    "title": "Keep Multiplying Found Values by Two",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "kids-with-the-greatest-number-of-candies",
+    "title": "Kids With the Greatest Number of Candies",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "largest-number-at-least-twice-of-others",
+    "title": "Larger Number At Least Twice of Others",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "length-of-last-word",
+    "title": "Length of last word",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "linked-list-cycle",
+    "title": "Linked List Cycle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "longest-common-prefix",
+    "title": "Longest common prefix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "majority-element",
+    "title": "Majority element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "make-array-zero-by-subtracting-equal-amounts",
+    "title": "Make Array Zero by Subtracting Equal Amounts",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "max-consecutive-ones",
+    "title": "Max Consecutive Ones",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "maximum-number-of-words-found-in-sentences",
+    "title": "Maximum Number of Words Found in Sentences",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "merge-sorted-array",
+    "title": "Merge Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-absolute-difference-in-bst",
+    "title": "Minimum Absolute Difference in BST",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-amount-of-time-to-fill-cups",
+    "title": "Minimum Amount of Time to Fill Cups",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-depth-of-binary-tree",
+    "title": "Minimum Depth of Binary Tree",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-value-to-get-positive-step-by-step-sum",
+    "title": "Minimum Value to Get Positive Step by Step Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "missing-number",
+    "title": "Missing number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "move-zeroes",
+    "title": "Move zeroes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "nim-game",
+    "title": "Nim Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-complement",
+    "title": "Number Complement",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-good-pairs",
+    "title": "Number of Good Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-rectangles-that-can-form-the-largest-square",
+    "title": "Number of Rectangles That Can Form The Largest Square",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-steps-to-reduce-a-number-to-zero",
+    "title": "Number of Steps to Reduce a Number to Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "palindrome-number",
+    "title": "Palindrome number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "pascals-triangle",
+    "title": "Pascal's Triangle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "percentage-of-letter-in-string",
+    "title": "Percentage of Letter in String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "plus-one",
+    "title": "Plus one",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "power-of-three",
+    "title": "Power of Three",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "power-of-two",
+    "title": "Power of Two",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "range-sum-query-immutable",
+    "title": "Range Sum Query - Immutable",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "ransom-note",
+    "title": "Ransom Note",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "remove-duplicates-from-sorted-array",
+    "title": "Remove Duplicates from Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "remove-element",
+    "title": "Remove element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-bits",
+    "title": "Reverse Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-vowels-of-a-string",
+    "title": "Reverse Vowels of a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "roman-to-integer",
+    "title": "Roman to Integer",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "search-insert-position",
+    "title": "Search insert position",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "shuffle-the-array",
+    "title": "Shuffle the Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "single-number",
+    "title": "Single number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sort-the-people",
+    "title": "Sort the People",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "split-a-string-in-balanced-strings",
+    "title": "Split a String in Balanced Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sqrt-x",
+    "title": "Sqrt(x)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "strong-password-checker-ii",
+    "title": "Strong Password Checker II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "student-attendance-record-i",
+    "title": "Student Attendance Record I",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sum-of-digits-in-the-minimum-number",
+    "title": "Sum of Digits in the Minimum Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "summary-ranges",
+    "title": "Summary Ranges",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "third-maximum-number",
+    "title": "Third Maximum Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "two-sum",
+    "title": "Two sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "ugly-number",
+    "title": "Ugly Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-anagram",
+    "title": "Valid anagram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-palindrome",
+    "title": "Valid palindrome",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-parentheses",
+    "title": "Valid parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-perfect-square",
+    "title": "Valid Perfect Square",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "word-pattern",
+    "title": "Word Pattern",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "3sum",
+    "title": "3Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "arithmetic-slices",
+    "title": "Arithmetic Slices",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "bitwise-and-of-numbers-range",
+    "title": "Bitwise AND of Numbers Range",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "bulb-switcher",
+    "title": "Bulb Switcher",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "coin-change",
+    "title": "Coin Change",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "combinations",
+    "title": "Combinations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "container-with-most-water",
+    "title": "Container with most water",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "decode-ways",
+    "title": "Decode Ways",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-first-and-last-position-of-element-in-sorted-array",
+    "title": "Find first and last position",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-peak-element",
+    "title": "Find Peak Element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "gas-station",
+    "title": "Gas Station",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "generate-parentheses",
+    "title": "Generate parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "get-equal-substrings-within-budget",
+    "title": "Get Equal Substrings Within Budget",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "group-anagrams",
+    "title": "Group Anagrams",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "guess-number-higher-or-lower-ii",
+    "title": "Guess Number Higher or Lower II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "integer-break",
+    "title": "Integer Break",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "integer-to-roman",
+    "title": "Integer to Roman",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "jump-game",
+    "title": "Jump Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "largest-number",
+    "title": "Largest Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-common-subsequence",
+    "title": "Longest Common Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-palindromic-substring",
+    "title": "Longest palindromic substring",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-substring-without-repeating-characters",
+    "title": "Longest substring without repeating characters",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "majority-element-ii",
+    "title": "Majority Element II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-erasure-value",
+    "title": "Maximum Erasure Value",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-number-of-vowels-in-a-substring-of-given-length",
+    "title": "Maximum Number of Vowels in a Substring of Given Length",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "merge-intervals",
+    "title": "Merge Intervals",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "minimum-operations-to-make-array-equal",
+    "title": "Minimum Operations to Make Array Equal",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "minimum-operations-to-reduce-x-to-zero",
+    "title": "Minimum Operations to Reduce X to Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "multiply-strings",
+    "title": "Multiply Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "number-of-sub-arrays-with-odd-sum",
+    "title": "Number of Sub-arrays With Odd Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "permutation-in-string",
+    "title": "Permutation in String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "permutations",
+    "title": "Permutations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "powx-n",
+    "title": "Pow(x, n)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "product-of-array-except-self",
+    "title": "Product of Array Except Self",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "queue-reconstruction-by-height",
+    "title": "Queue Reconstruction by Height",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "restore-ip-addresses",
+    "title": "Restore IP Addresses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "search-in-rotated-sorted-array",
+    "title": "Search in rotated sorted array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "sort-colors",
+    "title": "Sort Colors",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "string-to-integer-atoi",
+    "title": "String to Integer (atoi)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "subsets",
+    "title": "Subsets",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "sum-of-two-integers",
+    "title": "Sum of Two Integers",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "super-ugly-number",
+    "title": "Super Ugly Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "task-scheduler",
+    "title": "Task Scheduler",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "two-sum-ii-input-array-is-sorted",
+    "title": "Two Sum II - Input Array Is Sorted",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "wiggle-sort-ii",
+    "title": "Wiggle Sort II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "word-search",
+    "title": "Word Search",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "basic-calculator",
+    "title": "Basic Calculator",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "burst-balloons",
+    "title": "Burst Balloons",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "candy",
+    "title": "Candy",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "count-of-smaller-numbers-after-self",
+    "title": "Count of Smaller Numbers After Self",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "distinct-subsequences",
+    "title": "Distinct Subsequences",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "dungeon-game",
+    "title": "Dungeon Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "edit-distance",
+    "title": "Edit distance",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "find-minimum-in-rotated-sorted-array-ii",
+    "title": "Find Minimum in Rotated Sorted Array II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "first-missing-positive",
+    "title": "First missing positive",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "interleaving-string",
+    "title": "Interleaving String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "jump-game-ii",
+    "title": "Jump Game II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "largest-rectangle-in-histogram",
+    "title": "Largest Rectangle in Histogram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "lfu-cache",
+    "title": "LFU Cache",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "longest-valid-parentheses",
+    "title": "Longest valid parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "max-points-on-a-line",
+    "title": "Max Points on a Line",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "max-sum-of-rectangle-no-larger-than-k",
+    "title": "Max Sum of Rectangle No Larger Than K",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "maximal-rectangle",
+    "title": "Maximal Rectangle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "maximum-gap",
+    "title": "Maximum Gap",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "median-of-two-sorted-arrays",
+    "title": "Median of two sorted arrays",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "merge-k-sorted-lists",
+    "title": "Merge k Sorted Lists",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "n-queens-ii",
+    "title": "N-Queens II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "n-queens",
+    "title": "N-Queens",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "palindrome-partitioning-ii",
+    "title": "Palindrome Partitioning II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "patching-array",
+    "title": "Patching Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "recover-binary-search-tree",
+    "title": "Recover Binary Search Tree",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "regular-expression-matching",
+    "title": "Regular expression matching",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "remove-duplicate-letters",
+    "title": "Remove Duplicate Letters",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "reverse-nodes-in-k-group",
+    "title": "Reverse Nodes in k-Group",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "reverse-pairs",
+    "title": "Reverse Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "russian-doll-envelopes",
+    "title": "Russian Doll Envelopes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "scramble-string",
+    "title": "Scramble String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "shortest-palindrome",
+    "title": "Shortest Palindrome",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sliding-window-maximum",
+    "title": "Sliding Window Maximum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sliding-window-median",
+    "title": "Sliding Window Median",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "smallest-good-base",
+    "title": "Smallest Good Base",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "strong-password-checker",
+    "title": "Strong Password Checker",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "substring-with-concatenation-of-all-words",
+    "title": "Substring with Concatenation",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "the-skyline-problem",
+    "title": "The Skyline Problem",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "trapping-rain-water-ii",
+    "title": "Trapping Rain Water II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "trapping-rain-water",
+    "title": "Trapping rain water",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "valid-number",
+    "title": "Valid number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "wildcard-matching",
+    "title": "Wildcard matching",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-break-ii",
+    "title": "Word Break II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-ladder-ii",
+    "title": "Word Ladder II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-ladder",
+    "title": "Word Ladder",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-search-ii",
+    "title": "Word Search II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  }
+]

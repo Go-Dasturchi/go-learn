@@ -1,0 +1,44 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"math/big"
+	"strconv"
+)
+
+// sumGeometric returns 1 + k + k^2 + ... + k^m as a big.Int.
+func sumGeometric(k int64, m int) *big.Int {
+	sum := big.NewInt(0)
+	cur := big.NewInt(1)
+	bigK := big.NewInt(k)
+	for i := 0; i <= m; i++ {
+		sum.Add(sum, cur)
+		cur.Mul(cur, bigK)
+	}
+	return sum
+}
+
+func solve(n string) string {
+	num, _ := strconv.ParseInt(n, 10, 64)
+	bigNum := new(big.Int)
+	bigNum.SetString(n, 10)
+
+	for m := 60; m >= 2; m-- {
+		k := int64(math.Pow(float64(num), 1.0/float64(m)))
+		for _, cand := range []int64{k - 1, k, k + 1, k + 2} {
+			if cand < 2 {
+				continue
+			}
+			if sumGeometric(cand, m).Cmp(bigNum) == 0 {
+				return strconv.FormatInt(cand, 10)
+			}
+		}
+	}
+
+	return strconv.FormatInt(num-1, 10)
+}
+
+func main() {
+	fmt.Println(solve("13"))
+}

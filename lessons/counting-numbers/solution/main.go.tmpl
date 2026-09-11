@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(low int, high int) int {
+	if low%2 != 0 {
+		low++
+	}
+	sum := 0
+	for i := low; i <= high; i += 2 {
+		sum += i
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(solve(1, 10))
+}

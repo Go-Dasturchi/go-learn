@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFirstLastPositiveCase1(t *testing.T) {
+	got := firstLastPositive([]int{-1, 5, -3, 8, -2, 3})
+	want := "first=1, last=5"
+	if got != want {
+		t.Errorf("firstLastPositive(arr=[-1, 5, -3, 8, -2, 3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFirstLastPositiveCase2(t *testing.T) {
+	got := firstLastPositive([]int{1, 2, 3, 4, 5})
+	want := "first=0, last=4"
+	if got != want {
+		t.Errorf("firstLastPositive(arr=[1, 2, 3, 4, 5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFirstLastPositiveCase3(t *testing.T) {
+	got := firstLastPositive([]int{-5, -3, 7, -1})
+	want := "first=2, last=2"
+	if got != want {
+		t.Errorf("firstLastPositive(arr=[-5, -3, 7, -1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func solve(s string, k int) string {
+	shift := ((k % 26) + 26) % 26
+	r := []rune(s)
+	result := make([]rune, len(r))
+	for i, c := range r {
+		switch {
+		case c >= 'a' && c <= 'z':
+			result[i] = 'a' + (c-'a'+rune(shift))%26
+		case c >= 'A' && c <= 'Z':
+			result[i] = 'A' + (c-'A'+rune(shift))%26
+		default:
+			result[i] = c
+		}
+	}
+	return string(result)
+}
+
+func main() {
+	fmt.Println(solve("ABC", 3))
+}

@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) [][]int {
+	res := [][]int{{}}
+	for _, n := range nums {
+		size := len(res)
+		for i := 0; i < size; i++ {
+			tmp := make([]int, len(res[i]))
+			copy(tmp, res[i])
+			tmp = append(tmp, n)
+			res = append(res, tmp)
+		}
+	}
+	return res
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3}))
+}

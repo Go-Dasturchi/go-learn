@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	maxIdx := 0
+	for i, n := range nums {
+		if n > nums[maxIdx] {
+			maxIdx = i
+		}
+	}
+	for i, n := range nums {
+		if i != maxIdx && nums[maxIdx] < 2*n {
+			return -1
+		}
+	}
+	return maxIdx
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 6, 1, 0}))
+}

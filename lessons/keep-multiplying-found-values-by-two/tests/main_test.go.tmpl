@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([]int{5, 3, 6, 1, 12}, 3)
+	var want int = 24
+	if got != want {
+		t.Errorf("solve(nums = [5,3,6,1,12], original = 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([]int{2, 7, 9}, 4)
+	var want int = 4
+	if got != want {
+		t.Errorf("solve(nums = [2,7,9], original = 4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve(3)
+	var want int = 2
+	if got != want {
+		t.Errorf("solve(n = 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve(6)
+	var want int = 9
+	if got != want {
+		t.Errorf("solve(n = 6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

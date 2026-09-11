@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func sumN(N int, nums []int) int {
+	sum := 0
+	for i := 0; i < N && i < len(nums); i++ {
+		sum += nums[i]
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(sumN(3, []int{5, 10, 15}))
+}

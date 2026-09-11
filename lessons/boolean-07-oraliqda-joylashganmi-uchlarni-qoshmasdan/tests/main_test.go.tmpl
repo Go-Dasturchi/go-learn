@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsInRangeExclusiveCase1(t *testing.T) {
+	got := isInRangeExclusive(5, 10, 15)
+	want := true
+	if got != want {
+		t.Errorf("isInRangeExclusive(A=5, B=10, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsInRangeExclusiveCase2(t *testing.T) {
+	got := isInRangeExclusive(5, 5, 15)
+	want := false
+	if got != want {
+		t.Errorf("isInRangeExclusive(A=5, B=5, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsInRangeExclusiveCase3(t *testing.T) {
+	got := isInRangeExclusive(5, 15, 15)
+	want := false
+	if got != want {
+		t.Errorf("isInRangeExclusive(A=5, B=15, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

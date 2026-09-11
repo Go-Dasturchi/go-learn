@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(n int, bad int) int {
+	isBadVersion := func(v int) bool {
+		return v >= bad
+	}
+	lo, hi := 1, n
+	for lo < hi {
+		mid := lo + (hi-lo)/2
+		if isBadVersion(mid) {
+			hi = mid
+		} else {
+			lo = mid + 1
+		}
+	}
+	return lo
+}
+
+func main() {
+	fmt.Println(solve(5, 4))
+}

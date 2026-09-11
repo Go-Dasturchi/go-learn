@@ -1,0 +1,30 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestFahrengeytgaBoiling(t *testing.T) {
+	got := Harorat(100).Fahrengeytga()
+	want := 212.0
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("Harorat(100).Fahrengeytga():\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestFahrengeytgaFreezing(t *testing.T) {
+	got := Harorat(0).Fahrengeytga()
+	want := 32.0
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("Harorat(0).Fahrengeytga():\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestFahrengeytgaRoomTemp(t *testing.T) {
+	got := Harorat(22).Fahrengeytga()
+	want := 71.6
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("Harorat(22).Fahrengeytga():\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

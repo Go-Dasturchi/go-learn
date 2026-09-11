@@ -1,0 +1,32 @@
+package main
+
+import (
+	"bytes"
+	"io"
+	"os"
+	"strings"
+	"testing"
+)
+
+func captureStdout(f func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+
+	f()
+
+	w.Close()
+	os.Stdout = old
+
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	return buf.String()
+}
+
+func TestTypeConversionOutput(t *testing.T) {
+	got := strings.TrimSpace(captureStdout(main))
+	want := "Son: 42"
+	if got != want {
+		t.Errorf("Expected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

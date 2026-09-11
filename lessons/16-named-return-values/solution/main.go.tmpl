@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+// minMax ro'yxatdagi eng kichik va eng katta sonlarni qaytaradi.
+func minMax(royxat []int) (kichik, katta int) {
+	kichik = royxat[0]
+	katta = royxat[0]
+	for _, son := range royxat {
+		if son < kichik {
+			kichik = son
+		}
+		if son > katta {
+			katta = son
+		}
+	}
+	return
+}
+
+func main() {
+	kichik, katta := minMax([]int{5, 2, 9, 1, 7})
+	fmt.Println(kichik, katta)
+}

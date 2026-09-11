@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestConvertLengthCase1(t *testing.T) {
+	got := convertLength(50, 1)
+	want := 5
+	if got != want {
+		t.Errorf("convertLength(L=50, unit=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestConvertLengthCase2(t *testing.T) {
+	got := convertLength(5, 2)
+	want := 5
+	if got != want {
+		t.Errorf("convertLength(L=5, unit=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestConvertLengthCase3(t *testing.T) {
+	got := convertLength(2, 3)
+	want := 2000
+	if got != want {
+		t.Errorf("convertLength(L=2, unit=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

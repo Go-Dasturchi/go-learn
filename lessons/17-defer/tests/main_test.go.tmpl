@@ -1,0 +1,38 @@
+package main
+
+import (
+	"bytes"
+	"io"
+	"os"
+	"strings"
+	"testing"
+)
+
+func captureStdout(f func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+
+	f()
+
+	w.Close()
+	os.Stdout = old
+
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	return buf.String()
+}
+
+func TestHisoblaOrder(t *testing.T) {
+	out := strings.TrimSpace(captureStdout(hisobla))
+	lines := strings.Split(out, "\n")
+	if len(lines) != 2 {
+		t.Fatalf("Expected 2 lines of output, got %d:\n%s", len(lines), out)
+	}
+	if strings.TrimSpace(lines[0]) != "Hisoblash boshlandi" {
+		t.Errorf("Expected first line:\nHisoblash boshlandi\n\nGot:\n%s", lines[0])
+	}
+	if strings.TrimSpace(lines[1]) != "Funksiya tugadi" {
+		t.Errorf("Expected second (deferred) line:\nFunksiya tugadi\n\nGot:\n%s", lines[1])
+	}
+}

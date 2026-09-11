@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"math/bits"
+)
+
+func solve(n int) int {
+	return int(bits.Reverse32(uint32(n)))
+}
+
+func main() {
+	fmt.Println(solve(43261596))
+}

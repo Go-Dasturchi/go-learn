@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPrevAndNextFibCase1(t *testing.T) {
+	got := prevAndNextFib(8)
+	want := "prev=5, next=13"
+	if got != want {
+		t.Errorf("prevAndNextFib(N=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPrevAndNextFibCase2(t *testing.T) {
+	got := prevAndNextFib(21)
+	want := "prev=13, next=34"
+	if got != want {
+		t.Errorf("prevAndNextFib(N=21):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPrevAndNextFibCase3(t *testing.T) {
+	got := prevAndNextFib(1)
+	want := "prev=0, next=1"
+	if got != want {
+		t.Errorf("prevAndNextFib(N=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

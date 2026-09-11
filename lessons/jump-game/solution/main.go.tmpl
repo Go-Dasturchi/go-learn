@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) bool {
+	maxReach := 0
+	for i, n := range nums {
+		if i > maxReach {
+			return false
+		}
+		if i+n > maxReach {
+			maxReach = i + n
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(solve([]int{2, 3, 1, 1, 4}))
+}

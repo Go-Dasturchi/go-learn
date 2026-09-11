@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func solve(rectangles [][]int) int {
+	maxLen := 0
+	count := 0
+	for _, r := range rectangles {
+		side := r[0]
+		if r[1] < side {
+			side = r[1]
+		}
+		if side > maxLen {
+			maxLen = side
+			count = 1
+		} else if side == maxLen {
+			count++
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve([][]int{[]int{5, 8}, []int{3, 9}, []int{5, 12}, []int{16, 5}}))
+}

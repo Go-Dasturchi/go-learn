@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+// Harorat — Selsiy darajasidagi haroratni ifodalovchi custom tur.
+type Harorat float64
+
+// Fahrengeytga Selsiy darajasini Farengeytga aylantiradi.
+func (h Harorat) Fahrengeytga() float64 {
+	return float64(h)*9/5 + 32
+}
+
+func main() {
+	suvQaynash := Harorat(100)
+	fmt.Println(suvQaynash.Fahrengeytga())
+}

@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(nums []int, k int) []int {
+	freq := make(map[int]int)
+	order := []int{}
+	for _, n := range nums {
+		if _, ok := freq[n]; !ok {
+			order = append(order, n)
+		}
+		freq[n]++
+	}
+	sort.SliceStable(order, func(i, j int) bool {
+		return freq[order[i]] > freq[order[j]]
+	})
+	return order[:k]
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 1, 1, 2, 2, 3}, 2))
+}

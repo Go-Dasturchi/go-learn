@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func digitCountAndSum(N int) string {
+	count := 0
+	sum := 0
+	n := N
+	for n > 0 {
+		sum += n % 10
+		count++
+		n /= 10
+	}
+	return fmt.Sprintf("count=%d, sum=%d", count, sum)
+}
+
+func main() {
+	fmt.Println(digitCountAndSum(12345))
+}

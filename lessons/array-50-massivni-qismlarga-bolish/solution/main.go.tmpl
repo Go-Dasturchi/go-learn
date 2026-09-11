@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func splitArray(N int, arr []int) []int {
+	natija := []int{}
+	for i := 0; i < N; i++ {
+		if arr[i] < 0 {
+			natija = append(natija, arr[i])
+		}
+	}
+	for i := 0; i < N; i++ {
+		if arr[i] == 0 {
+			natija = append(natija, arr[i])
+		}
+	}
+	for i := 0; i < N; i++ {
+		if arr[i] > 0 {
+			natija = append(natija, arr[i])
+		}
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(splitArray(7, []int{3, -2, 0, 5, -7, 0, 1}))
+}

@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(amount []int) int {
+	a := append([]int{}, amount...)
+	sort.Ints(a)
+	if a[2] >= a[0]+a[1] {
+		return a[2]
+	}
+	return (a[0] + a[1] + a[2] + 1) / 2
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 4, 2}))
+}

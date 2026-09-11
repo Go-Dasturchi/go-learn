@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	lastIndex := [26]int{}
+	for i := 0; i < len(s); i++ {
+		lastIndex[s[i]-'a'] = i
+	}
+	inStack := [26]bool{}
+	stack := []byte{}
+
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if inStack[c-'a'] {
+			continue
+		}
+		for len(stack) > 0 && stack[len(stack)-1] > c && lastIndex[stack[len(stack)-1]-'a'] > i {
+			top := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			inStack[top-'a'] = false
+		}
+		stack = append(stack, c)
+		inStack[c-'a'] = true
+	}
+
+	return string(stack)
+}
+
+func main() {
+	fmt.Println(solve("bcabc"))
+}

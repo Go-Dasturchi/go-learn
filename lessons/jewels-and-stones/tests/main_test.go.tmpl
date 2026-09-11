@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("aA", "aAAbbbb")
+	var want int = 3
+	if got != want {
+		t.Errorf("solve(jewels = \"aA\", stones = \"aAAbbbb\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("z", "ZZ")
+	var want int = 0
+	if got != want {
+		t.Errorf("solve(jewels = \"z\", stones = \"ZZ\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

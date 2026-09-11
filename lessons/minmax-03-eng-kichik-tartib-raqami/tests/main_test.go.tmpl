@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinIndexCase1(t *testing.T) {
+	got := minIndex(5, []int{3, 7, 2, 9, 1})
+	want := 5
+	if got != want {
+		t.Errorf("minIndex(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinIndexCase2(t *testing.T) {
+	got := minIndex(4, []int{10, 5, 15, 8})
+	want := 2
+	if got != want {
+		t.Errorf("minIndex(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinIndexCase3(t *testing.T) {
+	got := minIndex(3, []int{4, 4, 4})
+	want := 1
+	if got != want {
+		t.Errorf("minIndex(N=3, nums=[4, 4, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

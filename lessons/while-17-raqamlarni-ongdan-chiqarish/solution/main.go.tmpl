@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func digitsRightToLeft(N int) string {
+	result := ""
+	n := N
+	first := true
+	for n > 0 {
+		digit := n % 10
+		if !first {
+			result += " "
+		}
+		result += strconv.Itoa(digit)
+		first = false
+		n /= 10
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(digitsRightToLeft(12345))
+}

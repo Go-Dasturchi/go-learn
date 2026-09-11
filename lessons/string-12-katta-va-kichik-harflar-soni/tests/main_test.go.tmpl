@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("Hello World")
+	want := "upper=2, lower=8"
+	if got != want {
+		t.Errorf("solve(S='Hello World'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("ABC123xyz")
+	want := "upper=3, lower=3"
+	if got != want {
+		t.Errorf("solve(S='ABC123xyz'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve("12345")
+	want := "upper=0, lower=0"
+	if got != want {
+		t.Errorf("solve(S='12345'):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

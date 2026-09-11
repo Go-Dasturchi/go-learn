@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+// sozSoni berilgan sozlar slice'idagi har bir so'z necha marta
+// uchraganini hisoblab, map ko'rinishida qaytaradi.
+func sozSoni(sozlar []string) map[string]int {
+	natija := make(map[string]int)
+	for _, s := range sozlar {
+		natija[s]++
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(sozSoni([]string{"olma", "banan", "olma"}))
+	fmt.Println(sozSoni([]string{"a", "b", "a", "a", "b"}))
+}

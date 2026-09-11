@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func breadPrices(A int) string {
+	result := ""
+	for i := 12; i <= 20; i += 2 {
+		if i > 12 {
+			result += ", "
+		}
+		value := float64(A*i) / 10.0
+		result += fmt.Sprintf("%.1f", value)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(breadPrices(5))
+}

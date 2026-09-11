@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsEvenCase1(t *testing.T) {
+	got := isEven(8)
+	want := true
+	if got != want {
+		t.Errorf("isEven(A=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsEvenCase2(t *testing.T) {
+	got := isEven(7)
+	want := false
+	if got != want {
+		t.Errorf("isEven(A=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsEvenCase3(t *testing.T) {
+	got := isEven(-4)
+	want := true
+	if got != want {
+		t.Errorf("isEven(A=-4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

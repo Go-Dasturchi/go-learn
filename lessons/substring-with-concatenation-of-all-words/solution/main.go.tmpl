@@ -1,0 +1,47 @@
+package main
+
+import "fmt"
+
+func solve(s string, words []string) []int {
+	result := []int{}
+	if len(words) == 0 || len(s) == 0 {
+		return result
+	}
+	wordLen := len(words[0])
+	numWords := len(words)
+	totalLen := wordLen * numWords
+	if totalLen > len(s) {
+		return result
+	}
+
+	wordCount := make(map[string]int)
+	for _, w := range words {
+		wordCount[w]++
+	}
+
+	for i := 0; i <= len(s)-totalLen; i++ {
+		seen := make(map[string]int)
+		j := 0
+		for ; j < numWords; j++ {
+			start := i + j*wordLen
+			word := s[start : start+wordLen]
+			cnt, ok := wordCount[word]
+			if !ok {
+				break
+			}
+			seen[word]++
+			if seen[word] > cnt {
+				break
+			}
+		}
+		if j == numWords {
+			result = append(result, i)
+		}
+	}
+
+	return result
+}
+
+func main() {
+	fmt.Println(solve("barfoothefoobarman", []string{"foo", "bar"}))
+}

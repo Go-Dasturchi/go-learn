@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDayNameCase1(t *testing.T) {
+	got := dayName(1)
+	want := "Dushanba"
+	if got != want {
+		t.Errorf("dayName(K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDayNameCase2(t *testing.T) {
+	got := dayName(5)
+	want := "Juma"
+	if got != want {
+		t.Errorf("dayName(K=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDayNameCase3(t *testing.T) {
+	got := dayName(7)
+	want := "Yakshanba"
+	if got != want {
+		t.Errorf("dayName(K=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+func solve(n int, pick int) int {
+	guess := func(num int) int {
+		switch {
+		case num > pick:
+			return -1
+		case num < pick:
+			return 1
+		default:
+			return 0
+		}
+	}
+	lo, hi := 1, n
+	for lo <= hi {
+		mid := lo + (hi-lo)/2
+		res := guess(mid)
+		switch {
+		case res == 0:
+			return mid
+		case res < 0:
+			hi = mid - 1
+		default:
+			lo = mid + 1
+		}
+	}
+	return -1
+}
+
+func main() {
+	fmt.Println(solve(10, 6))
+}

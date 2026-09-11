@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+// toifa berilgan yosh bo'yicha "Voyaga yetgan" yoki "Voyaga yetmagan" qaytaradi.
+func toifa(age int) string {
+	if age >= 18 {
+		return "Voyaga yetgan"
+	}
+	return "Voyaga yetmagan"
+}
+
+func main() {
+	fmt.Println(toifa(20))
+	fmt.Println(toifa(15))
+}

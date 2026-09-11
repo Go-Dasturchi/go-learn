@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestReverseNumberCase1(t *testing.T) {
+	got := reverseNumber(123)
+	want := 321
+	if got != want {
+		t.Errorf("reverseNumber(n=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReverseNumberCase2(t *testing.T) {
+	got := reverseNumber(456)
+	want := 654
+	if got != want {
+		t.Errorf("reverseNumber(n=456):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReverseNumberCase3(t *testing.T) {
+	got := reverseNumber(700)
+	want := 007
+	if got != want {
+		t.Errorf("reverseNumber(n=700):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

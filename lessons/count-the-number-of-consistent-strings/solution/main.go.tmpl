@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func solve(allowed string, words []string) int {
+	var allowedSet [26]bool
+	for i := 0; i < len(allowed); i++ {
+		allowedSet[allowed[i]-'a'] = true
+	}
+	count := 0
+	for _, w := range words {
+		consistent := true
+		for i := 0; i < len(w); i++ {
+			if !allowedSet[w[i]-'a'] {
+				consistent = false
+				break
+			}
+		}
+		if consistent {
+			count++
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve("ab", []string{"ad", "bd", "aaab", "baa", "badab"}))
+}

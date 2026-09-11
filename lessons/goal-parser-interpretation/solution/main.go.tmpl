@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(command string) string {
+	var sb strings.Builder
+	for i := 0; i < len(command); i++ {
+		switch command[i] {
+		case 'G':
+			sb.WriteByte('G')
+		case '(':
+			if i+1 < len(command) && command[i+1] == ')' {
+				sb.WriteByte('o')
+				i++
+			} else {
+				sb.WriteString("al")
+				i += 3
+			}
+		}
+	}
+	return sb.String()
+}
+
+func main() {
+	fmt.Println(solve("G()(al)"))
+}

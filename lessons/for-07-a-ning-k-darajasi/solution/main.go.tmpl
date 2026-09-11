@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func power(A int, K int) string {
+	result := ""
+	value := 1
+	for i := 1; i <= K; i++ {
+		value *= A
+		if i > 1 {
+			result += ", "
+		}
+		result += strconv.Itoa(value)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(power(2, 5))
+}

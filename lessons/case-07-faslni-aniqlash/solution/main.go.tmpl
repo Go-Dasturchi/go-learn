@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func getSeason(K int) string {
+	switch K {
+	case 12, 1, 2:
+		return "Qish"
+	case 3, 4, 5:
+		return "Bahor"
+	case 6, 7, 8:
+		return "Yoz"
+	case 9, 10, 11:
+		return "Kuz"
+	}
+	return ""
+}
+
+func main() {
+	fmt.Println(getSeason(1))
+}

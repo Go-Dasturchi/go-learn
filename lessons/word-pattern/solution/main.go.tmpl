@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(pattern string, s string) bool {
+	words := strings.Fields(s)
+	if len(words) != len(pattern) {
+		return false
+	}
+	charToWord := make(map[byte]string)
+	wordToChar := make(map[string]byte)
+	for i := 0; i < len(pattern); i++ {
+		c := pattern[i]
+		w := words[i]
+		if mapped, ok := charToWord[c]; ok {
+			if mapped != w {
+				return false
+			}
+		} else {
+			charToWord[c] = w
+		}
+		if mapped, ok := wordToChar[w]; ok {
+			if mapped != c {
+				return false
+			}
+		} else {
+			wordToChar[w] = c
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(solve("abba", "dog cat cat dog"))
+}

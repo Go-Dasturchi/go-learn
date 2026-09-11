@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGetSignCase1(t *testing.T) {
+	got := getSign(10)
+	want := 1
+	if got != want {
+		t.Errorf("getSign(n=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetSignCase2(t *testing.T) {
+	got := getSign(-5)
+	want := -1
+	if got != want {
+		t.Errorf("getSign(n=-5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetSignCase3(t *testing.T) {
+	got := getSign(0)
+	want := 0
+	if got != want {
+		t.Errorf("getSign(n=0):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

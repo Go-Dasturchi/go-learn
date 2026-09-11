@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+func minMaxPosNeg(N int, nums []int) string {
+	minPos := 0
+	maxNeg := 0
+	hasPos := false
+	hasNeg := false
+	for i := 0; i < N; i++ {
+		if nums[i] > 0 {
+			if !hasPos || nums[i] < minPos {
+				minPos = nums[i]
+				hasPos = true
+			}
+		} else if nums[i] < 0 {
+			if !hasNeg || nums[i] > maxNeg {
+				maxNeg = nums[i]
+				hasNeg = true
+			}
+		}
+	}
+	minPosStr := "yoq"
+	if hasPos {
+		minPosStr = fmt.Sprintf("%d", minPos)
+	}
+	maxNegStr := "yoq"
+	if hasNeg {
+		maxNegStr = fmt.Sprintf("%d", maxNeg)
+	}
+	return fmt.Sprintf("minPos=%s, maxNeg=%s", minPosStr, maxNegStr)
+}
+
+func main() {
+	fmt.Println(minMaxPosNeg(6, []int{3, -8, 2, -9, 10, -4}))
+}

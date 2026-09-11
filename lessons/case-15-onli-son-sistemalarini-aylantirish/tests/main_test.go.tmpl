@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestConvertBaseCase1(t *testing.T) {
+	got := convertBase(15, 2)
+	var want string = "1111"
+	if got != want {
+		t.Errorf("convertBase(N=15, K=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestConvertBaseCase2(t *testing.T) {
+	got := convertBase(15, 8)
+	var want string = "17"
+	if got != want {
+		t.Errorf("convertBase(N=15, K=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestConvertBaseCase3(t *testing.T) {
+	got := convertBase(15, 16)
+	var want string = "F"
+	if got != want {
+		t.Errorf("convertBase(N=15, K=16):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// Manzil — shaharni saqlovchi oddiy struct.
+type Manzil struct {
+	Shahar string
+}
+
+// Odam — ismi va manzilini saqlovchi struct (Manzil ichma-ich struct).
+type Odam struct {
+	Ism    string
+	Manzil Manzil
+}
+
+// toliqMalumot "Ism, Shahar" ko'rinishidagi matnni qaytaradi.
+func toliqMalumot(o Odam) string {
+	// TODO: o.Ism va o.Manzil.Shahar ni ", " bilan birlashtiring
+	return ""
+}
+
+func main() {
+	ali := Odam{Ism: "Ali", Manzil: Manzil{Shahar: "Toshkent"}}
+	fmt.Println(toliqMalumot(ali))
+}

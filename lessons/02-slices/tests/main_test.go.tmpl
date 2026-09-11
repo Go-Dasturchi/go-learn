@@ -1,0 +1,30 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestOraliqMiddle(t *testing.T) {
+	got := oraliq([]int{10, 20, 30, 40, 50}, 1, 3)
+	want := []int{20, 30}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("oraliq([10,20,30,40,50], 1, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestOraliqStart(t *testing.T) {
+	got := oraliq([]int{10, 20, 30, 40, 50}, 0, 2)
+	want := []int{10, 20}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("oraliq([10,20,30,40,50], 0, 2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestOraliqWhole(t *testing.T) {
+	got := oraliq([]int{1, 2, 3}, 0, 3)
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("oraliq([1,2,3], 0, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

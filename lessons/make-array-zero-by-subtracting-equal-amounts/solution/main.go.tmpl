@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	seen := make(map[int]bool)
+	for _, n := range nums {
+		if n > 0 {
+			seen[n] = true
+		}
+	}
+	return len(seen)
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 5, 0, 3, 5}))
+}

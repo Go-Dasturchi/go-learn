@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv")
+	var want string = "this is a secret"
+	if got != want {
+		t.Errorf("solve(key = \"the quick brown fox jumps over the lazy dog\", message = \"vkbs bs t suepuv\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb")
+	var want string = "the five boxing wizards jump quickly"
+	if got != want {
+		t.Errorf("solve(key = \"eljuxhpwnyrdgtqkviszcfmabo\", message = \"zwx hnfx lqantp mnoeius ycgk vcnjrdb\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

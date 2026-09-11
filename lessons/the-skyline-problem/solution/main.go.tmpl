@@ -1,0 +1,100 @@
+package main
+
+import (
+	"container/heap"
+	"fmt"
+	"sort"
+)
+
+type skylineEvent struct {
+	x      int
+	height int // positive for start, negative for end
+}
+
+type skylineMaxHeap struct {
+	heights []int
+	counts  map[int]int
+}
+
+func newSkylineHeap() *skylineMaxHeap {
+	return &skylineMaxHeap{heights: []int{0}, counts: map[int]int{0: 1}}
+}
+
+func (h *skylineMaxHeap) Len() int            { return len(h.heights) }
+func (h *skylineMaxHeap) Less(i, j int) bool  { return h.heights[i] > h.heights[j] }
+func (h *skylineMaxHeap) Swap(i, j int)       { h.heights[i], h.heights[j] = h.heights[j], h.heights[i] }
+func (h *skylineMaxHeap) Push(x interface{})  { h.heights = append(h.heights, x.(int)) }
+func (h *skylineMaxHeap) Pop() interface{} {
+	old := h.heights
+	n := len(old)
+	item := old[n-1]
+	h.heights = old[:n-1]
+	return item
+}
+
+func (h *skylineMaxHeap) add(height int) {
+	heap.Push(h, height)
+	h.counts[height]++
+}
+
+func (h *skylineMaxHeap) remove(height int) {
+	h.counts[height]--
+}
+
+func (h *skylineMaxHeap) top() int {
+	for h.counts[h.heights[0]] <= 0 {
+		heap.Pop(h)
+	}
+	return h.heights[0]
+}
+
+func solve(buildings [][]int) [][]int {
+	events := []skylineEvent{}
+	for _, b := range buildings {
+		events = append(events, skylineEvent{x: b[0], height: b[2]})
+		events = append(events, skylineEvent{x: b[1], height: -b[2]})
+	}
+
+	sort.Slice(events, func(i, j int) bool {
+		if events[i].x != events[j].x {
+			return events[i].x < events[j].x
+		}
+		// process starts (positive) before ends (negative) at same x,
+		// and among starts, taller first; among ends, shorter first.
+		if events[i].height > 0 && events[j].height > 0 {
+			return events[i].height > events[j].height
+		}
+		if events[i].height < 0 && events[j].height < 0 {
+			return events[i].height > events[j].height
+		}
+		return events[i].height > 0
+	})
+
+	h := newSkylineHeap()
+	result := [][]int{}
+	prevMax := 0
+
+	i := 0
+	for i < len(events) {
+		curX := events[i].x
+		for i < len(events) && events[i].x == curX {
+			if events[i].height > 0 {
+				h.add(events[i].height)
+			} else {
+				h.remove(-events[i].height)
+			}
+			i++
+		}
+		curMax := h.top()
+		if curMax != prevMax {
+			result = append(result, []int{curX, curMax})
+			prevMax = curMax
+		}
+	}
+
+	return result
+}
+
+func main() {
+	fmt.Println(solve([][]int{{2, 9, 10}, {3, 7, 15}, {5, 12, 12}, {15, 20, 10}, {19, 24, 8}}))
+}

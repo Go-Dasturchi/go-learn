@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestUchburchakCase1(t *testing.T) {
+	got := uchburchak(3, 4)
+	want := 5
+	if got != want {
+		t.Errorf("uchburchak(a=3, b=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestUchburchakCase2(t *testing.T) {
+	got := uchburchak(5, 12)
+	want := 13
+	if got != want {
+		t.Errorf("uchburchak(a=5, b=12):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestUchburchakCase3(t *testing.T) {
+	got := uchburchak(6, 8)
+	want := 10
+	if got != want {
+		t.Errorf("uchburchak(a=6, b=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

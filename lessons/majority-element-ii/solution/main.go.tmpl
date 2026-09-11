@@ -1,0 +1,45 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) []int {
+	var cand1, cand2 int
+	count1, count2 := 0, 0
+	for _, num := range nums {
+		switch {
+		case count1 != 0 && num == cand1:
+			count1++
+		case count2 != 0 && num == cand2:
+			count2++
+		case count1 == 0:
+			cand1 = num
+			count1 = 1
+		case count2 == 0:
+			cand2 = num
+			count2 = 1
+		default:
+			count1--
+			count2--
+		}
+	}
+	count1, count2 = 0, 0
+	for _, num := range nums {
+		if num == cand1 {
+			count1++
+		} else if num == cand2 {
+			count2++
+		}
+	}
+	res := []int{}
+	if count1 > len(nums)/3 {
+		res = append(res, cand1)
+	}
+	if count2 > len(nums)/3 {
+		res = append(res, cand2)
+	}
+	return res
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 2, 3}))
+}

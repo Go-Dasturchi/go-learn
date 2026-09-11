@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(strs []string) [][]string {
+	groups := map[string][]string{}
+	order := []string{}
+	for _, s := range strs {
+		b := []byte(s)
+		sort.Slice(b, func(i, j int) bool { return b[i] < b[j] })
+		key := string(b)
+		if _, ok := groups[key]; !ok {
+			order = append(order, key)
+		}
+		groups[key] = append(groups[key], s)
+	}
+	res := make([][]string, 0, len(order))
+	for _, key := range order {
+		g := groups[key]
+		sort.Strings(g)
+		res = append(res, g)
+	}
+	sort.SliceStable(res, func(i, j int) bool {
+		if len(res[i]) != len(res[j]) {
+			return len(res[i]) < len(res[j])
+		}
+		return res[i][0] < res[j][0]
+	})
+	return res
+}
+
+func main() {
+	fmt.Println(solve([]string{"eat", "tea", "tan", "ate", "nat", "bat"}))
+}

@@ -1,0 +1,57 @@
+package main
+
+import "fmt"
+
+func largestRectangleInHist(heights []int) int {
+	stack := []int{}
+	maxArea := 0
+	n := len(heights)
+	for i := 0; i <= n; i++ {
+		h := 0
+		if i < n {
+			h = heights[i]
+		}
+		for len(stack) > 0 && heights[stack[len(stack)-1]] >= h {
+			top := stack[len(stack)-1]
+			stack = stack[:len(stack)-1]
+			height := heights[top]
+			width := i
+			if len(stack) > 0 {
+				width = i - stack[len(stack)-1] - 1
+			}
+			area := height * width
+			if area > maxArea {
+				maxArea = area
+			}
+		}
+		stack = append(stack, i)
+	}
+	return maxArea
+}
+
+func solve(matrix [][]string) int {
+	if len(matrix) == 0 || len(matrix[0]) == 0 {
+		return 0
+	}
+	cols := len(matrix[0])
+	heights := make([]int, cols)
+	best := 0
+	for _, row := range matrix {
+		for c := 0; c < cols; c++ {
+			if row[c] == "1" {
+				heights[c]++
+			} else {
+				heights[c] = 0
+			}
+		}
+		area := largestRectangleInHist(heights)
+		if area > best {
+			best = area
+		}
+	}
+	return best
+}
+
+func main() {
+	fmt.Println(solve([][]string{{"1", "0", "1", "0", "0"}, {"1", "0", "1", "1", "1"}, {"1", "1", "1", "1", "1"}, {"1", "0", "0", "1", "0"}}))
+}

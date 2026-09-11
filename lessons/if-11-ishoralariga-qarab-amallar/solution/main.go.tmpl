@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func signAction(A int, B int) int {
+	sameSign := (A >= 0 && B >= 0) || (A < 0 && B < 0)
+	if sameSign {
+		return A * B
+	}
+	return A + B
+}
+
+func main() {
+	fmt.Println(signAction(3, 5))
+}

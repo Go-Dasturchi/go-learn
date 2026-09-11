@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"sort"
+	"testing"
+)
+
+// The problem statement explicitly allows sentences in any order, so these
+// tests compare sorted copies rather than exact slice order.
+func sortedCopy(s []string) []string {
+	out := make([]string, len(s))
+	copy(out, s)
+	sort.Strings(out)
+	return out
+}
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("catsanddog", []string{"cat", "cats", "and", "sand", "dog"})
+	var want []string = []string{"cats and dog", "cat sand dog"}
+	if !reflect.DeepEqual(sortedCopy(got), sortedCopy(want)) {
+		t.Errorf("solve(s = \"catsanddog\", wordDict = [\"cat\",\"cats\",\"and\",\"sand\",\"dog\"]):\nExpected (any order):\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("pineapplepenapple", []string{"apple", "pen", "applepen", "pine", "pineapple"})
+	var want []string = []string{"pine apple pen apple", "pine applepen apple", "pineapple pen apple"}
+	if !reflect.DeepEqual(sortedCopy(got), sortedCopy(want)) {
+		t.Errorf("solve(s = \"pineapplepenapple\", wordDict = [\"apple\",\"pen\",\"applepen\",\"pine\",\"pineapple\"]):\nExpected (any order):\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve("catsandog", []string{"cats", "dog", "sand", "and", "cat"})
+	var want []string = []string{}
+	if !reflect.DeepEqual(sortedCopy(got), sortedCopy(want)) {
+		t.Errorf("solve(s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]):\nExpected (any order):\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(s string, letter string) int {
+	if len(letter) == 0 || len(s) == 0 {
+		return 0
+	}
+	count := strings.Count(s, letter)
+	return count * 100 / len(s)
+}
+
+func main() {
+	fmt.Println(solve("foobar", "o"))
+}

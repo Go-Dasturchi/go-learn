@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSameParityCase1(t *testing.T) {
+	got := sameParity(8, 10)
+	want := true
+	if got != want {
+		t.Errorf("sameParity(A=8, B=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSameParityCase2(t *testing.T) {
+	got := sameParity(7, 9)
+	want := true
+	if got != want {
+		t.Errorf("sameParity(A=7, B=9):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSameParityCase3(t *testing.T) {
+	got := sameParity(7, 8)
+	want := false
+	if got != want {
+		t.Errorf("sameParity(A=7, B=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

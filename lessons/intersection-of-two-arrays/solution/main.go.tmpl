@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func solve(nums1 []int, nums2 []int) []int {
+	set1 := make(map[int]bool)
+	for _, n := range nums1 {
+		set1[n] = true
+	}
+	added := make(map[int]bool)
+	result := []int{}
+	for _, n := range nums2 {
+		if set1[n] && !added[n] {
+			result = append(result, n)
+			added[n] = true
+		}
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 2, 1}, []int{2, 2}))
+}

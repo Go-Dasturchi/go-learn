@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSumAndProductCase1(t *testing.T) {
+	got := sumAndProduct(23)
+	want := 5
+	if got != want {
+		t.Errorf("sumAndProduct(n=23):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumAndProductCase2(t *testing.T) {
+	got := sumAndProduct(47)
+	want := 11
+	if got != want {
+		t.Errorf("sumAndProduct(n=47):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumAndProductCase3(t *testing.T) {
+	got := sumAndProduct(90)
+	want := 9
+	if got != want {
+		t.Errorf("sumAndProduct(n=90):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

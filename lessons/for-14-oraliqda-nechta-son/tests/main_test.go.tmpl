@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCountInRangeCase1(t *testing.T) {
+	got := countInRange(5, 10, 7, []int{3, 7, 12, 8, 2, 9, 6})
+	want := 4
+	if got != want {
+		t.Errorf("countInRange(A=5, B=10, N=7, nums=[3,7,12,8,2,9,6]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountInRangeCase2(t *testing.T) {
+	got := countInRange(0, 5, 5, []int{1, 2, 3, 4, 6})
+	want := 4
+	if got != want {
+		t.Errorf("countInRange(A=0, B=5, N=5, nums=[1,2,3,4,6]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountInRangeCase3(t *testing.T) {
+	got := countInRange(10, 20, 4, []int{15, 25, 12, 8})
+	want := 2
+	if got != want {
+		t.Errorf("countInRange(A=10, B=20, N=4, nums=[15,25,12,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

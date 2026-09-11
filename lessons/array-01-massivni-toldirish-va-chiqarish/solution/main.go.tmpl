@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func fillAndPrint(N int) []int {
+	natija := []int{}
+	for i := 0; i < N; i++ {
+		natija = append(natija, i)
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(fillAndPrint(5))
+}

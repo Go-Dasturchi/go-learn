@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	seen := make(map[int]bool)
+	left := 0
+	sum := 0
+	best := 0
+	for right := 0; right < len(nums); right++ {
+		for seen[nums[right]] {
+			seen[nums[left]] = false
+			sum -= nums[left]
+			left++
+		}
+		seen[nums[right]] = true
+		sum += nums[right]
+		if sum > best {
+			best = sum
+		}
+	}
+	return best
+}
+
+func main() {
+	fmt.Println(solve([]int{4, 2, 4, 5, 6}))
+}

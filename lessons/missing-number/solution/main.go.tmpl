@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	n := len(nums)
+	sum := n * (n + 1) / 2
+	for _, v := range nums {
+		sum -= v
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(solve([]int{3, 0, 1}))
+}

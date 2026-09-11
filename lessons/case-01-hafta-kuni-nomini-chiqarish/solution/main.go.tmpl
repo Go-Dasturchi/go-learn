@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func dayName(K int) string {
+	switch K {
+	case 1:
+		return "Dushanba"
+	case 2:
+		return "Seshanba"
+	case 3:
+		return "Chorshanba"
+	case 4:
+		return "Payshanba"
+	case 5:
+		return "Juma"
+	case 6:
+		return "Shanba"
+	case 7:
+		return "Yakshanba"
+	}
+	return ""
+}
+
+func main() {
+	fmt.Println(dayName(1))
+}

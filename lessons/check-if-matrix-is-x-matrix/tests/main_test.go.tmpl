@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([][]int{[]int{2, 0, 0, 1}, []int{0, 3, 1, 0}, []int{0, 5, 2, 0}, []int{4, 0, 0, 2}})
+	var want bool = true
+	if got != want {
+		t.Errorf("solve(grid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([][]int{[]int{5, 7, 0}, []int{0, 3, 1}, []int{0, 5, 0}})
+	var want bool = false
+	if got != want {
+		t.Errorf("solve(grid = [[5,7,0],[0,3,1],[0,5,0]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

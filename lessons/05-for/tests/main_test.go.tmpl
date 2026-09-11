@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestYigindiFive(t *testing.T) {
+	got := yigindi(5)
+	want := 15
+	if got != want {
+		t.Errorf("yigindi(5):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindiTen(t *testing.T) {
+	got := yigindi(10)
+	want := 55
+	if got != want {
+		t.Errorf("yigindi(10):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindiOne(t *testing.T) {
+	got := yigindi(1)
+	want := 1
+	if got != want {
+		t.Errorf("yigindi(1):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

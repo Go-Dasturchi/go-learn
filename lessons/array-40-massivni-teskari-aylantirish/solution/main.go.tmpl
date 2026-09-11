@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func reverseArr(N int, arr []int) []int {
+	natija := []int{}
+	for i := N - 1; i >= 0; i-- {
+		natija = append(natija, arr[i])
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(reverseArr(5, []int{1, 2, 3, 4, 5}))
+}

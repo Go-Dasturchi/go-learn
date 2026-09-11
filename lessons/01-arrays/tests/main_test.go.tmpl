@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestYigindiArrayOneToFive(t *testing.T) {
+	got := yigindiArray([5]int{1, 2, 3, 4, 5})
+	want := 15
+	if got != want {
+		t.Errorf("yigindiArray([1,2,3,4,5]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindiArrayTens(t *testing.T) {
+	got := yigindiArray([5]int{10, 20, 30, 40, 50})
+	want := 150
+	if got != want {
+		t.Errorf("yigindiArray([10,20,30,40,50]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindiArrayZeros(t *testing.T) {
+	got := yigindiArray([5]int{0, 0, 0, 0, 0})
+	want := 0
+	if got != want {
+		t.Errorf("yigindiArray([0,0,0,0,0]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestMultiplyByTwoCase1(t *testing.T) {
+	got := multiplyByTwo(5, []int{1, 2, 3, 4, 5})
+	want := []int{2, 4, 6, 8, 10}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("multiplyByTwo(N=5, arr=[1,2,3,4,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMultiplyByTwoCase2(t *testing.T) {
+	got := multiplyByTwo(3, []int{10, 20, 30})
+	want := []int{20, 40, 60}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("multiplyByTwo(N=3, arr=[10,20,30]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMultiplyByTwoCase3(t *testing.T) {
+	got := multiplyByTwo(4, []int{7, 3, 9, 1})
+	want := []int{14, 6, 18, 2}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("multiplyByTwo(N=4, arr=[7,3,9,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

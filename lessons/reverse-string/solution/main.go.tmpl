@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func solve(s []string) []string {
+	result := append([]string{}, s...)
+	for i, j := 0, len(result)-1; i < j; i, j = i+1, j-1 {
+		result[i], result[j] = result[j], result[i]
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]string{"h", "e", "l", "l", "o"}))
+}

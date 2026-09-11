@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func solve(ransomNote string, magazine string) bool {
+	var counts [26]int
+	for _, c := range magazine {
+		counts[c-'a']++
+	}
+	for _, c := range ransomNote {
+		counts[c-'a']--
+		if counts[c-'a'] < 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(solve("a", "b"))
+}

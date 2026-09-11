@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestMaydonFourFive(t *testing.T) {
+	got := maydon(4, 5)
+	want := 20
+	if got != want {
+		t.Errorf("maydon(4, 5):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestMaydonTenTwo(t *testing.T) {
+	got := maydon(10, 2)
+	want := 20
+	if got != want {
+		t.Errorf("maydon(10, 2):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestMaydonZero(t *testing.T) {
+	got := maydon(0, 7)
+	want := 0
+	if got != want {
+		t.Errorf("maydon(0, 7):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

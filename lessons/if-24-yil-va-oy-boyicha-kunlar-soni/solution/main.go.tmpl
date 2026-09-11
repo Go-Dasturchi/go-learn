@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func daysInMonth(year int, month int) int {
+	switch month {
+	case 1, 3, 5, 7, 8, 10, 12:
+		return 31
+	case 4, 6, 9, 11:
+		return 30
+	case 2:
+		isLeap := (year%4 == 0 && year%100 != 0) || year%400 == 0
+		if isLeap {
+			return 29
+		}
+		return 28
+	}
+	return 0
+}
+
+func main() {
+	fmt.Println(daysInMonth(2020, 2))
+}

@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) []int {
+	var count [102]int
+	for _, n := range nums {
+		count[n+1]++
+	}
+	for i := 1; i < len(count); i++ {
+		count[i] += count[i-1]
+	}
+	result := make([]int, len(nums))
+	for i, n := range nums {
+		result[i] = count[n]
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{8, 1, 2, 2, 3}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestYigindi2DThreeFour(t *testing.T) {
+	got := yigindi2D(3, 4)
+	want := 12
+	if got != want {
+		t.Errorf("yigindi2D(3, 4):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindi2DTwoTwo(t *testing.T) {
+	got := yigindi2D(2, 2)
+	want := 4
+	if got != want {
+		t.Errorf("yigindi2D(2, 2):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestYigindi2DZero(t *testing.T) {
+	got := yigindi2D(0, 5)
+	want := 0
+	if got != want {
+		t.Errorf("yigindi2D(0, 5):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

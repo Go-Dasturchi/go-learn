@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSumSquaresCase1(t *testing.T) {
+	got := sumSquares(1, 5)
+	want := 55
+	if got != want {
+		t.Errorf("sumSquares(K=1, N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumSquaresCase2(t *testing.T) {
+	got := sumSquares(3, 6)
+	want := 86
+	if got != want {
+		t.Errorf("sumSquares(K=3, N=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumSquaresCase3(t *testing.T) {
+	got := sumSquares(2, 4)
+	want := 29
+	if got != want {
+		t.Errorf("sumSquares(K=2, N=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

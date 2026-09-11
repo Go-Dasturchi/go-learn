@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func unusedSegment(A int, B int) int {
+	remaining := A
+	for remaining >= B {
+		remaining -= B
+	}
+	return remaining
+}
+
+func main() {
+	fmt.Println(unusedSegment(10, 3))
+}

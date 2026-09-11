@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func solve(n int, k int) [][]int {
+	res := [][]int{}
+	comb := []int{}
+	var backtrack func(start int)
+	backtrack = func(start int) {
+		if len(comb) == k {
+			tmp := make([]int, k)
+			copy(tmp, comb)
+			res = append(res, tmp)
+			return
+		}
+		for i := start; i <= n; i++ {
+			comb = append(comb, i)
+			backtrack(i + 1)
+			comb = comb[:len(comb)-1]
+		}
+	}
+	backtrack(1)
+	return res
+}
+
+func main() {
+	fmt.Println(solve(4, 2))
+}

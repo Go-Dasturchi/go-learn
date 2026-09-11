@@ -1,0 +1,62 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	n := len(nums)
+	if n < 2 {
+		return 0
+	}
+	temp := make([]int, n)
+	arr := make([]int, n)
+	copy(arr, nums)
+	count := 0
+
+	var mergeSort func(lo, hi int)
+	mergeSort = func(lo, hi int) {
+		if hi-lo <= 1 {
+			return
+		}
+		mid := (lo + hi) / 2
+		mergeSort(lo, mid)
+		mergeSort(mid, hi)
+
+		j := mid
+		for i := lo; i < mid; i++ {
+			for j < hi && arr[i] > 2*arr[j] {
+				j++
+			}
+			count += j - mid
+		}
+
+		i, a, b := lo, lo, mid
+		for a < mid && b < hi {
+			if arr[a] <= arr[b] {
+				temp[i] = arr[a]
+				a++
+			} else {
+				temp[i] = arr[b]
+				b++
+			}
+			i++
+		}
+		for a < mid {
+			temp[i] = arr[a]
+			a++
+			i++
+		}
+		for b < hi {
+			temp[i] = arr[b]
+			b++
+			i++
+		}
+		copy(arr[lo:hi], temp[lo:hi])
+	}
+
+	mergeSort(0, n)
+	return count
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 3, 2, 3, 1}))
+}

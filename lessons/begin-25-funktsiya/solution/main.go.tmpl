@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func solve(x int) float64 {
+	xf := float64(x)
+	return 3*math.Pow(xf, 6) - 6*xf*xf - 7
+}
+
+func main() {
+	fmt.Println(solve(2))
+}

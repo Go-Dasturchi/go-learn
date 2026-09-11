@@ -1,0 +1,30 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestJuftSonlarTen(t *testing.T) {
+	got := juftSonlar(10)
+	want := []int{2, 4, 6, 8, 10}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("juftSonlar(10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJuftSonlarFive(t *testing.T) {
+	got := juftSonlar(5)
+	want := []int{2, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("juftSonlar(5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJuftSonlarOne(t *testing.T) {
+	got := juftSonlar(1)
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("juftSonlar(1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

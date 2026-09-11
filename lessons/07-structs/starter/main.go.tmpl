@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+// Odam — ism va yoshni saqlovchi oddiy struct.
+type Odam struct {
+	Ism  string
+	Yosh int
+}
+
+// kattaroq ikkita Odam orasidan yoshi kattarog'ini qaytaradi (teng
+// bo'lsa, a ni qaytaradi).
+func kattaroq(a, b Odam) Odam {
+	// TODO: a.Yosh va b.Yosh ni solishtirib, kattarog'ini qaytaring
+	return Odam{}
+}
+
+func main() {
+	ali := Odam{Ism: "Ali", Yosh: 25}
+	vali := Odam{Ism: "Vali", Yosh: 30}
+	fmt.Println(kattaroq(ali, vali))
+}

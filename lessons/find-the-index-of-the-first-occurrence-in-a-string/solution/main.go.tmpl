@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(haystack string, needle string) int {
+	return strings.Index(haystack, needle)
+}
+
+func main() {
+	fmt.Println(solve("sadbutsad", "sad"))
+}

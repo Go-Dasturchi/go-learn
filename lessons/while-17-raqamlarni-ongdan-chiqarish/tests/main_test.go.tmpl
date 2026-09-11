@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDigitsRightToLeftCase1(t *testing.T) {
+	got := digitsRightToLeft(12345)
+	want := "5 4 3 2 1"
+	if got != want {
+		t.Errorf("digitsRightToLeft(N=12345):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitsRightToLeftCase2(t *testing.T) {
+	got := digitsRightToLeft(789)
+	want := "9 8 7"
+	if got != want {
+		t.Errorf("digitsRightToLeft(N=789):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitsRightToLeftCase3(t *testing.T) {
+	got := digitsRightToLeft(100)
+	want := "0 0 1"
+	if got != want {
+		t.Errorf("digitsRightToLeft(N=100):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

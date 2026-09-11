@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinGreaterThanSqrtCase1(t *testing.T) {
+	got := minGreaterThanSqrt(15)
+	want := 3
+	if got != want {
+		t.Errorf("minGreaterThanSqrt(N=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinGreaterThanSqrtCase2(t *testing.T) {
+	got := minGreaterThanSqrt(25)
+	want := 5
+	if got != want {
+		t.Errorf("minGreaterThanSqrt(N=25):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinGreaterThanSqrtCase3(t *testing.T) {
+	got := minGreaterThanSqrt(50)
+	want := 7
+	if got != want {
+		t.Errorf("minGreaterThanSqrt(N=50):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

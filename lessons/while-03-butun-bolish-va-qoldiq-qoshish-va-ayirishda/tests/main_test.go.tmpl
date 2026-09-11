@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDivAndModCase1(t *testing.T) {
+	got := divAndMod(17, 5)
+	want := "quotient=3, remainder=2"
+	if got != want {
+		t.Errorf("divAndMod(N=17, K=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDivAndModCase2(t *testing.T) {
+	got := divAndMod(20, 4)
+	want := "quotient=5, remainder=0"
+	if got != want {
+		t.Errorf("divAndMod(N=20, K=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDivAndModCase3(t *testing.T) {
+	got := divAndMod(7, 3)
+	want := "quotient=2, remainder=1"
+	if got != want {
+		t.Errorf("divAndMod(N=7, K=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

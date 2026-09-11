@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGetSeasonCase1(t *testing.T) {
+	got := getSeason(1)
+	want := "Qish"
+	if got != want {
+		t.Errorf("getSeason(K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetSeasonCase2(t *testing.T) {
+	got := getSeason(5)
+	want := "Bahor"
+	if got != want {
+		t.Errorf("getSeason(K=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetSeasonCase3(t *testing.T) {
+	got := getSeason(8)
+	want := "Yoz"
+	if got != want {
+		t.Errorf("getSeason(K=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

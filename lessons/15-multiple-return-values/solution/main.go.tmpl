@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+// bolishVaQoldiq a ni b ga bo'lgandagi bo'linma va qoldiqni qaytaradi.
+func bolishVaQoldiq(a, b int) (int, int) {
+	return a / b, a % b
+}
+
+func main() {
+	b, q := bolishVaQoldiq(17, 5)
+	fmt.Println(b, q)
+}

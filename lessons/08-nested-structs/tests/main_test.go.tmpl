@@ -1,0 +1,21 @@
+package main
+
+import "testing"
+
+func TestToliqMalumotBasic(t *testing.T) {
+	o := Odam{Ism: "Ali", Manzil: Manzil{Shahar: "Toshkent"}}
+	got := toliqMalumot(o)
+	want := "Ali, Toshkent"
+	if got != want {
+		t.Errorf("toliqMalumot(Ali/Toshkent):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestToliqMalumotAnotherCity(t *testing.T) {
+	o := Odam{Ism: "Vali", Manzil: Manzil{Shahar: "Samarqand"}}
+	got := toliqMalumot(o)
+	want := "Vali, Samarqand"
+	if got != want {
+		t.Errorf("toliqMalumot(Vali/Samarqand):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

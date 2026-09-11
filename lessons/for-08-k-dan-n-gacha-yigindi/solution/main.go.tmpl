@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func sumRange(K int, N int) int {
+	sum := 0
+	for i := K; i <= N; i++ {
+		sum += i
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(sumRange(1, 10))
+}

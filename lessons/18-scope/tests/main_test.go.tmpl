@@ -1,0 +1,11 @@
+package main
+
+import "testing"
+
+func TestHisoblashOutput(t *testing.T) {
+	got := hisoblash()
+	want := "Natija: 42"
+	if got != want {
+		t.Errorf("hisoblash():\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

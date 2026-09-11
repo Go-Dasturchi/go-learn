@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("1.1.1.1")
+	var want string = "1[.]1[.]1[.]1"
+	if got != want {
+		t.Errorf("solve(address = \"1.1.1.1\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("255.100.50.0")
+	var want string = "255[.]100[.]50[.]0"
+	if got != want {
+		t.Errorf("solve(address = \"255.100.50.0\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFindMaxCase1(t *testing.T) {
+	got := findMax(5, []int{3, 7, 2, 9, 1})
+	want := 9
+	if got != want {
+		t.Errorf("findMax(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMaxCase2(t *testing.T) {
+	got := findMax(4, []int{10, 5, 15, 8})
+	want := 15
+	if got != want {
+		t.Errorf("findMax(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMaxCase3(t *testing.T) {
+	got := findMax(3, []int{4, 4, 4})
+	want := 4
+	if got != want {
+		t.Errorf("findMax(N=3, nums=[4, 4, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

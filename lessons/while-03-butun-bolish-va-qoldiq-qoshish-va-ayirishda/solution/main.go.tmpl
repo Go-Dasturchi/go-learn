@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func divAndMod(N int, K int) string {
+	quotient := 0
+	remainder := N
+	for remainder >= K {
+		remainder -= K
+		quotient++
+	}
+	return fmt.Sprintf("quotient=%d, remainder=%d", quotient, remainder)
+}
+
+func main() {
+	fmt.Println(divAndMod(17, 5))
+}

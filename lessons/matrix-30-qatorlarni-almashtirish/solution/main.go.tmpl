@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func swapRows(M int, N int, K1 int, K2 int, matrix [][]int) [][]int {
+	matrix[K1], matrix[K2] = matrix[K2], matrix[K1]
+	return matrix
+}
+
+func main() {
+	fmt.Println(swapRows(3, 3, 0, 2, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}}))
+}

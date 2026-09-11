@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func gradeToWord(n int) string {
+	switch n {
+	case 1:
+		return "yomon"
+	case 2:
+		return "qoniqarsiz"
+	case 3:
+		return "qoniqarli"
+	case 4:
+		return "yaxshi"
+	case 5:
+		return "a'lo"
+	}
+	return ""
+}
+
+func main() {
+	fmt.Println(gradeToWord(1))
+}

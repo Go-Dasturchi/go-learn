@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func productRange(K int, N int) int {
+	product := 1
+	for i := K; i <= N; i++ {
+		product *= i
+	}
+	return product
+}
+
+func main() {
+	fmt.Println(productRange(1, 5))
+}

@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve("25525511135")
+	var want []string = []string{"255.255.11.135", "255.255.111.35"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(s = \"25525511135\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve("0000")
+	var want []string = []string{"0.0.0.0"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(s = \"0000\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve("101023")
+	var want []string = []string{"1.0.10.23", "1.0.102.3", "10.1.0.23", "10.10.2.3", "101.0.2.3"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(s = \"101023\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

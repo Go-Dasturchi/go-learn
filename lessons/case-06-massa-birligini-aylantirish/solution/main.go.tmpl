@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func convertMass(M int, unit int) int {
+	switch unit {
+	case 1:
+		return M
+	case 2:
+		return M / 1000000
+	case 3:
+		return M / 1000
+	case 4:
+		return M * 1000
+	case 5:
+		return M * 100
+	}
+	return 0
+}
+
+func main() {
+	fmt.Println(convertMass(5, 1))
+}

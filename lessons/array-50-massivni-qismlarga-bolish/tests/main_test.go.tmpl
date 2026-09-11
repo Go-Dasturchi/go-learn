@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSplitArrayCase1(t *testing.T) {
+	got := splitArray(7, []int{3, -2, 0, 5, -7, 0, 1})
+	want := []int{-2, -7, 0, 0, 3, 5, 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("splitArray(N=7, arr=[3,-2,0,5,-7,0,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSplitArrayCase2(t *testing.T) {
+	got := splitArray(5, []int{-1, 2, -3, 4, -5})
+	want := []int{-1, -3, -5, 2, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("splitArray(N=5, arr=[-1,2,-3,4,-5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSplitArrayCase3(t *testing.T) {
+	got := splitArray(4, []int{1, 2, 3, 4})
+	want := []int{1, 2, 3, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("splitArray(N=4, arr=[1,2,3,4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

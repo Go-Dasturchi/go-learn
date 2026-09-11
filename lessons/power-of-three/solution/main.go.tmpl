@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func solve(n int) bool {
+	if n < 1 {
+		return false
+	}
+	// 1162261467 = 3^19 is the largest power of 3 that fits in int32.
+	const maxPow3 = 1162261467
+	return maxPow3%n == 0
+}
+
+func main() {
+	fmt.Println(solve(27))
+}

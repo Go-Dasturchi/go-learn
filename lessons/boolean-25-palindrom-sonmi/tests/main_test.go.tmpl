@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsPalindromeCase1(t *testing.T) {
+	got := isPalindrome(1221)
+	want := true
+	if got != want {
+		t.Errorf("isPalindrome(A=1221):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPalindromeCase2(t *testing.T) {
+	got := isPalindrome(1234)
+	want := false
+	if got != want {
+		t.Errorf("isPalindrome(A=1234):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsPalindromeCase3(t *testing.T) {
+	got := isPalindrome(5005)
+	want := true
+	if got != want {
+		t.Errorf("isPalindrome(A=5005):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

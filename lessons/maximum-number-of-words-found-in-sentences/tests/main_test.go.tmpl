@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([]string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"})
+	var want int = 6
+	if got != want {
+		t.Errorf("solve(sentences = [\"alice and bob love leetcode\", \"i think so too\", \"this is great thanks very much\"]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([]string{"please wait", "continue to fight", "continue to win"})
+	var want int = 3
+	if got != want {
+		t.Errorf("solve(sentences = [\"please wait\", \"continue to fight\", \"continue to win\"]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestToifaAdult(t *testing.T) {
+	got := toifa(20)
+	want := "Voyaga yetgan"
+	if got != want {
+		t.Errorf("toifa(20):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestToifaExactlyEighteen(t *testing.T) {
+	got := toifa(18)
+	want := "Voyaga yetgan"
+	if got != want {
+		t.Errorf("toifa(18):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestToifaMinor(t *testing.T) {
+	got := toifa(15)
+	want := "Voyaga yetmagan"
+	if got != want {
+		t.Errorf("toifa(15):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

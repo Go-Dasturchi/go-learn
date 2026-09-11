@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestDigitCountAndSumCase1(t *testing.T) {
+	got := digitCountAndSum(12345)
+	want := "count=5, sum=15"
+	if got != want {
+		t.Errorf("digitCountAndSum(N=12345):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitCountAndSumCase2(t *testing.T) {
+	got := digitCountAndSum(789)
+	want := "count=3, sum=24"
+	if got != want {
+		t.Errorf("digitCountAndSum(N=789):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestDigitCountAndSumCase3(t *testing.T) {
+	got := digitCountAndSum(100)
+	want := "count=3, sum=1"
+	if got != want {
+		t.Errorf("digitCountAndSum(N=100):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

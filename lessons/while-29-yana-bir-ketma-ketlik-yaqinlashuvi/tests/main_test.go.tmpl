@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestAnotherSequenceCase1(t *testing.T) {
+	got := anotherSequence(0.1)
+	var want string = "K=5, A4=1.777778, A5=1.740741"
+	if got != want {
+		t.Errorf("anotherSequence(eps=0.1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAnotherSequenceCase2(t *testing.T) {
+	got := anotherSequence(0.01)
+	var want string = "K=7, A6=1.753086, A7=1.748971"
+	if got != want {
+		t.Errorf("anotherSequence(eps=0.01):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAnotherSequenceCase3(t *testing.T) {
+	got := anotherSequence(0.001)
+	var want string = "K=9, A8=1.750343, A9=1.749886"
+	if got != want {
+		t.Errorf("anotherSequence(eps=0.001):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

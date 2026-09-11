@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func isPalindrome(A int) bool {
+	d1 := A / 1000
+	d2 := (A / 100) % 10
+	d3 := (A / 10) % 10
+	d4 := A % 10
+	return d1 == d4 && d2 == d3
+}
+
+func main() {
+	fmt.Println(isPalindrome(1221))
+}

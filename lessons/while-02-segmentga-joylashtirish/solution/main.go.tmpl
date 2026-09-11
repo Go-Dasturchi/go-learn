@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func fitInSegment(A int, B int) int {
+	count := 0
+	remaining := A
+	for remaining >= B {
+		remaining -= B
+		count++
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(fitInSegment(10, 3))
+}

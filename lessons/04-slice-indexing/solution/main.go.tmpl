@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+// ikkilantir sonlar slice'idagi har bir elementni indeks orqali ikki
+// baravar oshiradi va shu (o'zgartirilgan) slice'ning o'zini qaytaradi.
+func ikkilantir(sonlar []int) []int {
+	for i := range sonlar {
+		sonlar[i] = sonlar[i] * 2
+	}
+	return sonlar
+}
+
+func main() {
+	fmt.Println(ikkilantir([]int{1, 2, 3}))
+	fmt.Println(ikkilantir([]int{5, 10}))
+}

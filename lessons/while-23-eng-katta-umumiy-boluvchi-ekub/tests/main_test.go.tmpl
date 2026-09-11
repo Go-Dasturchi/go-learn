@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGcdCase1(t *testing.T) {
+	got := gcd(48, 18)
+	want := 6
+	if got != want {
+		t.Errorf("gcd(A=48, B=18):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGcdCase2(t *testing.T) {
+	got := gcd(100, 35)
+	want := 5
+	if got != want {
+		t.Errorf("gcd(A=100, B=35):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGcdCase3(t *testing.T) {
+	got := gcd(17, 19)
+	want := 1
+	if got != want {
+		t.Errorf("gcd(A=17, B=19):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

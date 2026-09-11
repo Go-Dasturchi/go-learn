@@ -1,0 +1,59 @@
+package main
+
+import "fmt"
+
+func solve(board [][]string) [][]string {
+	result := make([][]string, len(board))
+	for i, row := range board {
+		result[i] = make([]string, len(row))
+		copy(result[i], row)
+	}
+
+	var isValid func(row, col int, c string) bool
+	isValid = func(row, col int, c string) bool {
+		for i := 0; i < 9; i++ {
+			if result[row][i] == c {
+				return false
+			}
+			if result[i][col] == c {
+				return false
+			}
+			boxRow := 3*(row/3) + i/3
+			boxCol := 3*(col/3) + i%3
+			if result[boxRow][boxCol] == c {
+				return false
+			}
+		}
+		return true
+	}
+
+	var backtrack func() bool
+	backtrack = func() bool {
+		for row := 0; row < 9; row++ {
+			for col := 0; col < 9; col++ {
+				if result[row][col] != "." {
+					continue
+				}
+				for d := 1; d <= 9; d++ {
+					c := string(rune('0' + d))
+					if isValid(row, col, c) {
+						result[row][col] = c
+						if backtrack() {
+							return true
+						}
+						result[row][col] = "."
+					}
+				}
+				return false
+			}
+		}
+		return true
+	}
+
+	backtrack()
+	return result
+}
+
+func main() {
+	fmt.Println(solve([][]string{{"5", "3", ".", ".", "7", ".", ".", ".", "."}, {"6", ".", ".", "1", "9", "5", ".", ".", "."}, {".", "9", "8", ".", ".", ".", ".", "6", "."}, {"8", ".", ".", ".", "6", ".", ".", ".", "3"}, {"4", ".", ".", "8", ".", "3", ".", ".", "1"}, {"7", ".", ".", ".", "2", ".", ".", ".", "6"}, {".", "6", ".", ".", ".", ".", "2", "8", "."}, {".", ".", ".", "4", "1", "9", ".", ".", "5"}, {".", ".", ".", ".", "8", ".", ".", "7", "9"}}))
+}

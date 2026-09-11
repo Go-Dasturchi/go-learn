@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestReverseArrayCase1(t *testing.T) {
+	got := reverseArray(5, []int{1, 2, 3, 4, 5})
+	want := "5, 4, 3, 2, 1"
+	if got != want {
+		t.Errorf("reverseArray(N=5, arr=[1,2,3,4,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReverseArrayCase2(t *testing.T) {
+	got := reverseArray(3, []int{10, 20, 30})
+	want := "30, 20, 10"
+	if got != want {
+		t.Errorf("reverseArray(N=3, arr=[10,20,30]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestReverseArrayCase3(t *testing.T) {
+	got := reverseArray(4, []int{7, 3, 9, 1})
+	want := "1, 9, 3, 7"
+	if got != want {
+		t.Errorf("reverseArray(N=4, arr=[7,3,9,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

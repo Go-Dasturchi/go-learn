@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func convertLength(L int, unit int) int {
+	switch unit {
+	case 1:
+		return L / 10
+	case 2:
+		return L
+	case 3:
+		return L * 1000
+	}
+	return 0
+}
+
+func main() {
+	fmt.Println(convertLength(50, 1))
+}

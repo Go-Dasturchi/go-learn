@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func sumAndProduct3(n int) string {
+	d1 := n / 100
+	d2 := (n / 10) % 10
+	d3 := n % 10
+	sum := d1 + d2 + d3
+	product := d1 * d2 * d3
+	return fmt.Sprintf("%d, %d", sum, product)
+}
+
+func main() {
+	fmt.Println(sumAndProduct3(123))
+}

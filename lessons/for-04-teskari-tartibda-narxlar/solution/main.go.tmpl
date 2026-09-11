@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func reversePrices(A int) string {
+	result := ""
+	for i := 10; i >= 1; i-- {
+		if i < 10 {
+			result += ", "
+		}
+		result += strconv.Itoa(A * i)
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(reversePrices(5))
+}

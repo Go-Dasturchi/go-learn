@@ -1,0 +1,44 @@
+package main
+
+import "fmt"
+
+func solve(s string) int {
+	result := 0
+	sign := 1
+	num := 0
+	stack := []int{}
+
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		switch {
+		case c >= '0' && c <= '9':
+			num = num*10 + int(c-'0')
+		case c == '+':
+			result += sign * num
+			num = 0
+			sign = 1
+		case c == '-':
+			result += sign * num
+			num = 0
+			sign = -1
+		case c == '(':
+			stack = append(stack, result, sign)
+			result = 0
+			sign = 1
+		case c == ')':
+			result += sign * num
+			num = 0
+			prevSign := stack[len(stack)-1]
+			prevResult := stack[len(stack)-2]
+			stack = stack[:len(stack)-2]
+			result = prevResult + prevSign*result
+			sign = 1
+		}
+	}
+	result += sign * num
+	return result
+}
+
+func main() {
+	fmt.Println(solve("(1+(4+5+2)-3)+(6+8)"))
+}

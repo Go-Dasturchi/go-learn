@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+func solve(s string) int {
+	i, n := 0, len(s)
+	for i < n && s[i] == ' ' {
+		i++
+	}
+	sign := 1
+	if i < n && (s[i] == '+' || s[i] == '-') {
+		if s[i] == '-' {
+			sign = -1
+		}
+		i++
+	}
+	result := 0
+	for i < n && s[i] >= '0' && s[i] <= '9' {
+		result = result*10 + int(s[i]-'0')
+		if sign == 1 && result > 2147483647 {
+			return 2147483647
+		}
+		if sign == -1 && result > 2147483648 {
+			return -2147483648
+		}
+		i++
+	}
+	return sign * result
+}
+
+func main() {
+	fmt.Println(solve("42"))
+}

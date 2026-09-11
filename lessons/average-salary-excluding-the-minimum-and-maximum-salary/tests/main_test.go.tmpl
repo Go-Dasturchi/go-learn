@@ -1,0 +1,21 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([]int{4000, 3000, 1000, 2000})
+	var want float64 = 2500.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("solve(salary = [4000,3000,1000,2000]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([]int{1000, 2000, 3000})
+	var want float64 = 2000.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("solve(salary = [1000,2000,3000]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

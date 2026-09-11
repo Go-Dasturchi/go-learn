@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestClosestPairCase1(t *testing.T) {
+	got := closestPair(5, []int{3, 7, 2, 9, 8})
+	want := "7, 8"
+	if got != want {
+		t.Errorf("closestPair(N=5, nums=[3, 7, 2, 9, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestClosestPairCase2(t *testing.T) {
+	got := closestPair(6, []int{10, 1, 5, 3, 20, 4})
+	want := "3, 4"
+	if got != want {
+		t.Errorf("closestPair(N=6, nums=[10, 1, 5, 3, 20, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestClosestPairCase3(t *testing.T) {
+	got := closestPair(4, []int{100, 50, 75, 25})
+	want := "50, 75"
+	if got != want {
+		t.Errorf("closestPair(N=4, nums=[100, 50, 75, 25]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

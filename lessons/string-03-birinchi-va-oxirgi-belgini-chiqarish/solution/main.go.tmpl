@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	r := []rune(s)
+	return fmt.Sprintf("%c, %c", r[0], r[len(r)-1])
+}
+
+func main() {
+	fmt.Println(solve("Hello"))
+}

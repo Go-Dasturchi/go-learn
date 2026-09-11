@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func abs(n int) int {
+	if n < 0 {
+		return -n
+	}
+	return n
+}
+
+func chessMove(fig int, x1 int, y1 int, x2 int, y2 int) bool {
+	dx := abs(x2 - x1)
+	dy := abs(y2 - y1)
+
+	rookMove := (dx == 0 || dy == 0) && !(dx == 0 && dy == 0)
+	bishopMove := dx == dy && dx != 0
+	knightMove := (dx == 1 && dy == 2) || (dx == 2 && dy == 1)
+
+	switch fig {
+	case 1:
+		return rookMove
+	case 2:
+		return bishopMove
+	case 3:
+		return rookMove || bishopMove
+	case 4:
+		return knightMove
+	}
+	return false
+}
+
+func main() {
+	fmt.Println(chessMove(1, 1, 1, 1, 5))
+}

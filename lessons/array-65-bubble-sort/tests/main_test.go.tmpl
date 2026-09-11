@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestBubbleSortCase1(t *testing.T) {
+	got := bubbleSort(5, []int{5, 2, 8, 1, 9})
+	want := []int{1, 2, 5, 8, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bubbleSort(N=5, arr=[5,2,8,1,9]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestBubbleSortCase2(t *testing.T) {
+	got := bubbleSort(4, []int{10, 5, 15, 8})
+	want := []int{5, 8, 10, 15}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bubbleSort(N=4, arr=[10,5,15,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestBubbleSortCase3(t *testing.T) {
+	got := bubbleSort(6, []int{3, 7, 2, 9, 1, 8})
+	want := []int{1, 2, 3, 7, 8, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bubbleSort(N=6, arr=[3,7,2,9,1,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

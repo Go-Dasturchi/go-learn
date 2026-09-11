@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func solve(s string) int {
+	lastSeen := make(map[byte]int)
+	best := 0
+	left := 0
+	for right := 0; right < len(s); right++ {
+		c := s[right]
+		if idx, ok := lastSeen[c]; ok && idx >= left {
+			left = idx + 1
+		}
+		lastSeen[c] = right
+		if right-left+1 > best {
+			best = right - left + 1
+		}
+	}
+	return best
+}
+
+func main() {
+	fmt.Println(solve("abcabcbb"))
+}

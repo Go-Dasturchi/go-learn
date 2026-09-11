@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestYuzaCase1(t *testing.T) {
+	got := yuza(0, 0, 4, 0, 0, 3)
+	want := "P=12.0, S=6.0"
+	if got != want {
+		t.Errorf("yuza(x1=0,y1=0,x2=4,y2=0,x3=0,y3=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestYuzaCase2(t *testing.T) {
+	got := yuza(0, 0, 3, 0, 0, 4)
+	want := "P=12.0, S=6.0"
+	if got != want {
+		t.Errorf("yuza(x1=0,y1=0,x2=3,y2=0,x3=0,y3=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestYuzaCase3(t *testing.T) {
+	got := yuza(1, 1, 4, 1, 1, 5)
+	want := "P=12.0, S=6.0"
+	if got != want {
+		t.Errorf("yuza(x1=1,y1=1,x2=4,y2=1,x3=1,y3=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

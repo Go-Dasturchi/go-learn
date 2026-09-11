@@ -1,0 +1,30 @@
+package main
+
+import "testing"
+
+func TestKattaroqBasic(t *testing.T) {
+	ali := Odam{Ism: "Ali", Yosh: 25}
+	vali := Odam{Ism: "Vali", Yosh: 30}
+	got := kattaroq(ali, vali)
+	if got != vali {
+		t.Errorf("kattaroq(Ali/25, Vali/30):\nExpected:\n%+v\n\nGot:\n%+v", vali, got)
+	}
+}
+
+func TestKattaroqReversed(t *testing.T) {
+	guli := Odam{Ism: "Guli", Yosh: 40}
+	kamol := Odam{Ism: "Kamol", Yosh: 20}
+	got := kattaroq(guli, kamol)
+	if got != guli {
+		t.Errorf("kattaroq(Guli/40, Kamol/20):\nExpected:\n%+v\n\nGot:\n%+v", guli, got)
+	}
+}
+
+func TestKattaroqEqualAges(t *testing.T) {
+	a := Odam{Ism: "A", Yosh: 30}
+	b := Odam{Ism: "B", Yosh: 30}
+	got := kattaroq(a, b)
+	if got != a {
+		t.Errorf("kattaroq(A/30, B/30) — yoshlar teng bo'lsa, birinchisi (a) qaytishi kerak:\nExpected:\n%+v\n\nGot:\n%+v", a, got)
+	}
+}

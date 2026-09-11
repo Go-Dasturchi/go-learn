@@ -1,0 +1,21 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([][]string{[]string{"o", "a", "a", "n"}, []string{"e", "t", "a", "e"}, []string{"i", "h", "k", "r"}, []string{"i", "f", "l", "v"}}, []string{"oath", "pea", "eat", "rain"})
+	var want []string = []string{"eat", "oath"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(board = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([][]string{[]string{"a", "b"}, []string{"c", "d"}}, []string{"abcb"})
+	var want []string = []string{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(board = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

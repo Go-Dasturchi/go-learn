@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func placeSquares(A int, B int, C int) int {
+	used := (A / C) * (B / C) * C * C
+	return A*B - used
+}
+
+func main() {
+	fmt.Println(placeSquares(10, 8, 3))
+}

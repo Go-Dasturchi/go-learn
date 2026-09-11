@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFirstDigitCase1(t *testing.T) {
+	got := firstDigit(456)
+	want := 4
+	if got != want {
+		t.Errorf("firstDigit(n=456):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFirstDigitCase2(t *testing.T) {
+	got := firstDigit(789)
+	want := 7
+	if got != want {
+		t.Errorf("firstDigit(n=789):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFirstDigitCase3(t *testing.T) {
+	got := firstDigit(123)
+	want := 1
+	if got != want {
+		t.Errorf("firstDigit(n=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

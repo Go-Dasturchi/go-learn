@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func reverseNumber(n int) int {
+	d1 := n / 100
+	d2 := (n / 10) % 10
+	d3 := n % 10
+	return d3*100 + d2*10 + d1
+}
+
+func main() {
+	fmt.Println(reverseNumber(123))
+}

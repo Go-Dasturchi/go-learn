@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func longestIncreasing(N int, arr []int) int {
+	if N == 0 {
+		return 0
+	}
+	dp := make([]int, N)
+	best := 1
+	for i := 0; i < N; i++ {
+		dp[i] = 1
+		for j := 0; j < i; j++ {
+			if arr[j] < arr[i] && dp[j]+1 > dp[i] {
+				dp[i] = dp[j] + 1
+			}
+		}
+		if dp[i] > best {
+			best = dp[i]
+		}
+	}
+	return best - 1
+}
+
+func main() {
+	fmt.Println(longestIncreasing(8, []int{1, 2, 3, 1, 2, 3, 4, 5}))
+}

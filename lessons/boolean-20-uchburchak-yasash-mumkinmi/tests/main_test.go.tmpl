@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCanFormTriangleCase1(t *testing.T) {
+	got := canFormTriangle(3, 4, 5)
+	want := true
+	if got != want {
+		t.Errorf("canFormTriangle(A=3, B=4, C=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCanFormTriangleCase2(t *testing.T) {
+	got := canFormTriangle(1, 2, 5)
+	want := false
+	if got != want {
+		t.Errorf("canFormTriangle(A=1, B=2, C=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCanFormTriangleCase3(t *testing.T) {
+	got := canFormTriangle(5, 5, 5)
+	want := true
+	if got != want {
+		t.Errorf("canFormTriangle(A=5, B=5, C=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,30 @@
+package main
+
+import "testing"
+
+func TestOshirBasic(t *testing.T) {
+	x := 5
+	oshir(&x, 10)
+	want := 15
+	if x != want {
+		t.Errorf("oshir(&x=5, 10):\nExpected x to become:\n%d\n\nGot:\n%d", want, x)
+	}
+}
+
+func TestOshirNegative(t *testing.T) {
+	x := 20
+	oshir(&x, -5)
+	want := 15
+	if x != want {
+		t.Errorf("oshir(&x=20, -5):\nExpected x to become:\n%d\n\nGot:\n%d", want, x)
+	}
+}
+
+func TestOshirZero(t *testing.T) {
+	x := 0
+	oshir(&x, 0)
+	want := 0
+	if x != want {
+		t.Errorf("oshir(&x=0, 0):\nExpected x to become:\n%d\n\nGot:\n%d", want, x)
+	}
+}

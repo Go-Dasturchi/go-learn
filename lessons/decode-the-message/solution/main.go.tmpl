@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func solve(key string, message string) string {
+	var mapping [26]byte
+	var used [26]bool
+	next := byte('a')
+	for i := 0; i < len(key); i++ {
+		c := key[i]
+		if c == ' ' {
+			continue
+		}
+		idx := c - 'a'
+		if !used[idx] {
+			used[idx] = true
+			mapping[idx] = next
+			next++
+		}
+	}
+	var sb strings.Builder
+	for i := 0; i < len(message); i++ {
+		c := message[i]
+		if c == ' ' {
+			sb.WriteByte(' ')
+		} else {
+			sb.WriteByte(mapping[c-'a'])
+		}
+	}
+	return sb.String()
+}
+
+func main() {
+	fmt.Println(solve("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
+}

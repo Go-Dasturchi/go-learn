@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	count := make(map[int]int)
+	pairs := 0
+	for _, n := range nums {
+		pairs += count[n]
+		count[n]++
+	}
+	return pairs
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3, 1, 1, 3}))
+}

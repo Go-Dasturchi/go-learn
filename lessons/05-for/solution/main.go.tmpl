@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+// yigindi 1 dan n gacha bo'lgan barcha sonlarning yig'indisini qaytaradi.
+func yigindi(n int) int {
+	natija := 0
+	for i := 1; i <= n; i++ {
+		natija += i
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(yigindi(5))
+	fmt.Println(yigindi(10))
+}

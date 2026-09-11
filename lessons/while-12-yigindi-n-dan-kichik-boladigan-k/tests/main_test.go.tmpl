@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestKSumLessNCase1(t *testing.T) {
+	got := kSumLessN(10)
+	want := "K=4, sum=10"
+	if got != want {
+		t.Errorf("kSumLessN(N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestKSumLessNCase2(t *testing.T) {
+	got := kSumLessN(20)
+	want := "K=5, sum=15"
+	if got != want {
+		t.Errorf("kSumLessN(N=20):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestKSumLessNCase3(t *testing.T) {
+	got := kSumLessN(7)
+	want := "K=3, sum=6"
+	if got != want {
+		t.Errorf("kSumLessN(N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

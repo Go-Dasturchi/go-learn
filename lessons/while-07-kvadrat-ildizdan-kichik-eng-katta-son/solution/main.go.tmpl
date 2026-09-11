@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func maxLessThanSqrt(N int) int {
+	K := 1
+	for K*K <= N {
+		K++
+	}
+	return K
+}
+
+func main() {
+	fmt.Println(maxLessThanSqrt(15))
+}

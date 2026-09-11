@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func diagonalRotate(N int, matrix [][]int) [][]int {
+	result := make([][]int, N)
+	for i := 0; i < N; i++ {
+		row := make([]int, N)
+		for j := 0; j < N; j++ {
+			row[j] = matrix[N-1-j][i]
+		}
+		result[i] = row
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(diagonalRotate(3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestThousandsDigitCase1(t *testing.T) {
+	got := thousandsDigit(12345)
+	want := 2
+	if got != want {
+		t.Errorf("thousandsDigit(n=12345):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestThousandsDigitCase2(t *testing.T) {
+	got := thousandsDigit(98765)
+	want := 8
+	if got != want {
+		t.Errorf("thousandsDigit(n=98765):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestThousandsDigitCase3(t *testing.T) {
+	got := thousandsDigit(10000)
+	want := 0
+	if got != want {
+		t.Errorf("thousandsDigit(n=10000):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

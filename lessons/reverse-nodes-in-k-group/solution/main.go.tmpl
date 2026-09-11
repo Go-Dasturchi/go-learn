@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func solve(head []int, k int) []int {
+	n := len(head)
+	result := make([]int, n)
+	copy(result, head)
+
+	for start := 0; start+k <= n; start += k {
+		end := start + k - 1
+		for i, j := start, end; i < j; i, j = i+1, j-1 {
+			result[i], result[j] = result[j], result[i]
+		}
+	}
+
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 2, 3, 4, 5}, 2))
+}

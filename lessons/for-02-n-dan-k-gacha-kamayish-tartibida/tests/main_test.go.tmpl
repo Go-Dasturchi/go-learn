@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestRangeNtoKCase1(t *testing.T) {
+	got := rangeNtoK(3, 7)
+	var want string = "7 6 5 4 3"
+	if got != want {
+		t.Errorf("rangeNtoK(K=3, N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRangeNtoKCase2(t *testing.T) {
+	got := rangeNtoK(1, 5)
+	var want string = "5 4 3 2 1"
+	if got != want {
+		t.Errorf("rangeNtoK(K=1, N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestRangeNtoKCase3(t *testing.T) {
+	got := rangeNtoK(10, 10)
+	var want string = "10"
+	if got != want {
+		t.Errorf("rangeNtoK(K=10, N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

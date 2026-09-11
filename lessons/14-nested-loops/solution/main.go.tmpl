@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// yigindi2D qatorlar x ustunlar o'lchamli jadvaldagi katakchalar sonini qaytaradi.
+func yigindi2D(qatorlar, ustunlar int) int {
+	soni := 0
+	for i := 0; i < qatorlar; i++ {
+		for j := 0; j < ustunlar; j++ {
+			soni++
+		}
+	}
+	return soni
+}
+
+func main() {
+	fmt.Println(yigindi2D(3, 4))
+	fmt.Println(yigindi2D(2, 2))
+}

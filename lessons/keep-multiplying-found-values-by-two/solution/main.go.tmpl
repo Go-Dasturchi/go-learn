@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, original int) int {
+	set := make(map[int]bool)
+	for _, n := range nums {
+		set[n] = true
+	}
+	for set[original] {
+		original *= 2
+	}
+	return original
+}
+
+func main() {
+	fmt.Println(solve([]int{5, 3, 6, 1, 12}, 3))
+}

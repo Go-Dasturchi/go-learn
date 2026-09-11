@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func solve(columnNumber int) string {
+	var result []byte
+	for columnNumber > 0 {
+		columnNumber--
+		result = append(result, byte(columnNumber%26)+'A')
+		columnNumber /= 26
+	}
+	for l, r := 0, len(result)-1; l < r; l, r = l+1, r-1 {
+		result[l], result[r] = result[r], result[l]
+	}
+	return string(result)
+}
+
+func main() {
+	fmt.Println(solve(1))
+}

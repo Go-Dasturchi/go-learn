@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func shapeArea(N int, a int, h int, b int) int {
+	switch N {
+	case 1:
+		return a * h / 2
+	case 2:
+		return a * a
+	case 3:
+		return a * b
+	}
+	return 0
+}
+
+func main() {
+	fmt.Println(shapeArea(1, 6, 4, 0))
+}

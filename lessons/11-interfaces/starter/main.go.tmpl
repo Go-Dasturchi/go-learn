@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+// Shakl — yuza hisoblay oladigan har qanday shakl uchun shartnoma.
+type Shakl interface {
+	Yuza() float64
+}
+
+// Kvadrat — tomoni bilan berilgan kvadrat.
+type Kvadrat struct {
+	Tomon float64
+}
+
+func (k Kvadrat) Yuza() float64 {
+	return k.Tomon * k.Tomon
+}
+
+// Tortburchak — uzunlik va kengligi bilan berilgan to'g'ri to'rtburchak.
+type Tortburchak struct {
+	Uzunlik, Kenglik float64
+}
+
+func (t Tortburchak) Yuza() float64 {
+	return t.Uzunlik * t.Kenglik
+}
+
+// jamiYuza ro'yxatdagi barcha shakllarning yuzalari yig'indisini qaytaradi.
+func jamiYuza(shakllar []Shakl) float64 {
+	// TODO: har bir shaklning Yuza() qiymatini yig'ing
+	return 0
+}
+
+func main() {
+	shakllar := []Shakl{
+		Kvadrat{Tomon: 2},
+		Tortburchak{Uzunlik: 3, Kenglik: 4},
+	}
+	fmt.Println(jamiYuza(shakllar))
+}

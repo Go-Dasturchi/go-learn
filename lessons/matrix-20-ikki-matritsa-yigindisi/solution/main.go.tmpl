@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func addMatrices(M int, N int, A [][]int, B [][]int) [][]int {
+	result := make([][]int, M)
+	for i := 0; i < M; i++ {
+		row := make([]int, N)
+		for j := 0; j < N; j++ {
+			row[j] = A[i][j] + B[i][j]
+		}
+		result[i] = row
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(addMatrices(2, 2, [][]int{[]int{1, 2}, []int{3, 4}}, [][]int{[]int{5, 6}, []int{7, 8}}))
+}

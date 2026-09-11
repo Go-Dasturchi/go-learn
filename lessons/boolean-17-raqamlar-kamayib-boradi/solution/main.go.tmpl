@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func digitsDecreasing(A int) bool {
+	first := A / 10
+	second := A % 10
+	return first > second
+}
+
+func main() {
+	fmt.Println(digitsDecreasing(32))
+}

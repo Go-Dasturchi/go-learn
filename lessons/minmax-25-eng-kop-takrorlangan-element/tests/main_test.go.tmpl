@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMostFrequentCase1(t *testing.T) {
+	got := mostFrequent(8, []int{3, 5, 3, 7, 3, 9, 5, 3})
+	want := "element=3, count=4"
+	if got != want {
+		t.Errorf("mostFrequent(N=8, nums=[3, 5, 3, 7, 3, 9, 5, 3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMostFrequentCase2(t *testing.T) {
+	got := mostFrequent(7, []int{1, 2, 2, 3, 3, 3, 4})
+	want := "element=3, count=3"
+	if got != want {
+		t.Errorf("mostFrequent(N=7, nums=[1, 2, 2, 3, 3, 3, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMostFrequentCase3(t *testing.T) {
+	got := mostFrequent(5, []int{5, 5, 5, 5, 5})
+	want := "element=5, count=5"
+	if got != want {
+		t.Errorf("mostFrequent(N=5, nums=[5, 5, 5, 5, 5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

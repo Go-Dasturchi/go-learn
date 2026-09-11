@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func sortedWord(w string) string {
+	b := []byte(w)
+	sort.Slice(b, func(i, j int) bool { return b[i] < b[j] })
+	return string(b)
+}
+
+func solve(words []string) []string {
+	result := []string{words[0]}
+	prevSorted := sortedWord(words[0])
+	for i := 1; i < len(words); i++ {
+		cur := sortedWord(words[i])
+		if cur == prevSorted {
+			continue
+		}
+		result = append(result, words[i])
+		prevSorted = cur
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]string{"abba", "baba", "bbaa", "cd", "cd"}))
+}

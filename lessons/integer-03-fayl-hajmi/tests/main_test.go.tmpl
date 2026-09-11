@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestToKilobytesCase1(t *testing.T) {
+	got := toKilobytes(2560)
+	want := 2
+	if got != want {
+		t.Errorf("toKilobytes(size=2560):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToKilobytesCase2(t *testing.T) {
+	got := toKilobytes(5120)
+	want := 5
+	if got != want {
+		t.Errorf("toKilobytes(size=5120):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToKilobytesCase3(t *testing.T) {
+	got := toKilobytes(1023)
+	want := 0
+	if got != want {
+		t.Errorf("toKilobytes(size=1023):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

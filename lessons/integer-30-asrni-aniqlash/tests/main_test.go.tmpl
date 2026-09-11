@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestGetCenturyCase1(t *testing.T) {
+	got := getCentury(1900)
+	want := 19
+	if got != want {
+		t.Errorf("getCentury(year=1900):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetCenturyCase2(t *testing.T) {
+	got := getCentury(1901)
+	want := 20
+	if got != want {
+		t.Errorf("getCentury(year=1901):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestGetCenturyCase3(t *testing.T) {
+	got := getCentury(2000)
+	want := 20
+	if got != want {
+		t.Errorf("getCentury(year=2000):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

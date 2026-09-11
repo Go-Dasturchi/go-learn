@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func solve(s string) string {
+	r := []rune(s)
+	counts := make(map[rune]int)
+	for _, c := range r {
+		counts[c]++
+	}
+	var bestChar rune
+	bestCount := 0
+	seen := make(map[rune]bool)
+	for _, c := range r {
+		if seen[c] {
+			continue
+		}
+		seen[c] = true
+		if counts[c] > bestCount {
+			bestCount = counts[c]
+			bestChar = c
+		}
+	}
+	return fmt.Sprintf("%c, %d", bestChar, bestCount)
+}
+
+func main() {
+	fmt.Println(solve("hello"))
+}

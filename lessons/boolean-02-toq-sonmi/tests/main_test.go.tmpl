@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsOddCase1(t *testing.T) {
+	got := isOdd(7)
+	want := true
+	if got != want {
+		t.Errorf("isOdd(A=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsOddCase2(t *testing.T) {
+	got := isOdd(8)
+	want := false
+	if got != want {
+		t.Errorf("isOdd(A=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsOddCase3(t *testing.T) {
+	got := isOdd(-3)
+	want := true
+	if got != want {
+		t.Errorf("isOdd(A=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+	"strconv"
+	"strings"
+)
+
+func solve(nums []int) string {
+	strs := make([]string, len(nums))
+	for i, n := range nums {
+		strs[i] = strconv.Itoa(n)
+	}
+	sort.Slice(strs, func(i, j int) bool {
+		return strs[i]+strs[j] > strs[j]+strs[i]
+	})
+	if strs[0] == "0" {
+		return "0"
+	}
+	return strings.Join(strs, "")
+}
+
+func main() {
+	fmt.Println(solve([]int{10, 2}))
+}

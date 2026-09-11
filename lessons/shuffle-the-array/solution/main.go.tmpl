@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func solve(nums []int, n int) []int {
+	result := make([]int, 0, 2*n)
+	for i := 0; i < n; i++ {
+		result = append(result, nums[i], nums[i+n])
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{2, 5, 1, 3, 4, 7}, 3))
+}

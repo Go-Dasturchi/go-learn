@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func solve(items [][]string, ruleKey string, ruleValue string) int {
+	idx := 0
+	switch ruleKey {
+	case "type":
+		idx = 0
+	case "color":
+		idx = 1
+	case "name":
+		idx = 2
+	}
+	count := 0
+	for _, item := range items {
+		if item[idx] == ruleValue {
+			count++
+		}
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve([][]string{[]string{"phone", "blue", "pixel"}, []string{"computer", "silver", "lenovo"}, []string{"phone", "gold", "iphone"}}, "color", "silver"))
+}

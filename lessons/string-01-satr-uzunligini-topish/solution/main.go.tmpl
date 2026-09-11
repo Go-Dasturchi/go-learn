@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func solve(s string) int {
+	return utf8.RuneCountInString(s)
+}
+
+func main() {
+	fmt.Println(solve("Hello"))
+}

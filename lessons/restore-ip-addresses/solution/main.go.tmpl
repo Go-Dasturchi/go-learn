@@ -1,0 +1,43 @@
+package main
+
+import "fmt"
+
+func solve(s string) []string {
+	res := []string{}
+	n := len(s)
+	if n < 4 || n > 12 {
+		return res
+	}
+	var segments []string
+	var backtrack func(start int)
+	backtrack = func(start int) {
+		if len(segments) == 4 {
+			if start == n {
+				res = append(res, segments[0]+"."+segments[1]+"."+segments[2]+"."+segments[3])
+			}
+			return
+		}
+		for length := 1; length <= 3 && start+length <= n; length++ {
+			seg := s[start : start+length]
+			if length > 1 && seg[0] == '0' {
+				break
+			}
+			val := 0
+			for _, c := range seg {
+				val = val*10 + int(c-'0')
+			}
+			if val > 255 {
+				break
+			}
+			segments = append(segments, seg)
+			backtrack(start + length)
+			segments = segments[:len(segments)-1]
+		}
+	}
+	backtrack(0)
+	return res
+}
+
+func main() {
+	fmt.Println(solve("25525511135"))
+}

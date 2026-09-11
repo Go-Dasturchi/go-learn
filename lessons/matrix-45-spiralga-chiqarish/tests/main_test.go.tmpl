@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSpiralOrderCase1(t *testing.T) {
+	got := spiralOrder(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	want := "1,2,3,6,9,8,7,4,5"
+	if got != want {
+		t.Errorf("spiralOrder(M=3, N=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSpiralOrderCase2(t *testing.T) {
+	got := spiralOrder(2, 4, [][]int{[]int{1, 2, 3, 4}, []int{5, 6, 7, 8}})
+	want := "1,2,3,4,8,7,6,5"
+	if got != want {
+		t.Errorf("spiralOrder(M=2, N=4, matrix=[[1,2,3,4],[5,6,7,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSpiralOrderCase3(t *testing.T) {
+	got := spiralOrder(4, 2, [][]int{[]int{1, 2}, []int{3, 4}, []int{5, 6}, []int{7, 8}})
+	want := "1,2,4,6,8,7,5,3"
+	if got != want {
+		t.Errorf("spiralOrder(M=4, N=2, matrix=[[1,2],[3,4],[5,6],[7,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

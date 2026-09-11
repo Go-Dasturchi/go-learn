@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestPerimetriCase1(t *testing.T) {
+	got := perimetri(5, 3)
+	want := 16.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("perimetri(a=5, b=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPerimetriCase2(t *testing.T) {
+	got := perimetri(10, 4)
+	want := 28.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("perimetri(a=10, b=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPerimetriCase3(t *testing.T) {
+	got := perimetri(7, 7)
+	want := 28.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("perimetri(a=7, b=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

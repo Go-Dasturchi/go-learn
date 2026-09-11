@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func swapTensHundreds(n int) int {
+	h := n / 100
+	t := (n / 10) % 10
+	u := n % 10
+	return t*100 + h*10 + u
+}
+
+func main() {
+	fmt.Println(swapTensHundreds(123))
+}

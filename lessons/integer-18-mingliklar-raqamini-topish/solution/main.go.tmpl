@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func thousandsDigit(n int) int {
+	return (n / 1000) % 10
+}
+
+func main() {
+	fmt.Println(thousandsDigit(12345))
+}

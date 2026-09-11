@@ -1,0 +1,76 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func solve(beginWord string, endWord string, wordList []string) [][]string {
+	wordSet := make(map[string]bool)
+	for _, w := range wordList {
+		wordSet[w] = true
+	}
+	if !wordSet[endWord] {
+		return [][]string{}
+	}
+	delete(wordSet, beginWord)
+
+	// BFS to build parents graph layer by layer.
+	layer := map[string][][]string{beginWord: {{beginWord}}}
+	found := false
+
+	for len(layer) > 0 && !found {
+		nextLayer := make(map[string][][]string)
+		// remove words used in this layer from the set to prevent revisiting
+		for word := range layer {
+			delete(wordSet, word)
+		}
+		for word, paths := range layer {
+			wordBytes := []byte(word)
+			for i := 0; i < len(wordBytes); i++ {
+				orig := wordBytes[i]
+				for c := byte('a'); c <= 'z'; c++ {
+					if c == orig {
+						continue
+					}
+					wordBytes[i] = c
+					candidate := string(wordBytes)
+					if wordSet[candidate] {
+						if candidate == endWord {
+							found = true
+						}
+						for _, p := range paths {
+							newPath := make([]string, len(p)+1)
+							copy(newPath, p)
+							newPath[len(p)] = candidate
+							nextLayer[candidate] = append(nextLayer[candidate], newPath)
+						}
+					}
+				}
+				wordBytes[i] = orig
+			}
+		}
+		layer = nextLayer
+	}
+
+	result := [][]string{}
+	if paths, ok := layer[endWord]; ok {
+		result = paths
+	}
+
+	sort.Slice(result, func(i, j int) bool {
+		a, b := result[i], result[j]
+		for k := 0; k < len(a) && k < len(b); k++ {
+			if a[k] != b[k] {
+				return a[k] < b[k]
+			}
+		}
+		return len(a) < len(b)
+	})
+
+	return result
+}
+
+func main() {
+	fmt.Println(solve("hit", "cog", []string{"hot", "dot", "dog", "lot", "log", "cog"}))
+}

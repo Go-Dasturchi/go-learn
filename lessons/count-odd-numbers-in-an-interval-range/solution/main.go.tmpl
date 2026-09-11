@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func solve(low int, high int) int {
+	count := (high - low) / 2
+	if low%2 != 0 || high%2 != 0 {
+		count++
+	}
+	return count
+}
+
+func main() {
+	fmt.Println(solve(3, 7))
+}

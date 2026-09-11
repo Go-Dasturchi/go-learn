@@ -1,0 +1,1437 @@
+[
+  {
+    "id": "add-binary",
+    "title": "Add Binary",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "add-strings",
+    "title": "Add Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "average-salary-excluding-the-minimum-and-maximum-salary",
+    "title": "Average Salary Excluding the Minimum and Maximum Salary",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-matrix-is-x-matrix",
+    "title": "Check if Matrix Is X-Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-the-sentence-is-pangram",
+    "title": "Check if the Sentence Is Pangram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "check-if-two-string-arrays-are-equivalent",
+    "title": "Check if Two String Arrays are Equivalent",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "climbing-stairs",
+    "title": "Climbing stairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "contains-duplicate-ii",
+    "title": "Contains Duplicate II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "contains-duplicate",
+    "title": "Contains duplicate",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-asterisks",
+    "title": "Count Asterisks",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-items-matching-a-rule",
+    "title": "Count Items Matching a Rule",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-odd-numbers-in-an-interval-range",
+    "title": "Count Odd Numbers in an Interval Range",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-operations-to-obtain-zero",
+    "title": "Count Operations to Obtain Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-primes",
+    "title": "Count Primes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "count-the-number-of-consistent-strings",
+    "title": "Count the Number of Consistent Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "counting-bits",
+    "title": "Counting Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "counting-numbers",
+    "title": "Counting Numbers",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "decode-the-message",
+    "title": "Decode the Message",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "defanging-an-ip-address",
+    "title": "Defanging an IP Address",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "design-hashmap",
+    "title": "Design HashMap",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "divide-array-into-equal-pairs",
+    "title": "Divide Array Into Equal Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "excel-sheet-column-number",
+    "title": "Excel Sheet Column Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "excel-sheet-column-title",
+    "title": "Excel Sheet Column Title",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "final-value-of-variable-after-performing-operations",
+    "title": "Final Value of Variable After Performing Operations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-all-numbers-disappeared-in-an-array",
+    "title": "Find All Numbers Disappeared in an Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-center-of-star-graph",
+    "title": "Find Center of Star Graph",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-gcd",
+    "title": "Teapot",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-resultant-array-after-removing-anagrams",
+    "title": "Find Resultant Array After Removing Anagrams",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-the-difference",
+    "title": "Find the Difference",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "find-the-index-of-the-first-occurrence-in-a-string",
+    "title": "Find the Index of the First Occurrence in a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-bad-version",
+    "title": "First Bad Version",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-letter-to-appear-twice",
+    "title": "First Letter to Appear Twice",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "first-unique-character-in-a-string",
+    "title": "First Unique Character in a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "fizz-buzz",
+    "title": "Fizz Buzz",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "goal-parser-interpretation",
+    "title": "Goal Parser Interpretation",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "guess-number-higher-or-lower",
+    "title": "Guess Number Higher or Lower",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "hamming-distance",
+    "title": "Hamming Distance",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "happy-number",
+    "title": "Happy Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "how-many-numbers-are-smaller-than-the-current-number",
+    "title": "How Many Numbers Are Smaller Than the Current Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "intersection-of-two-arrays-ii",
+    "title": "Intersection of Two Arrays II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "intersection-of-two-arrays",
+    "title": "Intersection of Two Arrays",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "is-subsequence",
+    "title": "Is Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "isomorphic-strings",
+    "title": "Isomorphic strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "jewels-and-stones",
+    "title": "Jewels and Stones",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "keep-multiplying-found-values-by-two",
+    "title": "Keep Multiplying Found Values by Two",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "kids-with-the-greatest-number-of-candies",
+    "title": "Kids With the Greatest Number of Candies",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "largest-number-at-least-twice-of-others",
+    "title": "Larger Number At Least Twice of Others",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "length-of-last-word",
+    "title": "Length of last word",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "linked-list-cycle",
+    "title": "Linked List Cycle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "longest-common-prefix",
+    "title": "Longest common prefix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "majority-element",
+    "title": "Majority element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "make-array-zero-by-subtracting-equal-amounts",
+    "title": "Make Array Zero by Subtracting Equal Amounts",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "max-consecutive-ones",
+    "title": "Max Consecutive Ones",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "maximum-number-of-words-found-in-sentences",
+    "title": "Maximum Number of Words Found in Sentences",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "merge-sorted-array",
+    "title": "Merge Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-absolute-difference-in-bst",
+    "title": "Minimum Absolute Difference in BST",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-amount-of-time-to-fill-cups",
+    "title": "Minimum Amount of Time to Fill Cups",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-depth-of-binary-tree",
+    "title": "Minimum Depth of Binary Tree",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "minimum-value-to-get-positive-step-by-step-sum",
+    "title": "Minimum Value to Get Positive Step by Step Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "missing-number",
+    "title": "Missing number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "move-zeroes",
+    "title": "Move zeroes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "nim-game",
+    "title": "Nim Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-complement",
+    "title": "Number Complement",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-good-pairs",
+    "title": "Number of Good Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-rectangles-that-can-form-the-largest-square",
+    "title": "Number of Rectangles That Can Form The Largest Square",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "number-of-steps-to-reduce-a-number-to-zero",
+    "title": "Number of Steps to Reduce a Number to Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "palindrome-number",
+    "title": "Palindrome number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "pascals-triangle",
+    "title": "Pascal's Triangle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "percentage-of-letter-in-string",
+    "title": "Percentage of Letter in String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "plus-one",
+    "title": "Plus one",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "power-of-three",
+    "title": "Power of Three",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "power-of-two",
+    "title": "Power of Two",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "range-sum-query-immutable",
+    "title": "Range Sum Query - Immutable",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "ransom-note",
+    "title": "Ransom Note",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "remove-duplicates-from-sorted-array",
+    "title": "Remove Duplicates from Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "remove-element",
+    "title": "Remove element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-bits",
+    "title": "Reverse Bits",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "reverse-vowels-of-a-string",
+    "title": "Reverse Vowels of a String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "roman-to-integer",
+    "title": "Roman to Integer",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "search-insert-position",
+    "title": "Search insert position",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "shuffle-the-array",
+    "title": "Shuffle the Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "single-number",
+    "title": "Single number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sort-the-people",
+    "title": "Sort the People",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "split-a-string-in-balanced-strings",
+    "title": "Split a String in Balanced Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sqrt-x",
+    "title": "Sqrt(x)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "strong-password-checker-ii",
+    "title": "Strong Password Checker II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "student-attendance-record-i",
+    "title": "Student Attendance Record I",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "sum-of-digits-in-the-minimum-number",
+    "title": "Sum of Digits in the Minimum Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "summary-ranges",
+    "title": "Summary Ranges",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "third-maximum-number",
+    "title": "Third Maximum Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "two-sum",
+    "title": "Two sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "ugly-number",
+    "title": "Ugly Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-anagram",
+    "title": "Valid anagram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-palindrome",
+    "title": "Valid palindrome",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-parentheses",
+    "title": "Valid parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "valid-perfect-square",
+    "title": "Valid Perfect Square",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "word-pattern",
+    "title": "Word Pattern",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Easy"
+  },
+  {
+    "id": "3sum",
+    "title": "3Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "arithmetic-slices",
+    "title": "Arithmetic Slices",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "bitwise-and-of-numbers-range",
+    "title": "Bitwise AND of Numbers Range",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "bulb-switcher",
+    "title": "Bulb Switcher",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "coin-change",
+    "title": "Coin Change",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "combinations",
+    "title": "Combinations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "container-with-most-water",
+    "title": "Container with most water",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "decode-ways",
+    "title": "Decode Ways",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-first-and-last-position-of-element-in-sorted-array",
+    "title": "Find first and last position",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "find-peak-element",
+    "title": "Find Peak Element",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "gas-station",
+    "title": "Gas Station",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "generate-parentheses",
+    "title": "Generate parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "get-equal-substrings-within-budget",
+    "title": "Get Equal Substrings Within Budget",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "group-anagrams",
+    "title": "Group Anagrams",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "guess-number-higher-or-lower-ii",
+    "title": "Guess Number Higher or Lower II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "integer-break",
+    "title": "Integer Break",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "integer-to-roman",
+    "title": "Integer to Roman",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "jump-game",
+    "title": "Jump Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "largest-number",
+    "title": "Largest Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-common-subsequence",
+    "title": "Longest Common Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-palindromic-substring",
+    "title": "Longest palindromic substring",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "longest-substring-without-repeating-characters",
+    "title": "Longest substring without repeating characters",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "majority-element-ii",
+    "title": "Majority Element II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-erasure-value",
+    "title": "Maximum Erasure Value",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-number-of-vowels-in-a-substring-of-given-length",
+    "title": "Maximum Number of Vowels in a Substring of Given Length",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "merge-intervals",
+    "title": "Merge Intervals",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "minimum-operations-to-make-array-equal",
+    "title": "Minimum Operations to Make Array Equal",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "minimum-operations-to-reduce-x-to-zero",
+    "title": "Minimum Operations to Reduce X to Zero",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "multiply-strings",
+    "title": "Multiply Strings",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "number-of-sub-arrays-with-odd-sum",
+    "title": "Number of Sub-arrays With Odd Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "permutation-in-string",
+    "title": "Permutation in String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "permutations",
+    "title": "Permutations",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "powx-n",
+    "title": "Pow(x, n)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "product-of-array-except-self",
+    "title": "Product of Array Except Self",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "queue-reconstruction-by-height",
+    "title": "Queue Reconstruction by Height",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "restore-ip-addresses",
+    "title": "Restore IP Addresses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "search-in-rotated-sorted-array",
+    "title": "Search in rotated sorted array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "sort-colors",
+    "title": "Sort Colors",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "string-to-integer-atoi",
+    "title": "String to Integer (atoi)",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "subsets",
+    "title": "Subsets",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "sum-of-two-integers",
+    "title": "Sum of Two Integers",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "super-ugly-number",
+    "title": "Super Ugly Number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "task-scheduler",
+    "title": "Task Scheduler",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "two-sum-ii-input-array-is-sorted",
+    "title": "Two Sum II - Input Array Is Sorted",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "wiggle-sort-ii",
+    "title": "Wiggle Sort II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "word-search",
+    "title": "Word Search",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Medium"
+  },
+  {
+    "id": "basic-calculator",
+    "title": "Basic Calculator",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "burst-balloons",
+    "title": "Burst Balloons",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "candy",
+    "title": "Candy",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "count-of-smaller-numbers-after-self",
+    "title": "Count of Smaller Numbers After Self",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "distinct-subsequences",
+    "title": "Distinct Subsequences",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "dungeon-game",
+    "title": "Dungeon Game",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "edit-distance",
+    "title": "Edit distance",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "find-minimum-in-rotated-sorted-array-ii",
+    "title": "Find Minimum in Rotated Sorted Array II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "first-missing-positive",
+    "title": "First missing positive",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "interleaving-string",
+    "title": "Interleaving String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "jump-game-ii",
+    "title": "Jump Game II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "largest-rectangle-in-histogram",
+    "title": "Largest Rectangle in Histogram",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "lfu-cache",
+    "title": "LFU Cache",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "longest-valid-parentheses",
+    "title": "Longest valid parentheses",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "max-points-on-a-line",
+    "title": "Max Points on a Line",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "max-sum-of-rectangle-no-larger-than-k",
+    "title": "Max Sum of Rectangle No Larger Than K",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "maximal-rectangle",
+    "title": "Maximal Rectangle",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "maximum-gap",
+    "title": "Maximum Gap",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "median-of-two-sorted-arrays",
+    "title": "Median of two sorted arrays",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "merge-k-sorted-lists",
+    "title": "Merge k Sorted Lists",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "n-queens-ii",
+    "title": "N-Queens II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "n-queens",
+    "title": "N-Queens",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "palindrome-partitioning-ii",
+    "title": "Palindrome Partitioning II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "patching-array",
+    "title": "Patching Array",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "recover-binary-search-tree",
+    "title": "Recover Binary Search Tree",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "regular-expression-matching",
+    "title": "Regular expression matching",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "remove-duplicate-letters",
+    "title": "Remove Duplicate Letters",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "reverse-nodes-in-k-group",
+    "title": "Reverse Nodes in k-Group",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "reverse-pairs",
+    "title": "Reverse Pairs",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "russian-doll-envelopes",
+    "title": "Russian Doll Envelopes",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "scramble-string",
+    "title": "Scramble String",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "shortest-palindrome",
+    "title": "Shortest Palindrome",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sliding-window-maximum",
+    "title": "Sliding Window Maximum",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sliding-window-median",
+    "title": "Sliding Window Median",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "smallest-good-base",
+    "title": "Smallest Good Base",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "strong-password-checker",
+    "title": "Strong Password Checker",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "substring-with-concatenation-of-all-words",
+    "title": "Substring with Concatenation",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "the-skyline-problem",
+    "title": "The Skyline Problem",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "trapping-rain-water-ii",
+    "title": "Trapping Rain Water II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "trapping-rain-water",
+    "title": "Trapping rain water",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "valid-number",
+    "title": "Valid number",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "wildcard-matching",
+    "title": "Wildcard matching",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-break-ii",
+    "title": "Word Break II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-ladder-ii",
+    "title": "Word Ladder II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-ladder",
+    "title": "Word Ladder",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  },
+  {
+    "id": "word-search-ii",
+    "title": "Word Search II",
+    "category": "Problems",
+    "group": "Leetcode",
+    "subgroup": "Hard"
+  }
+]

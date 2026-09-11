@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func solve(arr []int) int {
+	const mod = 1000000007
+	evenCount, oddCount := 1, 0
+	prefixSum := 0
+	res := 0
+	for _, n := range arr {
+		prefixSum += n
+		if prefixSum%2 == 0 {
+			res = (res + oddCount) % mod
+			evenCount++
+		} else {
+			res = (res + evenCount) % mod
+			oddCount++
+		}
+	}
+	return res
+}
+
+func main() {
+	fmt.Println(solve([]int{1, 3, 5}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFindMinCase1(t *testing.T) {
+	got := findMin(5, []int{3, 7, 2, 9, 1})
+	want := 1
+	if got != want {
+		t.Errorf("findMin(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMinCase2(t *testing.T) {
+	got := findMin(4, []int{10, 5, 15, 8})
+	want := 5
+	if got != want {
+		t.Errorf("findMin(N=4, nums=[10, 5, 15, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMinCase3(t *testing.T) {
+	got := findMin(3, []int{4, 4, 4})
+	want := 4
+	if got != want {
+		t.Errorf("findMin(N=3, nums=[4, 4, 4]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

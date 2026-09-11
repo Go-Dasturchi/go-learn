@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func sequenceConverge(eps float64) string {
+	prev := 2.0
+	k := 1
+	next := 2 + 1/prev
+	k++
+	for math.Abs(next-prev) >= eps {
+		prev = next
+		next = 2 + 1/prev
+		k++
+	}
+	return fmt.Sprintf("K=%d, A%d=%.6f, A%d=%.6f", k, k-1, prev, k, next)
+}
+
+func main() {
+	fmt.Println(sequenceConverge(0.1))
+}

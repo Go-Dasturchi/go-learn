@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestExactlyOneOddCase1(t *testing.T) {
+	got := exactlyOneOdd(7, 8)
+	want := true
+	if got != want {
+		t.Errorf("exactlyOneOdd(A=7, B=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestExactlyOneOddCase2(t *testing.T) {
+	got := exactlyOneOdd(6, 8)
+	want := false
+	if got != want {
+		t.Errorf("exactlyOneOdd(A=6, B=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestExactlyOneOddCase3(t *testing.T) {
+	got := exactlyOneOdd(7, 9)
+	want := false
+	if got != want {
+		t.Errorf("exactlyOneOdd(A=7, B=9):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

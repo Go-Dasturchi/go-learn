@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSequenceConvergeCase1(t *testing.T) {
+	got := sequenceConverge(0.1)
+	var want string = "K=4, A3=2.400000, A4=2.416667"
+	if got != want {
+		t.Errorf("sequenceConverge(eps=0.1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSequenceConvergeCase2(t *testing.T) {
+	got := sequenceConverge(0.01)
+	var want string = "K=5, A4=2.416667, A5=2.413793"
+	if got != want {
+		t.Errorf("sequenceConverge(eps=0.01):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSequenceConvergeCase3(t *testing.T) {
+	got := sequenceConverge(0.001)
+	var want string = "K=6, A5=2.413793, A6=2.414286"
+	if got != want {
+		t.Errorf("sequenceConverge(eps=0.001):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func average(N int, nums []int) int {
+	sum := 0
+	for i := 0; i < N && i < len(nums); i++ {
+		sum += nums[i]
+	}
+	return sum / N
+}
+
+func main() {
+	fmt.Println(average(4, []int{10, 20, 30, 40}))
+}

@@ -1,0 +1,39 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestJamiYuzaBasic(t *testing.T) {
+	shakllar := []Shakl{
+		Kvadrat{Tomon: 2},
+		Tortburchak{Uzunlik: 3, Kenglik: 4},
+	}
+	got := jamiYuza(shakllar)
+	want := 16.0
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("jamiYuza(Kvadrat(2), Tortburchak(3,4)):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJamiYuzaOnlySquares(t *testing.T) {
+	shakllar := []Shakl{
+		Kvadrat{Tomon: 1},
+		Kvadrat{Tomon: 2},
+		Kvadrat{Tomon: 3},
+	}
+	got := jamiYuza(shakllar)
+	want := 14.0
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("jamiYuza(Kvadrat(1), Kvadrat(2), Kvadrat(3)):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJamiYuzaEmpty(t *testing.T) {
+	got := jamiYuza([]Shakl{})
+	want := 0.0
+	if math.Abs(got-want) > 1e-9 {
+		t.Errorf("jamiYuza([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

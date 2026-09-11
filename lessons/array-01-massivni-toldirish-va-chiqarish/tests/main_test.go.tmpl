@@ -1,0 +1,28 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestFillAndPrintCase1(t *testing.T) {
+	got := fillAndPrint(5)
+	want := []int{0, 1, 2, 3, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("fillAndPrint(N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFillAndPrintCase2(t *testing.T) {
+	got := fillAndPrint(3)
+	want := []int{0, 1, 2}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("fillAndPrint(N=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFillAndPrintCase3(t *testing.T) {
+	got := fillAndPrint(7)
+	want := []int{0, 1, 2, 3, 4, 5, 6}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("fillAndPrint(N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

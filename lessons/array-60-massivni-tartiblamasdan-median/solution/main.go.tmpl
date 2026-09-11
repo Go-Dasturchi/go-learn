@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func medianUnsorted(N int, arr []int) float64 {
+	sorted := make([]int, N)
+	copy(sorted, arr)
+	sort.Ints(sorted)
+	if N%2 == 1 {
+		return float64(sorted[N/2])
+	}
+	return float64(sorted[N/2-1]+sorted[N/2]) / 2
+}
+
+func main() {
+	fmt.Println(medianUnsorted(5, []int{3, 7, 2, 9, 1}))
+}

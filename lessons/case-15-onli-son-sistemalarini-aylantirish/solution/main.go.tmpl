@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// convertBase N sonini K-lik sanoq sistemasidagi matn ko'rinishida qaytaradi.
+func convertBase(N int, K int) string {
+	if N == 0 {
+		return "0"
+	}
+	const digits = "0123456789ABCDEF"
+	var sb strings.Builder
+	n := N
+	for n > 0 {
+		sb.WriteByte(digits[n%K])
+		n /= K
+	}
+	runes := []byte(sb.String())
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
+
+func main() {
+	fmt.Println(convertBase(15, 2))
+}

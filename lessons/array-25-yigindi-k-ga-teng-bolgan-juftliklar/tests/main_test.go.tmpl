@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPairsWithSumKCase1(t *testing.T) {
+	got := pairsWithSumK(5, 10, []int{2, 8, 5, 3, 7})
+	var want int = 2
+	if got != want {
+		t.Errorf("pairsWithSumK(N=5, K=10, arr=[2,8,5,3,7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPairsWithSumKCase2(t *testing.T) {
+	got := pairsWithSumK(6, 7, []int{1, 6, 3, 4, 2, 5})
+	var want int = 3
+	if got != want {
+		t.Errorf("pairsWithSumK(N=6, K=7, arr=[1,6,3,4,2,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPairsWithSumKCase3(t *testing.T) {
+	got := pairsWithSumK(4, 15, []int{10, 5, 8, 7})
+	var want int = 2
+	if got != want {
+		t.Errorf("pairsWithSumK(N=4, K=15, arr=[10,5,8,7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func maxDistance(N int, nums []int) int {
+	maxDiff := 0
+	for i := 0; i < N-1; i++ {
+		d := nums[i+1] - nums[i]
+		if d < 0 {
+			d = -d
+		}
+		if d > maxDiff {
+			maxDiff = d
+		}
+	}
+	return maxDiff
+}
+
+func main() {
+	fmt.Println(maxDistance(5, []int{10, 5, 20, 12, 3}))
+}

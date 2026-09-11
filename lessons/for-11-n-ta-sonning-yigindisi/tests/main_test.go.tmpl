@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSumNCase1(t *testing.T) {
+	got := sumN(3, []int{5, 10, 15})
+	want := 30
+	if got != want {
+		t.Errorf("sumN(N=3, nums=[5, 10, 15]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumNCase2(t *testing.T) {
+	got := sumN(4, []int{2, 4, 6, 8})
+	want := 20
+	if got != want {
+		t.Errorf("sumN(N=4, nums=[2, 4, 6, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumNCase3(t *testing.T) {
+	got := sumN(5, []int{1, 2, 3, 4, 5})
+	want := 15
+	if got != want {
+		t.Errorf("sumN(N=5, nums=[1, 2, 3, 4, 5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

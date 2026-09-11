@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsInRangeInclusiveCase1(t *testing.T) {
+	got := isInRangeInclusive(5, 10, 15)
+	want := true
+	if got != want {
+		t.Errorf("isInRangeInclusive(A=5, B=10, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsInRangeInclusiveCase2(t *testing.T) {
+	got := isInRangeInclusive(10, 5, 15)
+	want := false
+	if got != want {
+		t.Errorf("isInRangeInclusive(A=10, B=5, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsInRangeInclusiveCase3(t *testing.T) {
+	got := isInRangeInclusive(5, 5, 15)
+	want := true
+	if got != want {
+		t.Errorf("isInRangeInclusive(A=5, B=5, C=15):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

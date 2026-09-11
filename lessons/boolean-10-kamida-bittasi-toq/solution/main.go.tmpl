@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func atLeastOneOdd(A int, B int) bool {
+	return A%2 != 0 || B%2 != 0
+}
+
+func main() {
+	fmt.Println(atLeastOneOdd(7, 8))
+}

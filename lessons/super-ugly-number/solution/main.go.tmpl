@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func solve(n int, primes []int) int {
+	dp := make([]int, n)
+	dp[0] = 1
+	k := len(primes)
+	pointers := make([]int, k)
+	for i := 1; i < n; i++ {
+		next := 1 << 62
+		for j := 0; j < k; j++ {
+			val := dp[pointers[j]] * primes[j]
+			if val < next {
+				next = val
+			}
+		}
+		dp[i] = next
+		for j := 0; j < k; j++ {
+			if dp[pointers[j]]*primes[j] == next {
+				pointers[j]++
+			}
+		}
+	}
+	return dp[n-1]
+}
+
+func main() {
+	fmt.Println(solve(12, []int{2, 7, 13, 19}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPreviousMonthCase1(t *testing.T) {
+	got := previousMonth(2)
+	want := "Yanvar"
+	if got != want {
+		t.Errorf("previousMonth(K=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPreviousMonthCase2(t *testing.T) {
+	got := previousMonth(1)
+	want := "Dekabr"
+	if got != want {
+		t.Errorf("previousMonth(K=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPreviousMonthCase3(t *testing.T) {
+	got := previousMonth(7)
+	want := "Iyun"
+	if got != want {
+		t.Errorf("previousMonth(K=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

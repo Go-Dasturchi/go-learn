@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSwapOnesTensCase1(t *testing.T) {
+	got := swapOnesTens(123)
+	want := 132
+	if got != want {
+		t.Errorf("swapOnesTens(n=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapOnesTensCase2(t *testing.T) {
+	got := swapOnesTens(456)
+	want := 465
+	if got != want {
+		t.Errorf("swapOnesTens(n=456):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSwapOnesTensCase3(t *testing.T) {
+	got := swapOnesTens(789)
+	want := 798
+	if got != want {
+		t.Errorf("swapOnesTens(n=789):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

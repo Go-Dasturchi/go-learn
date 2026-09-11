@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([]int{3, 0, 1})
+	var want int = 2
+	if got != want {
+		t.Errorf("solve(nums = [3,0,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([]int{0, 1})
+	var want int = 2
+	if got != want {
+		t.Errorf("solve(nums = [0,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase3(t *testing.T) {
+	got := solve([]int{9, 6, 4, 2, 3, 5, 7, 0, 1})
+	var want int = 8
+	if got != want {
+		t.Errorf("solve(nums = [9,6,4,2,3,5,7,0,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func uchburchak(a int, b int) int {
+	return int(math.Round(math.Sqrt(float64(a*a + b*b))))
+}
+
+func main() {
+	fmt.Println(uchburchak(3, 4))
+}

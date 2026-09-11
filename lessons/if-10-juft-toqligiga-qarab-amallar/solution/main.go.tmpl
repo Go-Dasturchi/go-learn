@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func evenOddAction(A int, B int) float64 {
+	if A%2 == 0 && B%2 == 0 {
+		return float64(A+B) / 2.0
+	}
+	return math.Sqrt(float64(A) * float64(B))
+}
+
+func main() {
+	fmt.Println(evenOddAction(4, 6))
+}

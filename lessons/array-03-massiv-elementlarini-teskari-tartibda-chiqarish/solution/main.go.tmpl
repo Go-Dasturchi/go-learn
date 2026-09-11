@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func reverseArray(N int, arr []int) string {
+	natija := ""
+	for i := N - 1; i >= 0; i-- {
+		if natija != "" {
+			natija += ", "
+		}
+		natija += fmt.Sprintf("%d", arr[i])
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(reverseArray(5, []int{1, 2, 3, 4, 5}))
+}

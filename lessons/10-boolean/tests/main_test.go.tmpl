@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestMosKeladimiTrue(t *testing.T) {
+	if !mosKeladimi(20, 70) {
+		t.Error("mosKeladimi(20, 70): expected true, got false")
+	}
+}
+
+func TestMosKeladimiTooYoung(t *testing.T) {
+	if mosKeladimi(16, 90) {
+		t.Error("mosKeladimi(16, 90): expected false, got true")
+	}
+}
+
+func TestMosKeladimiLowScore(t *testing.T) {
+	if mosKeladimi(25, 40) {
+		t.Error("mosKeladimi(25, 40): expected false, got true")
+	}
+}
+
+func TestMosKeladimiBoundary(t *testing.T) {
+	if !mosKeladimi(18, 60) {
+		t.Error("mosKeladimi(18, 60): expected true, got false")
+	}
+}

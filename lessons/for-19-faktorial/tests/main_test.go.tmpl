@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFactorialCase1(t *testing.T) {
+	got := factorial(5)
+	want := 120
+	if got != want {
+		t.Errorf("factorial(N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFactorialCase2(t *testing.T) {
+	got := factorial(0)
+	want := 1
+	if got != want {
+		t.Errorf("factorial(N=0):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFactorialCase3(t *testing.T) {
+	got := factorial(7)
+	want := 5040
+	if got != want {
+		t.Errorf("factorial(N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

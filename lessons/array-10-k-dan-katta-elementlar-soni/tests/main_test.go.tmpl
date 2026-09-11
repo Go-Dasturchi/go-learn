@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCountGreaterKCase1(t *testing.T) {
+	got := countGreaterK(6, 5, []int{3, 7, 2, 9, 1, 8})
+	want := 3
+	if got != want {
+		t.Errorf("countGreaterK(N=6, K=5, arr=[3,7,2,9,1,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountGreaterKCase2(t *testing.T) {
+	got := countGreaterK(5, 10, []int{5, 15, 8, 20, 12})
+	want := 3
+	if got != want {
+		t.Errorf("countGreaterK(N=5, K=10, arr=[5,15,8,20,12]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountGreaterKCase3(t *testing.T) {
+	got := countGreaterK(4, 100, []int{50, 75, 25, 80})
+	want := 0
+	if got != want {
+		t.Errorf("countGreaterK(N=4, K=100, arr=[50,75,25,80]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

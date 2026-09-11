@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func zigzagOrder(M int, N int, matrix [][]int) string {
+	result := make([]string, 0, M*N)
+	for i := 0; i < M; i++ {
+		if i%2 == 0 {
+			for j := 0; j < N; j++ {
+				result = append(result, strconv.Itoa(matrix[i][j]))
+			}
+		} else {
+			for j := N - 1; j >= 0; j-- {
+				result = append(result, strconv.Itoa(matrix[i][j]))
+			}
+		}
+	}
+	return strings.Join(result, ",")
+}
+
+func main() {
+	fmt.Println(zigzagOrder(3, 3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}}))
+}

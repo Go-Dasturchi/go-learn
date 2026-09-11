@@ -1,0 +1,35 @@
+package main
+
+import "testing"
+
+func TestKunNomiMonday(t *testing.T) {
+	got := kunNomi(1)
+	want := "Dushanba"
+	if got != want {
+		t.Errorf("kunNomi(1):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestKunNomiWeekendSix(t *testing.T) {
+	got := kunNomi(6)
+	want := "Dam olish kuni"
+	if got != want {
+		t.Errorf("kunNomi(6):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestKunNomiWeekendSeven(t *testing.T) {
+	got := kunNomi(7)
+	want := "Dam olish kuni"
+	if got != want {
+		t.Errorf("kunNomi(7):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestKunNomiOther(t *testing.T) {
+	got := kunNomi(3)
+	want := "Oddiy kun"
+	if got != want {
+		t.Errorf("kunNomi(3):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

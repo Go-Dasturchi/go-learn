@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestAllDigitsDifferentCase1(t *testing.T) {
+	got := allDigitsDifferent(123)
+	want := true
+	if got != want {
+		t.Errorf("allDigitsDifferent(A=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAllDigitsDifferentCase2(t *testing.T) {
+	got := allDigitsDifferent(121)
+	want := false
+	if got != want {
+		t.Errorf("allDigitsDifferent(A=121):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAllDigitsDifferentCase3(t *testing.T) {
+	got := allDigitsDifferent(111)
+	want := false
+	if got != want {
+		t.Errorf("allDigitsDifferent(A=111):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

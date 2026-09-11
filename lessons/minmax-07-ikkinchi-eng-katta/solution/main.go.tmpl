@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+func secondMax(N int, nums []int) int {
+	sorted := make([]int, N)
+	copy(sorted, nums)
+	sort.Sort(sort.Reverse(sort.IntSlice(sorted)))
+	return sorted[1]
+}
+
+func main() {
+	fmt.Println(secondMax(5, []int{3, 7, 2, 9, 1}))
+}

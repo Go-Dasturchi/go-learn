@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestMinAndMaxCase1(t *testing.T) {
+	got := minAndMax(5, 3, 7)
+	want := 10
+	if got != want {
+		t.Errorf("minAndMax(a=5, b=3, c=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinAndMaxCase2(t *testing.T) {
+	got := minAndMax(2, 8, 4)
+	want := 10
+	if got != want {
+		t.Errorf("minAndMax(a=2, b=8, c=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestMinAndMaxCase3(t *testing.T) {
+	got := minAndMax(9, 1, 6)
+	want := 10
+	if got != want {
+		t.Errorf("minAndMax(a=9, b=1, c=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

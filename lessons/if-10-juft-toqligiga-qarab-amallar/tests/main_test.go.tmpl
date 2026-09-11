@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestEvenOddActionCase1(t *testing.T) {
+	got := evenOddAction(4, 6)
+	var want float64 = 5.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("evenOddAction(A=4, B=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestEvenOddActionCase2(t *testing.T) {
+	got := evenOddAction(4, 9)
+	var want float64 = 6.0
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("evenOddAction(A=4, B=9):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestEvenOddActionCase3(t *testing.T) {
+	got := evenOddAction(3, 5)
+	var want float64 = 3.872983346207417
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("evenOddAction(A=3, B=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

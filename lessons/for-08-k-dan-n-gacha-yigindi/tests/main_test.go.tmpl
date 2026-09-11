@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSumRangeCase1(t *testing.T) {
+	got := sumRange(1, 10)
+	want := 55
+	if got != want {
+		t.Errorf("sumRange(K=1, N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumRangeCase2(t *testing.T) {
+	got := sumRange(5, 10)
+	want := 45
+	if got != want {
+		t.Errorf("sumRange(K=5, N=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSumRangeCase3(t *testing.T) {
+	got := sumRange(3, 7)
+	want := 25
+	if got != want {
+		t.Errorf("sumRange(K=3, N=7):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestLocalMinCountCase1(t *testing.T) {
+	got := localMinCount(7, []int{5, 2, 8, 1, 9, 3, 7})
+	var want int = 3
+	if got != want {
+		t.Errorf("localMinCount(N=7, nums=[5, 2, 8, 1, 9, 3, 7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestLocalMinCountCase2(t *testing.T) {
+	got := localMinCount(5, []int{1, 3, 2, 4, 3})
+	var want int = 2
+	if got != want {
+		t.Errorf("localMinCount(N=5, nums=[1, 3, 2, 4, 3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestLocalMinCountCase3(t *testing.T) {
+	got := localMinCount(6, []int{1, 2, 3, 4, 5, 6})
+	var want int = 0
+	if got != want {
+		t.Errorf("localMinCount(N=6, nums=[1, 2, 3, 4, 5, 6]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

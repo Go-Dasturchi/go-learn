@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestFibIndexCase1(t *testing.T) {
+	got := fibIndex(8)
+	var want int = 6
+	if got != want {
+		t.Errorf("fibIndex(N=8):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFibIndexCase2(t *testing.T) {
+	got := fibIndex(21)
+	var want int = 8
+	if got != want {
+		t.Errorf("fibIndex(N=21):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFibIndexCase3(t *testing.T) {
+	got := fibIndex(1)
+	var want int = 2
+	if got != want {
+		t.Errorf("fibIndex(N=1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

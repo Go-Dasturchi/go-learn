@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsThreeDigitCase1(t *testing.T) {
+	got := isThreeDigit(123)
+	want := true
+	if got != want {
+		t.Errorf("isThreeDigit(A=123):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsThreeDigitCase2(t *testing.T) {
+	got := isThreeDigit(99)
+	want := false
+	if got != want {
+		t.Errorf("isThreeDigit(A=99):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsThreeDigitCase3(t *testing.T) {
+	got := isThreeDigit(1000)
+	want := false
+	if got != want {
+		t.Errorf("isThreeDigit(A=1000):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

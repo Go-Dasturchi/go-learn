@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestToTonsCase1(t *testing.T) {
+	got := toTons(2500)
+	want := 2
+	if got != want {
+		t.Errorf("toTons(M=2500):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToTonsCase2(t *testing.T) {
+	got := toTons(7800)
+	want := 7
+	if got != want {
+		t.Errorf("toTons(M=7800):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestToTonsCase3(t *testing.T) {
+	got := toTons(999)
+	want := 0
+	if got != want {
+		t.Errorf("toTons(M=999):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

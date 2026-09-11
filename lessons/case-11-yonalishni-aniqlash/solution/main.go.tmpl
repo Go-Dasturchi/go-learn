@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func getDirection(N1 int, K int) string {
+	// compass index: 0=Shimol(North), 1=Sharq(East), 2=Janub(South), 3=G'arb(West)
+	codeToCompass := map[int]int{1: 0, 2: 3, 3: 2, 4: 1}
+	compassToName := map[int]string{0: "Shimol", 1: "Sharq", 2: "Janub", 3: "G'arb"}
+
+	idx := codeToCompass[N1]
+	newIdx := ((idx+K)%4 + 4) % 4
+	return compassToName[newIdx]
+}
+
+func main() {
+	fmt.Println(getDirection(1, 1))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCountPrimesCase1(t *testing.T) {
+	got := countPrimes(10, 20)
+	want := 4
+	if got != want {
+		t.Errorf("countPrimes(A=10, B=20):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountPrimesCase2(t *testing.T) {
+	got := countPrimes(1, 10)
+	want := 4
+	if got != want {
+		t.Errorf("countPrimes(A=1, B=10):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCountPrimesCase3(t *testing.T) {
+	got := countPrimes(20, 30)
+	want := 2
+	if got != want {
+		t.Errorf("countPrimes(A=20, B=30):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) int {
+	maxProd, minProd, best := nums[0], nums[0], nums[0]
+	for i := 1; i < len(nums); i++ {
+		n := nums[i]
+		if n < 0 {
+			maxProd, minProd = minProd, maxProd
+		}
+		if n > maxProd*n {
+			maxProd = n
+		} else {
+			maxProd = maxProd * n
+		}
+		if n < minProd*n {
+			minProd = n
+		} else {
+			minProd = minProd * n
+		}
+		if maxProd > best {
+			best = maxProd
+		}
+	}
+	return best
+}
+
+func main() {
+	fmt.Println(solve([]int{2, 3, -2, 4}))
+}

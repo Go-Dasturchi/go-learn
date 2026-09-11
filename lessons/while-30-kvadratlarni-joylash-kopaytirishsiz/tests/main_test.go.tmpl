@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestPlaceSquaresNoMultCase1(t *testing.T) {
+	got := placeSquaresNoMult(10, 8, 3)
+	want := 6
+	if got != want {
+		t.Errorf("placeSquaresNoMult(A=10, B=8, C=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPlaceSquaresNoMultCase2(t *testing.T) {
+	got := placeSquaresNoMult(15, 10, 4)
+	want := 6
+	if got != want {
+		t.Errorf("placeSquaresNoMult(A=15, B=10, C=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestPlaceSquaresNoMultCase3(t *testing.T) {
+	got := placeSquaresNoMult(7, 5, 2)
+	want := 6
+	if got != want {
+		t.Errorf("placeSquaresNoMult(A=7, B=5, C=2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

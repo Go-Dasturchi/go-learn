@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestSecondsAfterHourCase1(t *testing.T) {
+	got := secondsAfterHour(3661)
+	want := 61
+	if got != want {
+		t.Errorf("secondsAfterHour(N=3661):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondsAfterHourCase2(t *testing.T) {
+	got := secondsAfterHour(7200)
+	want := 0
+	if got != want {
+		t.Errorf("secondsAfterHour(N=7200):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSecondsAfterHourCase3(t *testing.T) {
+	got := secondsAfterHour(10000)
+	want := 2800
+	if got != want {
+		t.Errorf("secondsAfterHour(N=10000):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

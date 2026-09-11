@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func solve(nums []int) []int {
+	result := append([]int{}, nums...)
+	insertPos := 0
+	for _, v := range result {
+		if v != 0 {
+			result[insertPos] = v
+			insertPos++
+		}
+	}
+	for ; insertPos < len(result); insertPos++ {
+		result[insertPos] = 0
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([]int{0, 1, 0, 3, 12}))
+}

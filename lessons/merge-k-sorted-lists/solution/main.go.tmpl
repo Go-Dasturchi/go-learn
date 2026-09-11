@@ -1,0 +1,50 @@
+package main
+
+import (
+	"container/heap"
+	"fmt"
+)
+
+type mergeItem struct {
+	val      int
+	listIdx  int
+	elemIdx  int
+}
+
+type mergeHeap []mergeItem
+
+func (h mergeHeap) Len() int            { return len(h) }
+func (h mergeHeap) Less(i, j int) bool  { return h[i].val < h[j].val }
+func (h mergeHeap) Swap(i, j int)       { h[i], h[j] = h[j], h[i] }
+func (h *mergeHeap) Push(x interface{}) { *h = append(*h, x.(mergeItem)) }
+func (h *mergeHeap) Pop() interface{} {
+	old := *h
+	n := len(old)
+	item := old[n-1]
+	*h = old[:n-1]
+	return item
+}
+
+func solve(lists [][]int) []int {
+	result := []int{}
+	h := &mergeHeap{}
+	heap.Init(h)
+	for i, list := range lists {
+		if len(list) > 0 {
+			heap.Push(h, mergeItem{val: list[0], listIdx: i, elemIdx: 0})
+		}
+	}
+	for h.Len() > 0 {
+		item := heap.Pop(h).(mergeItem)
+		result = append(result, item.val)
+		nextIdx := item.elemIdx + 1
+		if nextIdx < len(lists[item.listIdx]) {
+			heap.Push(h, mergeItem{val: lists[item.listIdx][nextIdx], listIdx: item.listIdx, elemIdx: nextIdx})
+		}
+	}
+	return result
+}
+
+func main() {
+	fmt.Println(solve([][]int{{1, 4, 5}, {1, 3, 4}, {2, 6}}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestAtLeastOnePositiveCase1(t *testing.T) {
+	got := atLeastOnePositive(-1, 5, -3)
+	want := true
+	if got != want {
+		t.Errorf("atLeastOnePositive(A=-1, B=5, C=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAtLeastOnePositiveCase2(t *testing.T) {
+	got := atLeastOnePositive(-1, -2, -3)
+	want := false
+	if got != want {
+		t.Errorf("atLeastOnePositive(A=-1, B=-2, C=-3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestAtLeastOnePositiveCase3(t *testing.T) {
+	got := atLeastOnePositive(1, 2, 3)
+	want := true
+	if got != want {
+		t.Errorf("atLeastOnePositive(A=1, B=2, C=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

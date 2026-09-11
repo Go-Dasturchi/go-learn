@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+func solve(s string) string {
+	r := []rune(s)
+	if len(r) == 0 {
+		return ""
+	}
+	var sb strings.Builder
+	count := 1
+	for i := 1; i <= len(r); i++ {
+		if i < len(r) && r[i] == r[i-1] {
+			count++
+		} else {
+			sb.WriteRune(r[i-1])
+			sb.WriteString(strconv.Itoa(count))
+			count = 1
+		}
+	}
+	return sb.String()
+}
+
+func main() {
+	fmt.Println(solve("aaabbc"))
+}

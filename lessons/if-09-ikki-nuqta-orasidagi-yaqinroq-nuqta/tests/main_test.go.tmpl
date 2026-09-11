@@ -1,0 +1,20 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestCloserPointCase1(t *testing.T) {
+	got := closerPoint(5, 3)
+	want := 3
+	if got != want {
+		t.Errorf("closerPoint(A=5, B=3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestCloserPointCase2(t *testing.T) {
+	got := closerPoint(-2, 4)
+	want := -2
+	if got != want {
+		t.Errorf("closerPoint(A=-2, B=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

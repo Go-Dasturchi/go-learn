@@ -1,0 +1,28 @@
+package main
+
+import (
+	"math"
+	"testing"
+)
+
+func TestFindMedianCase1(t *testing.T) {
+	got := findMedian(5, []int{3, 7, 2, 9, 1})
+	var want float64 = 3
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("findMedian(N=5, nums=[3, 7, 2, 9, 1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMedianCase2(t *testing.T) {
+	got := findMedian(6, []int{10, 5, 15, 8, 3, 20})
+	var want float64 = 9
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("findMedian(N=6, nums=[10, 5, 15, 8, 3, 20]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestFindMedianCase3(t *testing.T) {
+	got := findMedian(4, []int{1, 10, 5, 8})
+	var want float64 = 6.5
+	if math.Abs(got-want) > 1e-6 {
+		t.Errorf("findMedian(N=4, nums=[1, 10, 5, 8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

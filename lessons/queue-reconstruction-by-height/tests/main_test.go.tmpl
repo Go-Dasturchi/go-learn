@@ -1,0 +1,21 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSolveCase1(t *testing.T) {
+	got := solve([][]int{[]int{7, 0}, []int{4, 4}, []int{7, 1}, []int{5, 0}, []int{6, 1}, []int{5, 2}})
+	var want [][]int = [][]int{[]int{5, 0}, []int{7, 0}, []int{5, 2}, []int{6, 1}, []int{4, 4}, []int{7, 1}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestSolveCase2(t *testing.T) {
+	got := solve([][]int{[]int{6, 0}, []int{5, 0}, []int{4, 0}, []int{3, 2}, []int{2, 2}, []int{1, 4}})
+	var want [][]int = [][]int{[]int{4, 0}, []int{5, 0}, []int{2, 2}, []int{3, 2}, []int{1, 4}, []int{6, 0}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("solve(people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

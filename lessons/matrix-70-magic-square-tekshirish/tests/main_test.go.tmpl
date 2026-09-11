@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestIsMagicSquareCase1(t *testing.T) {
+	got := isMagicSquare(3, [][]int{[]int{2, 7, 6}, []int{9, 5, 1}, []int{4, 3, 8}})
+	want := true
+	if got != want {
+		t.Errorf("isMagicSquare(N=3, matrix=[[2,7,6],[9,5,1],[4,3,8]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsMagicSquareCase2(t *testing.T) {
+	got := isMagicSquare(3, [][]int{[]int{1, 2, 3}, []int{4, 5, 6}, []int{7, 8, 9}})
+	want := false
+	if got != want {
+		t.Errorf("isMagicSquare(N=3, matrix=[[1,2,3],[4,5,6],[7,8,9]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestIsMagicSquareCase3(t *testing.T) {
+	got := isMagicSquare(4, [][]int{[]int{16, 2, 3, 13}, []int{5, 11, 10, 8}, []int{9, 7, 6, 12}, []int{4, 14, 15, 1}})
+	want := true
+	if got != want {
+		t.Errorf("isMagicSquare(N=4, matrix=[[16,2,3,13],[5,11,10,8],[9,7,6,12],[4,14,15,1]]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

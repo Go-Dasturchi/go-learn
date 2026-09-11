@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestQoldiqSeventeenFive(t *testing.T) {
+	got := qoldiq(17, 5)
+	want := 2
+	if got != want {
+		t.Errorf("qoldiq(17, 5):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestQoldiqTenThree(t *testing.T) {
+	got := qoldiq(10, 3)
+	want := 1
+	if got != want {
+		t.Errorf("qoldiq(10, 3):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestQoldiqExactDivision(t *testing.T) {
+	got := qoldiq(9, 3)
+	want := 0
+	if got != want {
+		t.Errorf("qoldiq(9, 3):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

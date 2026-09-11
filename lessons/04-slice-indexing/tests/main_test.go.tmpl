@@ -1,0 +1,30 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestIkkilantirBasic(t *testing.T) {
+	got := ikkilantir([]int{1, 2, 3})
+	want := []int{2, 4, 6}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ikkilantir([1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestIkkilantirTwoElements(t *testing.T) {
+	got := ikkilantir([]int{5, 10})
+	want := []int{10, 20}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ikkilantir([5,10]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestIkkilantirWithZero(t *testing.T) {
+	got := ikkilantir([]int{0, -3, 7})
+	want := []int{0, -6, 14}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ikkilantir([0,-3,7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

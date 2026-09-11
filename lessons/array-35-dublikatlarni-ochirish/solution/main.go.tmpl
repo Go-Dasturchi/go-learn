@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func removeDuplicates(N int, arr []int) []int {
+	natija := []int{}
+	seen := map[int]bool{}
+	for i := 0; i < N; i++ {
+		if !seen[arr[i]] {
+			seen[arr[i]] = true
+			natija = append(natija, arr[i])
+		}
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(removeDuplicates(7, []int{1, 2, 3, 2, 4, 3, 5}))
+}

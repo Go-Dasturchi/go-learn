@@ -1,0 +1,27 @@
+package main
+
+import (
+	"testing"
+)
+
+func TestProductRangeCase1(t *testing.T) {
+	got := productRange(1, 5)
+	want := 120
+	if got != want {
+		t.Errorf("productRange(K=1, N=5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestProductRangeCase2(t *testing.T) {
+	got := productRange(3, 6)
+	want := 360
+	if got != want {
+		t.Errorf("productRange(K=3, N=6):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+func TestProductRangeCase3(t *testing.T) {
+	got := productRange(2, 4)
+	want := 24
+	if got != want {
+		t.Errorf("productRange(K=2, N=4):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

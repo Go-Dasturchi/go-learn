@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func solve(x1 int, x2 int) float64 {
+	return math.Abs(float64(x2 - x1))
+}
+
+func main() {
+	fmt.Println(solve(3, 10))
+}
