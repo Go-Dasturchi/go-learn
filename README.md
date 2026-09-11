@@ -38,6 +38,10 @@ go install ./cmd/go-learn
 
 Bu buyruq `go-learn` binary'sini `$(go env GOPATH)/bin` (odatda `~/go/bin`) papkasiga qo'yadi — o'sha papka `$PATH`da bo'lsa, `go-learn` buyrug'i istalgan joydan ishlaydi.
 
+### macOS / Linux / Windows
+
+Yuqoridagi uchta buyruq (`git clone`, `cd`, `go install`) macOS, Linux va Windows'da bir xil ishlaydi — Git va Go ikkalasi ham cross-platform. Dastur Windows'da ham ishlaydi, lekin **eng silliq tajriba uchun avval WSL (Windows Subsystem for Linux) o'rnatib, keyin shu qadamlarni WSL terminali ichida bajarish tavsiya etiladi** — chunki dastur ichida terminal kengligini aniqlash uchun Unix-uslubidagi `stty` buyrug'i ishlatiladi, va Vim odatda Windows'da emas, Linux/macOS'da tayyor o'rnatilgan bo'ladi. WSL ichida bular hammasi muammosiz ishlaydi.
+
 Yoki klon qilingan papka ichida lokal build:
 
 ```bash
