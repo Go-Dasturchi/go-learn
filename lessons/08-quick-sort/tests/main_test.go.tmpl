@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestTezSaralashBasic(t *testing.T) {
+	got := tezSaralash([]int{5, 2, 9, 1, 7, 3})
+	want := []int{1, 2, 3, 5, 7, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("tezSaralash([5,2,9,1,7,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestTezSaralashSingle(t *testing.T) {
+	got := tezSaralash([]int{7})
+	want := []int{7}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("tezSaralash([7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestTezSaralashEmpty(t *testing.T) {
+	got := tezSaralash([]int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("tezSaralash([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestTezSaralashDuplicates(t *testing.T) {
+	got := tezSaralash([]int{3, 1, 3, 2, 1})
+	want := []int{1, 1, 2, 3, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("tezSaralash([3,1,3,2,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

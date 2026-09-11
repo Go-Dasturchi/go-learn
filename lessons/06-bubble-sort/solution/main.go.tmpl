@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+// pufakchaSaralash sonlarni bubble sort algoritmi yordamida
+// o'sish tartibida saralaydi.
+func pufakchaSaralash(sonlar []int) []int {
+	n := len(sonlar)
+	for i := 0; i < n; i++ {
+		for j := 0; j < n-1-i; j++ {
+			if sonlar[j] > sonlar[j+1] {
+				sonlar[j], sonlar[j+1] = sonlar[j+1], sonlar[j]
+			}
+		}
+	}
+	return sonlar
+}
+
+func main() {
+	fmt.Println(pufakchaSaralash([]int{5, 2, 9, 1, 7}))
+}

@@ -1,0 +1,37 @@
+package main
+
+import "fmt"
+
+// Stack — LIFO (oxirgi kirgan birinchi chiqadi) tuzilmasi.
+type Stack struct {
+	items []int
+}
+
+// Push stekning ustiga yangi element qo'shadi.
+func (s *Stack) Push(x int) {
+	s.items = append(s.items, x)
+}
+
+// Pop stekning eng ustidagi elementini olib tashlab qaytaradi.
+func (s *Stack) Pop() (int, bool) {
+	if len(s.items) == 0 {
+		return 0, false
+	}
+	oxirgi := len(s.items) - 1
+	qiymat := s.items[oxirgi]
+	s.items = s.items[:oxirgi]
+	return qiymat, true
+}
+
+func main() {
+	s := &Stack{}
+	s.Push(1)
+	s.Push(2)
+	s.Push(3)
+
+	qiymat, ok := s.Pop()
+	fmt.Println(qiymat, ok)
+
+	qiymat, ok = s.Pop()
+	fmt.Println(qiymat, ok)
+}

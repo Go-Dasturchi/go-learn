@@ -1,0 +1,56 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestBFSBasic(t *testing.T) {
+	graf := map[int][]int{
+		1: {2, 3},
+		2: {1, 4},
+		3: {1, 4},
+		4: {2, 3},
+	}
+	got := BFS(graf, 1)
+	want := []int{1, 2, 3, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("BFS(graf, 1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBFSLinear(t *testing.T) {
+	graf := map[int][]int{
+		1: {2},
+		2: {1, 3},
+		3: {2},
+	}
+	got := BFS(graf, 1)
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("BFS(linear graf, 1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBFSSingleNode(t *testing.T) {
+	graf := map[int][]int{1: {}}
+	got := BFS(graf, 1)
+	want := []int{1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("BFS(single node graf, 1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBFSStar(t *testing.T) {
+	graf := map[int][]int{
+		1: {2, 3, 4},
+		2: {1},
+		3: {1},
+		4: {1},
+	}
+	got := BFS(graf, 1)
+	want := []int{1, 2, 3, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("BFS(star graf, 1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

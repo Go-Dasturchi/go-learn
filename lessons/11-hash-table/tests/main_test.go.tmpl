@@ -1,0 +1,47 @@
+package main
+
+import "testing"
+
+func TestHashJadvalOlFound(t *testing.T) {
+	h := &HashJadval{}
+	h.Qoy("olma", 100)
+	h.Qoy("banan", 200)
+
+	v, ok := h.Ol("olma")
+	if !ok || v != 100 {
+		t.Errorf("Ol(\"olma\"):\nExpected:\n100 true\n\nGot:\n%d %v", v, ok)
+	}
+}
+
+func TestHashJadvalOlNotFound(t *testing.T) {
+	h := &HashJadval{}
+	h.Qoy("olma", 100)
+
+	v, ok := h.Ol("uzum")
+	if ok || v != 0 {
+		t.Errorf("Ol(\"uzum\"):\nExpected:\n0 false\n\nGot:\n%d %v", v, ok)
+	}
+}
+
+func TestHashJadvalMultipleKeys(t *testing.T) {
+	h := &HashJadval{}
+	h.Qoy("a", 1)
+	h.Qoy("b", 2)
+	h.Qoy("c", 3)
+
+	v, ok := h.Ol("b")
+	if !ok || v != 2 {
+		t.Errorf("Ol(\"b\"):\nExpected:\n2 true\n\nGot:\n%d %v", v, ok)
+	}
+}
+
+func TestHashJadvalFirstInsertedWins(t *testing.T) {
+	h := &HashJadval{}
+	h.Qoy("kalit", 1)
+	h.Qoy("kalit", 2)
+
+	v, ok := h.Ol("kalit")
+	if !ok || v != 1 {
+		t.Errorf("Ol(\"kalit\") \"kalit\" ikki marta Qoy qilingandan keyin (birinchi qo'yilgani topilishi kerak):\nExpected:\n1 true\n\nGot:\n%d %v", v, ok)
+	}
+}

@@ -1,0 +1,45 @@
+package main
+
+import "fmt"
+
+// Juftlik — hash jadvalida saqlanadigan kalit-qiymat jufti.
+type Juftlik struct {
+	Kalit  string
+	Qiymat int
+}
+
+// HashJadval — oddiy, 10 ta chelakli xesh jadvali.
+type HashJadval struct {
+	chelaklar [10][]Juftlik
+}
+
+// oddiyHash kalitning harflari kod qiymatlari yig'indisini 10 ga bo'lgandagi
+// qoldiqni qaytaradi — bu kalit qaysi chelakka tushishini aniqlaydi.
+func oddiyHash(kalit string) int {
+	yigindi := 0
+	for _, harf := range kalit {
+		yigindi += int(harf)
+	}
+	return yigindi % 10
+}
+
+// Qoy kalit-qiymat juftligini mos chelakka qo'shadi.
+func (h *HashJadval) Qoy(kalit string, qiymat int) {
+	indeks := oddiyHash(kalit)
+	h.chelaklar[indeks] = append(h.chelaklar[indeks], Juftlik{Kalit: kalit, Qiymat: qiymat})
+}
+
+// Ol kalitga mos qiymatni qaytaradi.
+func (h *HashJadval) Ol(kalit string) (int, bool) {
+	// TODO: to'g'ri chelakni toping, ichida kalitni qidiring
+	return 0, false
+}
+
+func main() {
+	h := &HashJadval{}
+	h.Qoy("olma", 100)
+	h.Qoy("banan", 200)
+
+	fmt.Println(h.Ol("olma"))
+	fmt.Println(h.Ol("uzum"))
+}

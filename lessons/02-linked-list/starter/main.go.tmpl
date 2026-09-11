@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+// Node — bog'langan ro'yxatning bitta tugini.
+type Node struct {
+	Value int
+	Next  *Node
+}
+
+// royxatGaAylantir bosh tugundan boshlab, ro'yxatdagi barcha
+// qiymatlarni []int slice ko'rinishida qaytaradi.
+func royxatGaAylantir(bosh *Node) []int {
+	// TODO: bosh'dan boshlab Next orqali yurib, qiymatlarni yig'ing
+	return nil
+}
+
+func main() {
+	uchinchi := &Node{Value: 3}
+	ikkinchi := &Node{Value: 2, Next: uchinchi}
+	birinchi := &Node{Value: 1, Next: ikkinchi}
+
+	fmt.Println(royxatGaAylantir(birinchi))
+}

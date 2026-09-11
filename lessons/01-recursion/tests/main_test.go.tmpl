@@ -1,0 +1,35 @@
+package main
+
+import "testing"
+
+func TestFaktorialFive(t *testing.T) {
+	got := faktorial(5)
+	want := 120
+	if got != want {
+		t.Errorf("faktorial(5):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestFaktorialZero(t *testing.T) {
+	got := faktorial(0)
+	want := 1
+	if got != want {
+		t.Errorf("faktorial(0):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestFaktorialOne(t *testing.T) {
+	got := faktorial(1)
+	want := 1
+	if got != want {
+		t.Errorf("faktorial(1):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestFaktorialSeven(t *testing.T) {
+	got := faktorial(7)
+	want := 5040
+	if got != want {
+		t.Errorf("faktorial(7):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

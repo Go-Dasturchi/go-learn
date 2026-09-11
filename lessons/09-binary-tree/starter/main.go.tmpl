@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+// Tugun — ikkilik daraxtning bitta tuguni.
+type Tugun struct {
+	Value int
+	Left  *Tugun
+	Right *Tugun
+}
+
+// inorderAylanish daraxtni inorder (chap -> o'zi -> o'ng) tartibda
+// aylanib, barcha qiymatlarni []int qilib qaytaradi.
+func inorderAylanish(tugun *Tugun) []int {
+	// TODO: bazaviy holat va rekursiv chap/o'zi/o'ng birlashtirishni yozing
+	return nil
+}
+
+func main() {
+	ildiz := &Tugun{
+		Value: 5,
+		Left:  &Tugun{Value: 3},
+		Right: &Tugun{Value: 8},
+	}
+	fmt.Println(inorderAylanish(ildiz))
+}

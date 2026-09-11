@@ -1,0 +1,34 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestRoyxatGaAylantirBasic(t *testing.T) {
+	uchinchi := &Node{Value: 3}
+	ikkinchi := &Node{Value: 2, Next: uchinchi}
+	birinchi := &Node{Value: 1, Next: ikkinchi}
+
+	got := royxatGaAylantir(birinchi)
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("royxatGaAylantir(1->2->3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestRoyxatGaAylantirSingle(t *testing.T) {
+	got := royxatGaAylantir(&Node{Value: 42})
+	want := []int{42}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("royxatGaAylantir(single node 42):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestRoyxatGaAylantirNil(t *testing.T) {
+	got := royxatGaAylantir(nil)
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("royxatGaAylantir(nil):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

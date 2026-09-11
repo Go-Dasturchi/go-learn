@@ -1,0 +1,35 @@
+package main
+
+import "testing"
+
+func TestBinarQidiruvFound(t *testing.T) {
+	got := binarQidiruv([]int{1, 3, 5, 7, 9, 11, 13}, 7)
+	want := 3
+	if got != want {
+		t.Errorf("binarQidiruv([1,3,5,7,9,11,13], 7):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestBinarQidiruvNotFound(t *testing.T) {
+	got := binarQidiruv([]int{1, 3, 5, 7, 9, 11, 13}, 4)
+	want := -1
+	if got != want {
+		t.Errorf("binarQidiruv([1,3,5,7,9,11,13], 4):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestBinarQidiruvFirstElement(t *testing.T) {
+	got := binarQidiruv([]int{2, 4, 6, 8}, 2)
+	want := 0
+	if got != want {
+		t.Errorf("binarQidiruv([2,4,6,8], 2):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestBinarQidiruvLastElement(t *testing.T) {
+	got := binarQidiruv([]int{2, 4, 6, 8}, 8)
+	want := 3
+	if got != want {
+		t.Errorf("binarQidiruv([2,4,6,8], 8):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

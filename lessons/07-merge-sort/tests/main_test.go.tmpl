@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestMergeTartiblashBasic(t *testing.T) {
+	got := mergeTartiblash([]int{5, 2, 9, 1, 7, 3})
+	want := []int{1, 2, 3, 5, 7, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("mergeTartiblash([5,2,9,1,7,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestMergeTartiblashSingle(t *testing.T) {
+	got := mergeTartiblash([]int{42})
+	want := []int{42}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("mergeTartiblash([42]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestMergeTartiblashEmpty(t *testing.T) {
+	got := mergeTartiblash([]int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("mergeTartiblash([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestMergeTartiblashDuplicates(t *testing.T) {
+	got := mergeTartiblash([]int{4, 2, 4, 1, 2})
+	want := []int{1, 2, 2, 4, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("mergeTartiblash([4,2,4,1,2]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -210,6 +210,66 @@
     "category": "Go Core"
   },
   {
+    "id": "01-recursion",
+    "title": "Recursion",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "02-linked-list",
+    "title": "Linked List",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "03-stack",
+    "title": "Stack",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "04-queue",
+    "title": "Queue",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "05-binary-search",
+    "title": "Binary Search",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "06-bubble-sort",
+    "title": "Bubble Sort",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "07-merge-sort",
+    "title": "Merge Sort",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "08-quick-sort",
+    "title": "Quick Sort",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "09-binary-tree",
+    "title": "Binary Tree",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "10-binary-search-tree",
+    "title": "Binary Search Tree",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "11-hash-table",
+    "title": "Hash Table",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "id": "12-graph-bfs",
+    "title": "Graphs and BFS",
+    "category": "Data Structures & Algorithms"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestPufakchaSaralashBasic(t *testing.T) {
+	got := pufakchaSaralash([]int{5, 2, 9, 1, 7})
+	want := []int{1, 2, 5, 7, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("pufakchaSaralash([5,2,9,1,7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestPufakchaSaralashAlreadySorted(t *testing.T) {
+	got := pufakchaSaralash([]int{1, 2, 3})
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("pufakchaSaralash([1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestPufakchaSaralashReverse(t *testing.T) {
+	got := pufakchaSaralash([]int{9, 7, 5, 3, 1})
+	want := []int{1, 3, 5, 7, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("pufakchaSaralash([9,7,5,3,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestPufakchaSaralashDuplicates(t *testing.T) {
+	got := pufakchaSaralash([]int{4, 2, 4, 1, 2})
+	want := []int{1, 2, 2, 4, 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("pufakchaSaralash([4,2,4,1,2]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

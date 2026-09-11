@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+// Queue — FIFO (birinchi kirgan birinchi chiqadi) tuzilmasi.
+type Queue struct {
+	items []int
+}
+
+// Enqueue navbatning oxiriga yangi element qo'shadi.
+func (q *Queue) Enqueue(x int) {
+	q.items = append(q.items, x)
+}
+
+// Dequeue navbatning birinchi elementini olib tashlab qaytaradi.
+func (q *Queue) Dequeue() (int, bool) {
+	// TODO: bo'shlikni tekshiring, keyin birinchi elementni olib tashlab qaytaring
+	return 0, false
+}
+
+func main() {
+	q := &Queue{}
+	q.Enqueue(1)
+	q.Enqueue(2)
+	q.Enqueue(3)
+
+	qiymat, ok := q.Dequeue()
+	fmt.Println(qiymat, ok)
+
+	qiymat, ok = q.Dequeue()
+	fmt.Println(qiymat, ok)
+}

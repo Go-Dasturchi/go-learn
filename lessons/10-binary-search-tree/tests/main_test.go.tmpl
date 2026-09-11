@@ -1,0 +1,46 @@
+package main
+
+import "testing"
+
+func buildTestBST() *Tugun {
+	return &Tugun{
+		Value: 5,
+		Left:  &Tugun{Value: 3, Left: &Tugun{Value: 1}},
+		Right: &Tugun{Value: 8, Left: &Tugun{Value: 6}, Right: &Tugun{Value: 9}},
+	}
+}
+
+func TestQidirFound(t *testing.T) {
+	got := qidir(buildTestBST(), 6)
+	if got != true {
+		t.Errorf("qidir(BST, 6):\nExpected:\ntrue\n\nGot:\n%v", got)
+	}
+}
+
+func TestQidirNotFound(t *testing.T) {
+	got := qidir(buildTestBST(), 7)
+	if got != false {
+		t.Errorf("qidir(BST, 7):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}
+
+func TestQidirRoot(t *testing.T) {
+	got := qidir(buildTestBST(), 5)
+	if got != true {
+		t.Errorf("qidir(BST, 5):\nExpected:\ntrue\n\nGot:\n%v", got)
+	}
+}
+
+func TestQidirLeaf(t *testing.T) {
+	got := qidir(buildTestBST(), 1)
+	if got != true {
+		t.Errorf("qidir(BST, 1):\nExpected:\ntrue\n\nGot:\n%v", got)
+	}
+}
+
+func TestQidirNilTree(t *testing.T) {
+	got := qidir(nil, 5)
+	if got != false {
+		t.Errorf("qidir(nil, 5):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}

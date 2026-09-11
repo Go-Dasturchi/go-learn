@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+// tezSaralash sonlarni quick sort algoritmi yordamida
+// o'sish tartibida saralaydi (oxirgi element pivot sifatida ishlatiladi).
+func tezSaralash(sonlar []int) []int {
+	if len(sonlar) <= 1 {
+		return sonlar
+	}
+	pivot := sonlar[len(sonlar)-1]
+	kichiklar := []int{}
+	kattalar := []int{}
+	for _, son := range sonlar[:len(sonlar)-1] {
+		if son <= pivot {
+			kichiklar = append(kichiklar, son)
+		} else {
+			kattalar = append(kattalar, son)
+		}
+	}
+	natija := tezSaralash(kichiklar)
+	natija = append(natija, pivot)
+	natija = append(natija, tezSaralash(kattalar)...)
+	return natija
+}
+
+func main() {
+	fmt.Println(tezSaralash([]int{5, 2, 9, 1, 7, 3}))
+}

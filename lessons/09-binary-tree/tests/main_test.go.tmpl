@@ -1,0 +1,52 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestInorderAylanishBasic(t *testing.T) {
+	ildiz := &Tugun{
+		Value: 5,
+		Left:  &Tugun{Value: 3},
+		Right: &Tugun{Value: 8},
+	}
+	got := inorderAylanish(ildiz)
+	want := []int{3, 5, 8}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("inorderAylanish(5[3,8]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestInorderAylanishDeeper(t *testing.T) {
+	ildiz := &Tugun{
+		Value: 5,
+		Left: &Tugun{
+			Value: 3,
+			Left:  &Tugun{Value: 1},
+			Right: &Tugun{Value: 4},
+		},
+		Right: &Tugun{Value: 8},
+	}
+	got := inorderAylanish(ildiz)
+	want := []int{1, 3, 4, 5, 8}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("inorderAylanish(deeper tree):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestInorderAylanishNil(t *testing.T) {
+	got := inorderAylanish(nil)
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("inorderAylanish(nil):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestInorderAylanishSingle(t *testing.T) {
+	got := inorderAylanish(&Tugun{Value: 42})
+	want := []int{42}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("inorderAylanish(single node):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

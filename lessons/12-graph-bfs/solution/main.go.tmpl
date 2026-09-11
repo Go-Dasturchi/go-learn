@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+// BFS grafni boshlanish tugunidan kenglik bo'yicha (BFS) aylanib,
+// tashrif tartibini qaytaradi.
+func BFS(graf map[int][]int, boshlanish int) []int {
+	tashrifBuyurilgan := map[int]bool{boshlanish: true}
+	navbat := []int{boshlanish}
+	natija := []int{}
+
+	for len(navbat) > 0 {
+		joriy := navbat[0]
+		navbat = navbat[1:]
+		natija = append(natija, joriy)
+
+		for _, qoshni := range graf[joriy] {
+			if !tashrifBuyurilgan[qoshni] {
+				tashrifBuyurilgan[qoshni] = true
+				navbat = append(navbat, qoshni)
+			}
+		}
+	}
+	return natija
+}
+
+func main() {
+	graf := map[int][]int{
+		1: {2, 3},
+		2: {1, 4},
+		3: {1, 4},
+		4: {2, 3},
+	}
+	fmt.Println(BFS(graf, 1))
+}

@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+// merge ikkita saralangan slice'ni bitta saralangan slice'ga birlashtiradi.
+func merge(chap, ong []int) []int {
+	natija := []int{}
+	i, j := 0, 0
+	for i < len(chap) && j < len(ong) {
+		if chap[i] <= ong[j] {
+			natija = append(natija, chap[i])
+			i++
+		} else {
+			natija = append(natija, ong[j])
+			j++
+		}
+	}
+	natija = append(natija, chap[i:]...)
+	natija = append(natija, ong[j:]...)
+	return natija
+}
+
+// mergeTartiblash sonlarni merge sort algoritmi yordamida saralaydi.
+func mergeTartiblash(sonlar []int) []int {
+	if len(sonlar) <= 1 {
+		return sonlar
+	}
+	orta := len(sonlar) / 2
+	chap := mergeTartiblash(sonlar[:orta])
+	ong := mergeTartiblash(sonlar[orta:])
+	return merge(chap, ong)
+}
+
+func main() {
+	fmt.Println(mergeTartiblash([]int{5, 2, 9, 1, 7, 3}))
+}

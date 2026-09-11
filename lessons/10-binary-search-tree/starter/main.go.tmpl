@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+// Tugun — ikkilik qidiruv daraxtining bitta tuguni.
+type Tugun struct {
+	Value int
+	Left  *Tugun
+	Right *Tugun
+}
+
+// qidir BST xossasidan foydalanib, qiymat daraxtda bor-yo'qligini tekshiradi.
+func qidir(tugun *Tugun, qiymat int) bool {
+	// TODO: bazaviy holatlar va BST xossasiga ko'ra faqat kerakli tomonni tekshiring
+	return false
+}
+
+func main() {
+	ildiz := &Tugun{
+		Value: 5,
+		Left:  &Tugun{Value: 3, Left: &Tugun{Value: 1}},
+		Right: &Tugun{Value: 8, Left: &Tugun{Value: 6}, Right: &Tugun{Value: 9}},
+	}
+	fmt.Println(qidir(ildiz, 6))
+	fmt.Println(qidir(ildiz, 7))
+}
