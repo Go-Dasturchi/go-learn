@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestBufferGaJoylashBasic(t *testing.T) {
+	got := bufferGaJoylash([]int{1, 2, 3})
+	want := []int{1, 2, 3}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bufferGaJoylash([1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBufferGaJoylashEmpty(t *testing.T) {
+	got := bufferGaJoylash([]int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bufferGaJoylash([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBufferGaJoylashSingle(t *testing.T) {
+	got := bufferGaJoylash([]int{99})
+	want := []int{99}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bufferGaJoylash([99]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBufferGaJoylashMany(t *testing.T) {
+	got := bufferGaJoylash([]int{5, 4, 3, 2, 1})
+	want := []int{5, 4, 3, 2, 1}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("bufferGaJoylash([5,4,3,2,1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

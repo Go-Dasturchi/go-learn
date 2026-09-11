@@ -1,0 +1,33 @@
+package main
+
+import (
+	"context"
+	"reflect"
+	"testing"
+)
+
+func TestIshlaGachaBekorNotCancelled(t *testing.T) {
+	got := ishlaGachaBekor(context.Background(), []int{1, 2, 3})
+	want := []int{1, 4, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ishlaGachaBekor(Background, [1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestIshlaGachaBekorAlreadyCancelled(t *testing.T) {
+	ctx, bekorQil := context.WithCancel(context.Background())
+	bekorQil()
+	got := ishlaGachaBekor(ctx, []int{1, 2, 3})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ishlaGachaBekor(oldindan bekor qilingan, [1,2,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestIshlaGachaBekorEmptyInput(t *testing.T) {
+	got := ishlaGachaBekor(context.Background(), []int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("ishlaGachaBekor(Background, []):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

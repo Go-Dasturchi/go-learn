@@ -270,6 +270,56 @@
     "category": "Data Structures & Algorithms"
   },
   {
+    "id": "01-goroutines",
+    "title": "Goroutines",
+    "category": "Concurrency"
+  },
+  {
+    "id": "02-channels",
+    "title": "Channels",
+    "category": "Concurrency"
+  },
+  {
+    "id": "03-buffered-channels",
+    "title": "Buffered Channels",
+    "category": "Concurrency"
+  },
+  {
+    "id": "04-select",
+    "title": "Select",
+    "category": "Concurrency"
+  },
+  {
+    "id": "05-waitgroup",
+    "title": "WaitGroup",
+    "category": "Concurrency"
+  },
+  {
+    "id": "06-mutex",
+    "title": "Mutex",
+    "category": "Concurrency"
+  },
+  {
+    "id": "07-worker-pools",
+    "title": "Worker Pools",
+    "category": "Concurrency"
+  },
+  {
+    "id": "08-context",
+    "title": "Context",
+    "category": "Concurrency"
+  },
+  {
+    "id": "09-sync-once-atomic",
+    "title": "sync.Once and Atomic",
+    "category": "Concurrency"
+  },
+  {
+    "id": "10-race-conditions",
+    "title": "Race Conditions",
+    "category": "Concurrency"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

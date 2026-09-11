@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+// birinchiTayyor ch1 yoki ch2 dan qaysi biri birinchi qiymat yuborsa,
+// o'sha qiymatni qaytaradi.
+func birinchiTayyor(ch1, ch2 chan string) string {
+	// TODO: select yordamida ikkala kanalni bir vaqtda kuting
+	return ""
+}
+
+func main() {
+	ch1 := make(chan string)
+	ch2 := make(chan string)
+
+	go func() {
+		ch1 <- "salom"
+	}()
+
+	fmt.Println(birinchiTayyor(ch1, ch2))
+}

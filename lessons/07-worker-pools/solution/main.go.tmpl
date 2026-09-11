@@ -1,0 +1,51 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+// Natija — bitta ishlov natijasi.
+type Natija struct {
+	Indeks int
+	Qiymat int
+}
+
+// worker jobs kanalidan sonlarni olib, kvadratini results ga yuboradi.
+func worker(jobs <-chan int, results chan<- Natija, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for son := range jobs {
+		results <- Natija{Indeks: son, Qiymat: son * son}
+	}
+}
+
+// workerHisoblash workerSoni ta worker yordamida sonlarning
+// kvadratlarini parallel hisoblab, map[son]kvadrat qaytaradi.
+func workerHisoblash(sonlar []int, workerSoni int) map[int]int {
+	jobs := make(chan int, len(sonlar))
+	results := make(chan Natija, len(sonlar))
+	var wg sync.WaitGroup
+
+	for i := 0; i < workerSoni; i++ {
+		wg.Add(1)
+		go worker(jobs, results, &wg)
+	}
+
+	for _, son := range sonlar {
+		jobs <- son
+	}
+	close(jobs)
+
+	wg.Wait()
+	close(results)
+
+	natija := make(map[int]int)
+	for r := range results {
+		natija[r.Indeks] = r.Qiymat
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(workerHisoblash([]int{1, 2, 3, 4, 5}, 2))
+}

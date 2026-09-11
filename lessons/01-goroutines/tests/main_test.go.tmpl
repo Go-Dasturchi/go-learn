@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestKvadratlarParallelBasic(t *testing.T) {
+	got := kvadratlarParallel([]int{1, 2, 3, 4, 5})
+	want := []int{1, 4, 9, 16, 25}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("kvadratlarParallel([1,2,3,4,5]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestKvadratlarParallelNegative(t *testing.T) {
+	got := kvadratlarParallel([]int{-3, 0, 3})
+	want := []int{9, 0, 9}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("kvadratlarParallel([-3,0,3]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestKvadratlarParallelSingle(t *testing.T) {
+	got := kvadratlarParallel([]int{7})
+	want := []int{49}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("kvadratlarParallel([7]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestKvadratlarParallelEmpty(t *testing.T) {
+	got := kvadratlarParallel([]int{})
+	want := []int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("kvadratlarParallel([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

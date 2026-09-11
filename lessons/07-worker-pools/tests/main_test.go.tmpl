@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestWorkerHisoblashBasic(t *testing.T) {
+	got := workerHisoblash([]int{1, 2, 3, 4, 5}, 2)
+	want := map[int]int{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("workerHisoblash([1..5], 2):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestWorkerHisoblashSingleWorker(t *testing.T) {
+	got := workerHisoblash([]int{3, 6, 9}, 1)
+	want := map[int]int{3: 9, 6: 36, 9: 81}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("workerHisoblash([3,6,9], 1):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestWorkerHisoblashMoreWorkersThanJobs(t *testing.T) {
+	got := workerHisoblash([]int{2}, 5)
+	want := map[int]int{2: 4}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("workerHisoblash([2], 5):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestWorkerHisoblashEmpty(t *testing.T) {
+	got := workerHisoblash([]int{}, 3)
+	want := map[int]int{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("workerHisoblash([], 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

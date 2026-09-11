@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// yigindiChannel sonlarni bitta goroutine orqali kanalga yuborib,
+// asosiy funksiyada range bilan yig'ib, yig'indisini qaytaradi.
+func yigindiChannel(sonlar []int) int {
+	ch := make(chan int)
+	go func() {
+		for _, son := range sonlar {
+			ch <- son
+		}
+		close(ch)
+	}()
+
+	natija := 0
+	for son := range ch {
+		natija += son
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(yigindiChannel([]int{1, 2, 3, 4, 5}))
+}

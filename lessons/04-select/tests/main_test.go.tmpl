@@ -1,0 +1,29 @@
+package main
+
+import "testing"
+
+func TestBirinchiTayyorCh1(t *testing.T) {
+	ch1 := make(chan string)
+	ch2 := make(chan string)
+	go func() {
+		ch1 <- "birinchi"
+	}()
+	got := birinchiTayyor(ch1, ch2)
+	want := "birinchi"
+	if got != want {
+		t.Errorf("birinchiTayyor (faqat ch1 yuboradi):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestBirinchiTayyorCh2(t *testing.T) {
+	ch1 := make(chan string)
+	ch2 := make(chan string)
+	go func() {
+		ch2 <- "ikkinchi"
+	}()
+	got := birinchiTayyor(ch1, ch2)
+	want := "ikkinchi"
+	if got != want {
+		t.Errorf("birinchiTayyor (faqat ch2 yuboradi):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

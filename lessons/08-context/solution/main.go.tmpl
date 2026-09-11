@@ -1,0 +1,30 @@
+package main
+
+import (
+	"context"
+	"fmt"
+)
+
+// ishlaGachaBekor sonlarning kvadratlarini hisoblab boradi, lekin
+// ctx bekor qilinsa, hozirgacha yig'ilgan natijani darhol qaytaradi.
+func ishlaGachaBekor(ctx context.Context, sonlar []int) []int {
+	natija := []int{}
+	for _, son := range sonlar {
+		select {
+		case <-ctx.Done():
+			return natija
+		default:
+			natija = append(natija, son*son)
+		}
+	}
+	return natija
+}
+
+func main() {
+	ctx := context.Background()
+	fmt.Println(ishlaGachaBekor(ctx, []int{1, 2, 3}))
+
+	bekorlangan, bekorQil := context.WithCancel(context.Background())
+	bekorQil()
+	fmt.Println(ishlaGachaBekor(bekorlangan, []int{1, 2, 3}))
+}

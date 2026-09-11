@@ -1,0 +1,35 @@
+package main
+
+import (
+	"sync"
+	"testing"
+)
+
+func TestOshirConcurrentSafety(t *testing.T) {
+	h := &HavfsizHisoblagich{}
+	var wg sync.WaitGroup
+
+	n := 2000
+	for i := 0; i < n; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			h.Oshir()
+		}()
+	}
+	wg.Wait()
+
+	if h.son != n {
+		t.Errorf("2000 ta goroutine Oshir() chaqirgandan keyin:\nExpected:\n%d\n\nGot:\n%d", n, h.son)
+	}
+}
+
+func TestOshirSequential(t *testing.T) {
+	h := &HavfsizHisoblagich{}
+	for i := 0; i < 5; i++ {
+		h.Oshir()
+	}
+	if h.son != 5 {
+		t.Errorf("5 marta ketma-ket Oshir():\nExpected:\n5\n\nGot:\n%d", h.son)
+	}
+}

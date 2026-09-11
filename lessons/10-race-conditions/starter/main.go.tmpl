@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+// parallelYigindi sonlarning yig'indisini workerSoni ta parallel
+// goroutine yordamida, race condition'siz hisoblaydi.
+func parallelYigindi(sonlar []int, workerSoni int) int {
+	// TODO: workerSoni ta goroutine bilan, umumiy natijani xavfsiz oshirib, yig'indini hisoblang
+	return 0
+}
+
+func main() {
+	fmt.Println(parallelYigindi([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 3))
+}

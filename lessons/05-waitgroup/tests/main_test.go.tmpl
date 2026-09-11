@@ -1,0 +1,35 @@
+package main
+
+import "testing"
+
+func TestJamiHisoblaBasic(t *testing.T) {
+	got := jamiHisobla([]int{1, 2, 3, 4})
+	want := 30
+	if got != want {
+		t.Errorf("jamiHisobla([1,2,3,4]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestJamiHisoblaEmpty(t *testing.T) {
+	got := jamiHisobla([]int{})
+	want := 0
+	if got != want {
+		t.Errorf("jamiHisobla([]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestJamiHisoblaSingle(t *testing.T) {
+	got := jamiHisobla([]int{5})
+	want := 25
+	if got != want {
+		t.Errorf("jamiHisobla([5]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestJamiHisoblaLarger(t *testing.T) {
+	got := jamiHisobla([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+	want := 385
+	if got != want {
+		t.Errorf("jamiHisobla([1..10]):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

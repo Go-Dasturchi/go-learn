@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+// Natija — goroutine natijasini uning asl indeksi bilan birga tashiydi.
+type Natija struct {
+	Indeks int
+	Qiymat int
+}
+
+// kvadratlarParallel har bir son uchun alohida goroutine ishga tushirib,
+// kvadratini hisoblaydi va natijalarni to'g'ri tartibda qaytaradi.
+func kvadratlarParallel(sonlar []int) []int {
+	// TODO: har bir son uchun goroutine ishga tushiring, natijalarni kanal orqali yig'ing
+	return nil
+}
+
+func main() {
+	fmt.Println(kvadratlarParallel([]int{1, 2, 3, 4, 5}))
+}

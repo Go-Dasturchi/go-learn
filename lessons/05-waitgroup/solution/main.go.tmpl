@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+// jamiHisobla har bir son uchun goroutine ishga tushirib, kvadratini
+// hisoblaydi va WaitGroup yordamida hammasi tugaguncha kutib,
+// barcha kvadratlarning yig'indisini qaytaradi.
+func jamiHisobla(sonlar []int) int {
+	var wg sync.WaitGroup
+	ch := make(chan int, len(sonlar))
+
+	for _, son := range sonlar {
+		wg.Add(1)
+		go func(s int) {
+			defer wg.Done()
+			ch <- s * s
+		}(son)
+	}
+
+	wg.Wait()
+	close(ch)
+
+	natija := 0
+	for v := range ch {
+		natija += v
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(jamiHisobla([]int{1, 2, 3, 4}))
+}

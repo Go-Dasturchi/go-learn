@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+// bufferGaJoylash barcha qiymatlarni sig'imi yetarli buferlangan
+// kanalga joylab, so'ng ularni orqaga slice qilib qaytaradi.
+func bufferGaJoylash(qiymatlar []int) []int {
+	ch := make(chan int, len(qiymatlar))
+	for _, q := range qiymatlar {
+		ch <- q
+	}
+	close(ch)
+
+	natija := []int{}
+	for q := range ch {
+		natija = append(natija, q)
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(bufferGaJoylash([]int{1, 2, 3}))
+}
