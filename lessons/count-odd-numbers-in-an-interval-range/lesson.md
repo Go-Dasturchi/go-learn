@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha sonlarni birma-bir sanab chiqish shart emas — oraliqdagi son va uning chekkalarining juft/toqligidan formula orqali topish mumkin.
+2. (high-low)/2 orqali asosiy sonni toping, so'ngra agar low yoki high toq bo'lsa natijaga 1 qo'shing.

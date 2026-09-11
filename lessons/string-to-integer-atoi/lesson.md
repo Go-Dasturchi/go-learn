@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Satrni belgidan-belgiga bosqichma-bosqich o'qing: avval bo'sh joylarni o'tkazib yuboring, keyin ishorani aniqlang, so'ng raqamlarni yig'ing — har bir bosqichda "keyingi belgi kutilgan turdami" deb tekshiring.
+2. Raqamlarni o'qish jarayonida natijani `result*10 + raqam` tarzida yig'ib boring va har safar 32-bit chegaradan (2147483647 yoki -2147483648) oshib ketishni tekshirib, oshsa darhol chegara qiymatini qaytaring; raqam bo'lmagan belgiga yetganda o'qishni to'xtatib, ishora bilan ko'paytirilgan natijani qaytaring.

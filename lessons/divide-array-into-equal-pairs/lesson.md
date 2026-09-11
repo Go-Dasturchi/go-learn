@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonning massivda necha marta uchraganini sanang — juftlikka bo'linish uchun bu sonlar nima bo'lishi kerakligini o'ylang.
+2. Har bir sonning takrorlanish sonini map orqali hisoblang; agar biror sonning soni toq bo'lsa uni juft sonli juftliklarga ajratib bo'lmaydi, shuning uchun false qaytaring, aks holda true.

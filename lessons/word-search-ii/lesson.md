@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir so'zni jadvalda alohida-alohida qidirish (har biri uchun to'liq DFS) samarasiz bo'ladi — barcha so'zlarni bitta Trie (prefiks daraxti) ga yig'ib, jadval bo'ylab bitta umumiy DFS bilan bir yo'la qidiring.
+2. `words` dan Trie quring, har bir tugunda "shu yergacha to'liq so'z tugaydimi" belgisini saqlang. Jadvaldagi har bir katakdan DFS boshlang: joriy harf Trie da mos yo'l bo'lsagina davom eting (aks holda darhol qaytish — bu keraksiz qidiruvlarni katta miqdorda kesib tashlaydi), agar joriy Trie tugunida to'liq so'z tugasa uni natijalar to'plamiga qo'shing. Qayta ishlatishdan saqlanish uchun tashrif buyurilgan katakni vaqtincha belgilab qo'ying va DFS dan qaytgach asl holatiga tiklang.

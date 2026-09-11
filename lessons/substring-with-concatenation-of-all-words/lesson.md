@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha so'zlar bir xil uzunlikda ekanidan foydalaning — bu degani, `s` ichidagi har bir mumkin bo'lgan boshlang'ich pozitsiyani "so'z uzunligi" qadamlar bilan bo'lib, har bir bo'lakni bitta so'zga tenglashtirib tekshirish mumkin.
+2. `words` dagi har bir so'zning nechta marta uchrashini xesh-jadvalda saqlang. `s` bo'ylab har bir mumkin boshlang'ich indeksdan boshlab, ketma-ket wordLen uzunlikdagi bo'laklarni ajratib, ularning har biri kerakli so'zlar to'plamida borligini va hali ortiqcha ishlatilmaganini (joriy tekshiruv uchun alohida hisoblagich bilan) nazorat qiling; agar barcha numWords ta bo'lak mos kelsa, shu boshlang'ich indeksni natijaga qo'shing.

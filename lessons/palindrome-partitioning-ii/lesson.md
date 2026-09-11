@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Masalani ikki bosqichda yeching: avval qaysi (i,j) qism-satrlar palindrom ekanini oldindan hisoblab jadval qiling, so'ngra shu jadvaldan foydalanib "minimal kesishlar soni" uchun 1D dinamik dasturlash quring.
+2. isPalindrome[i][j] ni "s[i..j] palindrommi" deb belgilang: u true bo'ladi agar s[i]==s[j] va (uzunlik <=2 yoki isPalindrome[i+1][j-1] true) bo'lsa. Keyin cuts[i] ni "s[0..i] ni palindromlarga bo'lish uchun kerakli minimal kesishlar" deb belgilab, agar butun s[0..i] palindrom bo'lsa cuts[i]=0, aks holda barcha j<=i lar bo'yicha, agar s[j..i] palindrom bo'lsa cuts[i] = min(cuts[i], cuts[j-1]+1) qilib yangilang.

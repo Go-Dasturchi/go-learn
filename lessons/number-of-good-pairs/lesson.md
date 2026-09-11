@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni ilgari necha marta ko'rganingizni bilsangiz, juftliklar sonini ikkinchi ichki tsiklsiz ham hisoblash mumkin — buning uchun map dan foydalaning.
+2. Massivni bir marta aylanib, har bir son uchun uni map'ga qo'shishdan oldin shu songa mos hisoblagichning joriy qiymatini natijaga qo'shing (chunki u qadar necha marta uchragan bo'lsa, shuncha yangi juftlik hosil bo'ladi), keyin hisoblagichni oshiring.

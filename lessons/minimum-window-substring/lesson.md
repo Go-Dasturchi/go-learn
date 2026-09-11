@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu "sirg'anuvchi oyna" (sliding window) masalasi — ikkita ko'rsatkich (left, right) bilan oynani kengaytirib-toraytirib, oyna ichida `t` dagi barcha belgilar yetarli miqdorda mavjudligini kuzatib boring.
+2. `t` dagi har bir belgi uchun kerakli sonini xesh-jadvalda saqlang. `right` ni oshirib oynani kengaytiring va oyna ichidagi hisoblagichni yangilang; qachonki oyna talab qilingan barcha belgilarni yetarlicha o'z ichiga olsa (masalan, "formed == required" turdagi hisoblagich orqali tekshiring), `left` ni imkon qadar o'ngga siljitib oynani toraytiring va har safar joriy oyna uzunligini eng yaxshi natija bilan solishtiring.

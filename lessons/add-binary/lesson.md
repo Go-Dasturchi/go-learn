@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Buni ikkala satrni songa aylantirib qo'shish emas (juda katta bo'lishi mumkin), balki qo'lda binar qo'shish kabi o'ylang — o'ngdan chapga xonalab qo'shish.
+2. Ikkala satrning oxiridan boshlab ikkita ko'rsatkich yuriting, har qadamda mos xonalar va carry'ni qo'shib natijadagi bitni va yangi carry'ni hisoblang, so'ng hosil bo'lgan natijani teskari aylantiring.

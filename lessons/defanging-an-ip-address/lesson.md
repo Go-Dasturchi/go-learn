@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masalada tayyor satr almashtirish funksiyasidan foydalanish eng qulay yo'l.
+2. strings paketida barcha '.' belgilarini '[.]' ga almashtiruvchi tayyor funksiyani qidiring va uni to'g'ridan-to'g'ri qo'llang.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir nuqtani navbat bilan "bazaviy nuqta" sifatida olib, undan boshqa har bir nuqtagacha bo'lgan yo'nalishni (og'ish/slope) guruhlash orqali yeching — bir xil yo'nalishga ega nuqtalar bitta to'g'ri chiziqda yotadi.
+2. Suzuvchi son xatoliklaridan qochish uchun og'ishni kasr sifatida emas, balki (dx, dy) ni ularning eng katta umumiy bo'luvchisiga (GCD) bo'lib, normallashtirilgan butun sonlar juftligi sifatida xesh-kalit qilib saqlang (ishorani ham izchil qilib belgilang). Har bir bazaviy nuqta uchun shu kalitlar bo'yicha hisoblagichni yuritib, eng ko'p uchragan kalitning soniga bazaviy nuqtaning o'zini va bir xil koordinatali (duplicate) nuqtalarni qo'shib, natijani yangilang.

@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sonlarni oddiy raqamli tartibda solishtirish yetarli emas — ularni satrga aylantirib, ikkita satrni qo'shib qo'yish natijasiga qarab maxsus solishtirish qoidasi kerakligini o'ylab ko'ring.
+2. Har bir sonni satrga aylantiring va ikkita a, b satrni solishtirishda `a+b` bilan `b+a` ni taqqoslab, kattasi oldinda turadigan tartibda saralang; saralangandan so'ng ularni birlashtiring, faqat natija "0000" kabi bo'lib qolsa, alohida "0" qaytarishni unutmang.

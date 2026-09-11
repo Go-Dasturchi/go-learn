@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir operatsiya satrida faqat '+' yoki '-' belgisi bor-yo'qligini bitta belgidan tekshirish kifoya.
+2. Har bir operatsiya satrining ikkinchi belgisini (op[1]) tekshiring — u '+' bo'lsa hisoblagichni oshiring, aks holda kamaytiring.

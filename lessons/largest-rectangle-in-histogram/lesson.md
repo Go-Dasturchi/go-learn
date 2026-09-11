@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir ustun uchun chapdan va o'ngdan qancha kengaya olishini alohida qidirish o'rniga, balandliklari o'sib boruvchi (monotonik) stek (stack) saqlashni o'ylab ko'ring — bu ustun indekslarini saqlaydi.
+2. Massiv bo'ylab yurib, agar joriy balandlik stekning tepasidagi balandlikdan kichik bo'lsa, stekdan chiqarib tashlang: chiqarilgan ustun endi kengayolmaydigan eng baland ustun bo'ladi, uning kengligi joriy indeks bilan (chiqarilgandan keyin stekda qolgan tepadagi indeks) orasidagi farq bo'ladi. Har bir chiqarishda yuza = balandlik * kenglik ni hisoblab, maksimal yuzani yangilab boring; oxirida qulaylik uchun massiv oxiriga balandligi 0 bo'lgan virtual ustun qo'shib qo'ying.

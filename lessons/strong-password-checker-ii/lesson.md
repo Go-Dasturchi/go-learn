@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir shartni alohida bayroq (flag) sifatida kuzatib, satrni faqat bir marta aylanib chiqish orqali barchasini birdan tekshirish mumkin.
+2. Satr bo'ylab yurib har bir belgi turini (kichik, katta, raqam, maxsus belgi) aniqlab mos bayroqni true qiling, shu bilan birga joriy belgi oldingisi bilan bir xil emasligini tekshiring; oxirida uzunlik shartini va barcha bayroqlarni birga tekshiring.

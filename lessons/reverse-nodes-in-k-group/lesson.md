@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni k tadan bo'laklarga bo'lib, har bir to'liq (aynan k ta elementdan iborat) bo'lakni alohida teskari qiling; oxirida k tadan kam qolgan bo'lak bo'lsa, uni tegmasdan qoldiring.
+2. `start` ni 0 dan boshlab har safar k ga oshirib boring, lekin faqat `start+k <= n` bo'lgandagina o'sha bo'lakni ikkita ko'rsatkich (bo'lak boshi va oxiri) bilan ichiga qarab yurib almashtiring (start+k > n bo'lgan oxirgi qoldiqni tegmasdan qoldiring).

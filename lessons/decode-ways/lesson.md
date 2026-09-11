@@ -46,5 +46,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir pozitsiyagacha bo'lgan qism-satrni necha xil usulda dekodlash mumkinligini saqlaydigan dinamik dasturlash (DP) yondashuvini o'ylab ko'ring — javob oldingi bitta yoki ikkita belgidagi natijalarga bog'liq bo'ladi.
+2. dp[0]=1 dan boshlab, har bir i pozitsiyasida: agar s[i-1] '0' bo'lmasa dp[i] ga dp[i-1] ni qo'shing (bitta harf sifatida o'qish), va agar oxirgi ikki belgi 10 dan 26 gacha bo'lgan (hamda birinchisi '0' bo'lmagan) sonni tashkil qilsa dp[i] ga dp[i-2] ni ham qo'shing (ikkita harf sifatida o'qish).

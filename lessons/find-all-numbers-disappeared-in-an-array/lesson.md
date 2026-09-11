@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. [1, n] oralig'idagi har bir son massivda uchraganini belgilab boradigan boolean massiv haqida o'ylang.
+2. n+1 uzunlikdagi boolean massiv yaratib, nums'dagi har bir qiymatni indeks sifatida ishlatib true deb belgilang, so'ngra 1 dan n gacha false qolgan indekslarni natijaga qo'shing.

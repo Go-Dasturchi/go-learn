@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bo'lishsiz yechish uchun har bir indeksdagi javobni "chapdagi barcha elementlar ko'paytmasi" va "o'ngdagi barcha elementlar ko'paytmasi"ning ko'paytmasi sifatida ikki bosqichda hisoblashni o'ylab ko'ring.
+2. Avval chapdan o'ngga yurib, har bir indeksga o'zidan oldingi barcha elementlar ko'paytmasini yozib chiqing (natija massivida); so'ng o'ngdan chapga yurib, o'zgaruvchida o'ngdagi elementlar ko'paytmasini saqlab, uni natijadagi mos elementga ko'paytirib boring.

@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestQatorlarSoniThree(t *testing.T) {
+	got := qatorlarSoni("a\nb\nc")
+	want := 3
+	if got != want {
+		t.Errorf("qatorlarSoni(\"a\\nb\\nc\"):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestQatorlarSoniOne(t *testing.T) {
+	got := qatorlarSoni("faqat bitta qator")
+	want := 1
+	if got != want {
+		t.Errorf("qatorlarSoni(single line):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestQatorlarSoniEmpty(t *testing.T) {
+	got := qatorlarSoni("")
+	want := 0
+	if got != want {
+		t.Errorf("qatorlarSoni(\"\"):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

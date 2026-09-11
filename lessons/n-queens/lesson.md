@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu N-Queens II bilan bir xil backtracking (orqaga qaytish) mantig'iga asoslanadi, farqi shundaki bu safar taxta holatining o'zini ham saqlab, har bir to'liq yechim uchun taxta chizmasini yig'ish kerak bo'ladi.
+2. Ustunlar va ikkala diagonal (row+col hamda row-col+n) band-emasligini belgilaydigan uchta bool massiv bilan qatorma-qator ferzi joylashtiring; har bir qatorda qaysi ustunga ferzi qo'yilganini alohida massivda saqlang. n-qator to'liq to'ldirilganda, shu saqlangan ustun raqamlaridan '.' va 'Q' belgilaridan iborat taxta satrlarini yasab natijalar ro'yxatiga qo'shing, so'ng backtrack qilib boshqa variantlarni qidiring.

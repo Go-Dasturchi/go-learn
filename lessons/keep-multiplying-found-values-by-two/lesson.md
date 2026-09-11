@@ -42,5 +42,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivda son bor-yo'qligini tez tekshirish uchun set qo'llashni o'ylang, so'ngra jarayonni takrorlang.
+2. nums'ni set'ga aylantiring; original shu set'da mavjud ekan uni 2 ga ko'paytirib, set'da yo'q bo'lguncha davom eting.

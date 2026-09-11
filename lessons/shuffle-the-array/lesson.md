@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. `xi` va `yi` elementlarining massivdagi asl o'rinlarini (birinchi va ikkinchi yarim) formuladan hisoblab topish mumkinligini o'ylang.
+2. `0` dan `n-1` gacha yurib, har bir `i` uchun `nums[i]` (xi) va `nums[i+n]` (yi) qiymatlarini ketma-ket natijaga qo'shib boring.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir son uchun kerakli "juft" (`target - son`) allaqachon ko'rilganmi, yo'qmi tezda bilish uchun hash map dan foydalanishni o'ylang.
+2. Massivni bir marta aylanib, har bir elementdan oldin `target - nums[i]` map'da bor-yo'qligini tekshiring — bo'lsa ikkala indeksni qaytaring, bo'lmasa joriy sonni indeksi bilan birga map'ga qo'shib davom eting.

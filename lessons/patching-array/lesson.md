@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ochko'z (greedy) yondashuv qo'llang: "hozircha [1, miss-1] oralig'idagi barcha sonlarni ifodalay olamiz" degan invariantni saqlab, miss qiymatini bosqichma-bosqich qanday o'sishini kuzatib boring.
+2. `miss` — hozircha kafolatlangan diapazondan tashqaridagi eng kichik ifodalab bo'lmaydigan son. Agar nums dagi keyingi son `miss` dan kichik yoki teng bo'lsa, uni diapazonga qo'shib miss += nums[i] qiling (patch shart emas). Aks holda diapazonni ikki baravar kengaytiruvchi `miss` ning o'zini "sun'iy" qo'shib (miss += miss) patches sonini oshiring — bu ochko'zlik miss <= n bo'lguncha davom etadi.

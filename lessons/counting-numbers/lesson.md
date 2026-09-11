@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha sonlarni birma-bir tekshirish o'rniga, avval oraliqning eng kichik juft sonini toping.
+2. low toq bo'lsa uni 1 ga oshirib juft qiling, so'ngra shu juft sondan boshlab high gacha 2 qadam bilan yurib barcha juft sonlarni yig'indiga qo'shing.

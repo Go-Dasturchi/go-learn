@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. Perimetr = 4 * a
+2. Har bir tomon 4 marta takrorlanadi — shuning uchun tomonni 4 ga ko'paytirish kifoya, alohida qo'shish shart emas.

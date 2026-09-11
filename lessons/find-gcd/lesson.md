@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikki sonning eng katta umumiy bo'luvchisini topish uchun samarali klassik algoritmni eslang (Evklid algoritmi).
+2. b nolga tenglashguncha a, b = b, a%b almashtirishni takrorlang; b nolga teng bo'lganda a — GCD.

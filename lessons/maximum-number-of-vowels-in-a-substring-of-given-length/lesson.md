@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Uzunligi qat'iy `k` bo'lgan har bir qism-satrni qaytadan sanash shart emas — belgilangan o'lchamli oynani (fixed-size sliding window) bir pozitsiyaga siljitganda unli harflar sonining qanday o'zgarishini o'ylab ko'ring.
+2. Dastlabki `k` uzunlikdagi qism-satrdagi unli harflar sonini hisoblang; keyin oynani birma-bir o'ngga siljiting — har safar yangi qo'shilgan belgi unli bo'lsa hisoblagichni oshiring, oynadan chiqib ketgan belgi unli bo'lsa kamaytiring, va shu jarayonda eng katta hisoblagich qiymatini saqlab boring.

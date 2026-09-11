@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikkala massivni alohida-alohida yig'ib chiqib solishtirish shart emas — ularni bitta satrga birlashtirib solishtirsa bo'ladi.
+2. word1 dagi barcha elementlarni ketma-ket birlashtirib bitta satr hosil qiling, xuddi shunday word2 uchun ham qiling, so'ng ikkala natijaviy satrni tenglikka tekshiring.

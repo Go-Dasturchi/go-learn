@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Uchta qiymat (0,1,2) borligi sababli uchta ko'rsatkich bilan massivni bir marta aylanib chiqadigan usulni (Dutch National Flag algoritmi) o'ylab ko'ring.
+2. low, mid, high ko'rsatkichlarini yuriting: nums[mid]==0 bo'lsa uni low bilan almashtirib low va mid ni oshiring, nums[mid]==1 bo'lsa faqat mid ni oshiring, nums[mid]==2 bo'lsa uni high bilan almashtirib high ni kamaytiring (bu holda mid ni oshirmang, chunki yangi kelgan qiymat hali tekshirilmagan).

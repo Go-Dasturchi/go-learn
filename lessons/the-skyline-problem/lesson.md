@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir binoni ikkita "hodisa" (event) sifatida ifodalang — chap chetida binoning boshlanishini, o'ng chetida esa tugashini — va bu hodisalarni x koordinatasi bo'yicha sweep-line (chapdan o'ngga yurish) usulida qayta ishlang.
+2. Hodisalarni x bo'yicha saralang (bir xil x da avval barcha "boshlanish"larni, keyin "tugash"larni qayta ishlang, boshlanishlar orasida balandroq bino avval kelsin). Joriy vaqtdagi barcha faol binolar balandligini maksimal-heap (yoki hisoblagichli ko'p to'plam) da saqlang: har bir hodisadan keyin heap tepasidagi (eng katta) balandlik oldingi natijaviy balandlikdan farq qilsa, [x, yangi balandlik] ni natijaga qo'shing.

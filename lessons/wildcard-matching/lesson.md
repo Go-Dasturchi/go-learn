@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu ham 2D dinamik dasturlash masalasi (Regular Expression Matching ga o'xshash), lekin bu yerda `*` ancha sodda ma'noga ega — u nol yoki istalgan sondagi ISTALGAN belgilarga mos keladi, oldingi belgini takrorlamaydi.
+2. dp[i][j] ni "s ning birinchi i ta belgisi p ning birinchi j ta belgisiga mos keladimi" deb belgilang. Agar p[j-1]=='*' bo'lsa, dp[i][j] = dp[i-1][j] (yulduzcha joriy s[i-1] ni ham "yutib yuboradi") YOKI dp[i][j-1] (yulduzcha bo'sh satrga mos keladi). Aks holda, agar p[j-1]=='?' yoki p[j-1]==s[i-1] bo'lsa dp[i][j]=dp[i-1][j-1]. Bazaviy holatda dp[0][j] faqat p ning boshi ketma-ket `*` lardan iborat bo'lsagina true bo'ladi.

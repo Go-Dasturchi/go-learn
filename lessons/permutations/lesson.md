@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir pozitsiyaga qaysi son qo'yilishini tanlab, ishlatilgan sonlarni belgilab boradigan rekursiv qidiruv (backtracking) haqida o'ylab ko'ring.
+2. Joriy tanlangan sonlar ketma-ketligi va qaysi indekslar allaqachon ishlatilganini bildiruvchi bayroq (used) massivini yuriting: har chaqiriqda ishlatilmagan har bir sonni tanlab, uni belgilab rekursiyaga kiring, so'ng orqaga qaytishda belgini olib tashlang; ketma-ketlik uzunligi nums bilan tenglashganda uni natijaga saqlang.

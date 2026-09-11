@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu backtracking (rekursiya) masalasi, lekin bir xil pozitsiyadan boshlangan qidiruv bir necha marta takrorlanib ketishi mumkin — natijalarni pozitsiya bo'yicha keshlab (memoizatsiya) qo'ying, shunda har bir pozitsiya faqat bir marta qayta ishlanadi.
+2. dfs(start) funksiyasi "s[start:] dan hosil bo'ladigan barcha mumkin jumlalar ro'yxati"ni qaytarsin. Har bir end (start+1 dan len(s) gacha) uchun s[start:end] lug'atda bormi tekshiring, bo'lsa dfs(end) ni chaqirib qolgan qismning barcha variantlarini oling va joriy so'z bilan birlashtirib natijaga qo'shing (qolgan qism bo'sh bo'lsa faqat so'zning o'zini qo'shing); start==len(s) bo'lganda bazaviy holat sifatida bitta bo'sh jumla qaytaring.

@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bir tomonlama moslikni tekshirish yetarli emas — ikkala tomon (s->t va t->s) ham bir-biriga mos kelishi kerakligini unutmang.
+2. Ikkita xarita tuzing — biri s harfidan t harfiga, ikkinchisi t harfidan s harfiga; har bir juftlikni tekshirganda ikkala xaritada ham mos kelish buzilmasligini kuzating.

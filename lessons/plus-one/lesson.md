@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Qo'lda qo'shishda bo'lgani kabi, eng oxirgi (kichik xonali) raqamdan boshlab chapga qarab carry (o'tkazma) tarqalishini o'ylang.
+2. Massivning oxiridan boshlab yuring: agar joriy raqam 9 dan kichik bo'lsa, uni birga oshirib darhol natijani qaytaring; 9 bo'lsa uni 0 ga aylantirib chapdagi raqamga o'ting — agar hamma raqam 9 bo'lib chiqsa, oldiga qo'shimcha `1` qo'shing.

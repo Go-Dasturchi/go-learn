@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu 2D dinamik dasturlash masalasi — dp[i][j] ni "s ning birinchi i ta belgisi p ning birinchi j ta belgisiga mos keladimi" deb ta'riflang, `*` belgisini alohida holat sifatida ko'rib chiqing.
+2. Agar p[j-1] == '*' bo'lsa, ikki variant mavjud: yulduzcha oldidagi belgini "nol marta" ishlatish (dp[i][j] = dp[i][j-2]) yoki agar p[j-2] joriy s[i-1] ga mos kelsa "yana bir marta" ishlatish (dp[i][j] = dp[i][j] || dp[i-1][j]). Aks holda, agar p[j-1] == '.' yoki p[j-1] == s[i-1] bo'lsa, dp[i][j] = dp[i-1][j-1]; bazaviy holatlarda dp[0][0]=true va dp[0][j] uchun p ning boshida "x*y*..." kabi nolga moslashadigan naqshlarni to'g'ri hisoblang.

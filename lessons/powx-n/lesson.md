@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. x ni n marta ketma-ket ko'paytirish o'rniga, "tez darajaga ko'tarish" (fast exponentiation / binary exponentiation) usulini o'ylab ko'ring — bu yerda daraja har safar ikkiga bo'linadi.
+2. Agar n manfiy bo'lsa, x ni 1/x ga almashtirib n ni musbatga aylantiring; keyin n ni ikkiga bo'lib boruvchi siklda: agar n toq bo'lsa natijaga joriy x ni ko'paytiring, so'ng x ni o'ziga ko'paytiring (kvadratga ko'taring) va n ni ikkiga bo'ling (butun bo'lish) — n nolga tushguncha davom eting.

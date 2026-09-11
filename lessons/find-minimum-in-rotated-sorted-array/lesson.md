@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv to'liq saralanmagan bo'lsa ham, uni ikki qismga bo'lish mumkin — har bir yarmi o'zi saralangan bo'ladi, shuning uchun o'zgartirilgan binary search qo'llash mumkinligini o'ylab ko'ring.
+2. lo va hi ko'rsatkichlaridan boshlab mid ni hisoblang: agar nums[mid] > nums[hi] bo'lsa, minimal element mid dan o'ngda (lo = mid+1), aks holda mid o'zi ham nomzod bo'lishi mumkin (hi = mid); lo va hi tenglashganda o'sha indeks minimal elementni ko'rsatadi.

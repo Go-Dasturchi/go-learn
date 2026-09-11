@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir miqdor (0 dan amount gacha) uchun "shu miqdorni yig'ish uchun kerak bo'lgan eng kam tanga soni"ni saqlaydigan dinamik dasturlash jadvalini tuzishni o'ylab ko'ring.
+2. dp[0]=0 dan boshlang; har bir i=1..amount uchun barcha tangalarni sinab ko'ring — agar tanga qiymati i dan katta bo'lmasa, dp[i] ni dp[i-tanga]+1 bilan solishtirib eng kichigini saqlang; oxirida dp[amount] hali cheksiz (erishib bo'lmaydigan) qolsa -1 qaytaring.

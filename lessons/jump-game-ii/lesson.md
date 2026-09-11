@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir pozitsiyadan qayerga sakrash yaxshiroq ekanini alohida hisoblashga urinmang — buni "ochko'z" (greedy) BFS-ga o'xshash bitta o'tish bilan, joriy sakrashning "qamrov chegarasi" tushunchasi orqali yeching.
+2. Ikki chegarani kuzatib boring: curEnd (joriy sakrash bilan yetib borish mumkin bo'lgan eng oxirgi indeks) va farthest (shu vaqtgacha ko'rilgan barcha indekslardan yetib borish mumkin bo'lgan eng uzoq nuqta). Massiv bo'ylab yurib farthest ni yangilab boring; i == curEnd bo'lgan zahoti jumps ni oshiring va curEnd = farthest deb belgilang — bu "keyingi sakrashni boshlash vaqti keldi" degani.

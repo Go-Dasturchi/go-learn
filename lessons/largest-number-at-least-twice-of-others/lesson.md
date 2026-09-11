@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Avval eng katta elementning o'zini va indeksini toping, keyin uni qolgan barcha elementlar bilan alohida solishtiring.
+2. Massivdan maksimal elementning indeksini toping; so'ngra qolgan barcha elementlarni aylanib, ularning har biri maksimal elementning yarmidan katta emasligini (max < 2*n) tekshiring — birortasi katta bo'lsa -1 qaytaring, aks holda maksimal indeksni qaytaring.

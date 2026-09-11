@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Satrni belgi-belgi bilan o'qib, '(' ga duch kelganda undan keyingi belgiga qarab qaysi qoidani qo'llashni aniqlashni o'ylang.
+2. Satrni chapdan o'ngga aylaning: 'G' bo'lsa uni to'g'ridan-to'g'ri qo'shing, '(' bo'lsa keyingi belgi ')' mi tekshiring — bo'lsa 'o' qo'shib 1 belgi o'tkazib yuboring, aks holda 'al' qo'shib 3 belgi o'tkazib yuboring.

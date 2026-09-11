@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Masalada tasvirlangan jarayonni to'g'ridan-to'g'ri simulyatsiya qiling — bu Evklid algoritmiga o'xshaydi.
+2. num1 va num2 ikkalasi ham nolga teng bo'lmaguncha, kattarog'idan kichikrog'ini ayirib, har safar hisoblagichni oshirib boring.

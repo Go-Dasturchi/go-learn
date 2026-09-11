@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bir xil harflardan tuzilgan so'zlarni bir xil "kalit" (key) ostida guruhlash mumkinligini o'ylab ko'ring — anagrammalarni bir-biriga bog'laydigan umumiy xususiyat nima ekanligini aniqlang.
+2. Har bir so'zning harflarini saralab (sort) kanonik kalit hosil qiling va shu kalit bo'yicha xesh-jadval (map) da so'zlarni to'plang; oxirida map dagi har bir guruhni natija sifatida qaytaring.

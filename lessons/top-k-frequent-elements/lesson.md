@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Avval har bir sonning necha marta takrorlanganini sanab chiqing, so'ng shu chastotalar bo'yicha noyob sonlarni tartiblashni o'ylab ko'ring (to'liq O(n log n) sort ham ishlaydi, tezroq yechim uchun heap yoki bucket sort ni ko'rib chiqing).
+2. Har bir sonning chastotasini map orqali hisoblang; noyob sonlar ro'yxatini chastotasi bo'yicha kamayish tartibida saralang (yoki chastotani indeks sifatida ishlatib bucket'larga joylashtiring) va eng katta chastotali dastlabki k tasini natija sifatida qaytaring.

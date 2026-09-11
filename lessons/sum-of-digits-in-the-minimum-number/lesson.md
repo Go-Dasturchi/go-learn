@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Masalani ikki qadamga bo'ling: avval massivdagi eng kichik elementni toping, keyin uning raqamlar yig'indisini hisoblang.
+2. Massivdan minimal qiymatni toping, so'ng uni `%10` va `/10` amallari bilan xonalab ajratib raqamlarini yig'indiga qo'shing; yig'indi juft bo'lsa `1`, toq bo'lsa `0` qaytaring.

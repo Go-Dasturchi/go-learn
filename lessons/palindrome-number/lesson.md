@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sonni satrga aylantirmasdan, uning yarmini matematik yo'l bilan "teskari" qurishni o'ylang; manfiy sonlar va oxiri 0 (lekin o'zi 0 emas) bo'lgan sonlar darhol palindrom emasligini unutmang.
+2. Sonning oxirgi raqamlarini ajratib olib, ulardan yangi (teskari) son quring, buni teskari son asl sondan katta yoki teng bo'lguncha davom ettiring; oxirida asl son (endi qisqargan) teskari songa yoki uning oxirgi raqamisiz qismiga teng bo'lsa, bu palindrom.

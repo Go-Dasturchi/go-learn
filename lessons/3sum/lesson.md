@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni avval saralab oling — shunda har bir elementni "asosiy" son sifatida tanlab, qolgan ikkitasini topish uchun ikki ko'rsatkich (two pointers) usulidan foydalanish mumkin bo'ladi.
+2. nums ni sort qiling; har bir i uchun l=i+1, r=n-1 dan boshlang: yig'indi 0 dan kichik bo'lsa l++, katta bo'lsa r--, teng bo'lsa natijaga qo'shib l va r ni ichkariga suring va bir xil qiymatlarni o'tkazib yuborib dublikatlarning oldini oling.

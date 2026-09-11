@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+// xavfsizBolish a ni b ga bo'ladi; agar bu panic qilsa (masalan b == 0),
+// 0 qaytaradi, dastur qulamaydi.
+func xavfsizBolish(a, b int) (natija int) {
+	// TODO: defer + recover() bilan panicni ushlang, keyin natija = a / b qiling
+	return 0
+}
+
+func main() {
+	fmt.Println(xavfsizBolish(10, 2))
+	fmt.Println(xavfsizBolish(10, 0))
+	fmt.Println("Dastur davom etyapti")
+}

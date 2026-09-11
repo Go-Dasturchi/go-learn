@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni saralashsiz O(n) da yechish uchun barcha qiymatlarni hash-to'plamga (set) joylang va faqat "ketma-ketlikning boshlanish nuqtasi" bo'lgan sonlardan qidiruvni boshlang.
+2. Bir son n uchun, agar to'plamda n-1 mavjud bo'lsa, bu n biror ketma-ketlikning o'rtasida joylashgan degani — uni o'tkazib yuboring. Aks holda (n-1 yo'q bo'lsa), n dan boshlab n+1, n+2, ... to'plamda mavjud bo'lguncha uzunlikni sanang; shu tarzda har bir son umumiy hisobda faqat bir marta ko'rib chiqiladi va yechim O(n) bo'ladi.

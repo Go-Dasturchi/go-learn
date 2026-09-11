@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Foizni hisoblash uchun avval `letter` nechta marta uchraganini sanash kifoya.
+2. `s` ichida `letter` necha marta uchrashini sanang (masalan `strings.Count`), so'ng shu sonni `100` ga ko'paytirib satr uzunligiga butun songa bo'ling — Go dagi butun sonlar bo'linishi avtomatik pastga yaxlitlaydi.

@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ifodani chapdan o'ngga bitta o'tishda o'qib chiqing va joriy natija bilan joriy ishorani alohida o'zgaruvchilarda saqlang; qavslarni to'g'ri hisoblash uchun stek (stack) tuzilmasidan foydalanishni o'ylab ko'ring.
+2. Har bir belgini o'qiganda: raqam bo'lsa uni yig'ing, `+`/`-` uchrasa joriy sonni ishora bilan natijaga qo'shib ishorani yangilang. `(` uchraganda joriy natija va ishorani stekka joylab ularni nolga qaytaring; `)` uchraganda ichki natijani hisoblab, stekdan chiqargan qiymatlar yordamida tashqi natijaga qo'shing.

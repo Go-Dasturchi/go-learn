@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir belgining qiymatini map orqali saqlab, keyingi belgi bilan solishtirishni o'ylang — kichik qiymat kattadan oldin kelsa (masalan IV), bu ayirishni bildiradi.
+2. Satrni chapdan o'ngga aylanib, har bir belgi qiymatini joriy belgidan keyingi belgi qiymati bilan solishtiring: agar joriysi kichik bo'lsa uni yig'indidan ayiring, aks holda qo'shing.

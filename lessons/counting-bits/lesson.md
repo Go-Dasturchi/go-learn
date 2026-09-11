@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni alohida bitlar sonini hisoblash shart emas — oldin hisoblangan kichikroq sonlar natijasidan foydalanib dinamik dasturlash qo'llash mumkin.
+2. i sonining bitlar soni i>>1 (2 ga bo'lingan qismi) uchun avval hisoblangan natijaga, i ning eng oxirgi biti (i&1) qo'shilgan holda topiladi: ans[i] = ans[i>>1] + (i&1).

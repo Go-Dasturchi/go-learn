@@ -39,5 +39,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu klassik backtracking (orqaga qaytish) masalasi — bo'sh katakni tanlang, unga 1 dan 9 gacha raqamlarni birma-bir sinab ko'ring, mos kelmasa qaytib boshqa raqamni sinang.
+2. Har bir bo'sh katak uchun 1-9 raqamlarni sinab, mos raqam qatorida, ustunida va 3x3 quti (box) ichida takrorlanmasligini tekshiruvchi yordamchi funksiya yozing. Raqamni joylab keyingi bo'sh katak uchun rekursiv chaqiruv qiling; agar rekursiya muvaffaqiyatsiz tugasa (true qaytarmasa), joylagan raqamni bekor qilib ('.' ga qaytarib) keyingi raqamni sinang — barcha katak to'lganda true qaytaring.

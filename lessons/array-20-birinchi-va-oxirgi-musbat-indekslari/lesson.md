@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. Massiv elementlarini aylanib o\'ting', 'Index bilan ishlaganda ehtiyot bo\'ling
+2. Massiv bo'ylab bir marta chapdan o'ngga yuring: birinchi musbat sonni uchratganda uni faqat bir marta `first`ga yozib qo'ying (keyin qayta yangilamang), `last`ni esa har safar yangi musbat son uchraganda qayta yozib boring.

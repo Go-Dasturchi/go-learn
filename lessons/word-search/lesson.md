@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir katakdan boshlab so'zning keyingi harfini qo'shni kataklarda qidiradigan chuqurlikka birinchi qidiruv (DFS) va orqaga qaytish (backtracking) haqida o'ylab ko'ring.
+2. Har bir katak (r,c) va so'zdagi joriy pozitsiya (idx) uchun rekursiv DFS yozing: agar idx so'z uzunligiga yetsa true, agar katak chegaradan tashqarida, ziyorat qilingan yoki mos harf bo'lmasa false qaytaring; aks holda katakni "ziyorat qilingan" deb belgilab, to'rtta yo'nalishda (yuqori, past, chap, o'ng) rekursiya qiling va qaytishda belgini olib tashlang (boshqa yo'llar uchun katakni yana ishlatish mumkin bo'lsin).

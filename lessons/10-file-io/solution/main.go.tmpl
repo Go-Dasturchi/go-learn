@@ -1,0 +1,22 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"strings"
+)
+
+// qatorlarSoni matn ichidagi qatorlar sonini qaytaradi.
+func qatorlarSoni(matn string) int {
+	skanner := bufio.NewScanner(strings.NewReader(matn))
+	soni := 0
+	for skanner.Scan() {
+		soni++
+	}
+	return soni
+}
+
+func main() {
+	fmt.Println(qatorlarSoni("a\nb\nc"))
+	fmt.Println(qatorlarSoni("faqat bitta qator"))
+}

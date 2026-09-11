@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni "olish yoki olmaslik" tanlovi orqali barcha variantlarni yig'ib chiqadigan rekursiv qidiruv (backtracking) haqida o'ylab ko'ring.
+2. Joriy tanlangan sonlar to'plamini saqlab boruvchi yordamchi massiv bilan rekursiv funksiya yozing: har chaqiriqda `start` dan `n` gacha bo'lgan sonlarni birma-bir qo'shib, chuqurroq rekursiyaga kiring, keyin orqaga qaytishda (backtrack) oxirgi qo'shilgan sonni olib tashlang; to'plam uzunligi `k` ga yetganda natijaga saqlang.

@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni ikki marta ichma-ich aylanish shart emas — bitta o'tishda 'shu kungacha ko'rilgan eng arzon narx'ni kuzatib borish mumkin.
+2. Chapdan o'ngga yurib hozirgacha eng kichik narxni saqlab boring; har bir kunda hozirgi narx bilan shu minimal narx orasidagi farqni maksimal foyda bilan solishtiring.

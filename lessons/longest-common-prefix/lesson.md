@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Eng qisqa so'zni topish shart emas — birinchi satrni "nomzod prefiks" sifatida olib, qolganlari bilan solishtirib boring.
+2. Birinchi satrni prefiks deb belgilang, har bir keyingi satr bilan belgi-belgilab solishtiring va mos kelmagan joyda prefiksni qisqartiring; prefiks bo'sh bo'lib qolsa, darhol "" qaytaring.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Yangi tozalangan satr yaratish shart emas — ikki ko'rsatkichni to'g'ridan-to'g'ri asl satrning ikki chetidan yurgizib, alifbo-raqam bo'lmagan belgilarni o'tkazib yuborish mumkin.
+2. Bitta ko'rsatkichni boshidan, ikkinchisini oxiridan yurgizing; ikkalasi ham alifbo-raqam belgiga yetguncha suring, so'ng kichik harfga aylantirib ularni solishtiring — mos kelmasa `false`, ikkalasi kesishguncha davom etsa `true`.

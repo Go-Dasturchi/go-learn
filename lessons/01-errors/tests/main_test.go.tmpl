@@ -1,0 +1,33 @@
+package main
+
+import "testing"
+
+func TestBolishOk(t *testing.T) {
+	got, err := bolish(10, 2)
+	if err != nil {
+		t.Errorf("bolish(10, 2): kutilmagan xato: %v", err)
+	}
+	if got != 5 {
+		t.Errorf("bolish(10, 2):\nExpected:\n5\n\nGot:\n%d", got)
+	}
+}
+
+func TestBolishByZero(t *testing.T) {
+	got, err := bolish(10, 0)
+	if err == nil {
+		t.Errorf("bolish(10, 0): xatolik kutilgan edi, lekin err == nil")
+	}
+	if got != 0 {
+		t.Errorf("bolish(10, 0):\nExpected result:\n0\n\nGot:\n%d", got)
+	}
+}
+
+func TestBolishNegative(t *testing.T) {
+	got, err := bolish(-20, 4)
+	if err != nil {
+		t.Errorf("bolish(-20, 4): kutilmagan xato: %v", err)
+	}
+	if got != -5 {
+		t.Errorf("bolish(-20, 4):\nExpected:\n-5\n\nGot:\n%d", got)
+	}
+}

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikki satrning har bir prefiks juftligi uchun "eng uzun umumiy qism-ketma-ketlik uzunligi"ni saqlaydigan ikki o'lchamli dinamik dasturlash (2D DP) jadvalini o'ylab ko'ring.
+2. dp[i][j] — text1 ning birinchi i belgisi bilan text2 ning birinchi j belgisi orasidagi LCS uzunligi bo'lsin: agar text1[i-1]==text2[j-1] bo'lsa dp[i][j]=dp[i-1][j-1]+1, aks holda dp[i][j]=max(dp[i-1][j], dp[i][j-1]); javob dp[m][n] bo'ladi.

@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masala Fibonacci ketma-ketligiga juda o'xshaydi — har bir pog'onaga yetish yo'llari soni oldingi ikkita pog'onaga yetish yo'llari yig'indisiga teng.
+2. dp[i] = dp[i-1] + dp[i-2] formulasidan foydalanib, faqat oxirgi ikkita qiymatni saqlagan holda pastdan yuqoriga hisoblang (dp[1]=1, dp[2]=2).

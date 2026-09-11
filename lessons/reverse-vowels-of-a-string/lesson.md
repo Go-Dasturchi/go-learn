@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Faqat unlilarni almashtirish kerak bo'lgani uchun ikki tomondan yaqinlashuvchi ikkita ko'rsatkich g'oyasi mos keladi.
+2. Bitta ko'rsatkichni boshidan, ikkinchisini oxiridan yurgizing; har birini unli harfga yetguncha suring, ikkalasi ham unliga to'xtaganda ularni almashtirib, ikkalasini ham bir qadam ichkariga suring — bu ular kesishguncha davom etadi.

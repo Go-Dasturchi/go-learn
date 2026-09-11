@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni ikki marta aylanish shart emas — bitta o'tishda kerakli barcha ma'lumotni (min, max, yig'indi) yig'ib olish mumkin.
+2. Bitta pastadan sonlarni aylanib eng kichik va eng katta qiymatlarni hamda umumiy yig'indini toping, so'ng yig'indidan min va maxni ayirib qolgan elementlar soniga (len-2) bo'ling.

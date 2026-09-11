@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ismlarni to'g'ridan-to'g'ri saralash o'rniga, indekslarni bo'ylarga qarab saralashni o'ylang.
+2. `0` dan `len(names)-1` gacha indekslardan iborat massiv yarating va uni `heights` qiymatlariga qarab kamayish tartibida saralang, so'ng saralangan indekslar tartibida `names` dan mos ismlarni yig'ib natija hosil qiling.

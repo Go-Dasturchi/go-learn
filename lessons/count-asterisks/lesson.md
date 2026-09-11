@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. '|' belgisiga duch kelganingizda holatni (juftlik ichidami yoki yo'qmi) almashtirib borishni o'ylang (boolean flag).
+2. Satrni chapdan o'ngga aylanib, '|' ga duch kelganda flag'ni teskarisiga o'zgartiring, '*' ga duch kelganda flag juftlik tashqarisini bildirsa hisoblagichni oshiring.

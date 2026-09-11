@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sikl yoki rekursiyasiz yechish uchun 3 ning eng katta darajasini (int chegarasida sig'adigan) oldindan bilishdan foydalanishni o'ylang.
+2. Agar `n` musbat bo'lsa va int32 chegarasidagi eng katta `3^x` qiymati (`1162261467`) `n` ga qoldiqsiz bo'linsa, demak `n` ham 3 ning darajasi — chunki 3 tub son bo'lgani uchun uning darajalari faqat bir-birini bo'ladi.

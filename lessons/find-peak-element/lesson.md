@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Chiziqli qidiruv shart emas — qo'shni ikki elementni solishtirib, qaysi tomonda albatta cho'qqi borligini aniqlash mumkin, bu esa binary search g'oyasiga olib keladi.
+2. mid va mid+1 ni solishtiring: agar nums[mid] < nums[mid+1] bo'lsa, o'sish davom etmoqda va cho'qqi mid dan o'ngda joylashgan (lo = mid+1), aks holda cho'qqi mid da yoki undan chapda bo'ladi (hi = mid); lo va hi tenglashganda o'sha indeks cho'qqi hisoblanadi.

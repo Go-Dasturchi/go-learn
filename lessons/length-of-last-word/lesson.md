@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Satrni oxiridan boshlab teskari tomondan o'qishni o'ylang — avval oxiridagi bo'sh joylarni, keyin so'zning o'zini hisoblang.
+2. Satr oxiridan boshlab bo'sh joylarni o'tkazib yuboring, so'ng bo'sh joy bo'lmagan belgilarni sanashni davom ettiring — birinchi bo'sh joyga (yoki satr boshiga) yetguncha.

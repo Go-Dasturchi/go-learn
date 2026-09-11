@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Katta sonlarni int'ga aylantirib qo'shish xavfli (overflow) — buni qo'lda ustun usulida qo'shish kabi tasavvur qiling.
+2. Ikkala satrning oxiridan boshlab, har ikkala xonani va carry'ni qo'shib qoldiqni natijaga yozib, carry'ni yangilang; ikkala satr tugagach carry qolsa uni ham qo'shing.

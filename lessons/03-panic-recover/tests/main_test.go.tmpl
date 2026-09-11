@@ -1,0 +1,32 @@
+package main
+
+import "testing"
+
+func TestXavfsizBolishOk(t *testing.T) {
+	got := xavfsizBolish(10, 2)
+	want := 5
+	if got != want {
+		t.Errorf("xavfsizBolish(10, 2):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestXavfsizBolishByZeroDoesNotPanic(t *testing.T) {
+	defer func() {
+		if r := recover(); r != nil {
+			t.Fatalf("xavfsizBolish(10, 0) panic qilmasligi kerak edi (recover bilan ushlanishi kerak), lekin panic yuz berdi: %v", r)
+		}
+	}()
+	got := xavfsizBolish(10, 0)
+	want := 0
+	if got != want {
+		t.Errorf("xavfsizBolish(10, 0):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestXavfsizBolishNegative(t *testing.T) {
+	got := xavfsizBolish(-20, 4)
+	want := -5
+	if got != want {
+		t.Errorf("xavfsizBolish(-20, 4):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

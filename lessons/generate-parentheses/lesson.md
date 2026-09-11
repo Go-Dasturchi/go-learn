@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir qadamda ochiq yoki yopiq qavs qo'shish mumkinmi degan tanlov bilan ishlaydigan rekursiv qidiruv (backtracking) haqida o'ylab ko'ring, faqat har doim to'g'ri (valid) natijaga olib boradigan tanlovlarni qiling.
+2. Joriy satr, ishlatilgan ochiq qavslar soni va ishlatilgan yopiq qavslar sonini parametr sifatida uzatuvchi rekursiv funksiya yozing: ochiq qavslar soni n dan kichik bo'lsa "(" qo'shishingiz mumkin, yopiq qavslar soni ochiq qavslardan kam bo'lsa ")" qo'shishingiz mumkin; satr uzunligi 2n ga yetganda uni natijaga saqlang.

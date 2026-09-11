@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"regexp"
+)
+
+// raqamlarniTop matn ichidagi barcha ketma-ket raqam guruhlarini topib qaytaradi.
+func raqamlarniTop(matn string) []string {
+	naqsh := regexp.MustCompile(`[0-9]+`)
+	return naqsh.FindAllString(matn, -1)
+}
+
+func main() {
+	fmt.Println(raqamlarniTop("Uy 12, xona 5, qavat 3"))
+	fmt.Println(raqamlarniTop("raqam yo'q"))
+}

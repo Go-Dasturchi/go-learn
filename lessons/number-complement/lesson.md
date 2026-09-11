@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sonning barcha bitlarini teskari qilish uchun sonning necha xonali (bitli) ekanini bilishga to'g'ri keladi — shu uzunlikda "hammasi 1" bo'lgan maska yaratishni o'ylang.
+2. `num` dan katta yoki teng bo'lguncha maskani chapga surib 1 bilan to'ldirib boring (masalan `1, 11, 111, ...` ikkilikda), so'ng `num` ni shu maska bilan XOR qiling — natija to'ldiruvchi son bo'ladi.

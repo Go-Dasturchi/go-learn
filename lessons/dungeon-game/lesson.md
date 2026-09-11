@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Masalani boshidan (yuqori-chapdan) emas, oxiridan (pastki-o'ng burchakdan) boshlab teskari yo'nalishda yeching — bu "shu katakdan boshlab, malika turgan katakkacha omon yetib borish uchun kerakli minimal boshlang'ich HP" haqidagi dinamik dasturlash.
+2. dp[i][j] ni (i,j) katakka kirishdan oldin zarur bo'lgan minimal sog'liq deb belgilang. Chegara sifatida dp[m][n-1] = dp[m-1][n] = 1 qo'ying, so'ngra orqaga qarab dp[i][j] = max(1, min(dp[i+1][j], dp[i][j+1]) - dungeon[i][j]) formulasi bilan to'ldiring; yakuniy javob dp[0][0] bo'ladi.

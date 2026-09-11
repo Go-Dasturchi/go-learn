@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Maktabda qo'lda ko'paytirish usulini eslang: har bir raqamni boshqasining har bir raqamiga alohida ko'paytirib, natijalarni mos pozitsiyalarga qo'shib chiqish mumkin — bu uchun natijani xonalar (digits) massivi sifatida saqlang.
+2. Uzunligi m+n bo'lgan natija massivi tuzing; num1[i] va num2[j] ko'paytmasi natija massivining `i+j` va `i+j+1` pozitsiyalariga ta'sir qiladi — har bir ko'paytmani mos joyga qo'shib, ortiqcha (carry) qismini chapdagi xonaga o'tkazing; oxirida boshidagi ortiqcha nollarni olib tashlab, raqamlarni satrga aylantiring.

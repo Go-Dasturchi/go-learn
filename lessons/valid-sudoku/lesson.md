@@ -46,5 +46,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir katak bir vaqtning o'zida uchta guruhga (o'z qatori, o'z ustuni, o'z 3x3 bloki) tegishli — shuning uchun har bir guruh uchun alohida "ko'rilgan raqamlar" to'plamini saqlashni o'ylab ko'ring.
+2. Har bir qator, ustun va 3x3 blok uchun alohida set (masalan map yoki bool massiv) yuriting; doskani bir marta aylanib chiqing va har bir to'ldirilgan katak uchun, agar uning qiymati mos qator/ustun/blok setida allaqachon bo'lsa false qaytaring, aks holda uni shu uchala setga ham qo'shing (blok indeksini `(r/3)*3 + c/3` orqali hisoblang).

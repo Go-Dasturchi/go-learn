@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. allowed satridagi harflarni tez tekshirish uchun 26 ta katakli boolean massiv (yoki set) tuzib oling.
+2. Avval allowed harflarini belgilaydigan massiv tuzing, so'ngra har bir so'zning barcha harflari shu massivda true ekanligini tekshirib, mos kelgan so'zlarni sanang.

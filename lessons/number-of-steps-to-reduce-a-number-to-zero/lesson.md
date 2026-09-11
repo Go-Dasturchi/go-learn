@@ -39,5 +39,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masalani to'g'ridan-to'g'ri, masalada aytilgan qoidani takrorlab simulyatsiya qilish orqali yechish mumkin.
+2. Son 0 bo'lmaguncha tsikl yurgizing: son juft bo'lsa 2 ga bo'ling, toq bo'lsa 1 ni ayiring, va har bir amaldan keyin qadamlar hisoblagichini oshirib boring.

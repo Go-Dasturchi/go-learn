@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu ikki satr bo'yicha quriladigan 2D dinamik dasturlash masalasi — dp[i][j] ni "s ning birinchi i ta belgisi ichida t ning birinchi j ta belgisiga mos keluvchi subsekvensiyalar soni" sifatida ta'riflashni o'ylab ko'ring.
+2. dp[i][j] = dp[i-1][j] (s[i-1] ni umuman ishlatmaslik varianti); agar s[i-1] == t[j-1] bo'lsa, bunga yana dp[i-1][j-1] ni ham qo'shing (s[i-1] ni t[j-1] ga moslashtirish varianti). Bazaviy holat sifatida barcha i uchun dp[i][0] = 1 qo'ying, chunki bo'sh satrga mos kelishning yagona yo'li bor.

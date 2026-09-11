@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir element uchun massivni to'liq qayta aylanish shart emas — sonlarning necha marta uchrashini hisoblab, prefiks yig'indi (prefix sum) qo'llash mumkin.
+2. Har bir qiymat necha marta uchraganini hisoblang, so'ng shu hisoblagich massivining prefiks yig'indisini oling — natijada count[v] qiymati v'dan kichik sonlar sonini beradi.

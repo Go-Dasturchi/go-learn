@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Qavslarning o'zini emas, balki ularning INDEKSLARINI saqlaydigan stek (stack) ishlatishni o'ylab ko'ring — stekning tepasi doim "hozirgacha yaroqli bo'lmagan oxirgi chegara" indeksini bildirsin.
+2. Stekni -1 bilan boshlang (chegara sifatida). `(` uchraganda uning indeksini stekka qo'shing. `)` uchraganda stekdan bittani chiqaring: agar stek shundan keyin bo'sh qolsa, joriy indeksni yangi chegara sifatida stekka qo'shing; aks holda joriy indeks bilan stekning yangi tepasi orasidagi farq — shu nuqtada tugaydigan yaroqli qism-satr uzunligi, uni maksimal natija bilan solishtiring.

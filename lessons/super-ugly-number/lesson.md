@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir yangi "xunuk son" avvalgi xunuk sonlardan birini biror tub songa ko'paytirish orqali hosil bo'ladi — shuning uchun har bir tub son uchun alohida ko'rsatkich (pointer) saqlab boruvchi dinamik dasturlash (DP) haqida o'ylab ko'ring.
+2. dp[0]=1 dan boshlang va har bir primes[j] uchun alohida ko'rsatkich (pointers[j]) yuriting; har qadamda barcha j lar bo'yicha `dp[pointers[j]] * primes[j]` qiymatlarining eng kichigini keyingi dp elementi sifatida oling, so'ng aynan shu eng kichik qiymatni bergan barcha j larning ko'rsatkichini bittaga oshiring (dublikatlarning oldini olish uchun).

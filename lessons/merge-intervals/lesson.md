@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Kesishuvni tekshirish uchun oraliqlarni qandaydir tartibga solish foydali bo'ladi — boshlanish nuqtasi bo'yicha saralashni o'ylab ko'ring, shunda kesishuvchi oraliqlar bir-biriga yaqin joylashadi.
+2. Oraliqlarni boshlanish qiymati bo'yicha o'sish tartibida saralang, so'ng natija ro'yxatini yuritib boring: agar joriy oraliqning boshlanishi oxirgi qo'shilgan oraliqning tugashidan katta bo'lmasa (kesishadi), ularning tugash qiymatlarining kattasini olib birlashtiring, aks holda joriy oraliqni yangi element sifatida ro'yxatga qo'shing.

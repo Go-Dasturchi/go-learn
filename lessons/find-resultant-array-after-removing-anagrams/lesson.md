@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikki so'z anagramma ekanligini tekshirish uchun ularning harflarini saralab solishtirishni o'ylang.
+2. Har bir so'zni saralangan holatga keltirib, oldin qoldirilgan so'zning saralangan holati bilan solishtiring; ular teng bo'lsa so'zni o'tkazib yuboring, aks holda natijaga qo'shib saralangan holatni yangilang.

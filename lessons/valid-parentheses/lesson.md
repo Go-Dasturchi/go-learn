@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Oxirgi ochilgan qavs birinchi yopilishi kerakligini eslang — bu klassik stek (stack) tuzilmasi bilan yechiladigan masala.
+2. Satrni chapdan o'ngga aylanib, ochiluvchi qavslarni stekka qo'ying; yopiluvchi qavs uchrasa, stek bo'sh yoki eng tepadagi element mos ochiluvchi qavs bo'lmasa `false` qaytaring, aks holda stekdan chiqaring — oxirida stek bo'sh bo'lsa `true`.

@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu ham inversiyalarni sanashga o'xshaydi, faqat shart nums[i] > nums[j] emas, balki nums[i] > 2*nums[j] — shu sababli modifikatsiyalangan merge sort (birlashtirib saralash) qo'llang, lekin sanashni oddiy merge bosqichidan alohida bajaring.
+2. Har bir merge chaqiruvida avval ikkala yarim ichida (hali birlashtirilmasdan turib, ular allaqachon saralangan holda) chap yarimning har bir elementi uchun o'ng yarimda nums[i] > 2*nums[j] shartini qanoatlantiruvchi elementlar sonini ikkita ko'rsatkich yordamida sanab chiqing (ikkala ko'rsatkich faqat oldinga siljiydi, orqaga qaytmaydi). Shundan keyingina odatiy merge (birlashtirish) bosqichini bajarib massivni saralangan holga keltiring.

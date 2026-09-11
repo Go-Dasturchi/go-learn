@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Masalani ikki qatlamga bo'ling: tashqi qismda barcha (top, bottom) qator juftlarini tanlab, har bir juft uchun ustunlar bo'yicha yig'indilarni bitta 1D massivga siqing, so'ngra shu 1D massivda "yig'indisi k dan katta bo'lmagan eng katta subarray" masalasini yeching.
+2. 1D subarray qismini prefiks yig'indilar va saralangan to'plam (yoki saralangan slice + binar qidiruv) yordamida yeching: joriy prefiks yig'indi `cur` uchun, `cur - k` dan katta yoki teng bo'lgan eng kichik oldingi prefiksni toping — bu prefiks bilan `cur` orasidagi farq shu oraliqning yig'indisi bo'lib, u albatta k dan katta bo'lmaydi; har bir yangi prefiksni saralangan tuzilmaga qo'shib boring va barcha (top,bottom) juftlar ustida eng katta natijani kuzating.

@@ -1,0 +1,30 @@
+package main
+
+import (
+	"testing"
+	"time"
+)
+
+func TestJamiDavomiylikBasic(t *testing.T) {
+	got := jamiDavomiylik([]int{30, 45, 15})
+	want := 90 * time.Minute
+	if got != want {
+		t.Errorf("jamiDavomiylik([30,45,15]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJamiDavomiylikTwenty(t *testing.T) {
+	got := jamiDavomiylik([]int{10, 10})
+	want := 20 * time.Minute
+	if got != want {
+		t.Errorf("jamiDavomiylik([10,10]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestJamiDavomiylikEmpty(t *testing.T) {
+	got := jamiDavomiylik([]int{})
+	want := time.Duration(0)
+	if got != want {
+		t.Errorf("jamiDavomiylik([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

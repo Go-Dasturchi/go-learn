@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Nolmas elementlarni massiv boshiga "siljitish" pozitsiyasi (write-pointer) g'oyasini o'ylab ko'ring.
+2. Bitta yozuv indeksi tuting; massivni chapdan o'ngga aylanib, nolga teng bo'lmagan har bir elementni shu indeksga qo'yib indeksni oshiring, keyin qolgan barcha o'rinlarni nol bilan to'ldiring.

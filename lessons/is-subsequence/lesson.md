@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikkita ko'rsatkich bilan bir vaqtda ikkala satrni aylanib borishni o'ylang (two pointers).
+2. t'ni bitta ko'rsatkich bilan aylaning; s'ning joriy belgisi t'dagi belgi bilan mos kelsa, s ko'rsatkichini oldinga siljiting; oxirida s ko'rsatkichi s uzunligiga yetgan bo'lsa, u qism-satr.

@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masalani "Largest Rectangle in Histogram" masalasiga qaytarib yechish mumkin — har bir qatorni gistogrammaning asosi deb, o'sha qatorgacha har bir ustunda tepasidan qancha ketma-ket `1` borligini balandlik sifatida hisoblang.
+2. `heights` massivini qator bo'ylab yurib yangilab boring: agar matrix[qator][ustun]=="1" bo'lsa heights[ustun]++ qiling, aks holda heights[ustun]=0 qiling. Har bir qatordan keyin shu heights massiviga nisbatan "eng katta to'rtburchak gistogrammada" algoritmini (monotonik stek bilan) qo'llab, natijalarning eng kattasini saqlang.

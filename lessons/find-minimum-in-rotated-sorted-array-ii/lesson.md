@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Odatiy binar qidiruv mantig'ini ishlating, lekin takrorlanuvchi elementlar mavjudligi sababli nums[mid] ni nums[hi] bilan solishtirganda uchinchi holat — ular teng bo'lgan holatni alohida ko'rib chiqishingiz kerak bo'ladi.
+2. lo va hi ko'rsatkichlari bilan ishlang: nums[mid] > nums[hi] bo'lsa minimum mid dan o'ngda, lo=mid+1; nums[mid] < nums[hi] bo'lsa minimum mid yoki undan chapda, hi=mid. Ular teng bo'lsa qaysi tomonda ekanini aniqlab bo'lmaydi, shu sababli xavfsiz variant sifatida hi ni bittaga kamaytiring (hi--), bu minimum elementni yo'qotmaydi.

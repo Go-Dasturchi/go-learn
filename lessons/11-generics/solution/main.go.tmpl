@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+// Ordered — solishtirish mumkin bo'lgan turlar uchun cheklov (constraint).
+type Ordered interface {
+	~int | ~float64 | ~string
+}
+
+// Katta a va b dan kattarog'ini qaytaradi.
+func Katta[T Ordered](a, b T) T {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	fmt.Println(Katta(3, 7))
+	fmt.Println(Katta(3.5, 2.1))
+	fmt.Println(Katta("olma", "nok"))
+}

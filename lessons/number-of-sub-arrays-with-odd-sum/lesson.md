@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir qism-massivni alohida tekshirish shart emas — prefiks yig'indilarning juft/toqligini kuzatib borsangiz, qism-massiv yig'indisining juft yoki toqligini tezda aniqlash mumkinligini o'ylab ko'ring.
+2. Joriy prefiks yig'indisining juft yoki toq ekanligini hisoblab boring va shu vaqtgacha uchragan juft hamda toq prefikslar sonini alohida sanang; joriy prefiks juft bo'lsa, undan oldingi toq prefikslar soni javobga qo'shiladi (chunki ular orasidagi farq toq bo'ladi), joriy prefiks toq bo'lsa, undan oldingi juft prefikslar soni qo'shiladi — natijani modul bo'yicha yig'ib boring.

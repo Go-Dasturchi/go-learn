@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har safar `L` va `R` sonlari tenglashganda, ochko'zlik (greedy) bilan darhol bitta muvozanatli bo'lakni "kesib olish" mumkinligini o'ylang.
+2. Satrni chapdan o'ngga aylanib, `L` uchun balansni oshiring, `R` uchun kamaytiring; balans nolga tushgan har safar hisoblagichni oshiring — bu eng maksimal bo'linish soni bo'ladi.

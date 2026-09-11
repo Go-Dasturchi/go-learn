@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// bolish a ni b ga bo'ladi, agar b == 0 bo'lsa xatolik qaytaradi.
+func bolish(a, b int) (int, error) {
+	// TODO: b == 0 bo'lsa xatolik qaytaring, aks holda a/b va nil
+	return 0, nil
+}
+
+func main() {
+	natija, err := bolish(10, 2)
+	if err != nil {
+		fmt.Println("Xato:", err)
+	} else {
+		fmt.Println("Natija:", natija)
+	}
+
+	natija, err = bolish(10, 0)
+	if err != nil {
+		fmt.Println("Xato:", err)
+	} else {
+		fmt.Println("Natija:", natija)
+	}
+}

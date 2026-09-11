@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. Mutlaq qiymat: abs(x2 - x1)
+2. Natija manfiy bo'lib qolmasligi uchun ayirmani mutlaq qiymatga (`math.Abs`) o'rab oling — `x2 - x1` manfiy chiqishi mumkin.

@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Monotonik stek (stack) g'oyasidan foydalaning: natijaviy satrni harf-harf quring va har bir harfning satrda oxirgi marta qayerda uchrashini oldindan bilib oling.
+2. Har bir belgi uchun: agar u allaqachon stekda bo'lsa o'tkazib yuboring. Aks holda, stekning tepasidagi harf joriy harfdan katta bo'lsa VA o'sha tepadagi harf satrning qolgan qismida yana uchraydigan bo'lsa (ya'ni uning lastIndex joriy pozitsiyadan katta bo'lsa), uni stekdan chiqarib tashlang — shu shartlarga mos kelmay qolguncha bu jarayonni takrorlang, so'ng joriy harfni stekka qo'shing.

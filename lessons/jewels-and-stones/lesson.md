@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. jewels satridagi belgilarni tez tekshirish uchun set (yoki boolean massiv) tuzib olish qulay.
+2. Avval jewels harflarini set'ga joylang, so'ngra stones satridagi har bir belgi shu set'da bor-yo'qligini tekshirib, mos kelganlarni sanang.

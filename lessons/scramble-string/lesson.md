@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu rekursiv masala — s1 ni biror pozitsiyada ikkiga bo'lib, s2 ning ham mos ravishda (bo'linmagan yoki almashtirilgan holda) ikkiga bo'linishini tekshiring; qayta hisoblashlarning oldini olish uchun memoizatsiya (masalan, s1+"#"+s2 kalitli xesh-jadval) shart.
+2. Har bir bo'lish uzunligi i uchun ikki holatni tekshiring: (1) bo'linmagan holat — isScramble(s1[:i], s2[:i]) va isScramble(s1[i:], s2[i:]); (2) almashtirilgan holat — isScramble(s1[:i], s2[n-i:]) va isScramble(s1[i:], s2[:n-i]). Har ikkisidan birortasi true bo'lsa javob true; tezlashtirish uchun avval ikkala satrning harf chastotalari mos kelmasa darhol false qaytaring.

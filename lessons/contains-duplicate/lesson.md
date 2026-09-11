@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni ko'rgan-ko'rmaganingizni tezda bilish uchun to'plam (set/map) dan foydalanishni o'ylang.
+2. Massivni bir marta aylanib, har bir sonni map'ga qo'shishdan oldin u allaqachon map'da bor-yo'qligini tekshiring — bo'lsa darhol true qaytaring.

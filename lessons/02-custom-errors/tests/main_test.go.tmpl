@@ -1,0 +1,41 @@
+package main
+
+import (
+	"errors"
+	"math"
+	"testing"
+)
+
+func TestIldizPositive(t *testing.T) {
+	got, err := ildiz(16)
+	if err != nil {
+		t.Errorf("ildiz(16): kutilmagan xato: %v", err)
+	}
+	if math.Abs(got-4) > 1e-9 {
+		t.Errorf("ildiz(16):\nExpected:\n4\n\nGot:\n%v", got)
+	}
+}
+
+func TestIldizNegativeReturnsCustomError(t *testing.T) {
+	_, err := ildiz(-9)
+	if err == nil {
+		t.Fatalf("ildiz(-9): xatolik kutilgan edi, lekin err == nil")
+	}
+	var manfiyErr *ManfiySonError
+	if !errors.As(err, &manfiyErr) {
+		t.Fatalf("ildiz(-9): xatolik *ManfiySonError turida bo'lishi kerak edi, got %T", err)
+	}
+	if manfiyErr.Qiymat != -9 {
+		t.Errorf("ildiz(-9): ManfiySonError.Qiymat:\nExpected:\n-9\n\nGot:\n%d", manfiyErr.Qiymat)
+	}
+}
+
+func TestIldizZero(t *testing.T) {
+	got, err := ildiz(0)
+	if err != nil {
+		t.Errorf("ildiz(0): kutilmagan xato: %v", err)
+	}
+	if got != 0 {
+		t.Errorf("ildiz(0):\nExpected:\n0\n\nGot:\n%v", got)
+	}
+}

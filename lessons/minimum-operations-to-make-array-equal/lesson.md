@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv aslida oddiy formula bilan aniqlanadi (1, 3, 5, ...) — barcha elementlarni tekislash uchun kerakli operatsiyalar sonini n orqali to'g'ridan-to'g'ri ifodalab bo'lish-bo'lmasligini o'ylab ko'ring, sikl yozmasdan.
+2. arr elementlari markazga (o'rtacha qiymatga) nisbatan simmetrik joylashgan: eng chetdagi juftlik (eng kichik va eng katta) orasidagi masofa markazgacha bo'lgan masofaga teng, va bu masofalarning yig'indisi n va oraliq qadam (2) orqali `n*n/4` formulasiga soddalashadi — buni kichik n larda qo'lda tekshirib ko'ring.

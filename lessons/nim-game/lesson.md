@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Kichik `n` qiymatlari (1, 2, 3, 4, 5...) uchun kim yutishini qo'lda sanab, natijalarda davriylik (pattern) borligini payqashga harakat qiling.
+2. Agar toshlar soni 4 ga qoldiqsiz bo'linsa, raqibingiz har doim sizni shu holatga qaytarib qo'ya oladi va siz yutqazasiz; aks holda siz g'olib bo'lasiz — shuning uchun javob `n % 4 != 0` shartiga bog'liq.

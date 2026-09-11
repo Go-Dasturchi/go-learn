@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir harfni ko'rgan-ko'rmaganingizni saqlab boradigan 26 ta katakli boolean massiv haqida o'ylang.
+2. Satrni chapdan o'ngga aylanib, har bir harfni tekshiring — agar u avval ko'rilgan bo'lsa shu harfni darhol qaytaring, aks holda uni 'ko'rilgan' deb belgilang.

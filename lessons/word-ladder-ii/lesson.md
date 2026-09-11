@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Faqat "Word Ladder" dagi kabi BFS bilan uzunlikni topish yetarli emas — bu safar barcha eng qisqa yo'llarni saqlab qolish kerak, shuning uchun BFS ni "qatlam-qatlam" (level by level) bajarib, har bir so'zga olib boruvchi barcha yo'llarni to'plang.
+2. Har bir qatlamda joriy so'zlarga qadar yig'ilgan barcha to'liq yo'llarni saqlang (xarita: so'z -> yo'llar ro'yxati). Bitta harfni almashtirib navbatdagi qatlamdagi so'zlarga o'ting, lekin FAQAT shu qatlamda topilgan so'zlarni keyingi qatlamga o'tkazing va ularni umumiy so'zlar to'plamidan o'chirib tashlang (aks holda ortga qaytish yoki cheksiz aylanish yuzaga kelishi mumkin); endWord birinchi marta uchragan qatlamda to'xtang — undan keyingi qatlamlarga hojat yo'q, chunki ular endi eng qisqa bo'lmaydi.

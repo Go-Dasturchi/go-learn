@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sakrash yo'lini alohida sinab ko'rish shart emas — har bir pozitsiyada "shu yergacha yetib borib, keyin qay yergacha uzoqlasha olishimiz mumkin" degan greedy (ochko'z) fikrlashni qo'llang.
+2. "Hozirgacha yeta oladigan eng uzoq indeks" (maxReach) degan o'zgaruvchini saqlab, massiv bo'ylab yuring: agar joriy indeks maxReach dan katta bo'lib qolsa, demak bu yerga yetib bo'lmaydi — false qaytaring; aks holda maxReach ni `i + nums[i]` bilan yangilab boring va oxirigacha yetib borsangiz true qaytaring.

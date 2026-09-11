@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Chapdan va o'ngdan elementlar olishni to'g'ridan-to'g'ri simulyatsiya qilish o'rniga, masalani teskarisiga o'girib ko'ring: "chetlardan olib x ni 0 qilish" — o'rtada qoladigan eng uzun qism-massivning yig'indisi `umumiy_yig'indi - x` ga teng bo'lishini topishga teng.
+2. target = umumiy_yig'indi - x ni hisoblang (agar manfiy bo'lsa -1); so'ng o'zgaruvchan oynani (sliding window) ishlatib, yig'indisi aynan target ga teng bo'lgan eng uzun uzluksiz qism-massivni toping (oyna yig'indisi target dan oshsa chap chetni siljiting); javob esa `len(nums) - shu eng uzun oyna uzunligi` bo'ladi.

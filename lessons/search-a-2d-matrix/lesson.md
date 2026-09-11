@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Matritsani qator-ustun sifatida emas, balki bitta uzun saralangan massiv sifatida tasavvur qilib ko'ring — bu binary search qo'llashga imkon beradi.
+2. lo=0, hi=rows*cols-1 oralig'ida odatdagi binary search yurgizing; har bir "tekis" mid indeksni `mid/cols` va `mid%cols` orqali qator va ustun indeksiga aylantirib, o'sha katakdagi qiymatni target bilan solishtiring.

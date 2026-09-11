@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Balandligi kattaroq odamlarni avval joylashtirsangiz, ular pastroq bo'ylagilarning "oldida kamida k ta baland odam" shartiga ta'sir qilmasligini o'ylab ko'ring — bu greedy + qadamma-qadam qo'yish (insertion) usuliga olib keladi.
+2. Odamlarni balandlik bo'yicha kamayish tartibida, balandlik teng bo'lganda esa `k` bo'yicha o'sish tartibida saralang; so'ng natija ro'yxatini bo'shdan boshlab, har bir odamni to'g'ridan-to'g'ri o'zining `k`-indeksiga (pozitsiyasiga) kiritib boring — chunki undan balandroq yoki teng bo'lganlar allaqachon joylashtirilgan.

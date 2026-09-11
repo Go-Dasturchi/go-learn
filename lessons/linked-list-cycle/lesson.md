@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Tugunlarni ketma-ket 'yurib' borib, avval tashrif buyurilgan tugunga qaytib kelinsa sikl bor deb bilish mumkin — buni saqlash uchun set ishlating.
+2. start'dan boshlab next[] orqali yurib boring, har bir tashrif buyurilgan indeksni set'ga qo'shing; agar joriy indeks avval ko'rilgan bo'lsa true, -1 ga yetsangiz false qaytaring.

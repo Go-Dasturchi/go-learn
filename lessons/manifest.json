@@ -150,6 +150,66 @@
     "category": "Data Structures"
   },
   {
+    "id": "01-errors",
+    "title": "Errors",
+    "category": "Go Core"
+  },
+  {
+    "id": "02-custom-errors",
+    "title": "Custom Errors",
+    "category": "Go Core"
+  },
+  {
+    "id": "03-panic-recover",
+    "title": "Panic and Recover",
+    "category": "Go Core"
+  },
+  {
+    "id": "04-closures",
+    "title": "Closures",
+    "category": "Go Core"
+  },
+  {
+    "id": "05-higher-order-functions",
+    "title": "Higher-Order Functions",
+    "category": "Go Core"
+  },
+  {
+    "id": "06-string-formatting",
+    "title": "String Formatting",
+    "category": "Go Core"
+  },
+  {
+    "id": "07-sorting",
+    "title": "Sorting",
+    "category": "Go Core"
+  },
+  {
+    "id": "08-time",
+    "title": "Time and Duration",
+    "category": "Go Core"
+  },
+  {
+    "id": "09-json",
+    "title": "JSON",
+    "category": "Go Core"
+  },
+  {
+    "id": "10-file-io",
+    "title": "File I/O",
+    "category": "Go Core"
+  },
+  {
+    "id": "11-generics",
+    "title": "Generics",
+    "category": "Go Core"
+  },
+  {
+    "id": "12-regular-expressions",
+    "title": "Regular Expressions",
+    "category": "Go Core"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

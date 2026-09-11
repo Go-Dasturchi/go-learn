@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir harfning uchraganini belgilab boradigan 26 ta katakli massiv (yoki set) haqida o'ylab ko'ring.
+2. Satrni bir marta aylanib, har bir harf uchun mos indeksni (c-'a') true qiling, so'ngra barcha 26 harf belgilanganmi tekshiring.

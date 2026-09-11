@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir shaxobchani boshlang'ich nuqta sifatida sinab ko'rish shart emas — gaz va xarajat farqini kuzatib boruvchi greedy (ochko'z) yondashuvni o'ylab ko'ring.
+2. Har bir i uchun diff = gas[i]-cost[i] ni umumiy yig'indiga qo'shib boring; agar joriy bakdagi yig'indi manfiy bo'lib qolsa, demak boshlanish nuqtasi o'sha yergacha bo'lgan hech qaysi shaxobcha bo'la olmaydi — boshlanishni i+1 ga ko'chirib bakni nolga qaytaring; oxirida agar umumiy yig'indi manfiy bo'lsa -1, aks holda topilgan boshlanish indeksi javob bo'ladi.

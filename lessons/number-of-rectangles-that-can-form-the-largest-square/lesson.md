@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir to'rtburchak uchun avval undan hosil bo'ladigan eng katta kvadrat tomonini (ikki tomonning kichigini) toping.
+2. To'rtburchaklarni bir marta aylanib, har birining `min(uzunlik, en)` qiymatini hisoblang; shu qiymatlar orasidagi eng kattasini va shu eng katta qiymatga ega bo'lgan to'rtburchaklar sonini bir vaqtda kuzatib boring (yangi maksimum topilsa hisoblagichni qayta boshlang, teng kelsa oshiring).

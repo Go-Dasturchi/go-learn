@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni alohida tekshirish o'rniga, 'Eratosfen g'alviri' (Sieve of Eratosthenes) usulini o'ylab ko'ring.
+2. n o'lchamli boolean massiv yarating, 2 dan boshlab har bir tub sonning barcha karralilarini 'murakkab' deb belgilang (i*i dan boshlab), so'ngra belgilanmagan sonlarni sanang.

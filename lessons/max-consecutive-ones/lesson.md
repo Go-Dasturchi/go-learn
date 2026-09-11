@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni bir marta aylanib, joriy ketma-ket birlar seriyasining uzunligini kuzatib boring.
+2. Ikkita hisoblagich tuting: joriy ketma-ketlik va eng yaxshi natija. `1` uchraganda joriysini oshirib eng yaxshisi bilan solishtiring, `0` uchraganda joriysini nolga qaytaring.

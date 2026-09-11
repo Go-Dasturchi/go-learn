@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. n/3 dan ko'p marta uchraydigan elementlar ko'pi bilan ikkita bo'lishi mumkinligini payqang — bu Boyer-Moore Voting algoritmini ikkita nomzod bilan umumlashtirishga olib keladi.
+2. Ikkita nomzod (cand1, cand2) va ularning hisoblagichlarini yuriting: joriy son mavjud nomzodlardan biriga teng bo'lsa hisoblagichini oshiring, bo'sh nomzod bo'lsa joriy sonni nomzod qiling, aks holda ikkala hisoblagichni ham kamaytiring; oxirida massivni qayta aylanib, ikkala nomzodning haqiqiy takrorlanish sonini hisoblab, n/3 dan ko'p bo'lganlarinigina natijaga qo'shing.

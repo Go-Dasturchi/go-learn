@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv saralangan bo'lgani uchun oddiy binary search kifoya qilmaydi — target ning birinchi va oxirgi o'rnini topish uchun ikkita alohida binary search yurgizish kerakligini o'ylab ko'ring.
+2. Bittasi target dan kichik bo'lgan eng chap chegarani (lower bound), ikkinchisi target dan katta bo'lgan eng chap chegarani (upper bound) topadigan ikkita binary search yozing; birinchisi natijaning boshlanish indeksini, ikkinchisidan 1 ayirilgani esa tugash indeksini beradi — agar boshlanish indeksidagi qiymat target ga teng bo'lmasa, `[-1,-1]` qaytaring.

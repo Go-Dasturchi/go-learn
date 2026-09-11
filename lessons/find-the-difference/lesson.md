@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir harfning necha marta uchraganini hisoblab, ikkala satrni solishtirishni o'ylang (26 ta katakli hisoblagich yetarli).
+2. s'dagi harflar uchun hisoblagichni oshiring, t'dagi harflar uchun kamaytiring; oxirida qaysi harfning hisoblagichi manfiy bo'lsa, o'sha qo'shilgan harf.

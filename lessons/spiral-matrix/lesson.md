@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Matritsaning tashqi chegaralarini (top, bottom, left, right) kuzatib, har safar bir tomonni to'liq aylanib chiqqach chegarani ichkariga siljitib borishni o'ylab ko'ring.
+2. top<=bottom va left<=right bo'lguncha davom eting: avval yuqori qatorni chapdan o'ngga o'qib top++ qiling, keyin o'ng ustunni yuqoridan pastga o'qib right-- qiling, so'ng (agar hali qator qolgan bo'lsa) pastki qatorni o'ngdan chapga o'qib bottom-- qiling, va (agar hali ustun qolgan bo'lsa) chap ustunni pastdan yuqoriga o'qib left++ qiling.

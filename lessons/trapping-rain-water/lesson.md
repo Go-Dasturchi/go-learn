@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir ustun ustidagi suv miqdori "chapdagi eng baland ustun" va "o'ngdagi eng baland ustun"ning kichigi bilan cheklanadi — buni oldindan hisoblab qo'yish o'rniga ikkita ko'rsatkich (chapdan va o'ngdan) bilan bitta o'tishda hisoblash mumkin.
+2. `left` va `right` ko'rsatkichlarini massiv chetlaridan boshlang, `leftMax` va `rightMax` ni kuzatib boring. Har qadamda height[left] va height[right] ni solishtirib, qaysi tomon kichik bo'lsa o'sha tomonni ishlating: agar height[left] < height[right] bo'lsa, height[left] ni leftMax bilan solishtirib (agar undan katta bo'lsa leftMax ni yangilang, aks holda leftMax-height[left] miqdorda suv qo'shing) left++ qiling; aks holda xuddi shunday right tomon uchun bajaring. Bu ishlaydi, chunki kichikroq tomonning suv sathi albatta ikkala tomon maksimumining kichigi bilan belgilanadi.

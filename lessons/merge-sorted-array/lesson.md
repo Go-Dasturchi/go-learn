@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikkala massiv allaqachon tartiblangan — ularni birlashtirishning eng samarali yo'li klassik "merge" (ikki ko'rsatkichli qo'shish) usulidir.
+2. Ikkala massivning boshidan ikkita indeks bilan yuring, har qadamda ikki tomondagi kichikroq qiymatni natijaga qo'shib mos indeksni oshiring; biri tugagach, ikkinchisining qolgan qismini to'g'ridan-to'g'ri natijaga qo'shib qo'ying.

@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir palindromning "markazi" bo'lishi mumkinligini o'ylab ko'ring — markazdan ikki tomonga kengayib borish (expand around center) orqali har bir mumkin bo'lgan palindromni tekshirish mumkin.
+2. Har bir indeks i uchun ikki xil markazni tekshiring: toq uzunlikdagi palindromlar uchun (i,i) va juft uzunlikdagilar uchun (i,i+1); har ikkalasidan chap va o'ng tomonga bir xil belgi turgunicha kengaytirib boring va shu jarayonda topilgan eng uzun palindromning boshlanish/tugash indekslarini saqlab qo'ying.

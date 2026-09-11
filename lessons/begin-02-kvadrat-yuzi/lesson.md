@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. Yuza = a * a
+2. Yuza — tomonning o'z-o'ziga ko'paytmasi: `a * a`, tomonlar sonini emas, faqat bitta tomonni bilish kifoya.

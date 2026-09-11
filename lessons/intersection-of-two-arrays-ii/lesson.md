@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikkinchi massivdagi har bir sonning necha marta uchraganini hisoblab, birinchi massivni aylanib shu hisobdan foydalanishni o'ylang.
+2. nums2'dagi sonlarning uchrash sonini map'da saqlang; nums1'ni aylanib, agar son map'da mavjud va soni 0 dan katta bo'lsa natijaga qo'shib hisoblagichni kamaytiring.

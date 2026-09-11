@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir katakning diagonalga tegishli yoki tegishli emasligini indekslari orqali aniqlashni o'ylang (i==j yoki i+j==n-1).
+2. Matritsani ikki marta aylanib, har bir (i,j) uchun diagonalga tegishli bo'lsa qiymat nolmasligini, tegishli bo'lmasa nol ekanligini tekshiring; birortasi shartga mos kelmasa darhol false qaytaring.

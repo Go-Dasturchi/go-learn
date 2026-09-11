@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+// ManfiySonError — manfiy son berilganda qaytariladigan maxsus xatolik turi.
+type ManfiySonError struct {
+	Qiymat int
+}
+
+func (e *ManfiySonError) Error() string {
+	return fmt.Sprintf("manfiy son qabul qilinmaydi: %d", e.Qiymat)
+}
+
+// ildiz x ning kvadrat ildizini hisoblaydi, x manfiy bo'lsa xatolik qaytaradi.
+func ildiz(x int) (float64, error) {
+	if x < 0 {
+		return 0, &ManfiySonError{Qiymat: x}
+	}
+	return math.Sqrt(float64(x)), nil
+}
+
+func main() {
+	natija, err := ildiz(16)
+	fmt.Println(natija, err)
+
+	_, err = ildiz(-9)
+	fmt.Println(err)
+}

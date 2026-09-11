@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv tartiblangan bo'lgani uchun ketma-ket kelayotgan (har biri oldingisidan aynan 1 ta katta) sonlarni bir guruh sifatida aniqlash mumkin.
+2. Har bir oraliqning boshlanish indeksini eslab qoling va keyingi son joriysidan aynan 1 ga katta bo'lguncha ichki tsiklda oldinga siljing; oraliq tugagach boshlanish va tugash qiymatlari teng bo'lsa bitta son, aks holda "a->b" ko'rinishida qo'shing.

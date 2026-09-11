@@ -1,0 +1,24 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// Mahsulot — nomi va narxini saqlovchi struct, JSON teglari bilan.
+type Mahsulot struct {
+	Nomi string `json:"nomi"`
+	Narx int    `json:"narx"`
+}
+
+// toJSON m ni JSON matniga aylantiradi.
+func toJSON(m Mahsulot) (string, error) {
+	baytlar, err := json.Marshal(m)
+	return string(baytlar), err
+}
+
+func main() {
+	m := Mahsulot{Nomi: "Non", Narx: 5000}
+	natija, err := toJSON(m)
+	fmt.Println(natija, err)
+}

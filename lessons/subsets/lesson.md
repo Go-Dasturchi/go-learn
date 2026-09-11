@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir yangi son qo'shilganda mavjud qism-to'plamlar sonini ikki barobarga oshirish mumkinligini o'ylab ko'ring — yoki bo'lmasa har bir sonni "olish/olmaslik" tanlovi bilan yuruvchi rekursiv qidiruvni ko'rib chiqing.
+2. Natijani bo'sh to'plam `[[]]` bilan boshlang; har bir yangi n uchun natijadagi hozirgi barcha qism-to'plamlarning nusxasini olib, ularga n ni qo'shib, shu yangi qism-to'plamlarni ham natijaga qo'shib boring — shunda oxirida barcha 2^n ta kombinatsiya hosil bo'ladi.

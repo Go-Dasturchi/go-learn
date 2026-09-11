@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Kerakli `startValue` qiymati oraliq yig'indining eng past (eng manfiy) nuqtasiga bog'liq ekanini o'ylang.
+2. `nums` bo'ylab yurib joriy yig'indini hisoblang va u qancha pastga tushsa ham eng kichik qiymatni saqlab boring; javob — shu eng kichik qiymatni 1 dan ayirib, teskari ishora bilan olish, ya'ni `1 - min`.

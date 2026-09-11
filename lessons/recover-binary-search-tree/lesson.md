@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. To'g'ri BST ning in-order ketma-ketligi doim o'sish tartibida bo'ladi — shu sababli berilgan massivda qoida buzilgan joylarni (qo'shni ikki element noto'g'ri tartibda kelgan joylarni) qidiring.
+2. Massiv bo'ylab yurib, nums[i] > nums[i+1] bo'lgan joylarni toping. Agar bunday buzilish faqat bitta joyda uchrasa (ikki qo'shni tugun almashgan), o'sha ikkisini almashtiring; agar ikki alohida joyda uchrasa (uzoqdagi ikki tugun almashgan), birinchi buzilishdagi birinchi elementni va ikkinchi buzilishdagi ikkinchi elementni bir-biri bilan almashtiring.

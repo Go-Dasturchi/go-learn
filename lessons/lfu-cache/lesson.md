@@ -44,5 +44,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. O(1) vaqt uchun ikkita xesh-jadval kerak bo'ladi: biri kalitdan tugunga, ikkinchisi esa har bir chastota (frequency) qiymatidan o'sha chastotaga ega elementlarning ikki tomonlama bog'langan ro'yxatiga (doubly linked list) — shu bilan bir chastota ichida eng eski/eng yangi elementni ham kuzatib borish mumkin bo'ladi.
+2. Har bir elementni get yoki put qilganda uning chastotasini bittaga oshirib, eski chastota ro'yxatidan yangi chastota ro'yxatining boshiga o'tkazing. Doim minFreq (eng kichik chastota) qiymatini kuzatib boring — agar element ko'chirilgandan keyin eski chastota ro'yxati bo'shab qolsa va u minFreq ga teng bo'lsa, minFreq ni bittaga oshiring; sig'im to'lganda esa aynan minFreq ro'yxatining oxiridagi (eng uzoq ishlatilmagan) elementni o'chiring.

@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. To'liq saralashdan tashqari, "k-eng katta element"ni topish uchun heap (uyum) yoki quickselect kabi qisman tartiblashga asoslangan usullar borligini o'ylab ko'ring — ammo eng sodda va tez tushuniladigan yo'l ham chiqishga imkon beradi.
+2. Eng sodda yondashuv sifatida massivning nusxasini kamayish tartibida to'liq saralang va (k-1)-indeksdagi elementni qaytaring; O(n) talab qilinsa, minimal hajmli max-heap yoki quickselect (tez saralashdagi bo'lish qadamiga o'xshash) orqali faqat kerakli qismni tartiblang.

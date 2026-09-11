@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir qism-satrni alohida tekshirish shart emas — o'zgaruvchan uzunlikdagi oyna (sliding window) va har bir belgining oxirgi ko'rilgan pozitsiyasini saqlashni o'ylab ko'ring.
+2. Har bir belgining oxirgi uchragan indeksini map da saqlang; oynani o'ngga kengaytirib boring, agar joriy belgi oyna ichida oldin uchragan bo'lsa, oynaning chap chegarasini o'sha belgidan keyingi pozitsiyaga sakratib o'tkazing va har qadamda joriy oyna uzunligi bilan eng yaxshi natijani solishtiring.

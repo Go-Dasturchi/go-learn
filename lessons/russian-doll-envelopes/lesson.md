@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masalani "Longest Increasing Subsequence" (eng uzun o'suvchi qism-ketma-ketlik) masalasiga aylantirish mumkin — buning uchun konvertlarni to'g'ri tartibda saralab olish kerak.
+2. Konvertlarni eni bo'yicha o'sish tartibida, eni teng bo'lganda esa balandligi bo'yicha KAMAYISH tartibida saralang (bu bir xil enli konvertlarning bir-biriga tasodifan "ichma-ich" hisoblanib ketishining oldini oladi). Shundan so'ng faqat balandliklar ketma-ketligida eng uzun QAT'IY o'suvchi qism-ketma-ketlikni O(n log n) da (tails massivi va binar qidiruv bilan) toping.

@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Uchta shartni (uzunlik, belgi turlari, ketma-ket takrorlanish) mustaqil emas, balki uzunlikka qarab uchta ALOHIDA holatga (n<6, 6<=n<=20, n>20) bo'lib yeching — chunki uzunlik juda qisqa yoki juda uzun bo'lganda o'chirish/qo'shish amallari takroriy belgilar muammosini "bepul" hal qilib yuborishi mumkin.
+2. Avval 3 va undan uzun ketma-ket bir xil belgili guruhlarni toping va har biri uchun length/3 ta almashtirish kerakligini hisoblang (bu `replaces`). n<6 bo'lsa javob = max(missingTypes, 6-n). 6<=n<=20 bo'lsa javob = max(missingTypes, replaces). n>20 bo'lsa avval n-20 ta belgini o'chirishingiz kerak — bu o'chirishlarni birinchi navbatda uzunligi 3k ga teng bo'lgan guruhlardan (har birida 1 tadan o'chirish 1 ta almashtirishni yo'q qiladi), keyin 3k+1 guruhlardan (2 tadan o'chirish kerak), so'ng qolganini 3 tadan o'chirib `replaces` ni kamaytirib boring, va yakuniy javob = deletes + max(missingTypes, replaces).

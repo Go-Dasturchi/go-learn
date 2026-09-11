@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir so'zni "graf tuguni" deb, ulardan bir harf farq qiluvchi so'zlarni "qo'shni" deb hisoblang — shunda eng qisqa o'zgartirishlar ketma-ketligini topish oddiy BFS (kenglikni birinchi qidirish) masalasiga aylanadi.
+2. beginWord dan boshlab BFS yuriting: har bir so'z uchun uning har bir pozitsiyasidagi harfni 'a' dan 'z' gacha almashtirib barcha mumkin variantlarni hosil qiling, hosil bo'lgan so'z wordList da bor va hali tashrif buyurilmagan bo'lsa uni navbatdagi qatlamga qo'shing. Har bir qatlam bosib o'tilganda qadamlar sonini oshirib boring; endWord uchraganda joriy qadamlar sonini qaytaring.

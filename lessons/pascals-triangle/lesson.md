@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir qatorni oldingi qatordan hosil qilish mumkin — chetlardagi elementlar doim 1, ichkilari esa yuqoridagi ikkita qo'shni elementning yig'indisi.
+2. Qatorlarni birma-bir quring: har qator uchun boshi va oxirini 1 qilib belgilang, o'rtadagi har bir indeks uchun oldingi qatordagi `j-1` va `j` indeksdagi qiymatlarni qo'shib joylashtiring.

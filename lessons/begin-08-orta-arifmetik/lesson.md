@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. orta = (a + b) / 2
+2. Avval ikkala sonni qo'shing, keyin natijani 2 ga bo'ling — agar sonlar `int` bo'lsa, kasr natija uchun `float64`ga aylantirishni unutmang.

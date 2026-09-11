@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. `sqrt` funksiyasidan foydalanish mumkin bo'lmagani uchun javobni `1` dan `x` gacha bo'lgan oraliqda binary search bilan qidirishni o'ylang.
+2. `lo=1`, `hi=x/2` oralig'ida binary search yurgizing: o'rtadagi qiymat `mid <= x/mid` shartini qanoatlantirsa, uni nomzod javob sifatida saqlab qidiruvni yuqoriga davom ettiring, aks holda pastga qarab torayting — oxirida saqlangan eng katta mos nomzod javob bo'ladi.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir son oxirgi marta qaysi indeksda uchraganini saqlaydigan xarita (map) haqida o'ylang.
+2. Massivni bir marta aylanib, har bir son uchun uning oxirgi ko'rilgan indeksini map'da saqlang; yangi son map'da bo'lsa va joriy indeks bilan farqi k dan oshmasa true qaytaring.

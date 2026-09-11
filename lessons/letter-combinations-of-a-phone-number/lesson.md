@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir raqamga mos harflardan birini tanlab, keyingi raqamga o'tadigan rekursiv qidiruv (backtracking) haqida o'ylab ko'ring — bu xuddi daraxt shaklidagi barcha yo'llarni yig'ib chiqishga o'xshaydi.
+2. Raqam-harflar moslamasini (masalan '2' -> "abc") tayyorlab, joriy indeks va joriy yig'ilgan satrni oluvchi rekursiv funksiya yozing: indeks digits uzunligiga yetganda joriy satrni natijaga qo'shing, aks holda joriy raqamga mos har bir harf uchun uni satrga qo'shib keyingi indeksga rekursiya qiling.

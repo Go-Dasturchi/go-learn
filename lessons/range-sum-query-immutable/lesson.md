@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masalada faqat bitta so'rov bo'lgani uchun murakkab prefiks-yig'indi tuzilmasi shart emas — oddiy tsikl yetarli.
+2. `left` dan `right` gacha (ikkalasi ham kiritilgan holda) tsikl yurgizib, oraliqdagi barcha elementlarni bitta yig'indiga qo'shib chiqing.

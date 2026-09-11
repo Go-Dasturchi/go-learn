@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+// Odam — ism va yoshni saqlovchi oddiy struct.
+type Odam struct {
+	Ism  string
+	Yosh int
+}
+
+// yoshBoyicha odamlar slice'ini yoshi bo'yicha o'sish tartibida saralaydi.
+func yoshBoyicha(odamlar []Odam) []Odam {
+	sort.Slice(odamlar, func(i, j int) bool {
+		return odamlar[i].Yosh < odamlar[j].Yosh
+	})
+	return odamlar
+}
+
+func main() {
+	odamlar := []Odam{
+		{Ism: "Vali", Yosh: 30},
+		{Ism: "Ali", Yosh: 25},
+		{Ism: "Guli", Yosh: 22},
+	}
+	fmt.Println(yoshBoyicha(odamlar))
+}

@@ -39,5 +39,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu 26 lik sanoq sistemasiga o'xshaydi (lekin A=1 dan boshlanadi, 0 emas) — o'nlik sondagi kabi chapdan o'ngga har bir harfni 'siljitib' qo'shishni o'ylang.
+2. Natijani 0 dan boshlang, har bir harf uchun natija = natija*26 + (harf - 'A' + 1) formulasini qo'llang.

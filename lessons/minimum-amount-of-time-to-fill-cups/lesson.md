@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har safar eng katta ikkita qiymatni birga kamaytirish eng samarali — uchta qiymatni saralab, eng kattasiga alohida e'tibor bering.
+2. Uch qiymatni tartiblang; agar eng kattasi qolgan ikkitasining yig'indisidan katta yoki teng bo'lsa, javob shu eng katta qiymatga teng, aks holda javob uchala qiymat yig'indisini 2 ga bo'lib, kerak bo'lsa yuqoriga yaxlitlash orqali topiladi.

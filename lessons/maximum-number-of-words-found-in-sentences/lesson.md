@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir gapdagi so'zlar sonini bo'sh joylar bo'yicha ajratib sanashni o'ylang.
+2. Har bir gapni bo'sh joy bo'yicha bo'laklarga ajrating (masalan, `strings.Fields`), hosil bo'lgan bo'laklar sonini hisoblang va barcha gaplar ichidan eng kattasini saqlab boring.

@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. s1 ning permutatsiyasi degani — uzunligi s1 bilan bir xil bo'lgan va harflar chastotasi (har bir harf necha marta uchrashi) bir xil bo'lgan qism-satr degani; shuning uchun belgilangan o'lchamli oyna (fixed-size sliding window) va harf sanoqlarini solishtirish g'oyasini o'ylab ko'ring.
+2. s1 dagi har bir harfning chastotasini hisoblang, so'ng s2 ustida uzunligi len(s1) bo'lgan oynani bir pozitsiyaga siljitib boring — har safar oynaga kirgan harfning sonini oshirib, chiqib ketgan harfning sonini kamaytiring; agar oynadagi chastotalar to'plami s1 nikiga aynan teng bo'lsa, true qaytaring.

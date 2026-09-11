@@ -1,0 +1,36 @@
+package main
+
+import "testing"
+
+func TestHisoblagichSequential(t *testing.T) {
+	hisobla := hisoblagichYarat()
+	seq := []int{hisobla(), hisobla(), hisobla(), hisobla()}
+	want := []int{1, 2, 3, 4}
+	for i := range want {
+		if seq[i] != want[i] {
+			t.Errorf("hisobla() ketma-ket chaqiruvlari:\nExpected:\n%v\n\nGot:\n%v", want, seq)
+			break
+		}
+	}
+}
+
+func TestHisoblagichIndependentInstances(t *testing.T) {
+	a := hisoblagichYarat()
+	b := hisoblagichYarat()
+
+	a()
+	a()
+	firstB := b()
+
+	if firstB != 1 {
+		t.Errorf("Yangi hisoblagich mustaqil bo'lishi kerak (1 dan boshlashi kerak):\nExpected:\n1\n\nGot:\n%d", firstB)
+	}
+}
+
+func TestHisoblagichSingleCall(t *testing.T) {
+	c := hisoblagichYarat()
+	got := c()
+	if got != 1 {
+		t.Errorf("Birinchi chaqiruv:\nExpected:\n1\n\nGot:\n%d", got)
+	}
+}

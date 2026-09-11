@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir elementda "shu yerda tugaydigan eng uzun o'suvchi ketma-ketlik uzunligi"ni saqlaydigan oddiy DP bilan boshlash mumkin, lekin tezroq yechim uchun "har bir uzunlikdagi o'suvchi ketma-ketlikning eng kichik oxirgi elementi"ni saqlab borishni o'ylab ko'ring.
+2. `tails` deb nomlangan yordamchi massiv yuriting — tails[i] shu uzunlikdagi o'suvchi ketma-ketlikning eng kichik mumkin bo'lgan oxirgi qiymati; har bir yangi son uchun binary search orqali uni tails ichida qayerga qo'yish (yoki almashtirish) mumkinligini toping — agar songa joy bo'lmasa, tails oxiriga qo'shing; oxirida tails uzunligi javob bo'ladi.

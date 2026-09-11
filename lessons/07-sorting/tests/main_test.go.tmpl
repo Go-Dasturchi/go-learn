@@ -1,0 +1,47 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestYoshBoyichaBasic(t *testing.T) {
+	odamlar := []Odam{
+		{Ism: "Vali", Yosh: 30},
+		{Ism: "Ali", Yosh: 25},
+		{Ism: "Guli", Yosh: 22},
+	}
+	got := yoshBoyicha(odamlar)
+	want := []Odam{
+		{Ism: "Guli", Yosh: 22},
+		{Ism: "Ali", Yosh: 25},
+		{Ism: "Vali", Yosh: 30},
+	}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("yoshBoyicha(...):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestYoshBoyichaAlreadySorted(t *testing.T) {
+	odamlar := []Odam{
+		{Ism: "A", Yosh: 10},
+		{Ism: "B", Yosh: 20},
+	}
+	got := yoshBoyicha(odamlar)
+	want := []Odam{
+		{Ism: "A", Yosh: 10},
+		{Ism: "B", Yosh: 20},
+	}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("yoshBoyicha(already sorted):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestYoshBoyichaSingle(t *testing.T) {
+	odamlar := []Odam{{Ism: "Yolg'iz", Yosh: 40}}
+	got := yoshBoyicha(odamlar)
+	want := []Odam{{Ism: "Yolg'iz", Yosh: 40}}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("yoshBoyicha(single):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

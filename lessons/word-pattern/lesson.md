@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu bijection (ikki tomonlama bir xil moslik) masalasi — bitta belgidan so'zga va bitta so'zdan belgiga ikkita alohida map kerak bo'lishi mumkinligini o'ylang.
+2. `s` ni so'zlarga ajrating va uzunligini `pattern` uzunligi bilan solishtiring; so'ng har bir pozitsiya uchun ikkita map (belgi->so'z va so'z->belgi) orqali avvalgi moslik bilan ziddiyat yo'qligini tekshirib, mos kelmasa `false` qaytaring.

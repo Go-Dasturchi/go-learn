@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu 2D dinamik dasturlash masalasi — dp[i][j] ni "s1 ning birinchi i ta va s2 ning birinchi j ta belgisidan s3 ning birinchi i+j ta belgisini hosil qilish mumkinmi" degan mantiqiy qiymat sifatida ta'riflang.
+2. dp[i][j] true bo'ladi, agar (dp[i-1][j] true va s1[i-1]==s3[i+j-1]) yoki (dp[i][j-1] true va s2[j-1]==s3[i+j-1]) shartlaridan kamida bittasi bajarilsa. Bazaviy qator va ustunni (dp[i][0] va dp[0][j]) alohida to'ldirishni unutmang, chunki ular faqat bitta satrdan kelib chiqadi.

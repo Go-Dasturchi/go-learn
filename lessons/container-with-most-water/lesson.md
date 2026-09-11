@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha juftliklarni tekshirish shart emas — ikkita ko'rsatkichni massivning ikki chetidan boshlab, ularni asta-sekin ichkariga siljitish g'oyasini (two pointers) ko'rib chiqing.
+2. l=0 va r=n-1 dan boshlang, har qadamda joriy maydonni (past chiziq balandligi × masofa) hisoblab eng yaxshisini yangilang, so'ng har doim ikkita chiziqdan pastrog'iga qarab tegishli ko'rsatkichni ichkariga suring — chunki balandroq chiziqni harakatlantirish natijani hech qachon yaxshilamaydi.

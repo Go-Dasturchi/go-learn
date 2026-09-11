@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. 32 bitni teskari qilish uchun har bir bitni birma-bir o'qib, natijaga qarama-qarshi tomondan joylashtirishni o'ylang.
+2. 32 marta tsikl yurgizing: har qadamda natijani chapga bir bitga suring va `n` ning eng past bitini natijaga qo'shing, so'ngra `n` ni o'ngga bir bitga suring — shunday qilib bitlar teskari tartibda yig'iladi.

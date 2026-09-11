@@ -42,5 +42,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir lampochka necha marta almashtirilishini o'ylab ko'ring — bu uning tartib raqami qancha bo'luvchiga ega ekanligiga bog'liq, sonni "yoniq" qoldiradigan bo'luvchilar soni esa juft yoki toqligiga qarab aniqlanadi.
+2. Faqat to'liq kvadrat (perfect square) raqamli lampochkalar oxirida yoniq qoladi, chunki ularning bo'luvchilari juft sondagi juftlarga ajralmaydi (kvadrat ildizi o'ziga juft topa olmaydi); shuning uchun javob — n gacha bo'lgan to'liq kvadratlar soni, uni i*i <= n shartini tekshirib sanash mumkin.

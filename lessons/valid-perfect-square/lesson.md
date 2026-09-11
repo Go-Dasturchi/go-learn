@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. `sqrt` ishlatmasdan, `1` dan `num` gacha bo'lgan oraliqda kvadrat ildizni binary search bilan qidirishni o'ylang.
+2. `lo=1`, `hi=num` oralig'ida binary search yurgizing: o'rtadagi qiymatning kvadratini `num` bilan solishtiring — teng bo'lsa `true`, kichik bo'lsa pastki chegarani, katta bo'lsa yuqori chegarani mos ravishda torayting; oraliq tugasa `false` qaytaring.

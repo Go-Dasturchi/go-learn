@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv to'liq saralanmagan bo'lsa ham, mid nuqtasi har doim ikki yarimning kamida bittasini saralangan holda qoldiradi — shu saralangan yarimni aniqlab, target o'sha yarimda bor-yo'qligini tekshiring.
+2. Har qadamda nums[lo] <= nums[mid] shartini tekshiring: agar chap yarim saralangan bo'lsa va target shu yarim oralig'ida bo'lsa hi=mid-1, aks holda lo=mid+1; aks holda (o'ng yarim saralangan) target o'ng yarim oralig'ida bo'lsa lo=mid+1, aks holda hi=mid-1 qiling.

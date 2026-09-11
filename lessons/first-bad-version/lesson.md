@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Chiziqli qidiruv o'rniga, 'yomon versiyalar' har doim bitta chegaradan keyin boshlanishini hisobga olib binary search qo'llang.
+2. lo=1, hi=n bilan boshlang, har safar mid'ni tekshirib, agar u yomon bo'lsa hi=mid qiling (yomon bo'lishi mumkin bo'lgan chegarani qisqartiring), aks holda lo=mid+1 qiling; lo==hi bo'lganda javob topiladi.

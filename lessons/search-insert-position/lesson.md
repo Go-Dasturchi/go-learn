@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv tartiblangan va `O(log n)` talab qilingani uchun binary search (ikkilik qidiruv) dan foydalaning.
+2. `lo` va `hi` chegaralari bilan binary search yurgizing: o'rtadagi element `target` dan kichik bo'lsa `lo` ni o'rtadan keyingiga, aks holda `hi` ni o'rtaga tenglashtiring — tsikl tugagach `lo` aynan kerakli indeks (mavjud bo'lsa target o'zi, bo'lmasa qo'yiladigan joyi) bo'ladi.

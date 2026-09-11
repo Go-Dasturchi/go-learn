@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Vaqt jadvalini bevosita simulyatsiya qilish shart emas — eng ko'p takrorlanadigan vazifa qancha "bo'shliq" yaratishini matematik formula orqali hisoblashni o'ylab ko'ring.
+2. Har bir vazifaning chastotasini sanang, eng katta chastotani (maxFreq) va shu chastotaga ega vazifalar sonini (maxCount) toping; formula bo'yicha minimal vaqt `(maxFreq-1)*(n+1) + maxCount` ga teng bo'ladi, ammo agar umumiy vazifalar soni bundan katta bo'lsa (bo'shliqqa ehtiyoj yo'q holat), javob shunchaki vazifalar sonining o'ziga teng bo'ladi.

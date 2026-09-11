@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. 2 ning darajalari ikkilik ko'rinishda faqat bitta `1` bitiga ega bo'lishini eslang — bu holatni bitli amallar bilan tezda tekshirish mumkin.
+2. `n` musbat bo'lishi va `n & (n-1)` ifodasi 0 ga teng bo'lishi kerak — chunki `n-1` operatsiyasi eng oxirgi 1 bitni va undan keyingi barcha nollarni "1" ga aylantiradi, shu sabab AND natijasi faqat yagona bit bo'lganda 0 bo'ladi.

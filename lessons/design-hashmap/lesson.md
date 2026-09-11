@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Go'da xarita (map) tayyor mavjud — bu masalada shunchaki map[int]int dan foydalanib put/get/remove mantiqini qo'llash mumkin.
+2. keys va values massivlaridan foydalanib map to'ldiring (keyingi qo'shilgan qiymat oldingisini almashtiradi), so'ngra queryKey map'da bor-yo'qligini tekshirib, bor bo'lsa qiymatini, bo'lmasa -1 ni qaytaring.

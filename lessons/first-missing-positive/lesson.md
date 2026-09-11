@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. O(n) vaqt va O(1) qo'shimcha xotira bilan yechish uchun berilgan massivning o'zini xesh-jadval o'rnida ishlatishni o'ylab ko'ring — 1 dan n gacha bo'lgan har bir musbat son x uchun uning "to'g'ri" joyi x-1 indeksi hisoblanadi.
+2. Massiv bo'ylab yurib, agar nums[i] 1 dan n oralig'ida bo'lsa va hali o'z to'g'ri joyida (nums[nums[i]-1]) turmagan bo'lsa, nums[i] bilan nums[nums[i]-1] ni almashtiring va shu tekshiruvni shu indeksda takrorlayvering. Shundan so'ng yana bir marta yurib, nums[i] != i+1 bo'lgan birinchi indeksni toping — javob i+1; agar barchasi joyida bo'lsa javob n+1.

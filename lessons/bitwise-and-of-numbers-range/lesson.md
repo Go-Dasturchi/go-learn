@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha sonlarni birma-bir AND qilish shart emas — left va right ning ikkilik (binary) yozuvidagi umumiy old qismini (common prefix) topish kifoya, chunki oraliqda kamida bitta son bu prefiksdan keyingi bitlarni "buzadi".
+2. left va right ni bir xil bo'lguncha bir vaqtda o'ngga siljiting (>>), har safar siljishlar sonini sanang; teng bo'lgach, natijani xuddi shuncha marta chapga siljitib (<<) qaytaring.

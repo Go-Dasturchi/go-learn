@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir tugun uchun ikkita tushunchani ajrating: "shu tugundan faqat bitta shoxga pastga tushuvchi eng yaxshi yo'l" va "shu tugun orqali o'tuvchi, ikkala shoxni ham birlashtiruvchi eng yaxshi to'liq yo'l". Rekursiya faqat birinchisini qaytarishi, ikkinchisi esa global javobni yangilash uchun ishlatilishi kerak.
+2. DFS funksiyasi har bir tugunda "shu tugundan pastga tushadigan eng katta yig'indi"ni qaytarsin (agar chap yoki o'ng gain manfiy chiqsa, uni 0 deb hisoblang — manfiy shoxni yo'lga qo'shmang). Har safar node.Val+leftGain+rightGain qiymatini global eng yaxshi natija bilan solishtirib yangilang, lekin funksiyaning o'zi faqat node.Val+max(leftGain, rightGain) ni qaytarishi kerak.

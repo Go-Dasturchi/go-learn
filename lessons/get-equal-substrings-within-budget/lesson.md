@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir qism-satrni alohida hisoblash shart emas — o'zgaruvchan uzunlikdagi oyna (sliding window) yordamida joriy xarajatni saqlab, oynani kengaytirib-toraytirib borish mumkinligini o'ylab ko'ring.
+2. Har bir pozitsiyadagi |s[i]-t[i]| xarajatini oldindan hisoblang; keyin ikki ko'rsatkichli oynani o'ng chetdan kengaytiring, joriy yig'indi maxCost dan oshib ketsa chap chetni siljitib ortiqcha xarajatni ayirib tashlang, va har qadamda eng katta oyna uzunligini yangilab boring.

@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu yerda daraxt kirishda "to'liq" (complete) shaklda deb qaraladi, shuning uchun chuqurlikni daraxtni aylanib chiqmasdan, tugunlar sonidan formula orqali topish mumkin.
+2. Tugunlar sonini ikkilik (binary) ko'rinishga o'girib, undagi bitlar uzunligini (ya'ni log2(n) ning pastki butun qismi plyus bitta) hisoblang — bu aynan minimal chuqurlikka teng bo'ladi.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv allaqachon saralangan bo'lgani uchun har bir juftlikni tekshirish shart emas — ikki ko'rsatkichni massivning ikki chetidan boshlab, yig'indiga qarab ularni ichkariga siljitishni o'ylab ko'ring.
+2. l=0 va r=len(numbers)-1 dan boshlang; agar numbers[l]+numbers[r] target dan kichik bo'lsa l++, katta bo'lsa r--, teng bo'lsa 1-indexed `[l+1, r+1]` ni qaytaring — massiv saralangan bo'lgani uchun bu yondashuv hech qanday to'g'ri javobni o'tkazib yubormaydi.

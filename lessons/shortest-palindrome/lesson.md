@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Asosiy savol shu: "s ning boshidan boshlanadigan ENG UZUN palindrom prefiksi qancha?" — shuni tez topish uchun KMP algoritmining "failure function" (prefiks funksiyasi) g'oyasidan foydalanish mumkin.
+2. `s` ni teskarisi bilan maxsus ajratuvchi belgi orqali birlashtiring: combined = s + "#" + reverse(s). Shu birlashtirilgan satr uchun KMP prefiks funksiyasini hisoblang; uning oxirgi qiymati — s ning boshidan boshlanuvchi eng uzun palindrom prefiksi uzunligini beradi. Qolgan (palindrom bo'lmagan) qismning teskarisini s ning boshiga qo'shib javobni hosil qiling.

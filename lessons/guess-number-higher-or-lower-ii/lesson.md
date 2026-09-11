@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu oddiy binary search emas — har bir [lo, hi] oralig' uchun "eng yomon holatda kafolatlangan minimal xarajat"ni saqlaydigan intervalli dinamik dasturlash (interval DP) kerakligini o'ylab ko'ring.
+2. Uzunligi oshib boruvchi har bir [lo, hi] oralig'i uchun, oraliq ichidagi har bir x ni taxmin sifatida sinab ko'ring: xarajat x + max(chap qism DP natijasi, o'ng qism DP natijasi) bo'ladi (chunki raqib eng yomon tomonni tanlaydi), va shu x lardan eng kichik xarajat beruvchisini dp[lo][hi] sifatida saqlang.

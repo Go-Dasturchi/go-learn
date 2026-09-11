@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikki satr anagram bo'lishi uchun ularning uzunliklari teng va har bir harfning soni bir xil bo'lishi kerakligini o'ylang.
+2. Uzunliklar teng emasligini avval tekshiring, so'ng har bir harf uchun sonini saqlaydigan massiv/map tuzib, `s` dagi harflar uchun oshiring va `t` dagi harflar uchun kamaytiring — oxirida barcha sonlar nolga teng bo'lsa, ular anagram.

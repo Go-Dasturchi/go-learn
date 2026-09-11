@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. `0` dan `n` gacha bo'lgan sonlar yig'indisi uchun oddiy formula borligini eslang — bu sizga qidiruv qilmasdan turib solishtirish imkonini beradi.
+2. `n = len(nums)` uchun `0+1+...+n` formula yig'indisini hisoblang, so'ng massivdagi barcha sonlarni shu yig'indidan ayirib chiqing — qolgan natija tushib qolgan son bo'ladi.

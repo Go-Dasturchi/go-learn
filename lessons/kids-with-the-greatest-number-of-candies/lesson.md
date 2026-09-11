@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Avval barcha bolalar orasidagi eng katta konfet sonini toping, keyin har bir bolani shu qiymat bilan solishtiring.
+2. Massivdan maksimal qiymatni toping, so'ng har bir bola uchun candies[i] + extraCandies >= maxCandies shartini tekshirib natija massivini tuzing.

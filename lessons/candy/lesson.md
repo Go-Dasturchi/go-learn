@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir bolani bir vaqtning o'zida ikkala qo'shnisi bilan solishtirishga urinmang — masalani ikkita alohida o'tish (chapdan o'ngga va o'ngdan chapga) orqali yeching, har bir o'tishda faqat bitta tomondagi qoidani ta'minlang.
+2. Avval barcha bolaga 1 tadan konfet bering. Chapdan o'ngga yurib, ratings[i] > ratings[i-1] bo'lsa candies[i] = candies[i-1]+1 qiling. Keyin o'ngdan chapga yurib, ratings[i] > ratings[i+1] bo'lsa candies[i] ni max(candies[i], candies[i+1]+1) ga tenglashtiring — bu ikkinchi o'tishda birinchi o'tishda qo'yilgan qiymatni kamaytirib yubormaslik uchun kerak.

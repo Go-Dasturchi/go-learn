@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu klassik 'substring qidirish' masalasi — tayyor kutubxona funksiyasidan foydalanish yoki qo'lda ikki ko'rsatkichli qidiruv yozish mumkin.
+2. strings paketidagi satr ichida boshqa satrni qidiradigan tayyor funksiyani qo'llang — u mos kelmasa -1 qaytaradi.

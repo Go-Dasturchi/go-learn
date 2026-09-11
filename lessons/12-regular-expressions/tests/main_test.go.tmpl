@@ -1,0 +1,29 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestRaqamlarniTopBasic(t *testing.T) {
+	got := raqamlarniTop("Uy 12, xona 5, qavat 3")
+	want := []string{"12", "5", "3"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("raqamlarniTop(\"Uy 12, xona 5, qavat 3\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestRaqamlarniTopNone(t *testing.T) {
+	got := raqamlarniTop("raqam yo'q")
+	if len(got) != 0 {
+		t.Errorf("raqamlarniTop(\"raqam yo'q\"):\nExpected: bo'sh natija\n\nGot:\n%v", got)
+	}
+}
+
+func TestRaqamlarniTopMultiDigit(t *testing.T) {
+	got := raqamlarniTop("2024-yil, 100 foiz")
+	want := []string{"2024", "100"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("raqamlarniTop(\"2024-yil, 100 foiz\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv allaqachon tartiblangan bo'lgani uchun eng kichik farqni izlash uchun barcha juftliklarni emas, faqat qo'shni elementlarni tekshirish kifoya.
+2. Massiv bo'ylab yurib, har bir qo'shni juftlik orasidagi farqni (`nums[i]-nums[i-1]`) hisoblang va shu farqlarning eng kichigini saqlab boring — javob shu bo'ladi.

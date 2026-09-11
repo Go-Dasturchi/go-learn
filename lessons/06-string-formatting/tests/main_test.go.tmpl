@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestFormatlashBasic(t *testing.T) {
+	got := formatlash("Ali", 25, 1.7)
+	want := "Ism: Ali, Yosh: 25, Bo'y: 1.70"
+	if got != want {
+		t.Errorf("formatlash(\"Ali\", 25, 1.7):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestFormatlashRounding(t *testing.T) {
+	got := formatlash("Vali", 30, 1.8)
+	want := "Ism: Vali, Yosh: 30, Bo'y: 1.80"
+	if got != want {
+		t.Errorf("formatlash(\"Vali\", 30, 1.8):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestFormatlashZeroHeight(t *testing.T) {
+	got := formatlash("Test", 1, 0)
+	want := "Ism: Test, Yosh: 1, Bo'y: 0.00"
+	if got != want {
+		t.Errorf("formatlash(\"Test\", 1, 0):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

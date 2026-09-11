@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Oynani har safar boshidan saralashning hojati yo'q — o'lchami k bo'lgan saralangan massiv (yoki tuzilma) ni saqlab, oyna siljiganda faqat bitta eski elementni chiqarib, bitta yangisini kiritishni o'ylab ko'ring.
+2. Boshlang'ich k ta elementni saralab oling. Har bir siljishda: chiqib ketayotgan elementni binar qidiruv (sort.SearchInts) yordamida saralangan massivda topib o'chiring, keyin kirayotgan yangi elementni ham binar qidiruv bilan to'g'ri joyiga qo'shib qo'ying (slice ichiga joylash). Har bir oyna uchun saralangan massiv o'rtasidagi (yoki ikkita o'rta elementning o'rtachasi) qiymatni medianasi sifatida qaytaring.

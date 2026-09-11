@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Solishtirishga asoslangan saralash O(n log n) beradi, lekin bizga O(n) kerak — bu yerda Bucket Sort g'oyasidan foydalaning: agar sonlarni (max-min)/(n-1) hajmidagi "chelaklar"ga taqsimlasangiz, javob hech qachon bitta chelak ICHIDA bo'lmaydi, faqat chelaklar ORASIDA bo'ladi.
+2. Har bir chelakda faqat minimum va maksimum qiymatlarni saqlash yetarli (chelak ichidagi tartib ahamiyatsiz, chunki maksimal farq ikki qo'shni to'lgan chelak orasida bo'ladi). Chelaklarni to'ldirib bo'lgach, ketma-ket to'lgan chelaklar bo'ylab yurib, oldingi chelakning maksimumi bilan joriy chelakning minimumi orasidagi farqni hisoblab, eng kattasini toping.

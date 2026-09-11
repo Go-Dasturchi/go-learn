@@ -39,5 +39,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. ruleKey qaysi ustunga (type/color/name) mos kelishini avval aniqlab oling, so'ng shu ustunni tekshiring.
+2. ruleKey ga qarab tekshiriladigan indeksni (0, 1 yoki 2) tanlang, so'ng har bir elementning shu indeksdagi qiymatini ruleValue bilan solishtirib mos kelganlarni sanang.

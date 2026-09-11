@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sonni ikkilik ko'rinishida "1" bitlarini sanash uchun uni qadam-baqadam 2 ga bo'lish yoki bitli operatsiyalar bilan tekshirishni o'ylang.
+2. Son 0 bo'lmaguncha uni 2 ga bo'lib (yoki 1 bit o'ngga surib) boring, har qadamda eng past bit (`n % 2` yoki `n & 1`) 1 ga teng bo'lsa hisoblagichni oshiring.

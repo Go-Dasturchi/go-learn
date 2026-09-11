@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. n/2 dan ko'p uchragan element borligini alohida sanoq (map) saqlamasdan ham "ovoz berish" g'oyasi orqali topish mumkin — Boyer-Moore voting algoritmini eslang.
+2. Nomzod va hisoblagich saqlang: hisoblagich 0 bo'lganda joriy elementni yangi nomzod qiling, keyingi elementlar nomzodga mos kelsa hisoblagichni oshiring, mos kelmasa kamaytiring — massiv oxirida qolgan nomzod javob bo'ladi.

@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni saralash shart emas — faqat eng katta uchta noyob qiymatni (birinchi, ikkinchi, uchinchi) bitta o'tishda kuzatib borish mumkin.
+2. Uchta o'zgaruvchi (birinchi, ikkinchi, uchinchi eng katta) saqlang; har bir sonni avval takrorlanmasligi uchun tekshiring, so'ng u qaysi o'ringa mos kelishiga qarab o'zgaruvchilarni siljiting; agar uchinchisi topilmagan bo'lsa, javob sifatida eng kattasini qaytaring.

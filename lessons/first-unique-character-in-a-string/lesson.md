@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Avval har bir harf necha marta uchraganini sanab oling, so'ng qayta aylanib birinchi marta faqat bir marta uchragan harfni toping.
+2. 26 ta katakli hisoblagich massivida har bir harfning uchrash sonini yig'ing; keyin satrni yana bir marta boshidan aylanib, hisoblagichi 1 ga teng bo'lgan birinchi harfning indeksini qaytaring.

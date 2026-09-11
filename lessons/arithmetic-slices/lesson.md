@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir indeksda "aynan shu elementda tugaydigan arifmetik ketma-ketliklar soni" degan holatni saqlab boruvchi dinamik dasturlash (DP) haqida o'ylab ko'ring.
+2. i=2 dan boshlab yuring: agar nums[i]-nums[i-1] == nums[i-1]-nums[i-2] bo'lsa, joriy hisoblagichni 1 ga oshirib uni umumiy javobga qo'shing; shart bajarilmasa hisoblagichni nolga qaytaring.

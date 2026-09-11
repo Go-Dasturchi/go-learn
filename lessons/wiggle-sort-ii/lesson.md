@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massivni saralab, uni kichik va katta yarimlarga bo'lib, keyin ularni juft va toq pozitsiyalarga navbat bilan taqsimlashni o'ylab ko'ring — shunda katta sonlar kichiklarning orasiga tushib, "to'lqin" shakli hosil bo'ladi.
+2. Massivni saralang, uni ikki qismga bo'ling (kichikroq yarim va kattaroq yarim); kichikroq yarimning elementlarini teskari tartibda juft indekslarga (0,2,4,...), kattaroq yarimning elementlarini ham teskari tartibda toq indekslarga (1,3,5,...) joylashtiring — teskari tartib teng qiymatlarning yonma-yon tushib qolishining oldini oladi.

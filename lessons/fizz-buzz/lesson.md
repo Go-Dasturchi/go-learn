@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir son uchun 3 va 5 ga bo'linishini alohida-alohida emas, avval ikkalasiga birdan bo'linishini tekshirishdan boshlang.
+2. 1 dan n gacha yurib, har bir son uchun avval 15 ga (ham 3 ham 5 ga) bo'linishini, keyin 3 ga, keyin 5 ga bo'linishini tekshiring, aks holda sonning o'zini satrga aylantirib qo'shing.

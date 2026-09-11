@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Manfiy sonlar borligi sababli faqat "eng katta joriy ko'paytma"ni kuzatish yetarli emas — manfiy son eng kichik (eng manfiy) ko'paytmani ham eng kattaga aylantirib yuborishi mumkinligini o'ylab ko'ring.
+2. Har bir qadamda ham joriy maksimal, ham joriy minimal ko'paytmani saqlab boring; joriy son manfiy bo'lsa ikkalasini almashtirib qo'ying, so'ng har birini (joriy son bilan davom ettirish yoki joriy sondan qaytadan boshlash) orasidan kattasini/kichigini tanlab yangilang va shu jarayondagi eng katta maksimal qiymatni umumiy javob sifatida saqlang.

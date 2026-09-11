@@ -1,0 +1,36 @@
+package main
+
+import "testing"
+
+func TestToJSONBasic(t *testing.T) {
+	got, err := toJSON(Mahsulot{Nomi: "Non", Narx: 5000})
+	if err != nil {
+		t.Errorf("toJSON: kutilmagan xato: %v", err)
+	}
+	want := `{"nomi":"Non","narx":5000}`
+	if got != want {
+		t.Errorf("toJSON(Non/5000):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestToJSONAnother(t *testing.T) {
+	got, err := toJSON(Mahsulot{Nomi: "Sut", Narx: 8000})
+	if err != nil {
+		t.Errorf("toJSON: kutilmagan xato: %v", err)
+	}
+	want := `{"nomi":"Sut","narx":8000}`
+	if got != want {
+		t.Errorf("toJSON(Sut/8000):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestToJSONZeroPrice(t *testing.T) {
+	got, err := toJSON(Mahsulot{Nomi: "Bepul", Narx: 0})
+	if err != nil {
+		t.Errorf("toJSON: kutilmagan xato: %v", err)
+	}
+	want := `{"nomi":"Bepul","narx":0}`
+	if got != want {
+		t.Errorf("toJSON(Bepul/0):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// filter sonlar ichidan shart(son) true qaytargan elementlarni qaytaradi.
+func filter(sonlar []int, shart func(int) bool) []int {
+	// TODO: bo'sh slice bilan boshlang, shartga mos elementlarni append qiling
+	return nil
+}
+
+func main() {
+	sonlar := []int{1, 2, 3, 4, 5, 6, 7, 8}
+
+	juft := func(x int) bool { return x%2 == 0 }
+	fmt.Println(filter(sonlar, juft))
+
+	katta := func(x int) bool { return x > 5 }
+	fmt.Println(filter(sonlar, katta))
+}

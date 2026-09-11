@@ -40,5 +40,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir oynada maksimumni qaytadan qidirish o'rniga, elementlarning INDEKSLARINI saqlaydigan monotonik kamayuvchi ikki tomonlama navbat (deque) dan foydalanishni o'ylab ko'ring — bunda deque boshida doim joriy oynaning maksimal elementi indeksi turadi.
+2. Har bir yangi elementni qo'shishdan oldin, deque oxiridagi barcha undan kichik yoki teng qiymatli indekslarni chiqarib tashlang (ular endi hech qachon maksimal bo'la olmaydi), so'ng joriy indeksni deque oxiriga qo'shing. Agar deque boshidagi indeks oynadan chiqib ketgan bo'lsa (indeks <= i-k), uni deque boshidan olib tashlang; i >= k-1 bo'lganda deque boshidagi qiymat joriy oynaning maksimumi bo'ladi.

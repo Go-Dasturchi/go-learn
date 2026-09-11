@@ -35,5 +35,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Massiv allaqachon tartiblangani uchun takrorlanuvchi elementlar doim qator turadi — buni ikki ko'rsatkich (o'qish va yozish) yordamida ajratish mumkin.
+2. `k` deb nomlangan "yozish" indeksini 1 dan boshlang; massivni ikkinchi elementdan boshlab aylanib, joriy element oxirgi noyob elementdan (`nums[k-1]`) farq qilsa, uni `nums[k]` ga yozing va `k` ni oshiring.

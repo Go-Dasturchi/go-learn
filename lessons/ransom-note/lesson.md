@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Harflar faqat kichik lotin alifbosidan iborat bo'lgani uchun har bir harfning sonini 26 ta katakli massivda saqlashni o'ylang.
+2. Avval `magazine` dagi har bir harfning nechta borligini sanang, so'ng `ransomNote` dagi har bir harf uchun shu sonlarni kamaytirib boring — agar biror harf uchun son manfiyga tushib qolsa, demak yetarli emas va `false` qaytarish kerak.

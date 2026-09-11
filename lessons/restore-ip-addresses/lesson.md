@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Satrni 4 ta segmentga bo'lish variantlarini sinab ko'radigan rekursiv qidiruv (backtracking) haqida o'ylab ko'ring — har bir segment 1 dan 3 belgigacha uzunlikda bo'lishi mumkin.
+2. Joriy boshlanish pozitsiyasi va shu paytgacha yig'ilgan segmentlarni oluvchi rekursiv funksiya yozing: har chaqiriqda uzunligi 1, 2 yoki 3 bo'lgan keyingi segmentni sinab ko'ring — agar segment yetakchi noldan boshlansa (va uzunligi 1 dan katta) yoki qiymati 255 dan katta bo'lsa uni rad eting; 4 ta segment yig'ilib satr ham tugagan bo'lsa, ularni nuqta bilan birlashtirib natijaga qo'shing.

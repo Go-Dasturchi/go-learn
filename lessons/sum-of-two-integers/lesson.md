@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Qo'shish amalini bitli operatsiyalar orqali ifodalash mumkinligini o'ylab ko'ring — XOR "ko'chirishsiz qo'shish"ni, AND esa qayerda ko'chirish (carry) yuzaga kelishini ko'rsatadi.
+2. b nolga aylanguncha davom eting: har safar carry ni `(a & b) << 1` sifatida hisoblang, a ni `a XOR b` bilan yangilang, so'ng b ni carry ga tenglashtiring — b nolga aylanganda a natijaviy yig'indini beradi.

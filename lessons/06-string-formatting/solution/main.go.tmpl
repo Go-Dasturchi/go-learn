@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+// formatlash "Ism: <ism>, Yosh: <yosh>, Bo'y: <boy>" ko'rinishidagi
+// matnni qaytaradi, boy nuqtadan keyin aniq 2 xona bilan.
+func formatlash(ism string, yosh int, boy float64) string {
+	return fmt.Sprintf("Ism: %s, Yosh: %d, Bo'y: %.2f", ism, yosh, boy)
+}
+
+func main() {
+	fmt.Println(formatlash("Ali", 25, 1.7))
+	fmt.Println(formatlash("Malika", 22, 1.685))
+}

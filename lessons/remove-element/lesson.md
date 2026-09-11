@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Tartibni saqlash shart emasligidan foydalaning — faqat `val` ga teng bo'lmagan elementlarni bitta "yozish" pozitsiyasiga to'plashni o'ylang.
+2. Bitta hisoblagich `k` tuting; massivni boshidan oxirigacha aylanib, `val` ga teng bo'lmagan har bir elementni `nums[k]` o'rniga yozib `k` ni oshirib boring — oxirida `k` javob bo'ladi.

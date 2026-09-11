@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. "Takrorlanmaydigan uzluksiz qism-massiv" degan shart o'zgaruvchan uzunlikdagi oyna (sliding window) qo'llashga ishora qiladi — oyna ichida qaysi sonlar borligini kuzatib boring.
+2. Oyna ichidagi sonlarni saqlaydigan set (map) va joriy yig'indini yuriting; oynani o'ngga kengaytirganda agar shu son oynada allaqachon bo'lsa, chap chetdan sonlarni chiqarib (yig'indidan ayirib, setdan o'chirib) takrorlanish yo'qolguncha torayting, so'ng yangi sonni qo'shib joriy yig'indini eng yaxshi natija bilan solishtiring.

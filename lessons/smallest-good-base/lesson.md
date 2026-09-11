@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. `k` bo'yicha to'g'ridan-to'g'ri qidirish o'rniga, geometrik qatordagi hadlar soni `m` (ya'ni n = k^0+k^1+...+k^m dagi daraja) bo'yicha yuqoridan pastga qarab iteratsiya qiling — m qancha katta bo'lsa, mos keluvchi k shuncha kichik bo'ladi va uni taxminiy formula bilan tez topish mumkin.
+2. Har bir m (eng kattasidan, masalan 60 dan, 2 gacha) uchun k ni n^(1/m) formulasi orqali taxminan hisoblang (suzuvchi son xatoligi bo'lishi mumkinligi uchun k-1, k, k+1 kabi yaqin qiymatlarni ham tekshiring), so'ng sumGeometric(k, m) = 1+k+...+k^m ni katta sonlar (big.Int) bilan aniq hisoblab n ga tengligini tekshiring; mos kelgan birinchi (eng katta m dagi) k javob bo'ladi.

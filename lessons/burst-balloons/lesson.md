@@ -36,5 +36,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Qaysi balonni birinchi portlatish emas, balki qaysi balonni bir oraliqda ENG OXIRIDA portlatishni tanlash haqida o'ylang — bu oraliq (interval) dinamik dasturlash masalasi. Massiv chetlariga qiymati 1 bo'lgan virtual balonlar qo'shib olish chegaraviy holatlarni soddalashtiradi.
+2. dp[left][right] ni faqat (left,right) ochiq oralig'idagi barcha balonlarni portlatgandan keyin olinadigan maksimal tanga miqdori deb belgilang. Har bir k ni shu oraliqda eng oxirida portlaydigan balon deb tanlab, coins = balloons[left]*balloons[k]*balloons[right] + dp[left][k] + dp[k][right] formulasini barcha mumkin bo'lgan k lar bo'yicha hisoblab, eng kattasini tanlang; oraliqlarni kichik uzunlikdan kattaga qarab to'ldiring.

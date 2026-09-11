@@ -33,5 +33,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. O'rtaga qadar ikki tomondan yaqinlashuvchi ikkita ko'rsatkich (two pointers) g'oyasini o'ylang.
+2. Bitta ko'rsatkichni boshidan, ikkinchisini oxiridan boshlang; ular bir-biriga yetguncha ikkala pozitsiyadagi elementlarni almashtirib, ko'rsatkichlarni bir-biriga qarab suring.

@@ -29,5 +29,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Rim raqamlarini alohida-alohida chiqarish o'rniga, qiymatlarni eng kattasidan boshlab greedy (ochko'z) tarzda ayirib borishni o'ylab ko'ring — bunda 4, 9, 40, 90, 400, 900 kabi maxsus kombinatsiyalarni ham alohida "qiymat" sifatida hisoblash qulay bo'ladi.
+2. Qiymatlar va ularga mos belgilarni kamayish tartibida ikkita mos ro'yxatda saqlang (masalan 1000→"M", 900→"CM", ..., 1→"I"); ro'yxat bo'ylab yurib, num shu qiymatdan katta yoki teng bo'lguncha uni ayirib mos belgini natijaga qo'shing, so'ng keyingi qiymatga o'ting.

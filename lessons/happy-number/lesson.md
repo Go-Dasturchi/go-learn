@@ -41,5 +41,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Jarayon cheksiz siklga tushib qolishi mumkinligini hisobga olib, oldin ko'rilgan sonlarni saqlab borishni o'ylang.
+2. Har safar sonni raqamlari kvadratlari yig'indisiga almashtirib boring va har bir yangi sonni set'ga qo'shing; agar son 1 ga aylansa true, agar avval ko'rilgan songa qaytib kelsa (sikl) false qaytaring.

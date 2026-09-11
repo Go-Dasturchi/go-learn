@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir sonni "birinchi bo'lak + qolgan qismning eng yaxshi ko'paytmasi" ko'rinishida ifodalab, kichikroq sonlar uchun javoblarni saqlab boruvchi dinamik dasturlash (DP) haqida o'ylab ko'ring.
+2. dp[1..3] uchun boshlang'ich qiymatlarni to'g'ridan-to'g'ri belgilang; keyin har bir i=4..n uchun barcha j=1..i-1 bo'linishlarini sinab, j * dp[i-j] ning eng kattasini dp[i] sifatida saqlang (bu yerda dp[i-j] o'zi ham qolgan qismni yana bo'lish natijasi bo'lishi mumkin).

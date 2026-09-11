@@ -30,3 +30,4 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 ## HINTS
 
 1. P = 2 * (a + b)
+2. Ikkala juft tomon ham bor: `a` va `b`. Avval ularning yig'indisini toping, keyin natijani 2 ga ko'paytiring.

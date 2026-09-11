@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Markaziy tugun barcha qirralarda ishtirok etadi — shuning uchun uni topish uchun barcha qirralarni ko'rish shart emas, faqat dastlabki ikkita qirrani solishtirish kifoya.
+2. Birinchi ikkita qirrani oling; ularda umumiy bo'lgan tugun (ya'ni ikkalasida ham uchraydigan tugun) — bu markaz, chunki markaz har bir qirrada qatnashadi.

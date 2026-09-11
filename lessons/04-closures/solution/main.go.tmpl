@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+// hisoblagichYarat har chaqirilganda 1 dan boshlab ketma-ket oshib
+// boradigan sonni qaytaradigan mustaqil closure yaratadi.
+func hisoblagichYarat() func() int {
+	son := 0
+	return func() int {
+		son++
+		return son
+	}
+}
+
+func main() {
+	hisobla1 := hisoblagichYarat()
+	fmt.Println(hisobla1())
+	fmt.Println(hisobla1())
+	fmt.Println(hisobla1())
+
+	hisobla2 := hisoblagichYarat()
+	fmt.Println(hisobla2())
+}

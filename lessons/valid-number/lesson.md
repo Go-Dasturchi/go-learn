@@ -30,5 +30,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Regex yozishga urinmang — buning o'rniga bitta ko'rsatkich bilan satrni qismlarga (ixtiyoriy ishora, butun qism raqamlari, ixtiyoriy nuqta va kasr qismi, ixtiyoriy 'e'/'E' va daraja qismi) ketma-ket "iste'mol qilib" o'ting, har bir qismda nechta raqam uchraganini sanang.
+2. Ko'rsatkichni: ixtiyoriy '+'/'-' dan o'tkazing, keyin nuqtagacha bo'lgan raqamlarni sanang, so'ng ixtiyoriy '.' dan keyin yana raqamlarni sanang — agar ikkala raqam sonlari ham nolga teng bo'lsa darhol false qaytaring (mantissa yo'q). Keyin ixtiyoriy 'e'/'E' va undan keyingi ixtiyoriy ishora hamda kamida bitta raqamdan iborat daraja qismini tekshiring (agar 'e' bor-u lekin daraja raqamlari nol bo'lsa false). Oxirida ko'rsatkich butun satrni to'liq bosib o'tganini (i == n) tekshiring.

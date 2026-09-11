@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Barcha elementlarni bitta joyga yig'ib saralash o'rniga, har bir k ta ro'yxatning "hozirgi eng kichik ko'rinmagan elementi" orasidan eng kichigini tezda topib turadigan tuzilma — minimal heap (priority queue) dan foydalanishni o'ylab ko'ring.
+2. Heapga dastlab har bir ro'yxatning birinchi elementini (qaysi ro'yxatdan va qaysi indeksdan ekanini ham) joylang. Har safar heapdan eng kichigini chiqarib natijaga qo'shing, so'ng aynan o'sha ro'yxatning keyingi elementi mavjud bo'lsa, uni ham heapga qo'shing — bu jarayonni heap bo'shaguncha davom ettiring.

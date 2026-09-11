@@ -31,5 +31,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. O(1) xotira va O(n) vaqt talab qilingani uchun map o'rniga bitli operatsiyalarni o'ylang — XOR ning o'z-o'ziga qarshi xossasidan foydalaning.
+2. Massivdagi barcha sonlarni ketma-ket XOR qiling: bir xil ikkita son XOR qilinganda bir-birini yo'q qiladi (natija 0), shuning uchun oxirida faqat yolg'iz son qoladi.

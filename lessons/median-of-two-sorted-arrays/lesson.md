@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. To'liq birlashtirib chiqishning hojati yo'q — kichikroq massivda binar qidiruv qilib, ikkala massivni "chap yarim" va "o'ng yarim"ga bo'luvchi kesish nuqtasini toping, shunda chap yarimdagi elementlar soni umumiy uzunlikning yarmiga teng bo'lsin.
+2. `nums1` da `i` ta, `nums2` da esa `j = half - i` ta elementni chap tomonga olib, `nums1[i-1] <= nums2[j] && nums2[j-1] <= nums1[i]` shartini tekshiring (chegara holatlar uchun cheksizliklardan foydalaning). Shart bajarilmasa, qaysi tomonga siljish kerakligini aniqlab (agar nums1[i-1] > nums2[j] bo'lsa i ni kamaytiring, aks holda oshiring) binar qidiruvni davom ettiring; shart bajarilganda chap qismning maksimumi va (juft uzunlikda) o'ng qismning minimumidan medianani hisoblang.

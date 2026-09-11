@@ -34,5 +34,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu masala inversiyalarni sanashga o'xshaydi — qiymatlarning o'zini emas, balki ularning boshlang'ich indekslarini kuzatib turadigan modifikatsiyalangan merge sort (birlashtirib saralash) algoritmini qo'llashni o'ylab ko'ring.
+2. Qiymatlar o'rniga indekslar massivini rekursiv ravishda saralang. Merge (birlashtirish) bosqichida, agar o'ng yarimdan bir element chap yarimdagi elementdan oldin natijaga qo'yilsa, bu o'sha paytgacha o'ng tarafdan ko'chirilgan barcha elementlar chap elementdan kichik ekanini bildiradi — shu sonni counts[chap element indeksi] ga qo'shib boring.

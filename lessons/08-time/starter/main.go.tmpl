@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+// jamiDavomiylik daqiqalar slice'idagi barcha qiymatlarni (daqiqa
+// sifatida) qo'shib, umumiy time.Duration qaytaradi.
+func jamiDavomiylik(daqiqalar []int) time.Duration {
+	// TODO: barcha daqiqalarni yig'ing, keyin time.Duration(jami) * time.Minute qaytaring
+	return 0
+}
+
+func main() {
+	fmt.Println(jamiDavomiylik([]int{30, 45, 15}))
+	fmt.Println(jamiDavomiylik([]int{10, 10}))
+}

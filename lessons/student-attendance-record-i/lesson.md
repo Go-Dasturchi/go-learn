@@ -41,5 +41,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Ikki shartni bir vaqtda kuzatish uchun ikkita alohida hisoblagich tuting: umumiy 'A' soni va joriy ketma-ket 'L' soni.
+2. Satrni bir marta aylanib, 'A' uchun umumiy hisoblagichni oshiring, 'L' uchun ketma-ket hisoblagichni oshiring va boshqa harfda uni nolga tushiring; agar biror qadamda 'A' soni 2 taga yoki ketma-ket 'L' soni 3 taga yetsa, darhol false qaytaring.

@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Sonni ketma-ket 2, 3 va 5 ga bo'linaversa, oxirida nima qolishini kuzatishni o'ylang.
+2. `n` musbat bo'lsa, uni avval 2 ga, keyin 3 ga, keyin 5 ga bo'linmay qolguncha bo'lib boring; agar oxirida `n` aynan `1` ga tenglashsa, demak u faqat shu uch tub ko'paytuvchidan iborat va xunuk son.

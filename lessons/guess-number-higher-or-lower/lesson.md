@@ -37,5 +37,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Chiziqli qidirish o'rniga, guess funksiyasining javobidan foydalanib binary search qo'llang.
+2. lo=1, hi=n bilan boshlab mid'ni tekshiring; guess(mid) natijaga qarab (-1 bo'lsa hi=mid-1, 1 bo'lsa lo=mid+1, 0 bo'lsa topildi) oraliqni qisqartirib boring.

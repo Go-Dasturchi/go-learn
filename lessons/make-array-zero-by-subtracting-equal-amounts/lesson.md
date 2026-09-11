@@ -38,5 +38,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Har bir operatsiya massivdagi aynan bitta noyob musbat qiymatni butunlay yo'qotadi — bu massivdagi turli (distinct) musbat qiymatlar soni bilan bog'liqligini o'ylang.
+2. Nolga teng bo'lmagan elementlarni to'plamga (set/map) joylang; to'plamda nechta turli qiymat qolsa, javob shuncha bo'ladi, chunki har operatsiya bitta eng kichik noyob qiymatni butunlay olib tashlaydi.

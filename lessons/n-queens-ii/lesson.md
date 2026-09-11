@@ -32,5 +32,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu klassik backtracking (orqaga qaytish) masalasi — ferzilarni qatorma-qator joylashtirib boring, har bir qatorda faqat bitta ferzi bo'ladi, shuning uchun faqat ustunlar va ikkala diagonal bo'yicha to'qnashuvni tekshirish kifoya.
+2. Har bir ustun uchun `cols[]`, har bir "/" diagonal uchun `row+col`, har bir "\" diagonal uchun `row-col+n` (manfiy bo'lmasligi uchun n qo'shiladi) qiymatlaridan foydalanib band joylarni belgilovchi uchta bool massiv yuriting. Qatorni to'ldirishda mos ustun/diagonal band bo'lmasa uni band deb belgilab keyingi qatorga o'ting, qaytishda esa belgini qaytadan bo'shating (backtrack); barcha n qator to'ldirilganda hisoblagichni oshiring.

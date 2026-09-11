@@ -39,5 +39,5 @@ Vim editorini ochish uchun ENTER bosing. Kod tayyor bo'lgach, **`:wqa`** (yoki `
 
 ## HINTS
 
-1. Masala shartini qayta o'qib, kerakli algoritmni aniqlang.
-2. Avval eng oddiy (naiv) yechimni yozing, keyin kerak bo'lsa optimallashtiring.
+1. Bu 26 lik sanoq sistemasiga o'tkazishga o'xshaydi, lekin oddiy qoldiq olish usuli ishlamaydi chunki bu yerda 0 emas 1 dan boshlanadi — sonni kamaytirib olishni o'ylab ko'ring.
+2. columnNumber 0 dan katta ekan, avval uni 1 ga kamaytiring, so'ng (columnNumber % 26) orqali harfni toping va columnNumber'ni 26 ga bo'ling; hosil bo'lgan harflarni yig'ib, keyin ularni teskari aylantiring.
