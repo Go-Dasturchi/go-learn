@@ -137,6 +137,12 @@ ok  	go-learn/internal/lesson
 ok  	go-learn/internal/progress
 ```
 
-## MVP holati
+## Loyiha holati
 
-Hozircha 6 ta dars tayyor (Fundamentals: Hello World → Variables → Types → If/Else → For Loop → Functions), to'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) ishlaydi. Qolgan 104 ta dars xuddi shu arxitektura asosida, yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich qo'shiladi.
+Jami **440 ta dars** tayyor va test qilingan, uchta bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha):
+
+- **0. Problems** — 410 ta amaliy masala: 205 tasi Abramyan to'plamidan (Begin/Integer/Array/... bo'yicha bo'lingan), 205 tasi LeetCode uslubidagi masalalar (Easy/Medium/Hard bo'yicha bo'lingan).
+- **1. Fundamentals** — 18 ta dars: Hello World → Variables → Types → If/Else → For Loop → Functions → Constants → Strings → Numbers → Boolean → Operators → Type Conversion → Switch → Nested Loops → Multiple Return Values → Named Return Values → Defer → Scope.
+- **2. Data Structures** — 12 ta dars: Arrays → Slices → Slice Append → Slice Indexing → Slice Copy → Maps → Structs → Nested Structs → Pointers → Methods → Interfaces → Custom Types.
+
+To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 440 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.
