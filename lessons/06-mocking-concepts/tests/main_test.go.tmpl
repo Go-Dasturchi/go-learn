@@ -1,0 +1,47 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestSoxtaXabarchiRecordsMessages(t *testing.T) {
+	soxta := &SoxtaXabarchi{}
+	err := Bildirish(soxta, "Salom!")
+	if err != nil {
+		t.Errorf("Bildirish: kutilmagan xato: %v", err)
+	}
+	err = Bildirish(soxta, "Xayr!")
+	if err != nil {
+		t.Errorf("Bildirish: kutilmagan xato: %v", err)
+	}
+
+	got := soxta.YuborilganXabarlar
+	want := []string{"Salom!", "Xayr!"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("YuborilganXabarlar:\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSoxtaXabarchiSingleMessage(t *testing.T) {
+	soxta := &SoxtaXabarchi{}
+	soxta.Yubor("Test")
+
+	got := soxta.YuborilganXabarlar
+	want := []string{"Test"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("YuborilganXabarlar:\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSoxtaXabarchiNoRealSideEffect(t *testing.T) {
+	// Mockning butun ma'nosi — real ta'sir qoldirmasligi. Bu yerda faqat
+	// xatolik qaytmasligini va ro'yxat to'g'ri yangilanishini tekshiramiz.
+	soxta := &SoxtaXabarchi{}
+	if err := soxta.Yubor("xabar"); err != nil {
+		t.Errorf("Yubor: kutilmagan xato: %v", err)
+	}
+	if len(soxta.YuborilganXabarlar) != 1 {
+		t.Errorf("YuborilganXabarlar uzunligi:\nExpected:\n1\n\nGot:\n%d", len(soxta.YuborilganXabarlar))
+	}
+}

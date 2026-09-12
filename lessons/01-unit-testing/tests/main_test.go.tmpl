@@ -1,0 +1,33 @@
+package main
+
+import "testing"
+
+func TestTubSonmiSeven(t *testing.T) {
+	if !TubSonmi(7) {
+		t.Errorf("TubSonmi(7):\nExpected:\ntrue\n\nGot:\nfalse")
+	}
+}
+
+func TestTubSonmiEight(t *testing.T) {
+	if TubSonmi(8) {
+		t.Errorf("TubSonmi(8):\nExpected:\nfalse\n\nGot:\ntrue")
+	}
+}
+
+func TestTubSonmiOne(t *testing.T) {
+	if TubSonmi(1) {
+		t.Errorf("TubSonmi(1):\nExpected:\nfalse\n\nGot:\ntrue")
+	}
+}
+
+func TestTubSonmiTwo(t *testing.T) {
+	if !TubSonmi(2) {
+		t.Errorf("TubSonmi(2):\nExpected:\ntrue\n\nGot:\nfalse")
+	}
+}
+
+func TestTubSonmiNegative(t *testing.T) {
+	if TubSonmi(-5) {
+		t.Errorf("TubSonmi(-5):\nExpected:\nfalse\n\nGot:\ntrue")
+	}
+}

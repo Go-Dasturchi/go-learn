@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+// producer sonlarni ch kanaliga yuboradi, tugagach wg.Done() chaqiradi.
+func producer(sonlar []int, ch chan<- int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for _, son := range sonlar {
+		ch <- son
+	}
+}
+
+// ishlabChiqaruvchiIsteMolchi ikkita producer'dan kelgan sonlarning
+// yig'indisini hisoblaydi.
+func ishlabChiqaruvchiIsteMolchi(sonlar1, sonlar2 []int) int {
+	// TODO: ikkita producer ishga tushiring, tugagach kanalni yoping, yig'indini hisoblang
+	return 0
+}
+
+func main() {
+	fmt.Println(ishlabChiqaruvchiIsteMolchi([]int{1, 2, 3}, []int{4, 5, 6}))
+}

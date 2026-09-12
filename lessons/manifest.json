@@ -210,6 +210,41 @@
     "category": "Go Core"
   },
   {
+    "id": "13-packages",
+    "title": "Packages",
+    "category": "Go Core"
+  },
+  {
+    "id": "14-modules",
+    "title": "Modules",
+    "category": "Go Core"
+  },
+  {
+    "id": "15-exported-unexported",
+    "title": "Exported / Unexported",
+    "category": "Go Core"
+  },
+  {
+    "id": "16-error-handling",
+    "title": "Error Handling",
+    "category": "Go Core"
+  },
+  {
+    "id": "17-encoding-decoding",
+    "title": "Encoding / Decoding",
+    "category": "Go Core"
+  },
+  {
+    "id": "18-command-line-arguments",
+    "title": "Command Line Arguments",
+    "category": "Go Core"
+  },
+  {
+    "id": "19-environment-variables",
+    "title": "Environment Variables",
+    "category": "Go Core"
+  },
+  {
     "id": "01-recursion",
     "title": "Recursion",
     "category": "Data Structures & Algorithms"
@@ -320,6 +355,21 @@
     "category": "Concurrency"
   },
   {
+    "id": "11-unbuffered-channels",
+    "title": "Unbuffered Channels",
+    "category": "Concurrency"
+  },
+  {
+    "id": "12-producer-consumer",
+    "title": "Producer / Consumer",
+    "category": "Concurrency"
+  },
+  {
+    "id": "13-concurrent-http-requests",
+    "title": "Concurrent HTTP Requests",
+    "category": "Concurrency"
+  },
+  {
     "id": "01-http-handlers",
     "title": "HTTP Handlers",
     "category": "Web Development"
@@ -368,6 +418,36 @@
     "id": "10-rest-api",
     "title": "Building a REST API",
     "category": "Web Development"
+  },
+  {
+    "id": "01-unit-testing",
+    "title": "Unit Testing",
+    "category": "Testing"
+  },
+  {
+    "id": "02-table-driven-tests",
+    "title": "Table Driven Tests",
+    "category": "Testing"
+  },
+  {
+    "id": "03-test-helpers",
+    "title": "Test Helpers",
+    "category": "Testing"
+  },
+  {
+    "id": "04-benchmarks",
+    "title": "Benchmarks",
+    "category": "Testing"
+  },
+  {
+    "id": "05-fuzz-testing",
+    "title": "Fuzz Testing",
+    "category": "Testing"
+  },
+  {
+    "id": "06-mocking-concepts",
+    "title": "Mocking Concepts",
+    "category": "Testing"
   },
   {
     "id": "begin-01-kvadrat-perimetri",

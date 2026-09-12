@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// argumentlarniTahlil "--kalit=qiymat" ko'rinishidagi argumentlarni
+// map[kalit]qiymat ko'rinishida qaytaradi.
+func argumentlarniTahlil(args []string) map[string]string {
+	natija := make(map[string]string)
+	for _, arg := range args {
+		qism := strings.TrimPrefix(arg, "--")
+		boluklar := strings.SplitN(qism, "=", 2)
+		if len(boluklar) == 2 {
+			natija[boluklar[0]] = boluklar[1]
+		}
+	}
+	return natija
+}
+
+func main() {
+	fmt.Println(argumentlarniTahlil([]string{"--ism=Ali", "--yosh=25"}))
+}

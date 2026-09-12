@@ -1,0 +1,38 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestArgumentlarniTahlilBasic(t *testing.T) {
+	got := argumentlarniTahlil([]string{"--ism=Ali", "--yosh=25"})
+	want := map[string]string{"ism": "Ali", "yosh": "25"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("argumentlarniTahlil([--ism=Ali,--yosh=25]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestArgumentlarniTahlilIgnoresInvalid(t *testing.T) {
+	got := argumentlarniTahlil([]string{"--ism=Ali", "notogri"})
+	want := map[string]string{"ism": "Ali"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("argumentlarniTahlil([--ism=Ali,notogri]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestArgumentlarniTahlilEmpty(t *testing.T) {
+	got := argumentlarniTahlil([]string{})
+	want := map[string]string{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("argumentlarniTahlil([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestArgumentlarniTahlilValueWithEquals(t *testing.T) {
+	got := argumentlarniTahlil([]string{"--url=http://a.com?x=1"})
+	want := map[string]string{"url": "http://a.com?x=1"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("argumentlarniTahlil([--url=http://a.com?x=1]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+// Hisob — balansni unexported maydonda saqlaydi.
+type Hisob struct {
+	balans int
+}
+
+// YangiHisob boshlang'ich balans bilan yangi Hisob yaratadi.
+func YangiHisob(boshlangich int) *Hisob {
+	return &Hisob{balans: boshlangich}
+}
+
+// Balans unexported balans maydonini exported method orqali qaytaradi.
+func (h *Hisob) Balans() int {
+	return h.balans
+}
+
+func main() {
+	h := YangiHisob(1000)
+	fmt.Println(h.Balans())
+}

@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+// muhitniOl nomi muhit o'zgaruvchisi o'rnatilgan bo'lsa uning qiymatini,
+// aks holda standart qiymatni qaytaradi.
+func muhitniOl(nomi, standart string) string {
+	// TODO: os.LookupEnv(nomi) bilan tekshiring, mavjud bo'lsa qiymatni qaytaring
+	return standart
+}
+
+func main() {
+	os.Setenv("SALOM_TILI", "uz")
+	defer os.Unsetenv("SALOM_TILI")
+
+	fmt.Println(muhitniOl("SALOM_TILI", "en"))
+	fmt.Println(muhitniOl("MAVJUD_EMAS", "standart_qiymat"))
+}

@@ -1,0 +1,30 @@
+package main
+
+import "testing"
+
+func TestBalansBasic(t *testing.T) {
+	h := YangiHisob(1000)
+	got := h.Balans()
+	want := 1000
+	if got != want {
+		t.Errorf("Balans():\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestBalansZero(t *testing.T) {
+	h := YangiHisob(0)
+	got := h.Balans()
+	want := 0
+	if got != want {
+		t.Errorf("Balans():\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestBalansNegative(t *testing.T) {
+	h := YangiHisob(-50)
+	got := h.Balans()
+	want := -50
+	if got != want {
+		t.Errorf("Balans():\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

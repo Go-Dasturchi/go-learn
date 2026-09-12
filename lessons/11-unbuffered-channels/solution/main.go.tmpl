@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+// hisoblaVaKut qiymatni goroutine ichida ikki baravar oshiradi,
+// buferlanmagan signal kanali orqali natija tayyor bo'lguncha kutadi.
+func hisoblaVaKut(qiymat int) int {
+	natija := 0
+	tugadi := make(chan struct{})
+
+	go func() {
+		natija = qiymat * 2
+		close(tugadi)
+	}()
+
+	<-tugadi
+	return natija
+}
+
+func main() {
+	fmt.Println(hisoblaVaKut(21))
+}

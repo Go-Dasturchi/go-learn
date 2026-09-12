@@ -1,0 +1,32 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+// ErrTopilmadi — qidiruv natija bermaganda qaytariladigan sentinel xatolik.
+var ErrTopilmadi = errors.New("topilmadi")
+
+func qidir(royxat []string, maqsad string) (int, error) {
+	for i, s := range royxat {
+		if s == maqsad {
+			return i, nil
+		}
+	}
+	return -1, ErrTopilmadi
+}
+
+// foydalanuvchiniTop ismni qidiradi, xatolikni qo'shimcha kontekst
+// bilan o'rab qaytaradi.
+func foydalanuvchiniTop(ism string) error {
+	// TODO: royxat := []string{"Ali", "Vali"} yarating, qidir(royxat, ism) ni
+	// chaqiring, xatolikni %w bilan o'rab qaytaring
+	return nil
+}
+
+func main() {
+	err := foydalanuvchiniTop("Guli")
+	fmt.Println(err)
+	fmt.Println(errors.Is(err, ErrTopilmadi))
+}

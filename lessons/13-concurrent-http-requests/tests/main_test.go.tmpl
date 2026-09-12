@@ -1,0 +1,51 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"reflect"
+	"testing"
+)
+
+func TestBarchaSahifalarniOlOrderPreserved(t *testing.T) {
+	s1 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "birinchi")
+	}))
+	defer s1.Close()
+	s2 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "ikkinchi")
+	}))
+	defer s2.Close()
+	s3 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "uchinchi")
+	}))
+	defer s3.Close()
+
+	got := barchaSahifalarniOl([]string{s1.URL, s2.URL, s3.URL})
+	want := []string{"birinchi", "ikkinchi", "uchinchi"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("barchaSahifalarniOl:\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBarchaSahifalarniOlSingle(t *testing.T) {
+	s1 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "yagona")
+	}))
+	defer s1.Close()
+
+	got := barchaSahifalarniOl([]string{s1.URL})
+	want := []string{"yagona"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("barchaSahifalarniOl(single):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBarchaSahifalarniOlEmpty(t *testing.T) {
+	got := barchaSahifalarniOl([]string{})
+	want := []string{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("barchaSahifalarniOl([]):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

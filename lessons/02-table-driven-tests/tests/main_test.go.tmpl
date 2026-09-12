@@ -1,0 +1,26 @@
+package main
+
+import "testing"
+
+func TestBelgi(t *testing.T) {
+	holatlar := []struct {
+		nomi     string
+		kirish   int
+		kutilgan string
+	}{
+		{"musbat", 5, "musbat"},
+		{"manfiy", -3, "manfiy"},
+		{"nol", 0, "nol"},
+		{"katta_musbat", 1000, "musbat"},
+		{"katta_manfiy", -1000, "manfiy"},
+	}
+
+	for _, h := range holatlar {
+		t.Run(h.nomi, func(t *testing.T) {
+			got := Belgi(h.kirish)
+			if got != h.kutilgan {
+				t.Errorf("Belgi(%d):\nExpected:\n%s\n\nGot:\n%s", h.kirish, h.kutilgan, got)
+			}
+		})
+	}
+}

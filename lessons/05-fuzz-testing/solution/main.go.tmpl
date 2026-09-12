@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+// TeskariAylantir s ni rune'lar bo'yicha teskari aylantiradi.
+func TeskariAylantir(s string) string {
+	runlar := []rune(s)
+	uzunlik := len(runlar)
+	natija := make([]rune, uzunlik)
+	for i, r := range runlar {
+		natija[uzunlik-1-i] = r
+	}
+	return string(natija)
+}
+
+func main() {
+	fmt.Println(TeskariAylantir("salom"))
+}

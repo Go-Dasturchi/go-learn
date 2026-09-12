@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+// Belgi n musbat/manfiy/nol ekanligini matn qilib qaytaradi.
+func Belgi(n int) string {
+	if n > 0 {
+		return "musbat"
+	} else if n < 0 {
+		return "manfiy"
+	}
+	return "nol"
+}
+
+func main() {
+	fmt.Println(Belgi(5), Belgi(-3), Belgi(0))
+}

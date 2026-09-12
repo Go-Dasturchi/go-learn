@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+// Xabarchi — xabar yuborish imkoniyatini mavhumlashtiruvchi interfeys.
+type Xabarchi interface {
+	Yubor(matn string) error
+}
+
+// SoxtaXabarchi — test uchun ishlatiladigan, chindan hech narsa
+// yubormaydigan soxta (mock) implementatsiya.
+type SoxtaXabarchi struct {
+	YuborilganXabarlar []string
+}
+
+// Yubor xabarni chindan yubormasdan, ro'yxatga qo'shib qo'yadi.
+func (s *SoxtaXabarchi) Yubor(matn string) error {
+	s.YuborilganXabarlar = append(s.YuborilganXabarlar, matn)
+	return nil
+}
+
+// Bildirish berilgan Xabarchi orqali matnni yuboradi.
+func Bildirish(x Xabarchi, matn string) error {
+	return x.Yubor(matn)
+}
+
+func main() {
+	soxta := &SoxtaXabarchi{}
+	Bildirish(soxta, "Salom!")
+	Bildirish(soxta, "Xayr!")
+
+	fmt.Println(soxta.YuborilganXabarlar)
+}

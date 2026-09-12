@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+// TubSonmi n tub son bo'lsa true, aks holda false qaytaradi.
+func TubSonmi(n int) bool {
+	if n <= 1 {
+		return false
+	}
+	for i := 2; i*i <= n; i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	fmt.Println(TubSonmi(7))
+	fmt.Println(TubSonmi(8))
+}

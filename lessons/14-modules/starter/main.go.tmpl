@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+// versiyaEskimi joriy versiya minimal versiyadan kichik (eskirgan)
+// bo'lsa true qaytaradi (oddiy lug'aviy solishtirish yetarli).
+func versiyaEskimi(joriy, minimal string) bool {
+	// TODO: joriy < minimal ni qaytaring
+	return false
+}
+
+func main() {
+	fmt.Println(versiyaEskimi("1.18.0", "1.20.0"))
+	fmt.Println(versiyaEskimi("1.25.0", "1.20.0"))
+}

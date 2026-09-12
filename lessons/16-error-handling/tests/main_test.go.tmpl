@@ -1,0 +1,34 @@
+package main
+
+import (
+	"errors"
+	"strings"
+	"testing"
+)
+
+func TestFoydalanuvchiniTopNotFoundWrapsErrTopilmadi(t *testing.T) {
+	err := foydalanuvchiniTop("Guli")
+	if err == nil {
+		t.Fatalf("foydalanuvchiniTop(\"Guli\"): xatolik kutilgan edi, lekin nil qaytdi")
+	}
+	if !errors.Is(err, ErrTopilmadi) {
+		t.Errorf("foydalanuvchiniTop(\"Guli\") xatoligi errors.Is orqali ErrTopilmadi'ga mos kelishi kerak edi")
+	}
+	if !strings.Contains(err.Error(), "foydalanuvchini qidirishda xato") {
+		t.Errorf("foydalanuvchiniTop(\"Guli\") xato matni:\nExpected: \"foydalanuvchini qidirishda xato\" iborasini o'z ichiga olishi\n\nGot:\n%s", err.Error())
+	}
+}
+
+func TestFoydalanuvchiniTopFound(t *testing.T) {
+	err := foydalanuvchiniTop("Ali")
+	if err != nil {
+		t.Errorf("foydalanuvchiniTop(\"Ali\"): kutilmagan xato: %v", err)
+	}
+}
+
+func TestFoydalanuvchiniTopFoundSecond(t *testing.T) {
+	err := foydalanuvchiniTop("Vali")
+	if err != nil {
+		t.Errorf("foydalanuvchiniTop(\"Vali\"): kutilmagan xato: %v", err)
+	}
+}

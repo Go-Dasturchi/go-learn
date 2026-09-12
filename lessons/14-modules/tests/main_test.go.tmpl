@@ -1,0 +1,24 @@
+package main
+
+import "testing"
+
+func TestVersiyaEskimiTrue(t *testing.T) {
+	got := versiyaEskimi("1.18.0", "1.20.0")
+	if got != true {
+		t.Errorf("versiyaEskimi(\"1.18.0\", \"1.20.0\"):\nExpected:\ntrue\n\nGot:\n%v", got)
+	}
+}
+
+func TestVersiyaEskimiFalse(t *testing.T) {
+	got := versiyaEskimi("1.25.0", "1.20.0")
+	if got != false {
+		t.Errorf("versiyaEskimi(\"1.25.0\", \"1.20.0\"):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}
+
+func TestVersiyaEskimiEqual(t *testing.T) {
+	got := versiyaEskimi("1.20.0", "1.20.0")
+	if got != false {
+		t.Errorf("versiyaEskimi(\"1.20.0\", \"1.20.0\"):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}

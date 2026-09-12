@@ -1,0 +1,34 @@
+package main
+
+import "testing"
+
+func TestStringQurishBasic(t *testing.T) {
+	got := StringQurish([]string{"a", "b", "c"})
+	want := "abc"
+	if got != want {
+		t.Errorf("StringQurish([a,b,c]):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestStringQurishSentence(t *testing.T) {
+	got := StringQurish([]string{"Salom", ", ", "dunyo", "!"})
+	want := "Salom, dunyo!"
+	if got != want {
+		t.Errorf("StringQurish sentence:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestStringQurishEmpty(t *testing.T) {
+	got := StringQurish([]string{})
+	want := ""
+	if got != want {
+		t.Errorf("StringQurish([]):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func BenchmarkStringQurish(b *testing.B) {
+	qismlar := []string{"Salom", ", ", "dunyo", "!"}
+	for i := 0; i < b.N; i++ {
+		StringQurish(qismlar)
+	}
+}

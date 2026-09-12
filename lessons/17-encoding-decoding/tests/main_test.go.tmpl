@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestBase64gaOtkazBasic(t *testing.T) {
+	got := base64gaOtkaz("Salom, Go!")
+	want := "U2Fsb20sIEdvIQ=="
+	if got != want {
+		t.Errorf("base64gaOtkaz(\"Salom, Go!\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestBase64gaOtkazEmpty(t *testing.T) {
+	got := base64gaOtkaz("")
+	want := ""
+	if got != want {
+		t.Errorf("base64gaOtkaz(\"\"):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestBase64gaOtkazSimple(t *testing.T) {
+	got := base64gaOtkaz("Salom")
+	want := "U2Fsb20="
+	if got != want {
+		t.Errorf("base64gaOtkaz(\"Salom\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

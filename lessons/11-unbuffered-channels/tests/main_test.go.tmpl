@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestHisoblaVaKutBasic(t *testing.T) {
+	got := hisoblaVaKut(21)
+	want := 42
+	if got != want {
+		t.Errorf("hisoblaVaKut(21):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestHisoblaVaKutZero(t *testing.T) {
+	got := hisoblaVaKut(0)
+	want := 0
+	if got != want {
+		t.Errorf("hisoblaVaKut(0):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}
+
+func TestHisoblaVaKutNegative(t *testing.T) {
+	got := hisoblaVaKut(-10)
+	want := -20
+	if got != want {
+		t.Errorf("hisoblaVaKut(-10):\nExpected:\n%d\n\nGot:\n%d", want, got)
+	}
+}

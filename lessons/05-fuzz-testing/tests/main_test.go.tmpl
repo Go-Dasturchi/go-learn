@@ -1,0 +1,47 @@
+package main
+
+import "testing"
+
+func TestTeskariAylantirBasic(t *testing.T) {
+	got := TeskariAylantir("salom")
+	want := "molas"
+	if got != want {
+		t.Errorf("TeskariAylantir(\"salom\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestTeskariAylantirEmpty(t *testing.T) {
+	got := TeskariAylantir("")
+	want := ""
+	if got != want {
+		t.Errorf("TeskariAylantir(\"\"):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestTeskariAylantirSingle(t *testing.T) {
+	got := TeskariAylantir("a")
+	want := "a"
+	if got != want {
+		t.Errorf("TeskariAylantir(\"a\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestTeskariAylantirUnicode(t *testing.T) {
+	got := TeskariAylantir("привет")
+	want := "тевирп"
+	if got != want {
+		t.Errorf("TeskariAylantir(\"привет\") (kirill, ko'p baytli):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func FuzzTeskariAylantir(f *testing.F) {
+	f.Add("salom")
+	f.Add("")
+	f.Add("a")
+	f.Fuzz(func(t *testing.T, s string) {
+		ikki := TeskariAylantir(TeskariAylantir(s))
+		if ikki != s {
+			t.Errorf("ikki marta teskari aylantirish %q ni qaytarmadi, %q keldi", s, ikki)
+		}
+	})
+}

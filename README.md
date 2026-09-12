@@ -149,14 +149,15 @@ ok  	go-learn/internal/progress
 
 ## Loyiha holati
 
-Jami **484 ta dars** tayyor va test qilingan, yettita bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha):
+Jami **500 ta dars** tayyor va test qilingan, sakkizta bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha). Kurs dasturi asl texnik topshiriqdagi (`go_zero_to_hero_claude_code_prompt.md`) LEVEL 1–6 ro'yxatiga to'g'ridan-to'g'ri mos qilib tuzilgan:
 
 - **0. Problems** — 410 ta amaliy masala: 205 tasi Abramyan to'plamidan (Begin/Integer/Array/... bo'yicha bo'lingan), 205 tasi LeetCode uslubidagi masalalar (Easy/Medium/Hard bo'yicha bo'lingan). Har birida ikkita haqiqiy, masalaga xos hint bor (generik emas).
 - **1. Fundamentals** — 18 ta dars: Hello World → Variables → Types → If/Else → For Loop → Functions → Constants → Strings → Numbers → Boolean → Operators → Type Conversion → Switch → Nested Loops → Multiple Return Values → Named Return Values → Defer → Scope.
 - **2. Data Structures** — 12 ta dars: Arrays → Slices → Slice Append → Slice Indexing → Slice Copy → Maps → Structs → Nested Structs → Pointers → Methods → Interfaces → Custom Types.
-- **3. Go Core** — 12 ta dars: Errors → Custom Errors → Panic and Recover → Closures → Higher-Order Functions → String Formatting → Sorting → Time and Duration → JSON → File I/O → Generics → Regular Expressions.
+- **3. Go Core** — 19 ta dars: Errors → Custom Errors → Panic and Recover → Closures → Higher-Order Functions → String Formatting → Sorting → Time and Duration → JSON → File I/O → Generics → Regular Expressions → Packages → Modules → Exported / Unexported → Error Handling → Encoding / Decoding → Command Line Arguments → Environment Variables.
 - **4. Data Structures & Algorithms** — 12 ta dars: Recursion → Linked List → Stack → Queue → Binary Search → Bubble Sort → Merge Sort → Quick Sort → Binary Tree → Binary Search Tree → Hash Table → Graphs and BFS (klassik struktura/algoritmlar Go'da noldan yozib chiqiladi, `sort`/`container` paketlaridan foydalanmasdan).
-- **5. Concurrency** — 10 ta dars: Goroutines → Channels → Buffered Channels → Select → WaitGroup → Mutex → Worker Pools → Context → sync.Once and Atomic → Race Conditions. Har bir mashq real vaqtga bog'liq bo'lmagan, deterministik natija beradigan qilib loyihalangan (indeksli natijalar, oldindan bekor qilingan context, bitta yuboruvchili kanallar) — bu esa `go test -race` ostida ham barqaror ishlashini ta'minlaydi.
+- **5. Concurrency** — 13 ta dars: Goroutines → Channels → Buffered Channels → Select → WaitGroup → Mutex → Worker Pools → Context → sync.Once and Atomic → Race Conditions → Unbuffered Channels → Producer / Consumer → Concurrent HTTP Requests. Har bir mashq real vaqtga bog'liq bo'lmagan, deterministik natija beradigan qilib loyihalangan (indeksli natijalar, oldindan bekor qilingan context, bitta yuboruvchili kanallar) — bu esa `go test -race` ostida ham barqaror ishlashini ta'minlaydi.
 - **6. Web Development** — 10 ta dars: HTTP Handlers → Query Parameters → JSON Responses → Reading JSON Request Bodies → HTTP Status Codes → Routing and Path Parameters → Middleware → Form Data → HTTP Client → Building a REST API (faqat standart `net/http` va `net/http/httptest` paketlari bilan, tashqi framework'siz; barcha mashqlar haqiqiy tarmoq/port ochmasdan, `httptest.NewRecorder`/`httptest.NewServer` orqali sinaladi).
+- **7. Testing** — 6 ta dars: Unit Testing → Table Driven Tests → Test Helpers → Benchmarks → Fuzz Testing → Mocking Concepts.
 
-To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 484 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.
+To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 500 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.

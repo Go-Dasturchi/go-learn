@@ -1,0 +1,21 @@
+package main
+
+import "testing"
+
+func TestVersiyaChiqar(t *testing.T) {
+	got := versiyaChiqar()
+	want := "Versiya: 2.5.0"
+	if got != want {
+		t.Errorf("versiyaChiqar():\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestVersiyaChiqarUsesConstant(t *testing.T) {
+	got := versiyaChiqar()
+	if got == "" {
+		t.Errorf("versiyaChiqar() bo'sh qaytmasligi kerak")
+	}
+	if got == "Versiya: " {
+		t.Errorf("versiyaChiqar() versiya konstantasini ishlatishi kerak, faqat prefiksni emas")
+	}
+}

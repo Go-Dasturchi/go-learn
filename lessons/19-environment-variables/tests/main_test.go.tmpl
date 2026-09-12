@@ -1,0 +1,38 @@
+package main
+
+import (
+	"os"
+	"testing"
+)
+
+func TestMuhitniOlSet(t *testing.T) {
+	os.Setenv("GOLEARN_TEST_KALIT_1", "qiymat123")
+	defer os.Unsetenv("GOLEARN_TEST_KALIT_1")
+
+	got := muhitniOl("GOLEARN_TEST_KALIT_1", "standart")
+	want := "qiymat123"
+	if got != want {
+		t.Errorf("muhitniOl(o'rnatilgan):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestMuhitniOlNotSet(t *testing.T) {
+	os.Unsetenv("GOLEARN_TEST_KALIT_MAVJUD_EMAS")
+
+	got := muhitniOl("GOLEARN_TEST_KALIT_MAVJUD_EMAS", "standart_qiymat")
+	want := "standart_qiymat"
+	if got != want {
+		t.Errorf("muhitniOl(o'rnatilmagan):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestMuhitniOlEmptyButSet(t *testing.T) {
+	os.Setenv("GOLEARN_TEST_KALIT_BOSH", "")
+	defer os.Unsetenv("GOLEARN_TEST_KALIT_BOSH")
+
+	got := muhitniOl("GOLEARN_TEST_KALIT_BOSH", "standart")
+	want := ""
+	if got != want {
+		t.Errorf("muhitniOl(bo'sh, lekin o'rnatilgan):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

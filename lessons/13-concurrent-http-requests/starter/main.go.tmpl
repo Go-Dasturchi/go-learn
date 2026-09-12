@@ -1,0 +1,45 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"net/http"
+	"net/http/httptest"
+)
+
+// matnniOl url'ga GET so'rovi yuborib, javob tanasini string sifatida qaytaradi.
+func matnniOl(url string) (string, error) {
+	javob, err := http.Get(url)
+	if err != nil {
+		return "", err
+	}
+	defer javob.Body.Close()
+	baytlar, err := io.ReadAll(javob.Body)
+	return string(baytlar), err
+}
+
+// Natija — bitta so'rov natijasini uning asl indeksi bilan tashiydi.
+type Natija struct {
+	Indeks int
+	Matn   string
+}
+
+// barchaSahifalarniOl har bir URL'ni parallel oladi, natijalarni
+// kiritilgan tartibda qaytaradi.
+func barchaSahifalarniOl(urllar []string) []string {
+	// TODO: har bir URL uchun goroutine ishga tushiring, indeks bo'yicha yig'ing
+	return nil
+}
+
+func main() {
+	s1 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "birinchi")
+	}))
+	defer s1.Close()
+	s2 := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "ikkinchi")
+	}))
+	defer s2.Close()
+
+	fmt.Println(barchaSahifalarniOl([]string{s1.URL, s2.URL}))
+}

@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func assertValidatsiya(t *testing.T, email string, kutilgan bool) {
+	t.Helper()
+	got := Validatsiya(email)
+	if got != kutilgan {
+		t.Errorf("Validatsiya(%q):\nExpected:\n%v\n\nGot:\n%v", email, kutilgan, got)
+	}
+}
+
+func TestValidatsiyaValid(t *testing.T) {
+	assertValidatsiya(t, "ali@mail.uz", true)
+}
+
+func TestValidatsiyaNoAt(t *testing.T) {
+	assertValidatsiya(t, "ali.mail.uz", false)
+}
+
+func TestValidatsiyaNoDot(t *testing.T) {
+	assertValidatsiya(t, "ali@mailuz", false)
+}
+
+func TestValidatsiyaTooShort(t *testing.T) {
+	assertValidatsiya(t, "a@b", false)
+}

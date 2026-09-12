@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func containsAt(s string) bool {
+	for _, r := range s {
+		if r == '@' {
+			return true
+		}
+	}
+	return false
+}
+
+func containsDot(s string) bool {
+	for _, r := range s {
+		if r == '.' {
+			return true
+		}
+	}
+	return false
+}
+
+// Validatsiya email uzunligi yetarli va @ hamda . belgilarini
+// o'z ichiga olsa true qaytaradi.
+func Validatsiya(email string) bool {
+	return len(email) > 3 && containsAt(email) && containsDot(email)
+}
+
+func main() {
+	fmt.Println(Validatsiya("ali@mail.uz"))
+	fmt.Println(Validatsiya("notorgri"))
+}

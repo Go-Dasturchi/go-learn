@@ -1,0 +1,15 @@
+package main
+
+import (
+	"encoding/base64"
+	"fmt"
+)
+
+// base64gaOtkaz matnni Base64 formatiga kodlaydi.
+func base64gaOtkaz(matn string) string {
+	return base64.StdEncoding.EncodeToString([]byte(matn))
+}
+
+func main() {
+	fmt.Println(base64gaOtkaz("Salom, Go!"))
+}

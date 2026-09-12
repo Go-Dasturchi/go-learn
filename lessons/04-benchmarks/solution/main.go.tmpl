@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// StringQurish qismlarni strings.Builder yordamida birlashtiradi.
+func StringQurish(qismlar []string) string {
+	var b strings.Builder
+	for _, q := range qismlar {
+		b.WriteString(q)
+	}
+	return b.String()
+}
+
+func main() {
+	fmt.Println(StringQurish([]string{"Salom", ", ", "dunyo", "!"}))
+}
