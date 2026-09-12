@@ -1,0 +1,41 @@
+package main
+
+import "testing"
+
+func TestParolniHashKnownValue(t *testing.T) {
+	got := parolniHash("MaxfiyParol123")
+	want := "9822357d23a2be58c0f646b2be746a27185e5cef2552324b79ce25ca445c1fc7"
+	if got != want {
+		t.Errorf("parolniHash(\"MaxfiyParol123\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestParolniHashDeterministic(t *testing.T) {
+	a := parolniHash("bir-xil-parol")
+	b := parolniHash("bir-xil-parol")
+	if a != b {
+		t.Errorf("Bir xil parol uchun xesh har doim bir xil bo'lishi kerak")
+	}
+}
+
+func TestParolniHashDifferentPasswords(t *testing.T) {
+	a := parolniHash("parol1")
+	b := parolniHash("parol2")
+	if a == b {
+		t.Errorf("Turli parollar turli xesh berishi kerak")
+	}
+}
+
+func TestParolniTekshirCorrect(t *testing.T) {
+	hash := parolniHash("MaxfiyParol123")
+	if !parolniTekshir("MaxfiyParol123", hash) {
+		t.Errorf("parolniTekshir to'g'ri parol bilan true qaytarishi kerak edi")
+	}
+}
+
+func TestParolniTekshirIncorrect(t *testing.T) {
+	hash := parolniHash("MaxfiyParol123")
+	if parolniTekshir("notogriParol", hash) {
+		t.Errorf("parolniTekshir noto'g'ri parol bilan false qaytarishi kerak edi")
+	}
+}

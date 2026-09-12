@@ -1,0 +1,40 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+var testRoyxat = []string{"a", "b", "c", "d", "e", "f", "g"}
+
+func TestSahifalashFirstPage(t *testing.T) {
+	got := sahifalash(testRoyxat, 1, 3)
+	want := []string{"a", "b", "c"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sahifalash(1, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSahifalashSecondPage(t *testing.T) {
+	got := sahifalash(testRoyxat, 2, 3)
+	want := []string{"d", "e", "f"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sahifalash(2, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSahifalashLastPartialPage(t *testing.T) {
+	got := sahifalash(testRoyxat, 3, 3)
+	want := []string{"g"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sahifalash(3, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestSahifalashOutOfRange(t *testing.T) {
+	got := sahifalash(testRoyxat, 10, 3)
+	want := []string{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("sahifalash(10, 3):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

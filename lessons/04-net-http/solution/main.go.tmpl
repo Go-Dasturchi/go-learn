@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// sarlavhaBilanSorov X-Mijoz-Nomi sarlavhasi bilan GET so'rovi yuboradi,
+// javob status kodini qaytaradi.
+func sarlavhaBilanSorov(url, sarlavhaQiymati string) (int, error) {
+	sorov, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return 0, err
+	}
+	sorov.Header.Set("X-Mijoz-Nomi", sarlavhaQiymati)
+
+	klient := &http.Client{}
+	javob, err := klient.Do(sorov)
+	if err != nil {
+		return 0, err
+	}
+	defer javob.Body.Close()
+	return javob.StatusCode, nil
+}
+
+func main() {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("Kelgan sarlavha:", r.Header.Get("X-Mijoz-Nomi"))
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer testServer.Close()
+
+	status, _ := sarlavhaBilanSorov(testServer.URL, "go-learn")
+	fmt.Println(status)
+}

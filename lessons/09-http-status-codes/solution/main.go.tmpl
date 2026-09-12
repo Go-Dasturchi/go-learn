@@ -1,0 +1,30 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+	"net/http"
+)
+
+var ErrTopilmadi = errors.New("topilmadi")
+var ErrNotogri = errors.New("notogri so'rov")
+
+// xatoStatusi xatolik turiga qarab mos HTTP status kodini qaytaradi.
+func xatoStatusi(err error) int {
+	switch {
+	case err == nil:
+		return http.StatusOK
+	case errors.Is(err, ErrTopilmadi):
+		return http.StatusNotFound
+	case errors.Is(err, ErrNotogri):
+		return http.StatusBadRequest
+	default:
+		return http.StatusInternalServerError
+	}
+}
+
+func main() {
+	fmt.Println(xatoStatusi(nil))
+	fmt.Println(xatoStatusi(ErrTopilmadi))
+	fmt.Println(xatoStatusi(errors.New("kutilmagan")))
+}

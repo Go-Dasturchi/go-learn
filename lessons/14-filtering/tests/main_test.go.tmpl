@@ -1,0 +1,33 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestElementlarniFiltrlashBasic(t *testing.T) {
+	royxat := []string{"kitob-1", "kitob-2", "qalam-1", "daftar-1"}
+	got := elementlarniFiltrlash(royxat, "kitob")
+	want := []string{"kitob-1", "kitob-2"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("elementlarniFiltrlash(kitob):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestElementlarniFiltrlashEmptyPrefix(t *testing.T) {
+	royxat := []string{"a", "b", "c"}
+	got := elementlarniFiltrlash(royxat, "")
+	want := []string{"a", "b", "c"}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("elementlarniFiltrlash(\"\"):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestElementlarniFiltrlashNoMatch(t *testing.T) {
+	royxat := []string{"a", "b", "c"}
+	got := elementlarniFiltrlash(royxat, "z")
+	want := []string{}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("elementlarniFiltrlash(z):\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}

@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// apiVersiyaniAjrat "/api/<versiya>/<qolgan yo'l>" ko'rinishidagi
+// manzildan versiya va qolgan qismni ajratadi.
+func apiVersiyaniAjrat(path string) (versiya, qolganPath string, ok bool) {
+	if !strings.HasPrefix(path, "/api/") {
+		return "", "", false
+	}
+	qism := strings.TrimPrefix(path, "/api/")
+	boluklar := strings.SplitN(qism, "/", 2)
+	if len(boluklar) < 1 || boluklar[0] == "" {
+		return "", "", false
+	}
+	versiya = boluklar[0]
+	if len(boluklar) == 2 {
+		qolganPath = "/" + boluklar[1]
+	}
+	return versiya, qolganPath, true
+}
+
+func main() {
+	v, p, ok := apiVersiyaniAjrat("/api/v1/kitoblar")
+	fmt.Println(v, p, ok)
+}

@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// tokenniAjrat "Bearer <token>" ko'rinishidagi sarlavhadan tokenni ajratadi.
+func tokenniAjrat(sarlavha string) (string, bool) {
+	if !strings.HasPrefix(sarlavha, "Bearer ") {
+		return "", false
+	}
+	token := strings.TrimPrefix(sarlavha, "Bearer ")
+	if token == "" {
+		return "", false
+	}
+	return token, true
+}
+
+// authTekshir sarlavhadagi tokenni togriToken bilan solishtiradi.
+func authTekshir(sarlavha, togriToken string) bool {
+	// TODO: tokenniAjrat orqali tokenni oling, togriToken bilan solishtiring
+	return false
+}
+
+func main() {
+	fmt.Println(authTekshir("Bearer maxfiy-token-123", "maxfiy-token-123"))
+	fmt.Println(authTekshir("Bearer notogri", "maxfiy-token-123"))
+	fmt.Println(authTekshir("", "maxfiy-token-123"))
+}

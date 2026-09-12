@@ -1,0 +1,68 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"reflect"
+	"testing"
+)
+
+func TestHandlerDeleteRemovesItem(t *testing.T) {
+	dukon := &KitoblarDukoni{Kitoblar: []string{"Sarob", "O'tkan kunlar"}}
+
+	req := httptest.NewRequest("DELETE", "/kitoblar/0", nil)
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusNoContent {
+		t.Errorf("status:\nExpected:\n204\n\nGot:\n%d", rec.Code)
+	}
+	want := []string{"O'tkan kunlar"}
+	if !reflect.DeepEqual(dukon.Kitoblar, want) {
+		t.Errorf("Kitoblar o'chirishdan keyin:\nExpected:\n%v\n\nGot:\n%v", want, dukon.Kitoblar)
+	}
+}
+
+func TestHandlerDeleteInvalidIndex(t *testing.T) {
+	dukon := &KitoblarDukoni{Kitoblar: []string{"Sarob"}}
+
+	req := httptest.NewRequest("DELETE", "/kitoblar/99", nil)
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusNotFound {
+		t.Errorf("status:\nExpected:\n404\n\nGot:\n%d", rec.Code)
+	}
+	want := []string{"Sarob"}
+	if !reflect.DeepEqual(dukon.Kitoblar, want) {
+		t.Errorf("Noto'g'ri indeks bilan Kitoblar o'zgarmasligi kerak:\nExpected:\n%v\n\nGot:\n%v", want, dukon.Kitoblar)
+	}
+}
+
+func TestHandlerDeleteNonNumeric(t *testing.T) {
+	dukon := &KitoblarDukoni{Kitoblar: []string{"Sarob"}}
+
+	req := httptest.NewRequest("DELETE", "/kitoblar/abc", nil)
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusNotFound {
+		t.Errorf("status:\nExpected:\n404\n\nGot:\n%d", rec.Code)
+	}
+}
+
+func TestHandlerDeleteSecondItem(t *testing.T) {
+	dukon := &KitoblarDukoni{Kitoblar: []string{"A", "B", "C"}}
+
+	req := httptest.NewRequest("DELETE", "/kitoblar/1", nil)
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusNoContent {
+		t.Errorf("status:\nExpected:\n204\n\nGot:\n%d", rec.Code)
+	}
+	want := []string{"A", "C"}
+	if !reflect.DeepEqual(dukon.Kitoblar, want) {
+		t.Errorf("Kitoblar:\nExpected:\n%v\n\nGot:\n%v", want, dukon.Kitoblar)
+	}
+}

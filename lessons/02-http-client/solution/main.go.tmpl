@@ -1,0 +1,39 @@
+package main
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// Kirish — ro'yxatga olish uchun yuboriladigan ma'lumot.
+type Kirish struct {
+	Ism string `json:"ism"`
+}
+
+// royxatgaOl ism'ni JSON qilib url'ga POST orqali yuboradi, status
+// kodini qaytaradi.
+func royxatgaOl(url, ism string) (int, error) {
+	baytlar, err := json.Marshal(Kirish{Ism: ism})
+	if err != nil {
+		return 0, err
+	}
+	javob, err := http.Post(url, "application/json", bytes.NewReader(baytlar))
+	if err != nil {
+		return 0, err
+	}
+	defer javob.Body.Close()
+	return javob.StatusCode, nil
+}
+
+func main() {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusCreated)
+	}))
+	defer testServer.Close()
+
+	status, _ := royxatgaOl(testServer.URL, "Ali")
+	fmt.Println(status)
+}

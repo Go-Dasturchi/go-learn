@@ -1,0 +1,37 @@
+package main
+
+import (
+	"net/http"
+	"testing"
+	"time"
+)
+
+func TestServerTuzishAddr(t *testing.T) {
+	mux := http.NewServeMux()
+	server := serverTuzish(mux, ":9090")
+
+	if server.Addr != ":9090" {
+		t.Errorf("server.Addr:\nExpected:\n:9090\n\nGot:\n%s", server.Addr)
+	}
+}
+
+func TestServerTuzishHandler(t *testing.T) {
+	mux := http.NewServeMux()
+	server := serverTuzish(mux, ":8080")
+
+	if server.Handler == nil {
+		t.Errorf("server.Handler nil bo'lmasligi kerak edi")
+	}
+}
+
+func TestServerTuzishTimeouts(t *testing.T) {
+	mux := http.NewServeMux()
+	server := serverTuzish(mux, ":8080")
+
+	if server.ReadTimeout != 5*time.Second {
+		t.Errorf("server.ReadTimeout:\nExpected:\n5s\n\nGot:\n%v", server.ReadTimeout)
+	}
+	if server.WriteTimeout != 10*time.Second {
+		t.Errorf("server.WriteTimeout:\nExpected:\n10s\n\nGot:\n%v", server.WriteTimeout)
+	}
+}

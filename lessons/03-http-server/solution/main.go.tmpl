@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"time"
+)
+
+// serverTuzish berilgan handler va manzil bilan sozlangan http.Server qaytaradi.
+func serverTuzish(handler http.Handler, manzil string) *http.Server {
+	return &http.Server{
+		Addr:         manzil,
+		Handler:      handler,
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+}
+
+func main() {
+	mux := http.NewServeMux()
+	server := serverTuzish(mux, ":8080")
+
+	fmt.Println(server.Addr)
+	fmt.Println(server.ReadTimeout)
+}

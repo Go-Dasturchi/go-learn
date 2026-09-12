@@ -1,0 +1,22 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+	"net/http"
+)
+
+var ErrTopilmadi = errors.New("topilmadi")
+var ErrNotogri = errors.New("notogri so'rov")
+
+// xatoStatusi xatolik turiga qarab mos HTTP status kodini qaytaradi.
+func xatoStatusi(err error) int {
+	// TODO: err turiga qarab mos http.Status... qiymatini qaytaring
+	return http.StatusInternalServerError
+}
+
+func main() {
+	fmt.Println(xatoStatusi(nil))
+	fmt.Println(xatoStatusi(ErrTopilmadi))
+	fmt.Println(xatoStatusi(errors.New("kutilmagan")))
+}

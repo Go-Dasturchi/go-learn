@@ -1,0 +1,46 @@
+package main
+
+import "testing"
+
+func TestFoydalanuvchiniValidatsiyaQilValid(t *testing.T) {
+	err := foydalanuvchiniValidatsiyaQil("Ali", 25)
+	if err != nil {
+		t.Errorf("to'g'ri ma'lumot uchun kutilmagan xato: %v", err)
+	}
+}
+
+func TestFoydalanuvchiniValidatsiyaQilEmptyName(t *testing.T) {
+	err := foydalanuvchiniValidatsiyaQil("", 25)
+	if err == nil {
+		t.Fatalf("bo'sh ism uchun xatolik kutilgan edi, lekin nil qaytdi")
+	}
+	want := "ism bo'sh bo'lishi mumkin emas"
+	if err.Error() != want {
+		t.Errorf("xato matni:\nExpected:\n%s\n\nGot:\n%s", want, err.Error())
+	}
+}
+
+func TestFoydalanuvchiniValidatsiyaQilInvalidAge(t *testing.T) {
+	err := foydalanuvchiniValidatsiyaQil("Ali", 200)
+	if err == nil {
+		t.Fatalf("noto'g'ri yosh uchun xatolik kutilgan edi, lekin nil qaytdi")
+	}
+	want := "yosh 0 dan 150 gacha bo'lishi kerak"
+	if err.Error() != want {
+		t.Errorf("xato matni:\nExpected:\n%s\n\nGot:\n%s", want, err.Error())
+	}
+}
+
+func TestFoydalanuvchiniValidatsiyaQilNegativeAge(t *testing.T) {
+	err := foydalanuvchiniValidatsiyaQil("Vali", -5)
+	if err == nil {
+		t.Fatalf("manfiy yosh uchun xatolik kutilgan edi, lekin nil qaytdi")
+	}
+}
+
+func TestFoydalanuvchiniValidatsiyaQilBoundaryAge(t *testing.T) {
+	err := foydalanuvchiniValidatsiyaQil("Guli", 150)
+	if err != nil {
+		t.Errorf("yosh=150 (chegara qiymati) uchun kutilmagan xato: %v", err)
+	}
+}

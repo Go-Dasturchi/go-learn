@@ -149,7 +149,7 @@ ok  	go-learn/internal/progress
 
 ## Loyiha holati
 
-Jami **500 ta dars** tayyor va test qilingan, sakkizta bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha). Kurs dasturi asl texnik topshiriqdagi (`go_zero_to_hero_claude_code_prompt.md`) LEVEL 1–6 ro'yxatiga to'g'ridan-to'g'ri mos qilib tuzilgan:
+Jami **516 ta dars** tayyor va test qilingan, to'qqizta bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha). Kurs dasturi asl texnik topshiriqdagi (`go_zero_to_hero_claude_code_prompt.md`) LEVEL 1–7 ro'yxatiga to'g'ridan-to'g'ri mos qilib tuzilgan:
 
 - **0. Problems** — 410 ta amaliy masala: 205 tasi Abramyan to'plamidan (Begin/Integer/Array/... bo'yicha bo'lingan), 205 tasi LeetCode uslubidagi masalalar (Easy/Medium/Hard bo'yicha bo'lingan). Har birida ikkita haqiqiy, masalaga xos hint bor (generik emas).
 - **1. Fundamentals** — 18 ta dars: Hello World → Variables → Types → If/Else → For Loop → Functions → Constants → Strings → Numbers → Boolean → Operators → Type Conversion → Switch → Nested Loops → Multiple Return Values → Named Return Values → Defer → Scope.
@@ -159,5 +159,6 @@ Jami **500 ta dars** tayyor va test qilingan, sakkizta bosqichga bo'lingan holda
 - **5. Concurrency** — 13 ta dars: Goroutines → Channels → Buffered Channels → Select → WaitGroup → Mutex → Worker Pools → Context → sync.Once and Atomic → Race Conditions → Unbuffered Channels → Producer / Consumer → Concurrent HTTP Requests. Har bir mashq real vaqtga bog'liq bo'lmagan, deterministik natija beradigan qilib loyihalangan (indeksli natijalar, oldindan bekor qilingan context, bitta yuboruvchili kanallar) — bu esa `go test -race` ostida ham barqaror ishlashini ta'minlaydi.
 - **6. Web Development** — 10 ta dars: HTTP Handlers → Query Parameters → JSON Responses → Reading JSON Request Bodies → HTTP Status Codes → Routing and Path Parameters → Middleware → Form Data → HTTP Client → Building a REST API (faqat standart `net/http` va `net/http/httptest` paketlari bilan, tashqi framework'siz; barcha mashqlar haqiqiy tarmoq/port ochmasdan, `httptest.NewRecorder`/`httptest.NewServer` orqali sinaladi).
 - **7. Testing** — 6 ta dars: Unit Testing → Table Driven Tests → Test Helpers → Benchmarks → Fuzz Testing → Mocking Concepts.
+- **8. HTTP & Backend** — 16 ta dars: HTTP Basics → HTTP Client → HTTP Server → net/http → Routing → Middleware → REST API → JSON API → HTTP Status Codes → Authentication → JWT → Password Hashing → Pagination → Filtering → Validation → Error Responses (JWT imzosi `crypto/hmac`/`crypto/sha256` bilan, parol xeshi `crypto/sha256` bilan — ikkalasi ham faqat standart kutubxona, real loyihada esa maxsus kutubxonalar — masalan JWT uchun tasdiqlangan kutubxona, parol uchun bcrypt/argon2 — ishlatilishi lozimligi darsda alohida ta'kidlangan).
 
-To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 500 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.
+To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 516 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.

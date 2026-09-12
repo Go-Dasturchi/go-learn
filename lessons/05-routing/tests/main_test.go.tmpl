@@ -1,0 +1,31 @@
+package main
+
+import "testing"
+
+func TestApiVersiyaniAjratBasic(t *testing.T) {
+	v, p, ok := apiVersiyaniAjrat("/api/v1/kitoblar")
+	if !ok || v != "v1" || p != "/kitoblar" {
+		t.Errorf("apiVersiyaniAjrat(/api/v1/kitoblar):\nExpected:\nv1 /kitoblar true\n\nGot:\n%s %s %v", v, p, ok)
+	}
+}
+
+func TestApiVersiyaniAjratV2(t *testing.T) {
+	v, p, ok := apiVersiyaniAjrat("/api/v2/foydalanuvchilar")
+	if !ok || v != "v2" || p != "/foydalanuvchilar" {
+		t.Errorf("apiVersiyaniAjrat(/api/v2/foydalanuvchilar):\nExpected:\nv2 /foydalanuvchilar true\n\nGot:\n%s %s %v", v, p, ok)
+	}
+}
+
+func TestApiVersiyaniAjratNoPrefix(t *testing.T) {
+	v, p, ok := apiVersiyaniAjrat("/boshqa/yol")
+	if ok || v != "" || p != "" {
+		t.Errorf("apiVersiyaniAjrat(/boshqa/yol):\nExpected:\n  false\n\nGot:\n%s %s %v", v, p, ok)
+	}
+}
+
+func TestApiVersiyaniAjratVersionOnly(t *testing.T) {
+	v, p, ok := apiVersiyaniAjrat("/api/v1")
+	if !ok || v != "v1" || p != "" {
+		t.Errorf("apiVersiyaniAjrat(/api/v1):\nExpected:\nv1 (bo'sh) true\n\nGot:\n%s %s %v", v, p, ok)
+	}
+}

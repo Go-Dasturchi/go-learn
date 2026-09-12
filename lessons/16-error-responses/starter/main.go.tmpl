@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// XatoJavobi — API'ning barcha xatolik javoblari uchun izchil shakl.
+type XatoJavobi struct {
+	Xato string `json:"xato"`
+	Kod  int    `json:"kod"`
+}
+
+// xatoYoz izchil JSON shaklida xatolik javobi yozadi.
+func xatoYoz(w http.ResponseWriter, xabar string, kod int) {
+	// TODO: Content-Type o'rnating, kod bilan WriteHeader qiling, XatoJavobi'ni JSON qilib yozing
+}
+
+func main() {
+	rec := httptest.NewRecorder()
+	xatoYoz(rec, "ism bo'sh bo'lishi mumkin emas", http.StatusBadRequest)
+
+	fmt.Println(rec.Code)
+	fmt.Println(rec.Body.String())
+}

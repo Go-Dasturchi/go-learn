@@ -1,0 +1,47 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestXatoYozStatus(t *testing.T) {
+	rec := httptest.NewRecorder()
+	xatoYoz(rec, "test xabari", http.StatusBadRequest)
+
+	if rec.Code != http.StatusBadRequest {
+		t.Errorf("status:\nExpected:\n400\n\nGot:\n%d", rec.Code)
+	}
+}
+
+func TestXatoYozContentType(t *testing.T) {
+	rec := httptest.NewRecorder()
+	xatoYoz(rec, "test xabari", http.StatusBadRequest)
+
+	got := rec.Header().Get("Content-Type")
+	want := "application/json"
+	if got != want {
+		t.Errorf("Content-Type:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestXatoYozBody(t *testing.T) {
+	rec := httptest.NewRecorder()
+	xatoYoz(rec, "ism bo'sh bo'lishi mumkin emas", http.StatusBadRequest)
+
+	got := rec.Body.String()
+	want := "{\"xato\":\"ism bo'sh bo'lishi mumkin emas\",\"kod\":400}\n"
+	if got != want {
+		t.Errorf("javob tanasi:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestXatoYozDifferentCode(t *testing.T) {
+	rec := httptest.NewRecorder()
+	xatoYoz(rec, "topilmadi", http.StatusNotFound)
+
+	if rec.Code != http.StatusNotFound {
+		t.Errorf("status:\nExpected:\n404\n\nGot:\n%d", rec.Code)
+	}
+}

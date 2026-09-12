@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+// elementlarniFiltrlash royxat'dan prefiks bilan boshlanadigan
+// elementlarni qaytaradi.
+func elementlarniFiltrlash(royxat []string, prefiks string) []string {
+	natija := []string{}
+	for _, element := range royxat {
+		if strings.HasPrefix(element, prefiks) {
+			natija = append(natija, element)
+		}
+	}
+	return natija
+}
+
+func main() {
+	royxat := []string{"kitob-1", "kitob-2", "qalam-1", "daftar-1"}
+	fmt.Println(elementlarniFiltrlash(royxat, "kitob"))
+	fmt.Println(elementlarniFiltrlash(royxat, ""))
+}

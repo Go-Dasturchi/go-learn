@@ -1,0 +1,55 @@
+package main
+
+import (
+	"encoding/json"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestRoyxatgaOlStatus(t *testing.T) {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusCreated)
+	}))
+	defer testServer.Close()
+
+	status, err := royxatgaOl(testServer.URL, "Ali")
+	if err != nil {
+		t.Fatalf("royxatgaOl: kutilmagan xato: %v", err)
+	}
+	if status != http.StatusCreated {
+		t.Errorf("royxatgaOl status:\nExpected:\n201\n\nGot:\n%d", status)
+	}
+}
+
+func TestRoyxatgaOlSendsCorrectBody(t *testing.T) {
+	var qabulQilingan Kirish
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		json.NewDecoder(r.Body).Decode(&qabulQilingan)
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer testServer.Close()
+
+	_, err := royxatgaOl(testServer.URL, "Malika")
+	if err != nil {
+		t.Fatalf("royxatgaOl: kutilmagan xato: %v", err)
+	}
+	if qabulQilingan.Ism != "Malika" {
+		t.Errorf("Serverga yuborilgan Ism:\nExpected:\nMalika\n\nGot:\n%s", qabulQilingan.Ism)
+	}
+}
+
+func TestRoyxatgaOlErrorStatus(t *testing.T) {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusBadRequest)
+	}))
+	defer testServer.Close()
+
+	status, err := royxatgaOl(testServer.URL, "Vali")
+	if err != nil {
+		t.Fatalf("royxatgaOl: kutilmagan xato: %v", err)
+	}
+	if status != http.StatusBadRequest {
+		t.Errorf("royxatgaOl status:\nExpected:\n400\n\nGot:\n%d", status)
+	}
+}

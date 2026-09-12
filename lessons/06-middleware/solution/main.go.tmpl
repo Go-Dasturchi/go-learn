@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// authMiddleware Authorization sarlavhasi bo'lmasa 401 qaytaradi,
+// aks holda keyingi handler'ni chaqiradi.
+func authMiddleware(keyingi http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		token := r.Header.Get("Authorization")
+		if token == "" {
+			w.WriteHeader(http.StatusUnauthorized)
+			return
+		}
+		keyingi.ServeHTTP(w, r)
+	})
+}
+
+func main() {
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Maxfiy ma'lumot")
+	})
+	himoyalangan := authMiddleware(asosiy)
+
+	req1 := httptest.NewRequest("GET", "/maxfiy", nil)
+	req1.Header.Set("Authorization", "token-123")
+	rec1 := httptest.NewRecorder()
+	himoyalangan.ServeHTTP(rec1, req1)
+	fmt.Println(rec1.Code)
+
+	req2 := httptest.NewRequest("GET", "/maxfiy", nil)
+	rec2 := httptest.NewRecorder()
+	himoyalangan.ServeHTTP(rec2, req2)
+	fmt.Println(rec2.Code)
+}

@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// sahifalash royxat'ning sahifa-raqamli (1dan boshlab), hajmi ta
+// elementdan iborat qismini qaytaradi.
+func sahifalash(royxat []string, sahifa, hajmi int) []string {
+	boshlanish := (sahifa - 1) * hajmi
+	tugash := boshlanish + hajmi
+
+	if boshlanish >= len(royxat) {
+		return []string{}
+	}
+	if tugash > len(royxat) {
+		tugash = len(royxat)
+	}
+	return royxat[boshlanish:tugash]
+}
+
+func main() {
+	royxat := []string{"a", "b", "c", "d", "e", "f", "g"}
+	fmt.Println(sahifalash(royxat, 1, 3))
+	fmt.Println(sahifalash(royxat, 2, 3))
+	fmt.Println(sahifalash(royxat, 3, 3))
+}

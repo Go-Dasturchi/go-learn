@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// KitoblarDukoni — kitoblar ro'yxatini saqlovchi do'kon.
+type KitoblarDukoni struct {
+	Kitoblar []string
+}
+
+// Handler DELETE so'rovini qayta ishlaydi (indeks bo'yicha o'chirish).
+func (d *KitoblarDukoni) Handler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == http.MethodDelete {
+		// TODO: indeksni ajrating, tekshiring, o'chiring, 204/404 qaytaring
+	}
+}
+
+func main() {
+	dukon := &KitoblarDukoni{Kitoblar: []string{"Sarob", "O'tkan kunlar"}}
+
+	req := httptest.NewRequest("DELETE", "/kitoblar/0", nil)
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	fmt.Println(rec.Code)
+	fmt.Println(dukon.Kitoblar)
+}

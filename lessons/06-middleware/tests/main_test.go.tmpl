@@ -1,0 +1,47 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestAuthMiddlewareWithToken(t *testing.T) {
+	chaqirildi := false
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		chaqirildi = true
+		w.WriteHeader(http.StatusOK)
+	})
+	himoyalangan := authMiddleware(asosiy)
+
+	req := httptest.NewRequest("GET", "/maxfiy", nil)
+	req.Header.Set("Authorization", "token-123")
+	rec := httptest.NewRecorder()
+	himoyalangan.ServeHTTP(rec, req)
+
+	if !chaqirildi {
+		t.Errorf("Authorization mavjud bo'lganda, asosiy handler chaqirilishi kerak edi")
+	}
+	if rec.Code != http.StatusOK {
+		t.Errorf("status:\nExpected:\n200\n\nGot:\n%d", rec.Code)
+	}
+}
+
+func TestAuthMiddlewareWithoutToken(t *testing.T) {
+	chaqirildi := false
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		chaqirildi = true
+	})
+	himoyalangan := authMiddleware(asosiy)
+
+	req := httptest.NewRequest("GET", "/maxfiy", nil)
+	rec := httptest.NewRecorder()
+	himoyalangan.ServeHTTP(rec, req)
+
+	if chaqirildi {
+		t.Errorf("Authorization bo'lmaganda, asosiy handler chaqirilmasligi kerak edi")
+	}
+	if rec.Code != http.StatusUnauthorized {
+		t.Errorf("status:\nExpected:\n401\n\nGot:\n%d", rec.Code)
+	}
+}

@@ -1,0 +1,25 @@
+package main
+
+import "testing"
+
+func TestHttpUsulTanla(t *testing.T) {
+	holatlar := []struct {
+		amal     string
+		kutilgan string
+	}{
+		{"yaratish", "POST"},
+		{"olish", "GET"},
+		{"yangilash", "PUT"},
+		{"ochirish", "DELETE"},
+		{"notogri", ""},
+	}
+
+	for _, h := range holatlar {
+		t.Run(h.amal, func(t *testing.T) {
+			got := httpUsulTanla(h.amal)
+			if got != h.kutilgan {
+				t.Errorf("httpUsulTanla(%q):\nExpected:\n%q\n\nGot:\n%q", h.amal, h.kutilgan, got)
+			}
+		})
+	}
+}

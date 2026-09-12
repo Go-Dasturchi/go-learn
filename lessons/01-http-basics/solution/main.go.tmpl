@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// httpUsulTanla amalga mos HTTP usulini qaytaradi.
+func httpUsulTanla(amal string) string {
+	switch amal {
+	case "yaratish":
+		return "POST"
+	case "olish":
+		return "GET"
+	case "yangilash":
+		return "PUT"
+	case "ochirish":
+		return "DELETE"
+	default:
+		return ""
+	}
+}
+
+func main() {
+	fmt.Println(httpUsulTanla("yaratish"))
+	fmt.Println(httpUsulTanla("olish"))
+	fmt.Println(httpUsulTanla("ochirish"))
+}

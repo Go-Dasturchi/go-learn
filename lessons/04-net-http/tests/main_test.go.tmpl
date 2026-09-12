@@ -1,0 +1,53 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestSarlavhaBilanSorovSendsHeader(t *testing.T) {
+	var qabulQilingan string
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		qabulQilingan = r.Header.Get("X-Mijoz-Nomi")
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer testServer.Close()
+
+	_, err := sarlavhaBilanSorov(testServer.URL, "go-learn")
+	if err != nil {
+		t.Fatalf("sarlavhaBilanSorov: kutilmagan xato: %v", err)
+	}
+	if qabulQilingan != "go-learn" {
+		t.Errorf("Serverga yuborilgan X-Mijoz-Nomi sarlavhasi:\nExpected:\ngo-learn\n\nGot:\n%s", qabulQilingan)
+	}
+}
+
+func TestSarlavhaBilanSorovStatus(t *testing.T) {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer testServer.Close()
+
+	status, err := sarlavhaBilanSorov(testServer.URL, "test")
+	if err != nil {
+		t.Fatalf("sarlavhaBilanSorov: kutilmagan xato: %v", err)
+	}
+	if status != http.StatusOK {
+		t.Errorf("status:\nExpected:\n200\n\nGot:\n%d", status)
+	}
+}
+
+func TestSarlavhaBilanSorovDifferentValue(t *testing.T) {
+	var qabulQilingan string
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		qabulQilingan = r.Header.Get("X-Mijoz-Nomi")
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer testServer.Close()
+
+	sarlavhaBilanSorov(testServer.URL, "boshqa-qiymat")
+	if qabulQilingan != "boshqa-qiymat" {
+		t.Errorf("Serverga yuborilgan X-Mijoz-Nomi sarlavhasi:\nExpected:\nboshqa-qiymat\n\nGot:\n%s", qabulQilingan)
+	}
+}

@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+// apiVersiyaniAjrat "/api/<versiya>/<qolgan yo'l>" ko'rinishidagi
+// manzildan versiya va qolgan qismni ajratadi.
+func apiVersiyaniAjrat(path string) (versiya, qolganPath string, ok bool) {
+	// TODO: "/api/" prefiksini tekshiring, versiya va qolgan yo'lni ajrating
+	return "", "", false
+}
+
+func main() {
+	v, p, ok := apiVersiyaniAjrat("/api/v1/kitoblar")
+	fmt.Println(v, p, ok)
+}

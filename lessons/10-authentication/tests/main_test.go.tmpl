@@ -1,0 +1,31 @@
+package main
+
+import "testing"
+
+func TestAuthTekshirValid(t *testing.T) {
+	got := authTekshir("Bearer maxfiy-token-123", "maxfiy-token-123")
+	if got != true {
+		t.Errorf("authTekshir(to'g'ri token):\nExpected:\ntrue\n\nGot:\n%v", got)
+	}
+}
+
+func TestAuthTekshirWrongToken(t *testing.T) {
+	got := authTekshir("Bearer notogri", "maxfiy-token-123")
+	if got != false {
+		t.Errorf("authTekshir(noto'g'ri token):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}
+
+func TestAuthTekshirEmptyHeader(t *testing.T) {
+	got := authTekshir("", "maxfiy-token-123")
+	if got != false {
+		t.Errorf("authTekshir(bo'sh sarlavha):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}
+
+func TestAuthTekshirMissingBearerPrefix(t *testing.T) {
+	got := authTekshir("maxfiy-token-123", "maxfiy-token-123")
+	if got != false {
+		t.Errorf("authTekshir(Bearer prefiksisiz):\nExpected:\nfalse\n\nGot:\n%v", got)
+	}
+}

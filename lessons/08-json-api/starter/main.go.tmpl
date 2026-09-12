@@ -1,0 +1,27 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// RoyxatJavobi — ma'lumot ro'yxatini son bilan birga "o'rovchi" konvert.
+type RoyxatJavobi struct {
+	Data  []string `json:"data"`
+	Count int      `json:"count"`
+}
+
+// royxatHandler ismlar ro'yxatini RoyxatJavobi konvertida JSON qilib yozadi.
+func royxatHandler(w http.ResponseWriter, r *http.Request) {
+	royxat := []string{"Ali", "Vali", "Guli"}
+	// TODO: Content-Type o'rnating, RoyxatJavobi{Data: royxat, Count: len(royxat)} ni JSON qilib yozing
+	_ = royxat
+}
+
+func main() {
+	req := httptest.NewRequest("GET", "/royxat", nil)
+	rec := httptest.NewRecorder()
+	royxatHandler(rec, req)
+	fmt.Println(rec.Body.String())
+}

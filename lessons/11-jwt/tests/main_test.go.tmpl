@@ -1,0 +1,41 @@
+package main
+
+import "testing"
+
+func TestImzoHisoblaKnownValue(t *testing.T) {
+	got := imzoHisobla("salom", "sirli-kalit")
+	want := "51POYU7Lbt2byuqaeXtJXU--lY0bOU92CpChneE4y3g"
+	if got != want {
+		t.Errorf("imzoHisobla(\"salom\", \"sirli-kalit\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestImzoHisoblaDifferentData(t *testing.T) {
+	got := imzoHisobla("boshqa-malumot", "sirli-kalit")
+	want := "l4lyj-gh3sym-hwu0zFTRE53Zn2t3l7Vzgjbiy0KgQg"
+	if got != want {
+		t.Errorf("imzoHisobla(\"boshqa-malumot\", \"sirli-kalit\"):\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestImzoHisoblaDeterministic(t *testing.T) {
+	a := imzoHisobla("bir-xil", "kalit")
+	b := imzoHisobla("bir-xil", "kalit")
+	if a != b {
+		t.Errorf("Bir xil kirish uchun imzo har doim bir xil bo'lishi kerak:\nBirinchi:\n%s\n\nIkkinchi:\n%s", a, b)
+	}
+}
+
+func TestTokenTogrimiValid(t *testing.T) {
+	imzo := imzoHisobla("payload-malumot", "maxfiy")
+	if !tokenTogrimi("payload-malumot", imzo, "maxfiy") {
+		t.Errorf("tokenTogrimi to'g'ri imzo va kalit bilan true qaytarishi kerak edi")
+	}
+}
+
+func TestTokenTogrimiWrongKey(t *testing.T) {
+	imzo := imzoHisobla("payload-malumot", "maxfiy")
+	if tokenTogrimi("payload-malumot", imzo, "notogri-kalit") {
+		t.Errorf("tokenTogrimi noto'g'ri kalit bilan false qaytarishi kerak edi")
+	}
+}

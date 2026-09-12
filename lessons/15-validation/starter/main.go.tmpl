@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+// foydalanuvchiniValidatsiyaQil ism va yoshni tekshirib, mos xatolikni
+// yoki nil qaytaradi.
+func foydalanuvchiniValidatsiyaQil(ism string, yosh int) error {
+	// TODO: ism bo'shligini, keyin yosh chegarasini tekshiring
+	return nil
+}
+
+func main() {
+	fmt.Println(foydalanuvchiniValidatsiyaQil("Ali", 25))
+	fmt.Println(foydalanuvchiniValidatsiyaQil("", 25))
+	fmt.Println(foydalanuvchiniValidatsiyaQil("Ali", 200))
+}

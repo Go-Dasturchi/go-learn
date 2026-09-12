@@ -1,0 +1,27 @@
+package main
+
+import (
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/base64"
+	"fmt"
+)
+
+// imzoHisobla malumotning maxfiyKalit bilan hisoblangan HMAC-SHA256
+// imzosini URL-xavfsiz Base64 matn sifatida qaytaradi.
+func imzoHisobla(malumot, maxfiyKalit string) string {
+	h := hmac.New(sha256.New, []byte(maxfiyKalit))
+	h.Write([]byte(malumot))
+	return base64.RawURLEncoding.EncodeToString(h.Sum(nil))
+}
+
+func tokenTogrimi(malumot, imzo, maxfiyKalit string) bool {
+	return imzoHisobla(malumot, maxfiyKalit) == imzo
+}
+
+func main() {
+	imzo := imzoHisobla("salom", "sirli-kalit")
+	fmt.Println(imzo)
+	fmt.Println(tokenTogrimi("salom", imzo, "sirli-kalit"))
+	fmt.Println(tokenTogrimi("salom", imzo, "boshqa-kalit"))
+}

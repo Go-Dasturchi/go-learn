@@ -1,0 +1,30 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestRoyxatHandlerContentType(t *testing.T) {
+	req := httptest.NewRequest("GET", "/royxat", nil)
+	rec := httptest.NewRecorder()
+	royxatHandler(rec, req)
+
+	got := rec.Header().Get("Content-Type")
+	want := "application/json"
+	if got != want {
+		t.Errorf("Content-Type:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestRoyxatHandlerBody(t *testing.T) {
+	req := httptest.NewRequest("GET", "/royxat", nil)
+	rec := httptest.NewRecorder()
+	royxatHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "{\"data\":[\"Ali\",\"Vali\",\"Guli\"],\"count\":3}\n"
+	if got != want {
+		t.Errorf("javob tanasi:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

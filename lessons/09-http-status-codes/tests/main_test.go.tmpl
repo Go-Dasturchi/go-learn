@@ -1,0 +1,54 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+	"net/http"
+	"testing"
+)
+
+func TestXatoStatusiNil(t *testing.T) {
+	got := xatoStatusi(nil)
+	if got != http.StatusOK {
+		t.Errorf("xatoStatusi(nil):\nExpected:\n200\n\nGot:\n%d", got)
+	}
+}
+
+func TestXatoStatusiTopilmadi(t *testing.T) {
+	got := xatoStatusi(ErrTopilmadi)
+	if got != http.StatusNotFound {
+		t.Errorf("xatoStatusi(ErrTopilmadi):\nExpected:\n404\n\nGot:\n%d", got)
+	}
+}
+
+func TestXatoStatusiNotogri(t *testing.T) {
+	got := xatoStatusi(ErrNotogri)
+	if got != http.StatusBadRequest {
+		t.Errorf("xatoStatusi(ErrNotogri):\nExpected:\n400\n\nGot:\n%d", got)
+	}
+}
+
+func TestXatoStatusiActuallyWrapped(t *testing.T) {
+	wrapped := fmt.Errorf("qidiruvda xato: %w", ErrTopilmadi)
+	got := xatoStatusi(wrapped)
+	if got != http.StatusNotFound {
+		t.Errorf("xatoStatusi(%%w bilan o'ralgan ErrTopilmadi):\nExpected:\n404\n\nGot:\n%d", got)
+	}
+}
+
+func TestXatoStatusiSimilarButUnrelated(t *testing.T) {
+	// Matni ErrTopilmadi'ga o'xshasa ham, bu aslida boshqa, mustaqil xato —
+	// errors.Is matn bo'yicha emas, xatolik zanjiri bo'yicha solishtiradi.
+	unrelated := errors.New("topilmadi")
+	got := xatoStatusi(unrelated)
+	if got != http.StatusInternalServerError {
+		t.Errorf("xatoStatusi(matni o'xshash, lekin o'ralmagan yangi xato):\nExpected:\n500\n\nGot:\n%d", got)
+	}
+}
+
+func TestXatoStatusiUnknown(t *testing.T) {
+	got := xatoStatusi(errors.New("kutilmagan"))
+	if got != http.StatusInternalServerError {
+		t.Errorf("xatoStatusi(kutilmagan):\nExpected:\n500\n\nGot:\n%d", got)
+	}
+}

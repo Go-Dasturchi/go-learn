@@ -1,0 +1,24 @@
+package main
+
+import (
+	"crypto/sha256"
+	"encoding/hex"
+	"fmt"
+)
+
+// parolniHash parolning SHA-256 xeshini hex matn ko'rinishida qaytaradi.
+func parolniHash(parol string) string {
+	summa := sha256.Sum256([]byte(parol))
+	return hex.EncodeToString(summa[:])
+}
+
+func parolniTekshir(parol, saqlanganHash string) bool {
+	return parolniHash(parol) == saqlanganHash
+}
+
+func main() {
+	hash := parolniHash("MaxfiyParol123")
+	fmt.Println(hash)
+	fmt.Println(parolniTekshir("MaxfiyParol123", hash))
+	fmt.Println(parolniTekshir("notogriParol", hash))
+}

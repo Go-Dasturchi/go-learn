@@ -450,6 +450,86 @@
     "category": "Testing"
   },
   {
+    "id": "01-http-basics",
+    "title": "HTTP Basics",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "02-http-client",
+    "title": "HTTP Client",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "03-http-server",
+    "title": "HTTP Server",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "04-net-http",
+    "title": "net/http",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "05-routing",
+    "title": "Routing",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "06-middleware",
+    "title": "Middleware",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "07-rest-api",
+    "title": "REST API",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "08-json-api",
+    "title": "JSON API",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "09-http-status-codes",
+    "title": "HTTP Status Codes",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "10-authentication",
+    "title": "Authentication",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "11-jwt",
+    "title": "JWT",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "12-password-hashing",
+    "title": "Password Hashing",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "13-pagination",
+    "title": "Pagination",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "14-filtering",
+    "title": "Filtering",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "15-validation",
+    "title": "Validation",
+    "category": "HTTP & Backend"
+  },
+  {
+    "id": "16-error-responses",
+    "title": "Error Responses",
+    "category": "HTTP & Backend"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",
