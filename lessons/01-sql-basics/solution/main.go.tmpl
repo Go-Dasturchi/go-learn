@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+// selectSorovQur "SELECT * FROM <jadval> WHERE <ustun> > <qiymat>"
+// ko'rinishidagi SQL so'rov matnini quradi.
+func selectSorovQur(jadval, ustun string, qiymat int) string {
+	return fmt.Sprintf("SELECT * FROM %s WHERE %s > %d", jadval, ustun, qiymat)
+}
+
+func main() {
+	fmt.Println(selectSorovQur("foydalanuvchilar", "yosh", 24))
+}

@@ -1,0 +1,44 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+type Foydalanuvchi struct {
+	ID  int
+	Ism string
+}
+
+type FoydalanuvchiRepository interface {
+	Ol(id int) (Foydalanuvchi, error)
+}
+
+type XotiraRepository struct {
+	malumotlar map[int]Foydalanuvchi
+}
+
+func (r *XotiraRepository) Ol(id int) (Foydalanuvchi, error) {
+	f, bor := r.malumotlar[id]
+	if !bor {
+		return Foydalanuvchi{}, errors.New("topilmadi")
+	}
+	return f, nil
+}
+
+// ismChiqar berilgan id bo'yicha foydalanuvchi ismini qaytaradi,
+// topilmasa "noma'lum" qaytaradi.
+func ismChiqar(repo FoydalanuvchiRepository, id int) string {
+	// TODO: repo.Ol(id) ni chaqiring, xatolik bo'lsa "noma'lum" qaytaring,
+	// aks holda foydalanuvchining Ism maydonini qaytaring
+	return ""
+}
+
+func main() {
+	repo := &XotiraRepository{malumotlar: map[int]Foydalanuvchi{
+		1: {ID: 1, Ism: "Ali"},
+	}}
+
+	fmt.Println(ismChiqar(repo, 1))
+	fmt.Println(ismChiqar(repo, 99))
+}

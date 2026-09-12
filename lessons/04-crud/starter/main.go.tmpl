@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+// XotiraFoydalanuvchilar — haqiqiy bazasiz, xotirada ishlaydigan
+// oddiy repository (test/mashq uchun).
+type XotiraFoydalanuvchilar struct {
+	malumot map[int]string
+}
+
+// Yarat yangi foydalanuvchini xotiraga qo'shadi.
+func (x *XotiraFoydalanuvchilar) Yarat(id int, ism string) {
+	if x.malumot == nil {
+		x.malumot = make(map[int]string)
+	}
+	x.malumot[id] = ism
+}
+
+// Ol id bo'yicha ismni qaytaradi, topilmasa xatolik qaytaradi.
+func (x *XotiraFoydalanuvchilar) Ol(id int) (string, error) {
+	// TODO: x.malumot[id] ni comma-ok bilan tekshiring, topilmasa xatolik qaytaring
+	return "", nil
+}
+
+func main() {
+	repo := &XotiraFoydalanuvchilar{}
+	repo.Yarat(1, "Ali")
+
+	ism, err := repo.Ol(1)
+	fmt.Println(ism, err)
+
+	_, err = repo.Ol(99)
+	fmt.Println(err)
+}

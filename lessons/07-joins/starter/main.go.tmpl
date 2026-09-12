@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+// birlashtir foydalanuvchilar (id -> ism) va buyurtmalar (id -> mahsulot soni)
+// xaritalarini umumiy id kaliti orqali bog'lab, ism -> mahsulot soni natijasini quradi.
+func birlashtir(foydalanuvchilar map[int]string, buyurtmalar map[int]int) map[string]int {
+	// TODO: buyurtmalar bo'ylab yuring, foydalanuvchilar xaritasidan comma-ok
+	// bilan ismni qidiring, topilsa natijaga qo'shing
+	return nil
+}
+
+func main() {
+	foydalanuvchilar := map[int]string{1: "Ali", 2: "Vali"}
+	buyurtmalar := map[int]int{1: 3, 2: 5, 99: 1}
+
+	natija := birlashtir(foydalanuvchilar, buyurtmalar)
+	fmt.Println(natija["Ali"], natija["Vali"], len(natija))
+}

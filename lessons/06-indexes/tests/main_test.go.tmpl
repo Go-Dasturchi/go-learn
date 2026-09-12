@@ -1,0 +1,33 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestIndeksYarat(t *testing.T) {
+	royxat := []string{"Ali", "Vali", "Guli"}
+	got := indeksYarat(royxat)
+	want := map[string]int{"Ali": 0, "Vali": 1, "Guli": 2}
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("indeksYarat(%v):\nExpected:\n%v\n\nGot:\n%v", royxat, want, got)
+	}
+}
+
+func TestIndeksYaratLookup(t *testing.T) {
+	royxat := []string{"olma", "nok", "uzum", "shaftoli"}
+	indeks := indeksYarat(royxat)
+	if indeks["uzum"] != 2 {
+		t.Errorf("indeks[\"uzum\"] = %d, kutilgan 2", indeks["uzum"])
+	}
+	if indeks["shaftoli"] != 3 {
+		t.Errorf("indeks[\"shaftoli\"] = %d, kutilgan 3", indeks["shaftoli"])
+	}
+}
+
+func TestIndeksYaratEmpty(t *testing.T) {
+	got := indeksYarat([]string{})
+	if len(got) != 0 {
+		t.Errorf("indeksYarat([]): bo'sh map kutilgan edi, %v qaytdi", got)
+	}
+}

@@ -1,0 +1,54 @@
+package main
+
+import (
+	"errors"
+	"testing"
+	"time"
+)
+
+func TestKutibUlanishSucceedsEventually(t *testing.T) {
+	urinishSoni := 0
+	ping := func() error {
+		urinishSoni++
+		if urinishSoni < 3 {
+			return errors.New("hali tayyor emas")
+		}
+		return nil
+	}
+
+	err := kutibUlanish(ping, 5, time.Millisecond)
+	if err != nil {
+		t.Errorf("kutibUlanish: kutilmagan xato: %v", err)
+	}
+	if urinishSoni != 3 {
+		t.Errorf("urinishlar soni:\nExpected:\n3\n\nGot:\n%d", urinishSoni)
+	}
+}
+
+func TestKutibUlanishSucceedsImmediately(t *testing.T) {
+	urinishSoni := 0
+	ping := func() error {
+		urinishSoni++
+		return nil
+	}
+
+	err := kutibUlanish(ping, 5, time.Millisecond)
+	if err != nil {
+		t.Errorf("kutibUlanish: kutilmagan xato: %v", err)
+	}
+	if urinishSoni != 1 {
+		t.Errorf("urinishlar soni:\nExpected:\n1\n\nGot:\n%d", urinishSoni)
+	}
+}
+
+func TestKutibUlanishAllFail(t *testing.T) {
+	oxirgiXato := errors.New("doim muvaffaqiyatsiz")
+	ping := func() error {
+		return oxirgiXato
+	}
+
+	err := kutibUlanish(ping, 3, time.Millisecond)
+	if err != oxirgiXato {
+		t.Errorf("kutibUlanish:\nExpected xato:\n%v\n\nGot:\n%v", oxirgiXato, err)
+	}
+}

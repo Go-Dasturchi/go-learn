@@ -1,0 +1,35 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestBirlashtirBasic(t *testing.T) {
+	foydalanuvchilar := map[int]string{1: "Ali", 2: "Vali"}
+	buyurtmalar := map[int]int{1: 3, 2: 5, 99: 1}
+
+	got := birlashtir(foydalanuvchilar, buyurtmalar)
+	want := map[string]int{"Ali": 3, "Vali": 5}
+
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("birlashtir():\nExpected:\n%v\n\nGot:\n%v", want, got)
+	}
+}
+
+func TestBirlashtirNoMatch(t *testing.T) {
+	foydalanuvchilar := map[int]string{1: "Ali"}
+	buyurtmalar := map[int]int{7: 10}
+
+	got := birlashtir(foydalanuvchilar, buyurtmalar)
+	if len(got) != 0 {
+		t.Errorf("mos kelmagan foydalanuvchi_id natijaga tushmasligi kerak, got %v", got)
+	}
+}
+
+func TestBirlashtirEmpty(t *testing.T) {
+	got := birlashtir(map[int]string{}, map[int]int{})
+	if len(got) != 0 {
+		t.Errorf("bo'sh xaritalar uchun bo'sh natija kutilgan edi, got %v", got)
+	}
+}

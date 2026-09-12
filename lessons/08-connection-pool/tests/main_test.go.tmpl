@@ -1,0 +1,56 @@
+package main
+
+import (
+	"testing"
+	"time"
+)
+
+func TestHavzaOlFIFO(t *testing.T) {
+	h := YangiHavza(2)
+
+	a := h.Ol()
+	b := h.Ol()
+
+	if a != 0 || b != 1 {
+		t.Errorf("Ol() FIFO tartibida kutilgan edi: a=0, b=1; got a=%d, b=%d", a, b)
+	}
+}
+
+func TestHavzaQaytarVaQaytaOl(t *testing.T) {
+	h := YangiHavza(1)
+
+	a := h.Ol()
+	h.Qaytar(a)
+	b := h.Ol()
+
+	if a != b {
+		t.Errorf("Qaytar()dan keyin Ol() xuddi shu qiymatni qaytarishi kerak edi: a=%d, b=%d", a, b)
+	}
+}
+
+func TestHavzaOlBlocksUntilQaytar(t *testing.T) {
+	h := YangiHavza(1)
+	first := h.Ol()
+
+	done := make(chan int)
+	go func() {
+		done <- h.Ol()
+	}()
+
+	select {
+	case <-done:
+		t.Fatalf("havza bo'sh bo'lganda Ol() darhol qaytmasligi kerak edi")
+	case <-time.After(50 * time.Millisecond):
+	}
+
+	h.Qaytar(first)
+
+	select {
+	case v := <-done:
+		if v != first {
+			t.Errorf("Qaytar()dan keyin Ol() %d qiymatini qaytarishi kerak edi, got %d", first, v)
+		}
+	case <-time.After(time.Second):
+		t.Fatalf("Qaytar()dan keyin Ol() vaqtida qaytmadi")
+	}
+}

@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+// Havza cheklangan sondagi "ulanish"larni qayta ishlatish uchun
+// bufferlangan kanal ustiga qurilgan oddiy connection pool.
+type Havza struct {
+	boshlar chan int
+}
+
+// YangiHavza hajm dona bo'sh o'rin bilan to'ldirilgan Havza yaratadi.
+func YangiHavza(hajm int) *Havza {
+	h := &Havza{boshlar: make(chan int, hajm)}
+	for i := 0; i < hajm; i++ {
+		h.boshlar <- i
+	}
+	return h
+}
+
+// Ol havzadan bitta "ulanish"ni oladi, bo'sh bo'lsa qaytarilishini kutadi.
+func (h *Havza) Ol() int {
+	// TODO: h.boshlar kanalidan bitta qiymatni oling va qaytaring
+	return 0
+}
+
+// Qaytar "ulanish"ni havzaga qaytaradi.
+func (h *Havza) Qaytar(id int) {
+	h.boshlar <- id
+}
+
+func main() {
+	h := YangiHavza(2)
+
+	a := h.Ol()
+	b := h.Ol()
+	fmt.Println("olindi:", a, b)
+
+	h.Qaytar(a)
+	c := h.Ol()
+	fmt.Println("qayta olindi:", c)
+}

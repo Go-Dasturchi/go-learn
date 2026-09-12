@@ -1,0 +1,44 @@
+package main
+
+import (
+	"errors"
+	"testing"
+)
+
+func TestIsmChiqarFound(t *testing.T) {
+	repo := &XotiraRepository{malumotlar: map[int]Foydalanuvchi{
+		1: {ID: 1, Ism: "Ali"},
+		2: {ID: 2, Ism: "Vali"},
+	}}
+
+	if got := ismChiqar(repo, 1); got != "Ali" {
+		t.Errorf("ismChiqar(repo, 1) = %q, kutilgan \"Ali\"", got)
+	}
+	if got := ismChiqar(repo, 2); got != "Vali" {
+		t.Errorf("ismChiqar(repo, 2) = %q, kutilgan \"Vali\"", got)
+	}
+}
+
+func TestIsmChiqarNotFound(t *testing.T) {
+	repo := &XotiraRepository{malumotlar: map[int]Foydalanuvchi{}}
+
+	if got := ismChiqar(repo, 99); got != "noma'lum" {
+		t.Errorf("ismChiqar(repo, 99) = %q, kutilgan \"noma'lum\"", got)
+	}
+}
+
+// SoxtaRepository — FoydalanuvchiRepository interfeysini amalga oshiruvchi
+// yana bir implementatsiya, ismChiqar interfeys bilan ishlashini tekshirish uchun.
+type SoxtaRepository struct{}
+
+func (r *SoxtaRepository) Ol(id int) (Foydalanuvchi, error) {
+	return Foydalanuvchi{}, errors.New("baza ulanmagan")
+}
+
+func TestIsmChiqarBoshqaImplementatsiya(t *testing.T) {
+	var repo FoydalanuvchiRepository = &SoxtaRepository{}
+
+	if got := ismChiqar(repo, 1); got != "noma'lum" {
+		t.Errorf("ismChiqar boshqa implementatsiya bilan ham ishlashi kerak, got %q", got)
+	}
+}

@@ -530,6 +530,51 @@
     "category": "HTTP & Backend"
   },
   {
+    "id": "01-sql-basics",
+    "title": "SQL Basics",
+    "category": "Database"
+  },
+  {
+    "id": "02-postgresql",
+    "title": "PostgreSQL",
+    "category": "Database"
+  },
+  {
+    "id": "03-database-connection",
+    "title": "Database Connection",
+    "category": "Database"
+  },
+  {
+    "id": "04-crud",
+    "title": "CRUD",
+    "category": "Database"
+  },
+  {
+    "id": "05-transactions",
+    "title": "Transactions",
+    "category": "Database"
+  },
+  {
+    "id": "06-indexes",
+    "title": "Indexes",
+    "category": "Database"
+  },
+  {
+    "id": "07-joins",
+    "title": "Joins",
+    "category": "Database"
+  },
+  {
+    "id": "08-connection-pool",
+    "title": "Connection Pool",
+    "category": "Database"
+  },
+  {
+    "id": "09-repository-pattern",
+    "title": "Repository Pattern",
+    "category": "Database"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

@@ -1,0 +1,49 @@
+package main
+
+import "testing"
+
+func TestOlFound(t *testing.T) {
+	repo := &XotiraFoydalanuvchilar{}
+	repo.Yarat(1, "Ali")
+
+	ism, err := repo.Ol(1)
+	if err != nil {
+		t.Errorf("Ol(1): kutilmagan xato: %v", err)
+	}
+	if ism != "Ali" {
+		t.Errorf("Ol(1):\nExpected:\nAli\n\nGot:\n%s", ism)
+	}
+}
+
+func TestOlNotFound(t *testing.T) {
+	repo := &XotiraFoydalanuvchilar{}
+	repo.Yarat(1, "Ali")
+
+	_, err := repo.Ol(99)
+	if err == nil {
+		t.Errorf("Ol(99): xatolik kutilgan edi, lekin nil qaytdi")
+	}
+}
+
+func TestOlEmptyRepository(t *testing.T) {
+	repo := &XotiraFoydalanuvchilar{}
+
+	_, err := repo.Ol(1)
+	if err == nil {
+		t.Errorf("Ol bo'sh repository'da xatolik qaytarishi kerak edi")
+	}
+}
+
+func TestOlMultipleUsers(t *testing.T) {
+	repo := &XotiraFoydalanuvchilar{}
+	repo.Yarat(1, "Ali")
+	repo.Yarat(2, "Vali")
+
+	ism, err := repo.Ol(2)
+	if err != nil {
+		t.Errorf("Ol(2): kutilmagan xato: %v", err)
+	}
+	if ism != "Vali" {
+		t.Errorf("Ol(2):\nExpected:\nVali\n\nGot:\n%s", ism)
+	}
+}

@@ -1,0 +1,29 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+	"time"
+)
+
+// kutibUlanish ping'ni ko'pi bilan urinishlar marta chaqiradi, har
+// muvaffaqiyatsizlikdan keyin kutish vaqtga kutadi.
+func kutibUlanish(ping func() error, urinishlar int, kutish time.Duration) error {
+	// TODO: urinishlar marta ping() chaqiring, muvaffaqiyatli bo'lsa nil qaytaring
+	return nil
+}
+
+func main() {
+	urinishSoni := 0
+	soxtaPing := func() error {
+		urinishSoni++
+		if urinishSoni < 3 {
+			return errors.New("baza hali tayyor emas")
+		}
+		return nil
+	}
+
+	err := kutibUlanish(soxtaPing, 5, time.Millisecond)
+	fmt.Println(err)
+	fmt.Println(urinishSoni)
+}

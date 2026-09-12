@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+// pulOtkazish kimdan hisobidan kimga hisobiga summa o'tkazadi,
+// mablag' yetarli bo'lmasa hech narsani o'zgartirmasdan xatolik qaytaradi.
+func pulOtkazish(hisoblar map[string]int, kimdan, kimga string, summa int) error {
+	// TODO: mablag' yetarliligini tekshiring, keyin hisoblarni yangilang
+	return nil
+}
+
+func main() {
+	hisoblar := map[string]int{"Ali": 500, "Vali": 200}
+
+	err := pulOtkazish(hisoblar, "Ali", "Vali", 300)
+	fmt.Println(err, hisoblar)
+
+	err = pulOtkazish(hisoblar, "Ali", "Vali", 1000)
+	fmt.Println(err, hisoblar)
+}

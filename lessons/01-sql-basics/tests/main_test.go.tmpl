@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestSelectSorovQurBasic(t *testing.T) {
+	got := selectSorovQur("foydalanuvchilar", "yosh", 24)
+	want := "SELECT * FROM foydalanuvchilar WHERE yosh > 24"
+	if got != want {
+		t.Errorf("selectSorovQur:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestSelectSorovQurDifferentTable(t *testing.T) {
+	got := selectSorovQur("kitoblar", "narx", 50000)
+	want := "SELECT * FROM kitoblar WHERE narx > 50000"
+	if got != want {
+		t.Errorf("selectSorovQur:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestSelectSorovQurZero(t *testing.T) {
+	got := selectSorovQur("mahsulotlar", "soni", 0)
+	want := "SELECT * FROM mahsulotlar WHERE soni > 0"
+	if got != want {
+		t.Errorf("selectSorovQur:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

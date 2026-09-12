@@ -1,0 +1,42 @@
+package main
+
+import (
+	"reflect"
+	"testing"
+)
+
+func TestPulOtkazishSuccess(t *testing.T) {
+	hisoblar := map[string]int{"Ali": 500, "Vali": 200}
+	err := pulOtkazish(hisoblar, "Ali", "Vali", 300)
+	if err != nil {
+		t.Errorf("pulOtkazish: kutilmagan xato: %v", err)
+	}
+	want := map[string]int{"Ali": 200, "Vali": 500}
+	if !reflect.DeepEqual(hisoblar, want) {
+		t.Errorf("hisoblar:\nExpected:\n%v\n\nGot:\n%v", want, hisoblar)
+	}
+}
+
+func TestPulOtkazishInsufficientFunds(t *testing.T) {
+	hisoblar := map[string]int{"Ali": 200, "Vali": 500}
+	err := pulOtkazish(hisoblar, "Ali", "Vali", 1000)
+	if err == nil {
+		t.Fatalf("pulOtkazish: xatolik kutilgan edi, lekin nil qaytdi")
+	}
+	want := map[string]int{"Ali": 200, "Vali": 500}
+	if !reflect.DeepEqual(hisoblar, want) {
+		t.Errorf("mablag' yetmaganda hisoblar o'zgarmasligi kerak:\nExpected:\n%v\n\nGot:\n%v", want, hisoblar)
+	}
+}
+
+func TestPulOtkazishExactAmount(t *testing.T) {
+	hisoblar := map[string]int{"Ali": 300, "Vali": 0}
+	err := pulOtkazish(hisoblar, "Ali", "Vali", 300)
+	if err != nil {
+		t.Errorf("pulOtkazish: kutilmagan xato: %v", err)
+	}
+	want := map[string]int{"Ali": 0, "Vali": 300}
+	if !reflect.DeepEqual(hisoblar, want) {
+		t.Errorf("hisoblar:\nExpected:\n%v\n\nGot:\n%v", want, hisoblar)
+	}
+}

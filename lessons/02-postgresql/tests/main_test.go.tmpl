@@ -1,0 +1,19 @@
+package main
+
+import "testing"
+
+func TestDsnQurBasic(t *testing.T) {
+	got := dsnQur("localhost", 5432, "golearn_user", "parol123", "golearn_db")
+	want := "host=localhost port=5432 user=golearn_user password=parol123 dbname=golearn_db sslmode=disable"
+	if got != want {
+		t.Errorf("dsnQur:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestDsnQurDifferentHost(t *testing.T) {
+	got := dsnQur("192.168.1.5", 5433, "admin", "sirli", "ishlab_chiqarish")
+	want := "host=192.168.1.5 port=5433 user=admin password=sirli dbname=ishlab_chiqarish sslmode=disable"
+	if got != want {
+		t.Errorf("dsnQur:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}

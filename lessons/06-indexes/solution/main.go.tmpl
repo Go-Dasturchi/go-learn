@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+// indeksYarat royxatdagi har bir qiymatdan uning indeksiga (o'rniga)
+// map[qiymat]indeks ko'rinishida xarita qurib qaytaradi.
+func indeksYarat(royxat []string) map[string]int {
+	indeks := make(map[string]int)
+	for i, s := range royxat {
+		indeks[s] = i
+	}
+	return indeks
+}
+
+func main() {
+	royxat := []string{"Ali", "Vali", "Guli"}
+	indeks := indeksYarat(royxat)
+
+	fmt.Println(indeks["Vali"])
+}
