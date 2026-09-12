@@ -1,0 +1,38 @@
+package main
+
+import "testing"
+
+func TestXabarNavbatiFIFO(t *testing.T) {
+	n := &XabarNavbati{}
+	n.Yubor("birinchi")
+	n.Yubor("ikkinchi")
+
+	xabar, bor := n.Ol()
+	if !bor || xabar != "birinchi" {
+		t.Errorf("birinchi Ol() = (%q, %v), kutilgan (\"birinchi\", true)", xabar, bor)
+	}
+
+	xabar, bor = n.Ol()
+	if !bor || xabar != "ikkinchi" {
+		t.Errorf("ikkinchi Ol() = (%q, %v), kutilgan (\"ikkinchi\", true)", xabar, bor)
+	}
+}
+
+func TestXabarNavbatiEmpty(t *testing.T) {
+	n := &XabarNavbati{}
+	xabar, bor := n.Ol()
+	if bor {
+		t.Errorf("bo'sh navbatda Ol() = (%q, true), kutilgan false", xabar)
+	}
+}
+
+func TestXabarNavbatiOlAfterEmpty(t *testing.T) {
+	n := &XabarNavbati{}
+	n.Yubor("yagona")
+
+	n.Ol()
+	_, bor := n.Ol()
+	if bor {
+		t.Errorf("navbat bo'shagandan keyin Ol() true qaytarmasligi kerak")
+	}
+}

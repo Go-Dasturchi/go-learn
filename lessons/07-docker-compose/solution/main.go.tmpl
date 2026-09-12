@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+// bogliqXizmatlarTayyormi kerak ro'yxatidagi barcha xizmatlar tayyor
+// xaritasida true bo'lsa true qaytaradi.
+func bogliqXizmatlarTayyormi(tayyor map[string]bool, kerak []string) bool {
+	for _, xizmat := range kerak {
+		if !tayyor[xizmat] {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	tayyor := map[string]bool{"db": true, "redis": false}
+
+	fmt.Println(bogliqXizmatlarTayyormi(tayyor, []string{"db"}))
+	fmt.Println(bogliqXizmatlarTayyormi(tayyor, []string{"db", "redis"}))
+	fmt.Println(bogliqXizmatlarTayyormi(tayyor, []string{}))
+}

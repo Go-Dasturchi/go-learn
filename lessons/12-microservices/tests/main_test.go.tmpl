@@ -1,0 +1,53 @@
+package main
+
+import (
+	"errors"
+	"strings"
+	"testing"
+)
+
+func TestBuyurtmaYaratishSuccess(t *testing.T) {
+	klient := &SoxtaKlient{malumotlar: map[int]Foydalanuvchi{1: {ID: 1, Ism: "Ali"}}}
+
+	got, err := BuyurtmaYaratish(klient, 1)
+	if err != nil {
+		t.Fatalf("BuyurtmaYaratish: kutilmagan xato: %v", err)
+	}
+	want := "Buyurtma Ali uchun yaratildi"
+	if got != want {
+		t.Errorf("BuyurtmaYaratish = %q, kutilgan %q", got, want)
+	}
+}
+
+func TestBuyurtmaYaratishWrapsError(t *testing.T) {
+	klient := &SoxtaKlient{malumotlar: map[int]Foydalanuvchi{}}
+
+	_, err := BuyurtmaYaratish(klient, 99)
+	if err == nil {
+		t.Fatalf("BuyurtmaYaratish: xatolik kutilgan edi")
+	}
+	if !strings.Contains(err.Error(), "foydalanuvchi xizmatiga ulanib bo'lmadi") {
+		t.Errorf("xatolik matni kutilgan prefiksni o'z ichiga olmaydi: %v", err)
+	}
+	if !strings.Contains(err.Error(), "topilmadi") {
+		t.Errorf("xatolik ichki xatolik matnini ham o'z ichiga olishi kerak: %v", err)
+	}
+}
+
+func TestBuyurtmaYaratishErrorsIsUnwrap(t *testing.T) {
+	ichkiXato := errors.New("maxsus xato")
+	klient := &xatoBeruvchiKlient{xato: ichkiXato}
+
+	_, err := BuyurtmaYaratish(klient, 1)
+	if !errors.Is(err, ichkiXato) {
+		t.Errorf("BuyurtmaYaratish qaytargan xatolik, %%w orqali ichki xatolikni saqlab qolishi kerak")
+	}
+}
+
+type xatoBeruvchiKlient struct {
+	xato error
+}
+
+func (k *xatoBeruvchiKlient) Ol(id int) (Foydalanuvchi, error) {
+	return Foydalanuvchi{}, k.xato
+}

@@ -1,0 +1,56 @@
+package main
+
+import (
+	"context"
+	"errors"
+	"reflect"
+	"testing"
+)
+
+func TestHammasiniYopReverseOrder(t *testing.T) {
+	var tartib []string
+	yopuvchilar := []func(context.Context) error{
+		func(ctx context.Context) error { tartib = append(tartib, "birinchi"); return nil },
+		func(ctx context.Context) error { tartib = append(tartib, "ikkinchi"); return nil },
+		func(ctx context.Context) error { tartib = append(tartib, "uchinchi"); return nil },
+	}
+
+	err := hammasiniYop(context.Background(), yopuvchilar)
+	if err != nil {
+		t.Fatalf("hammasiniYop: kutilmagan xato: %v", err)
+	}
+
+	want := []string{"uchinchi", "ikkinchi", "birinchi"}
+	if !reflect.DeepEqual(tartib, want) {
+		t.Errorf("tartib:\nExpected:\n%v\n\nGot:\n%v", want, tartib)
+	}
+}
+
+func TestHammasiniYopStopsOnError(t *testing.T) {
+	var chaqirilgan []string
+	yopuvchilar := []func(context.Context) error{
+		func(ctx context.Context) error { chaqirilgan = append(chaqirilgan, "birinchi"); return nil },
+		func(ctx context.Context) error { chaqirilgan = append(chaqirilgan, "ikkinchi"); return errors.New("xato") },
+		func(ctx context.Context) error {
+			chaqirilgan = append(chaqirilgan, "uchinchi")
+			return nil
+		},
+	}
+
+	err := hammasiniYop(context.Background(), yopuvchilar)
+	if err == nil {
+		t.Fatalf("hammasiniYop: xatolik kutilgan edi")
+	}
+
+	want := []string{"uchinchi", "ikkinchi"}
+	if !reflect.DeepEqual(chaqirilgan, want) {
+		t.Errorf("xatolikdan keyingilar chaqirilmasligi kerak edi:\nExpected:\n%v\n\nGot:\n%v", want, chaqirilgan)
+	}
+}
+
+func TestHammasiniYopEmpty(t *testing.T) {
+	err := hammasiniYop(context.Background(), nil)
+	if err != nil {
+		t.Errorf("bo'sh ro'yxat uchun nil kutilgan edi, got %v", err)
+	}
+}

@@ -1,0 +1,52 @@
+package main
+
+import (
+	"errors"
+	"testing"
+)
+
+func TestIsmniOlFound(t *testing.T) {
+	ombor := &XotiraOmbori{malumotlar: map[int]Foydalanuvchi{
+		1: {ID: 1, Ism: "Ali"},
+		2: {ID: 2, Ism: "Vali"},
+	}}
+	u := &FoydalanuvchiUseCase{ombor: ombor}
+
+	ism, err := u.IsmniOl(1)
+	if err != nil {
+		t.Errorf("IsmniOl(1): kutilmagan xato: %v", err)
+	}
+	if ism != "Ali" {
+		t.Errorf("IsmniOl(1) = %q, kutilgan \"Ali\"", ism)
+	}
+}
+
+func TestIsmniOlNotFound(t *testing.T) {
+	ombor := &XotiraOmbori{malumotlar: map[int]Foydalanuvchi{}}
+	u := &FoydalanuvchiUseCase{ombor: ombor}
+
+	ism, err := u.IsmniOl(99)
+	if err == nil {
+		t.Fatalf("IsmniOl(99): xatolik kutilgan edi, lekin nil qaytdi")
+	}
+	if ism != "" {
+		t.Errorf("IsmniOl(99): xatolikda bo'sh ism kutilgan edi, got %q", ism)
+	}
+}
+
+// SoxtaOmbor — FoydalanuvchiOmbori interfeysini amalga oshiruvchi yana bir
+// implementatsiya, use case interfeys bilan ishlashini tekshirish uchun.
+type SoxtaOmbor struct{}
+
+func (o *SoxtaOmbor) Ol(id int) (Foydalanuvchi, error) {
+	return Foydalanuvchi{}, errors.New("ombor ishlamayapti")
+}
+
+func TestIsmniOlBoshqaImplementatsiya(t *testing.T) {
+	u := &FoydalanuvchiUseCase{ombor: &SoxtaOmbor{}}
+
+	_, err := u.IsmniOl(1)
+	if err == nil {
+		t.Fatalf("IsmniOl boshqa implementatsiya bilan ham interfeys orqali ishlashi kerak")
+	}
+}

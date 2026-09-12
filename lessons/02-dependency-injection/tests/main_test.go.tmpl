@@ -1,0 +1,48 @@
+package main
+
+import "testing"
+
+func TestYangiServisInjectsDependency(t *testing.T) {
+	s := YangiServis(&EmailBildirishnoma{})
+	if s == nil {
+		t.Fatalf("YangiServis: nil qaytdi")
+	}
+	if s.bildirishnoma == nil {
+		t.Fatalf("YangiServis: bildirishnoma maydoni o'rnatilmadi")
+	}
+}
+
+func TestXabarYuborEmail(t *testing.T) {
+	s := YangiServis(&EmailBildirishnoma{})
+	got := s.XabarYubor("Salom")
+	want := "Email: Salom"
+	if got != want {
+		t.Errorf("XabarYubor(\"Salom\") = %q, kutilgan %q", got, want)
+	}
+}
+
+func TestXabarYuborSMS(t *testing.T) {
+	s := YangiServis(&SMSBildirishnoma{})
+	got := s.XabarYubor("Salom")
+	want := "SMS: Salom"
+	if got != want {
+		t.Errorf("XabarYubor(\"Salom\") = %q, kutilgan %q", got, want)
+	}
+}
+
+// SoxtaBildirishnoma — Bildirishnoma interfeysini amalga oshiruvchi yana bir
+// implementatsiya, Servis interfeys orqali ishlashini tekshirish uchun.
+type SoxtaBildirishnoma struct{}
+
+func (s *SoxtaBildirishnoma) Yubor(xabar string) string {
+	return "SOXTA: " + xabar
+}
+
+func TestXabarYuborBoshqaImplementatsiya(t *testing.T) {
+	s := YangiServis(&SoxtaBildirishnoma{})
+	got := s.XabarYubor("Test")
+	want := "SOXTA: Test"
+	if got != want {
+		t.Errorf("XabarYubor(\"Test\") = %q, kutilgan %q", got, want)
+	}
+}

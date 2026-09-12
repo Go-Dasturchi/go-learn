@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+// QiymatniOl cache-aside naqshi: avval keshdan, topilmasa bazadan o'qib
+// keshga yozadi.
+func QiymatniOl(kesh map[string]string, baza map[string]string, kalit string) string {
+	if qiymat, bor := kesh[kalit]; bor {
+		fmt.Println("cache HIT")
+		return qiymat
+	}
+	fmt.Println("cache MISS")
+	qiymat := baza[kalit]
+	kesh[kalit] = qiymat
+	return qiymat
+}
+
+func main() {
+	baza := map[string]string{"mahsulot:1": "Noutbuk"}
+	kesh := map[string]string{}
+
+	fmt.Println(QiymatniOl(kesh, baza, "mahsulot:1"))
+	fmt.Println(QiymatniOl(kesh, baza, "mahsulot:1"))
+}

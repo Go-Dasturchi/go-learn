@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+// Metrikalar — Prometheus Counter/Histogram g'oyalarining soddalashtirilgan
+// ko'rinishi: so'rovlar sonini va o'rtacha javob vaqtini kuzatadi.
+type Metrikalar struct {
+	sorovlarSoni int
+	jamiVaqtMs   int64
+}
+
+// SorovniQayd bitta so'rovning davomiyligini qayd qiladi.
+func (m *Metrikalar) SorovniQayd(davomiylikMs int64) {
+	m.sorovlarSoni++
+	m.jamiVaqtMs += davomiylikMs
+}
+
+// OrtachaVaqtMs hozirgacha qayd qilingan so'rovlarning o'rtacha vaqtini qaytaradi.
+func (m *Metrikalar) OrtachaVaqtMs() float64 {
+	// TODO: sorovlarSoni 0 bo'lsa 0 qaytaring, aks holda jamiVaqtMs/sorovlarSoni
+	// o'rtachasini float64 sifatida qaytaring
+	return 0
+}
+
+func main() {
+	m := &Metrikalar{}
+
+	m.SorovniQayd(100)
+	m.SorovniQayd(200)
+	m.SorovniQayd(300)
+
+	fmt.Println(m.sorovlarSoni, m.OrtachaVaqtMs())
+}

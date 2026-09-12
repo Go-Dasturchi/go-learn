@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+// Kesh — Redis'ning TTL (muddat) g'oyasini xotirada sinash uchun oddiy struct.
+type Kesh struct {
+	malumotlar  map[string]string
+	tugashVaqti map[string]int64
+}
+
+func YangiKesh() *Kesh {
+	return &Kesh{malumotlar: map[string]string{}, tugashVaqti: map[string]int64{}}
+}
+
+// Saqla kalitni qiymat bilan, hozir+ttlSoniya vaqtida tugaydigan qilib saqlaydi.
+func (k *Kesh) Saqla(kalit, qiymat string, hozir, ttlSoniya int64) {
+	k.malumotlar[kalit] = qiymat
+	k.tugashVaqti[kalit] = hozir + ttlSoniya
+}
+
+// Ol kalitning qiymatini qaytaradi, muddati o'tgan yoki mavjud bo'lmasa false qaytaradi.
+func (k *Kesh) Ol(kalit string, hozir int64) (string, bool) {
+	tugash, bor := k.tugashVaqti[kalit]
+	if !bor || hozir >= tugash {
+		return "", false
+	}
+	return k.malumotlar[kalit], true
+}
+
+func main() {
+	kesh := YangiKesh()
+	kesh.Saqla("ism", "Ali", 100, 60)
+
+	qiymat, bor := kesh.Ol("ism", 120)
+	fmt.Println(qiymat, bor)
+
+	qiymat, bor = kesh.Ol("ism", 200)
+	fmt.Println(qiymat, bor)
+}

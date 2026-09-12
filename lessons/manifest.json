@@ -575,6 +575,71 @@
     "category": "Database"
   },
   {
+    "id": "01-clean-architecture",
+    "title": "Clean Architecture",
+    "category": "Production Go"
+  },
+  {
+    "id": "02-dependency-injection",
+    "title": "Dependency Injection",
+    "category": "Production Go"
+  },
+  {
+    "id": "03-configuration",
+    "title": "Configuration",
+    "category": "Production Go"
+  },
+  {
+    "id": "04-logging",
+    "title": "Logging",
+    "category": "Production Go"
+  },
+  {
+    "id": "05-graceful-shutdown",
+    "title": "Graceful Shutdown",
+    "category": "Production Go"
+  },
+  {
+    "id": "06-docker",
+    "title": "Docker",
+    "category": "Production Go"
+  },
+  {
+    "id": "07-docker-compose",
+    "title": "Docker Compose",
+    "category": "Production Go"
+  },
+  {
+    "id": "08-redis",
+    "title": "Redis",
+    "category": "Production Go"
+  },
+  {
+    "id": "09-caching",
+    "title": "Caching",
+    "category": "Production Go"
+  },
+  {
+    "id": "10-grpc",
+    "title": "gRPC",
+    "category": "Production Go"
+  },
+  {
+    "id": "11-kafka",
+    "title": "Kafka",
+    "category": "Production Go"
+  },
+  {
+    "id": "12-microservices",
+    "title": "Microservices",
+    "category": "Production Go"
+  },
+  {
+    "id": "13-observability",
+    "title": "Observability",
+    "category": "Production Go"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

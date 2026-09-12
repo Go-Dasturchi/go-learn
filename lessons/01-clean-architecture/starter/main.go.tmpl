@@ -1,0 +1,50 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+type Foydalanuvchi struct {
+	ID  int
+	Ism string
+}
+
+type FoydalanuvchiOmbori interface {
+	Ol(id int) (Foydalanuvchi, error)
+}
+
+type XotiraOmbori struct {
+	malumotlar map[int]Foydalanuvchi
+}
+
+func (o *XotiraOmbori) Ol(id int) (Foydalanuvchi, error) {
+	f, bor := o.malumotlar[id]
+	if !bor {
+		return Foydalanuvchi{}, errors.New("topilmadi")
+	}
+	return f, nil
+}
+
+type FoydalanuvchiUseCase struct {
+	ombor FoydalanuvchiOmbori
+}
+
+// IsmniOl id bo'yicha foydalanuvchi ismini qaytaradi, use case faqat
+// FoydalanuvchiOmbori interfeysi bilan ishlaydi, aniq turni bilmaydi.
+func (u *FoydalanuvchiUseCase) IsmniOl(id int) (string, error) {
+	// TODO: u.ombor.Ol(id) ni chaqiring, xatolik bo'lsa uni qaytaring,
+	// aks holda foydalanuvchining Ism maydonini qaytaring
+	return "", nil
+}
+
+func main() {
+	ombor := &XotiraOmbori{malumotlar: map[int]Foydalanuvchi{1: {ID: 1, Ism: "Ali"}}}
+	useCase := &FoydalanuvchiUseCase{ombor: ombor}
+
+	ism, err := useCase.IsmniOl(1)
+	fmt.Println(ism, err)
+
+	_, err = useCase.IsmniOl(99)
+	fmt.Println(err)
+}

@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestSorovMahalliyXizmat(t *testing.T) {
+	got := Sorov(&MahalliyXizmat{}, "Ali")
+	want := "Salom, Ali"
+	if got != want {
+		t.Errorf("Sorov(...) = %q, kutilgan %q", got, want)
+	}
+}
+
+// SoxtaXizmat — SalomlashXizmati interfeysini amalga oshiruvchi yana bir
+// implementatsiya, Sorov interfeys orqali ishlashini tekshirish uchun.
+type SoxtaXizmat struct{}
+
+func (s *SoxtaXizmat) Salomlash(ism string) string {
+	return "Hi, " + ism
+}
+
+func TestSorovBoshqaImplementatsiya(t *testing.T) {
+	got := Sorov(&SoxtaXizmat{}, "Vali")
+	want := "Hi, Vali"
+	if got != want {
+		t.Errorf("Sorov(...) = %q, kutilgan %q", got, want)
+	}
+}

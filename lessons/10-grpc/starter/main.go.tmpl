@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+type SalomlashXizmati interface {
+	Salomlash(ism string) string
+}
+
+type MahalliyXizmat struct{}
+
+func (m *MahalliyXizmat) Salomlash(ism string) string {
+	return "Salom, " + ism
+}
+
+// Sorov xizmatni interfeys orqali chaqiradi, xuddi gRPC klienti masofaviy
+// xizmatni chaqirgandek — xizmat qayerda ishlashidan qat'i nazar.
+func Sorov(xizmat SalomlashXizmati, ism string) string {
+	// TODO: xizmat.Salomlash(ism) ni chaqiring va natijasini qaytaring
+	return ""
+}
+
+func main() {
+	xizmat := &MahalliyXizmat{}
+	fmt.Println(Sorov(xizmat, "Ali"))
+	fmt.Println(Sorov(xizmat, "Vali"))
+}

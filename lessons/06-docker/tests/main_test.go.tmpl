@@ -1,0 +1,27 @@
+package main
+
+import "testing"
+
+func TestDockerBuyrugiQur(t *testing.T) {
+	got := dockerBuyrugiQur("mening-dasturim", 8080, 8080)
+	want := "docker run -p 8080:8080 mening-dasturim"
+	if got != want {
+		t.Errorf("dockerBuyrugiQur(...) = %q, kutilgan %q", got, want)
+	}
+}
+
+func TestDockerBuyrugiQurDifferentPorts(t *testing.T) {
+	got := dockerBuyrugiQur("nginx", 3000, 80)
+	want := "docker run -p 3000:80 nginx"
+	if got != want {
+		t.Errorf("dockerBuyrugiQur(...) = %q, kutilgan %q", got, want)
+	}
+}
+
+func TestDockerBuyrugiQurEmptyImage(t *testing.T) {
+	got := dockerBuyrugiQur("", 5000, 5000)
+	want := "docker run -p 5000:5000 "
+	if got != want {
+		t.Errorf("dockerBuyrugiQur(...) = %q, kutilgan %q", got, want)
+	}
+}

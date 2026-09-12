@@ -1,0 +1,24 @@
+package main
+
+import "testing"
+
+func TestChiqarilsinmiCases(t *testing.T) {
+	testlar := []struct {
+		xabar, min string
+		kutilgan   bool
+	}{
+		{"DEBUG", "INFO", false},
+		{"ERROR", "INFO", true},
+		{"INFO", "INFO", true},
+		{"WARN", "ERROR", false},
+		{"ERROR", "DEBUG", true},
+		{"DEBUG", "DEBUG", true},
+	}
+
+	for _, tt := range testlar {
+		got := chiqarilsinmi(tt.xabar, tt.min)
+		if got != tt.kutilgan {
+			t.Errorf("chiqarilsinmi(%q, %q) = %v, kutilgan %v", tt.xabar, tt.min, got, tt.kutilgan)
+		}
+	}
+}

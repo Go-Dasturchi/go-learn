@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+// dockerBuyrugiQur "docker run -p <hostPort>:<konteynerPort> <image>"
+// ko'rinishidagi buyruq qatorini quradi.
+func dockerBuyrugiQur(image string, hostPort, konteynerPort int) string {
+	return fmt.Sprintf("docker run -p %d:%d %s", hostPort, konteynerPort, image)
+}
+
+func main() {
+	fmt.Println(dockerBuyrugiQur("mening-dasturim", 8080, 8080))
+	fmt.Println(dockerBuyrugiQur("nginx", 3000, 80))
+}

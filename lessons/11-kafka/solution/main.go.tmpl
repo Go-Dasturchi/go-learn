@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+// XabarNavbati — Kafka topic'ining bitta jarayon ichidagi soddalashtirilgan
+// ko'rinishi: Yubor — producer, Ol — consumer, FIFO tartibda.
+type XabarNavbati struct {
+	xabarlar []string
+}
+
+// Yubor xabarni navbat oxiriga qo'shadi (producer).
+func (n *XabarNavbati) Yubor(xabar string) {
+	n.xabarlar = append(n.xabarlar, xabar)
+}
+
+// Ol navbatning boshidagi xabarni oladi (consumer), bo'sh bo'lsa false qaytaradi.
+func (n *XabarNavbati) Ol() (string, bool) {
+	if len(n.xabarlar) == 0 {
+		return "", false
+	}
+	xabar := n.xabarlar[0]
+	n.xabarlar = n.xabarlar[1:]
+	return xabar, true
+}
+
+func main() {
+	navbat := &XabarNavbati{}
+
+	navbat.Yubor("buyurtma #1")
+	navbat.Yubor("buyurtma #2")
+
+	xabar, bor := navbat.Ol()
+	fmt.Println(xabar, bor)
+
+	xabar, bor = navbat.Ol()
+	fmt.Println(xabar, bor)
+
+	xabar, bor = navbat.Ol()
+	fmt.Println(xabar, bor)
+}

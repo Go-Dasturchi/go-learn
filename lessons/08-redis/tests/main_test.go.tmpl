@@ -1,0 +1,44 @@
+package main
+
+import "testing"
+
+func TestKeshOlValid(t *testing.T) {
+	k := YangiKesh()
+	k.Saqla("ism", "Ali", 100, 60)
+
+	qiymat, bor := k.Ol("ism", 120)
+	if !bor {
+		t.Fatalf("Ol: muddati hali tugamagan bo'lishi kerak edi")
+	}
+	if qiymat != "Ali" {
+		t.Errorf("Ol: qiymat = %q, kutilgan \"Ali\"", qiymat)
+	}
+}
+
+func TestKeshOlExpired(t *testing.T) {
+	k := YangiKesh()
+	k.Saqla("ism", "Ali", 100, 60)
+
+	_, bor := k.Ol("ism", 200)
+	if bor {
+		t.Errorf("Ol: muddati o'tgan bo'lishi kerak edi, lekin bor=true qaytdi")
+	}
+}
+
+func TestKeshOlExactExpiry(t *testing.T) {
+	k := YangiKesh()
+	k.Saqla("ism", "Ali", 100, 60)
+
+	_, bor := k.Ol("ism", 160)
+	if bor {
+		t.Errorf("hozir == tugashVaqti bo'lganda muddati tugagan hisoblanishi kerak")
+	}
+}
+
+func TestKeshOlNotFound(t *testing.T) {
+	k := YangiKesh()
+	_, bor := k.Ol("mavjudemas", 0)
+	if bor {
+		t.Errorf("mavjud bo'lmagan kalit uchun false kutilgan edi")
+	}
+}

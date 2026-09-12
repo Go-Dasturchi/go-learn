@@ -1,0 +1,33 @@
+package main
+
+import "testing"
+
+func TestKonfiguratsiyaYuklaDefaults(t *testing.T) {
+	cfg := KonfiguratsiyaYukla(map[string]string{})
+	if cfg.Port != 8080 {
+		t.Errorf("cfg.Port = %d, kutilgan 8080", cfg.Port)
+	}
+	if cfg.DBHost != "localhost" {
+		t.Errorf("cfg.DBHost = %q, kutilgan \"localhost\"", cfg.DBHost)
+	}
+}
+
+func TestKonfiguratsiyaYuklaOverride(t *testing.T) {
+	cfg := KonfiguratsiyaYukla(map[string]string{"PORT": "3000", "DB_HOST": "prod-db"})
+	if cfg.Port != 3000 {
+		t.Errorf("cfg.Port = %d, kutilgan 3000", cfg.Port)
+	}
+	if cfg.DBHost != "prod-db" {
+		t.Errorf("cfg.DBHost = %q, kutilgan \"prod-db\"", cfg.DBHost)
+	}
+}
+
+func TestKonfiguratsiyaYuklaPartial(t *testing.T) {
+	cfg := KonfiguratsiyaYukla(map[string]string{"PORT": "9090"})
+	if cfg.Port != 9090 {
+		t.Errorf("cfg.Port = %d, kutilgan 9090", cfg.Port)
+	}
+	if cfg.DBHost != "localhost" {
+		t.Errorf("cfg.DBHost = %q, kutilgan \"localhost\" (standart)", cfg.DBHost)
+	}
+}

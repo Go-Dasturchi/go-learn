@@ -1,0 +1,44 @@
+package main
+
+import "testing"
+
+func TestOrtachaVaqtMsNoRequests(t *testing.T) {
+	m := &Metrikalar{}
+	if got := m.OrtachaVaqtMs(); got != 0 {
+		t.Errorf("OrtachaVaqtMs() = %v, kutilgan 0 (hech qanday so'rov bo'lmaganda)", got)
+	}
+}
+
+func TestOrtachaVaqtMsSingle(t *testing.T) {
+	m := &Metrikalar{}
+	m.SorovniQayd(150)
+	if got := m.OrtachaVaqtMs(); got != 150 {
+		t.Errorf("OrtachaVaqtMs() = %v, kutilgan 150", got)
+	}
+}
+
+func TestOrtachaVaqtMsMultiple(t *testing.T) {
+	m := &Metrikalar{}
+	m.SorovniQayd(100)
+	m.SorovniQayd(200)
+	m.SorovniQayd(300)
+
+	got := m.OrtachaVaqtMs()
+	want := 200.0
+	if got != want {
+		t.Errorf("OrtachaVaqtMs() = %v, kutilgan %v", got, want)
+	}
+}
+
+func TestOrtachaVaqtMsUnevenDivision(t *testing.T) {
+	m := &Metrikalar{}
+	m.SorovniQayd(100)
+	m.SorovniQayd(200)
+	m.SorovniQayd(200)
+
+	got := m.OrtachaVaqtMs()
+	want := 500.0 / 3.0
+	if got != want {
+		t.Errorf("OrtachaVaqtMs() = %v, kutilgan %v (kasr sifatida)", got, want)
+	}
+}

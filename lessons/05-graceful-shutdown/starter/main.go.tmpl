@@ -1,0 +1,34 @@
+package main
+
+import (
+	"context"
+	"errors"
+	"fmt"
+)
+
+// hammasiniYop yopuvchilarni teskari tartibda (oxiridan boshigacha) chaqiradi,
+// birinchi xatolikda darhol to'xtaydi.
+func hammasiniYop(ctx context.Context, yopuvchilar []func(context.Context) error) error {
+	// TODO: yopuvchilar ro'yxatini teskari tartibda aylanib, har birini chaqiring
+	return nil
+}
+
+func main() {
+	var tartib []string
+
+	yopuvchilar := []func(context.Context) error{
+		func(ctx context.Context) error { tartib = append(tartib, "server"); return nil },
+		func(ctx context.Context) error { tartib = append(tartib, "baza"); return nil },
+		func(ctx context.Context) error { tartib = append(tartib, "kesh"); return nil },
+	}
+
+	err := hammasiniYop(context.Background(), yopuvchilar)
+	fmt.Println(err, tartib)
+
+	xatoYopuvchilar := []func(context.Context) error{
+		func(ctx context.Context) error { return nil },
+		func(ctx context.Context) error { return errors.New("yopib bo'lmadi") },
+	}
+	err = hammasiniYop(context.Background(), xatoYopuvchilar)
+	fmt.Println(err)
+}

@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+type Konfiguratsiya struct {
+	Port   int
+	DBHost string
+}
+
+func strYokiDefault(qiymat, standart string) string {
+	if qiymat == "" {
+		return standart
+	}
+	return qiymat
+}
+
+func intYokiDefault(qiymat string, standart int) int {
+	if qiymat == "0" || qiymat == "" {
+		return standart
+	}
+	var natija int
+	fmt.Sscanf(qiymat, "%d", &natija)
+	return natija
+}
+
+// KonfiguratsiyaYukla muhit xaritasidan Konfiguratsiya quradi,
+// mavjud bo'lmagan qiymatlar uchun standart qiymatlardan foydalanadi.
+func KonfiguratsiyaYukla(muhit map[string]string) Konfiguratsiya {
+	// TODO: muhit["PORT"] va muhit["DB_HOST"] ni intYokiDefault/strYokiDefault
+	// yordamchi funksiyalari bilan o'qib, Konfiguratsiya qaytaring
+	return Konfiguratsiya{}
+}
+
+func main() {
+	cfg1 := KonfiguratsiyaYukla(map[string]string{})
+	fmt.Println(cfg1.Port, cfg1.DBHost)
+
+	cfg2 := KonfiguratsiyaYukla(map[string]string{"PORT": "3000", "DB_HOST": "prod-db"})
+	fmt.Println(cfg2.Port, cfg2.DBHost)
+}

@@ -1,0 +1,37 @@
+package main
+
+import "testing"
+
+func TestQiymatniOlCacheMiss(t *testing.T) {
+	baza := map[string]string{"a": "1"}
+	kesh := map[string]string{}
+
+	got := QiymatniOl(kesh, baza, "a")
+	if got != "1" {
+		t.Errorf("QiymatniOl (miss) = %q, kutilgan \"1\"", got)
+	}
+	if kesh["a"] != "1" {
+		t.Errorf("cache miss'dan keyin kesh to'ldirilishi kerak edi, kesh[\"a\"] = %q", kesh["a"])
+	}
+}
+
+func TestQiymatniOlCacheHit(t *testing.T) {
+	baza := map[string]string{"a": "eski"}
+	kesh := map[string]string{"a": "yangi"}
+
+	got := QiymatniOl(kesh, baza, "a")
+	if got != "yangi" {
+		t.Errorf("QiymatniOl (hit) = %q, kutilgan \"yangi\" (keshdan, bazadan emas)", got)
+	}
+}
+
+func TestQiymatniOlDoesNotMutateBaza(t *testing.T) {
+	baza := map[string]string{"a": "1"}
+	kesh := map[string]string{}
+
+	QiymatniOl(kesh, baza, "a")
+
+	if baza["a"] != "1" {
+		t.Errorf("baza o'zgarmasligi kerak edi, got %q", baza["a"])
+	}
+}

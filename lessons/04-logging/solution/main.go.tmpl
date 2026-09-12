@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func logDarajaRaqami(daraja string) int {
+	darajalar := map[string]int{"DEBUG": 0, "INFO": 1, "WARN": 2, "ERROR": 3}
+	return darajalar[daraja]
+}
+
+// chiqarilsinmi xabarDarajasi, minDaraja'dan katta yoki teng bo'lsa true qaytaradi.
+func chiqarilsinmi(xabarDarajasi, minDaraja string) bool {
+	return logDarajaRaqami(xabarDarajasi) >= logDarajaRaqami(minDaraja)
+}
+
+func main() {
+	fmt.Println(chiqarilsinmi("DEBUG", "INFO"))
+	fmt.Println(chiqarilsinmi("ERROR", "INFO"))
+	fmt.Println(chiqarilsinmi("INFO", "INFO"))
+}

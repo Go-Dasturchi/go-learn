@@ -1,0 +1,31 @@
+package main
+
+import "testing"
+
+func TestBogliqXizmatlarTayyormiAllReady(t *testing.T) {
+	tayyor := map[string]bool{"db": true, "redis": true}
+	if !bogliqXizmatlarTayyormi(tayyor, []string{"db", "redis"}) {
+		t.Errorf("hammasi tayyor bo'lganda true kutilgan edi")
+	}
+}
+
+func TestBogliqXizmatlarTayyormiOneMissing(t *testing.T) {
+	tayyor := map[string]bool{"db": true, "redis": false}
+	if bogliqXizmatlarTayyormi(tayyor, []string{"db", "redis"}) {
+		t.Errorf("redis tayyor bo'lmaganda false kutilgan edi")
+	}
+}
+
+func TestBogliqXizmatlarTayyormiUnknownService(t *testing.T) {
+	tayyor := map[string]bool{"db": true}
+	if bogliqXizmatlarTayyormi(tayyor, []string{"db", "kafka"}) {
+		t.Errorf("xaritada mavjud bo'lmagan xizmat uchun false kutilgan edi")
+	}
+}
+
+func TestBogliqXizmatlarTayyormiEmptyRequirements(t *testing.T) {
+	tayyor := map[string]bool{"db": false}
+	if !bogliqXizmatlarTayyormi(tayyor, []string{}) {
+		t.Errorf("hech narsa kerak bo'lmasa true kutilgan edi")
+	}
+}

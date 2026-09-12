@@ -1,0 +1,43 @@
+package main
+
+import "fmt"
+
+type Bildirishnoma interface {
+	Yubor(xabar string) string
+}
+
+type EmailBildirishnoma struct{}
+
+func (e *EmailBildirishnoma) Yubor(xabar string) string {
+	return "Email: " + xabar
+}
+
+type SMSBildirishnoma struct{}
+
+func (s *SMSBildirishnoma) Yubor(xabar string) string {
+	return "SMS: " + xabar
+}
+
+// Servis — Bildirishnoma bog'liqligini konstruktor orqali qabul qiladi,
+// qaysi aniq turdan foydalanishni o'zi hal qilmaydi.
+type Servis struct {
+	bildirishnoma Bildirishnoma
+}
+
+// YangiServis bog'liqlikni tashqaridan qabul qilib, Servis yaratadi.
+func YangiServis(b Bildirishnoma) *Servis {
+	return &Servis{bildirishnoma: b}
+}
+
+// XabarYubor injektsiya qilingan bog'liqlik orqali xabar yuboradi.
+func (s *Servis) XabarYubor(matn string) string {
+	return s.bildirishnoma.Yubor(matn)
+}
+
+func main() {
+	emailServis := YangiServis(&EmailBildirishnoma{})
+	fmt.Println(emailServis.XabarYubor("Salom"))
+
+	smsServis := YangiServis(&SMSBildirishnoma{})
+	fmt.Println(smsServis.XabarYubor("Salom"))
+}
