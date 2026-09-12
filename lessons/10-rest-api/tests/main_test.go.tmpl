@@ -1,0 +1,60 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"strings"
+	"testing"
+)
+
+func TestHandlerPostCreatesBook(t *testing.T) {
+	dukon := &KitoblarDukoni{}
+	req := httptest.NewRequest("POST", "/kitoblar", strings.NewReader(`{"nomi":"O'tkan kunlar"}`))
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusCreated {
+		t.Errorf("POST status kod:\nExpected:\n201\n\nGot:\n%d", rec.Code)
+	}
+	wantBody := "{\"nomi\":\"O'tkan kunlar\"}\n"
+	if rec.Body.String() != wantBody {
+		t.Errorf("POST javob tanasi:\nExpected:\n%q\n\nGot:\n%q", wantBody, rec.Body.String())
+	}
+	if len(dukon.Kitoblar) != 1 || dukon.Kitoblar[0].Nomi != "O'tkan kunlar" {
+		t.Errorf("POST'dan keyin d.Kitoblar:\nExpected: 1 ta kitob, nomi \"O'tkan kunlar\"\n\nGot:\n%v", dukon.Kitoblar)
+	}
+}
+
+func TestHandlerPostThenGet(t *testing.T) {
+	dukon := &KitoblarDukoni{}
+
+	postReq := httptest.NewRequest("POST", "/kitoblar", strings.NewReader(`{"nomi":"Sarob"}`))
+	postRec := httptest.NewRecorder()
+	dukon.Handler(postRec, postReq)
+
+	getReq := httptest.NewRequest("GET", "/kitoblar", nil)
+	getRec := httptest.NewRecorder()
+	dukon.Handler(getRec, getReq)
+
+	if getRec.Code != http.StatusOK {
+		t.Errorf("GET status kod:\nExpected:\n200\n\nGot:\n%d", getRec.Code)
+	}
+	want := "[{\"nomi\":\"Sarob\"}]\n"
+	if getRec.Body.String() != want {
+		t.Errorf("GET javob tanasi:\nExpected:\n%q\n\nGot:\n%q", want, getRec.Body.String())
+	}
+}
+
+func TestHandlerPostInvalidJSON(t *testing.T) {
+	dukon := &KitoblarDukoni{}
+	req := httptest.NewRequest("POST", "/kitoblar", strings.NewReader(`bu JSON emas`))
+	rec := httptest.NewRecorder()
+	dukon.Handler(rec, req)
+
+	if rec.Code != http.StatusBadRequest {
+		t.Errorf("Noto'g'ri JSON bilan POST status kod:\nExpected:\n400\n\nGot:\n%d", rec.Code)
+	}
+	if len(dukon.Kitoblar) != 0 {
+		t.Errorf("Noto'g'ri JSON hech narsa qo'shmasligi kerak:\nExpected: 0 ta kitob\n\nGot:\n%d ta", len(dukon.Kitoblar))
+	}
+}

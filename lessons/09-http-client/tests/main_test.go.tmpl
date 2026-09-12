@@ -1,0 +1,40 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestMatnniOlBasic(t *testing.T) {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Salom, mijoz!")
+	}))
+	defer testServer.Close()
+
+	got, err := matnniOl(testServer.URL)
+	if err != nil {
+		t.Fatalf("matnniOl: kutilmagan xato: %v", err)
+	}
+	want := "Salom, mijoz!\n"
+	if got != want {
+		t.Errorf("matnniOl(testServer.URL):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestMatnniOlDifferentContent(t *testing.T) {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "42")
+	}))
+	defer testServer.Close()
+
+	got, err := matnniOl(testServer.URL)
+	if err != nil {
+		t.Fatalf("matnniOl: kutilmagan xato: %v", err)
+	}
+	want := "42"
+	if got != want {
+		t.Errorf("matnniOl(testServer.URL):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

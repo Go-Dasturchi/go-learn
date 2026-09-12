@@ -1,0 +1,50 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"strings"
+	"testing"
+)
+
+func newFormRequest(body string) *http.Request {
+	req := httptest.NewRequest("POST", "/royxat", strings.NewReader(body))
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	return req
+}
+
+func TestRoyxatdanOtishHandlerWithName(t *testing.T) {
+	req := newFormRequest("ism=Ali")
+	rec := httptest.NewRecorder()
+	royxatdanOtishHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Ro'yxatga olindi: Ali"
+	if got != want {
+		t.Errorf("royxatdanOtishHandler(ism=Ali):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestRoyxatdanOtishHandlerMissingName(t *testing.T) {
+	req := newFormRequest("")
+	rec := httptest.NewRecorder()
+	royxatdanOtishHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Ro'yxatga olindi: Noma'lum"
+	if got != want {
+		t.Errorf("royxatdanOtishHandler(bo'sh):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestRoyxatdanOtishHandlerDifferentName(t *testing.T) {
+	req := newFormRequest("ism=Malika")
+	rec := httptest.NewRecorder()
+	royxatdanOtishHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Ro'yxatga olindi: Malika"
+	if got != want {
+		t.Errorf("royxatdanOtishHandler(ism=Malika):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

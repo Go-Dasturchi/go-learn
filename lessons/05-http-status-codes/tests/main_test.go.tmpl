@@ -1,0 +1,32 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestYoshTekshirHandlerValid(t *testing.T) {
+	req := httptest.NewRequest("GET", "/tekshir?yosh=25", nil)
+	rec := httptest.NewRecorder()
+	yoshTekshirHandler(rec, req)
+
+	if rec.Code != 200 {
+		t.Errorf("status kod (yosh berilganda):\nExpected:\n200\n\nGot:\n%d", rec.Code)
+	}
+	if rec.Body.String() != "Qabul qilindi\n" {
+		t.Errorf("javob tanasi (yosh berilganda):\nExpected:\n%q\n\nGot:\n%q", "Qabul qilindi\n", rec.Body.String())
+	}
+}
+
+func TestYoshTekshirHandlerMissing(t *testing.T) {
+	req := httptest.NewRequest("GET", "/tekshir", nil)
+	rec := httptest.NewRecorder()
+	yoshTekshirHandler(rec, req)
+
+	if rec.Code != 400 {
+		t.Errorf("status kod (yosh berilmaganda):\nExpected:\n400\n\nGot:\n%d", rec.Code)
+	}
+	if rec.Body.String() != "yosh parametri kerak\n" {
+		t.Errorf("javob tanasi (yosh berilmaganda):\nExpected:\n%q\n\nGot:\n%q", "yosh parametri kerak\n", rec.Body.String())
+	}
+}

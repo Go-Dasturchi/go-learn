@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"strings"
+)
+
+// royxatdanOtishHandler "ism" forma maydonini o'qib, ro'yxatga olish
+// xabarini javobga yozadi.
+func royxatdanOtishHandler(w http.ResponseWriter, r *http.Request) {
+	ism := r.FormValue("ism")
+	if ism == "" {
+		ism = "Noma'lum"
+	}
+	fmt.Fprintf(w, "Ro'yxatga olindi: %s", ism)
+}
+
+func main() {
+	tana := "ism=Ali"
+	req := httptest.NewRequest("POST", "/royxat", strings.NewReader(tana))
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+
+	rec := httptest.NewRecorder()
+	royxatdanOtishHandler(rec, req)
+
+	fmt.Println(rec.Body.String())
+}

@@ -1,0 +1,33 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"strings"
+)
+
+// Sonlar — JSON so'rov tanasidan o'qiladigan ikkita son.
+type Sonlar struct {
+	A int `json:"a"`
+	B int `json:"b"`
+}
+
+// yigindiHandler so'rov tanasidagi JSON'ni Sonlar'ga o'qib,
+// A va B ning yig'indisini javobga yozadi.
+func yigindiHandler(w http.ResponseWriter, r *http.Request) {
+	var kirish Sonlar
+	json.NewDecoder(r.Body).Decode(&kirish)
+	fmt.Fprintf(w, "%d", kirish.A+kirish.B)
+}
+
+func main() {
+	tana := `{"a": 5, "b": 3}`
+	req := httptest.NewRequest("POST", "/yigindi", strings.NewReader(tana))
+	rec := httptest.NewRecorder()
+
+	yigindiHandler(rec, req)
+
+	fmt.Println(rec.Body.String())
+}

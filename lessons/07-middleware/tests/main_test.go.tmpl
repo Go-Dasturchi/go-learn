@@ -1,0 +1,44 @@
+package main
+
+import (
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+
+func TestLogMiddlewareSetsHeader(t *testing.T) {
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	})
+	oraladi := logMiddleware(asosiy)
+
+	req := httptest.NewRequest("GET", "/", nil)
+	rec := httptest.NewRecorder()
+	oraladi.ServeHTTP(rec, req)
+
+	got := rec.Header().Get("X-Ishladi")
+	want := "true"
+	if got != want {
+		t.Errorf("X-Ishladi sarlavhasi:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestLogMiddlewareCallsNext(t *testing.T) {
+	chaqirildi := false
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		chaqirildi = true
+		w.Write([]byte("ichki handler"))
+	})
+	oraladi := logMiddleware(asosiy)
+
+	req := httptest.NewRequest("GET", "/", nil)
+	rec := httptest.NewRecorder()
+	oraladi.ServeHTTP(rec, req)
+
+	if !chaqirildi {
+		t.Errorf("logMiddleware o'ralgan (keyingi) handler'ni chaqirishi kerak edi, lekin chaqirmadi")
+	}
+	if rec.Body.String() != "ichki handler" {
+		t.Errorf("javob tanasi:\nExpected:\n%q\n\nGot:\n%q", "ichki handler", rec.Body.String())
+	}
+}

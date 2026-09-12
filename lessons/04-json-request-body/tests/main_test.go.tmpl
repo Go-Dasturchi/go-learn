@@ -1,0 +1,43 @@
+package main
+
+import (
+	"net/http/httptest"
+	"strings"
+	"testing"
+)
+
+func TestYigindiHandlerBasic(t *testing.T) {
+	req := httptest.NewRequest("POST", "/yigindi", strings.NewReader(`{"a": 5, "b": 3}`))
+	rec := httptest.NewRecorder()
+	yigindiHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "8"
+	if got != want {
+		t.Errorf("yigindiHandler({a:5,b:3}):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestYigindiHandlerNegative(t *testing.T) {
+	req := httptest.NewRequest("POST", "/yigindi", strings.NewReader(`{"a": -10, "b": 4}`))
+	rec := httptest.NewRecorder()
+	yigindiHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "-6"
+	if got != want {
+		t.Errorf("yigindiHandler({a:-10,b:4}):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestYigindiHandlerZeros(t *testing.T) {
+	req := httptest.NewRequest("POST", "/yigindi", strings.NewReader(`{"a": 0, "b": 0}`))
+	rec := httptest.NewRecorder()
+	yigindiHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "0"
+	if got != want {
+		t.Errorf("yigindiHandler({a:0,b:0}):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

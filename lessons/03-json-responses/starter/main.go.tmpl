@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// Odam — ism va yoshni saqlovchi struct, JSON teglari bilan.
+type Odam struct {
+	Ism  string `json:"ism"`
+	Yosh int    `json:"yosh"`
+}
+
+// odamHandler Content-Type sarlavhasini o'rnatib, Odam{Ali, 25} ni
+// JSON ko'rinishida javobga yozadi.
+func odamHandler(w http.ResponseWriter, r *http.Request) {
+	// TODO: Content-Type sarlavhasini o'rnating, keyin JSON'ni javobga yozing
+}
+
+func main() {
+	req := httptest.NewRequest("GET", "/odam", nil)
+	rec := httptest.NewRecorder()
+
+	odamHandler(rec, req)
+
+	fmt.Println(rec.Header().Get("Content-Type"))
+	fmt.Println(rec.Body.String())
+}

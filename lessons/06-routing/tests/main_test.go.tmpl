@@ -1,0 +1,44 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestFoydalanuvchiHandlerDirect(t *testing.T) {
+	req := httptest.NewRequest("GET", "/foydalanuvchi/42", nil)
+	rec := httptest.NewRecorder()
+	foydalanuvchiHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Foydalanuvchi ID: 42"
+	if got != want {
+		t.Errorf("foydalanuvchiHandler(/foydalanuvchi/42):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestMuxRoutesSalom(t *testing.T) {
+	mux := yaratMux()
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+	mux.ServeHTTP(rec, req)
+
+	got := rec.Body.String()
+	want := "Salom!\n"
+	if got != want {
+		t.Errorf("mux /salom:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestMuxRoutesFoydalanuvchi(t *testing.T) {
+	mux := yaratMux()
+	req := httptest.NewRequest("GET", "/foydalanuvchi/7", nil)
+	rec := httptest.NewRecorder()
+	mux.ServeHTTP(rec, req)
+
+	got := rec.Body.String()
+	want := "Foydalanuvchi ID: 7"
+	if got != want {
+		t.Errorf("mux /foydalanuvchi/7:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

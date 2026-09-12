@@ -1,0 +1,42 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestSalomlashHandlerWithName(t *testing.T) {
+	req := httptest.NewRequest("GET", "/salom?ism=Ali", nil)
+	rec := httptest.NewRecorder()
+	salomlashHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Salom, Ali!"
+	if got != want {
+		t.Errorf("salomlashHandler(?ism=Ali):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestSalomlashHandlerWithoutName(t *testing.T) {
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+	salomlashHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Salom, mehmon!"
+	if got != want {
+		t.Errorf("salomlashHandler(bo'sh ism):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestSalomlashHandlerDifferentName(t *testing.T) {
+	req := httptest.NewRequest("GET", "/salom?ism=Malika", nil)
+	rec := httptest.NewRecorder()
+	salomlashHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Salom, Malika!"
+	if got != want {
+		t.Errorf("salomlashHandler(?ism=Malika):\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

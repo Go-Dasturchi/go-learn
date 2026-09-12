@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"net/http"
+	"net/http/httptest"
+)
+
+// matnniOl url'ga GET so'rovi yuborib, javob tanasini string sifatida qaytaradi.
+func matnniOl(url string) (string, error) {
+	javob, err := http.Get(url)
+	if err != nil {
+		return "", err
+	}
+	defer javob.Body.Close()
+
+	baytlar, err := io.ReadAll(javob.Body)
+	if err != nil {
+		return "", err
+	}
+	return string(baytlar), nil
+}
+
+func main() {
+	testServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Salom, mijoz!")
+	}))
+	defer testServer.Close()
+
+	natija, _ := matnniOl(testServer.URL)
+	fmt.Println(natija)
+}

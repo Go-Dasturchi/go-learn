@@ -320,6 +320,56 @@
     "category": "Concurrency"
   },
   {
+    "id": "01-http-handlers",
+    "title": "HTTP Handlers",
+    "category": "Web Development"
+  },
+  {
+    "id": "02-query-parameters",
+    "title": "Query Parameters",
+    "category": "Web Development"
+  },
+  {
+    "id": "03-json-responses",
+    "title": "JSON Responses",
+    "category": "Web Development"
+  },
+  {
+    "id": "04-json-request-body",
+    "title": "Reading JSON Request Bodies",
+    "category": "Web Development"
+  },
+  {
+    "id": "05-http-status-codes",
+    "title": "HTTP Status Codes",
+    "category": "Web Development"
+  },
+  {
+    "id": "06-routing",
+    "title": "Routing and Path Parameters",
+    "category": "Web Development"
+  },
+  {
+    "id": "07-middleware",
+    "title": "Middleware",
+    "category": "Web Development"
+  },
+  {
+    "id": "08-form-data",
+    "title": "Form Data",
+    "category": "Web Development"
+  },
+  {
+    "id": "09-http-client",
+    "title": "HTTP Client",
+    "category": "Web Development"
+  },
+  {
+    "id": "10-rest-api",
+    "title": "Building a REST API",
+    "category": "Web Development"
+  },
+  {
     "id": "begin-01-kvadrat-perimetri",
     "title": "Kvadrat perimetri",
     "category": "Problems",

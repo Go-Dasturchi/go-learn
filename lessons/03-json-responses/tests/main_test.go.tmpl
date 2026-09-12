@@ -1,0 +1,30 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestOdamHandlerContentType(t *testing.T) {
+	req := httptest.NewRequest("GET", "/odam", nil)
+	rec := httptest.NewRecorder()
+	odamHandler(rec, req)
+
+	got := rec.Header().Get("Content-Type")
+	want := "application/json"
+	if got != want {
+		t.Errorf("Content-Type sarlavhasi:\nExpected:\n%s\n\nGot:\n%s", want, got)
+	}
+}
+
+func TestOdamHandlerBody(t *testing.T) {
+	req := httptest.NewRequest("GET", "/odam", nil)
+	rec := httptest.NewRecorder()
+	odamHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "{\"ism\":\"Ali\",\"yosh\":25}\n"
+	if got != want {
+		t.Errorf("odamHandler javob tanasi:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}

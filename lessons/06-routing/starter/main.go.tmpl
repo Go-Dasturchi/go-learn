@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+func salomHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Salom!")
+}
+
+// foydalanuvchiHandler manzildagi "/foydalanuvchi/" prefiksidan keyingi
+// ID'ni ajratib, javobga yozadi.
+func foydalanuvchiHandler(w http.ResponseWriter, r *http.Request) {
+	// TODO: strings.TrimPrefix bilan ID'ni ajrating, javobga yozing
+}
+
+// yaratMux ikkala handler'ni ham ro'yxatdan o'tkazilgan mux qaytaradi.
+func yaratMux() *http.ServeMux {
+	// TODO: ikkala handler'ni ro'yxatdan o'tkazing, mux'ni qaytaring
+	return http.NewServeMux()
+}
+
+func main() {
+	mux := yaratMux()
+
+	req1 := httptest.NewRequest("GET", "/salom", nil)
+	rec1 := httptest.NewRecorder()
+	mux.ServeHTTP(rec1, req1)
+	fmt.Println(rec1.Body.String())
+
+	req2 := httptest.NewRequest("GET", "/foydalanuvchi/42", nil)
+	rec2 := httptest.NewRecorder()
+	mux.ServeHTTP(rec2, req2)
+	fmt.Println(rec2.Body.String())
+}

@@ -1,0 +1,30 @@
+package main
+
+import (
+	"net/http/httptest"
+	"testing"
+)
+
+func TestSalomHandlerBody(t *testing.T) {
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+
+	salomHandler(rec, req)
+
+	got := rec.Body.String()
+	want := "Salom, Go!\n"
+	if got != want {
+		t.Errorf("salomHandler javobi:\nExpected:\n%q\n\nGot:\n%q", want, got)
+	}
+}
+
+func TestSalomHandlerStatusDefaultOK(t *testing.T) {
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+
+	salomHandler(rec, req)
+
+	if rec.Code != 200 {
+		t.Errorf("salomHandler status kodi:\nExpected:\n200\n\nGot:\n%d", rec.Code)
+	}
+}

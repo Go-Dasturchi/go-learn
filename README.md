@@ -149,7 +149,7 @@ ok  	go-learn/internal/progress
 
 ## Loyiha holati
 
-Jami **474 ta dars** tayyor va test qilingan, oltita bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha):
+Jami **484 ta dars** tayyor va test qilingan, yettita bosqichga bo'lingan holda (menyuda ko'rsatiladigan tartib bo'yicha):
 
 - **0. Problems** — 410 ta amaliy masala: 205 tasi Abramyan to'plamidan (Begin/Integer/Array/... bo'yicha bo'lingan), 205 tasi LeetCode uslubidagi masalalar (Easy/Medium/Hard bo'yicha bo'lingan). Har birida ikkita haqiqiy, masalaga xos hint bor (generik emas).
 - **1. Fundamentals** — 18 ta dars: Hello World → Variables → Types → If/Else → For Loop → Functions → Constants → Strings → Numbers → Boolean → Operators → Type Conversion → Switch → Nested Loops → Multiple Return Values → Named Return Values → Defer → Scope.
@@ -157,5 +157,6 @@ Jami **474 ta dars** tayyor va test qilingan, oltita bosqichga bo'lingan holda (
 - **3. Go Core** — 12 ta dars: Errors → Custom Errors → Panic and Recover → Closures → Higher-Order Functions → String Formatting → Sorting → Time and Duration → JSON → File I/O → Generics → Regular Expressions.
 - **4. Data Structures & Algorithms** — 12 ta dars: Recursion → Linked List → Stack → Queue → Binary Search → Bubble Sort → Merge Sort → Quick Sort → Binary Tree → Binary Search Tree → Hash Table → Graphs and BFS (klassik struktura/algoritmlar Go'da noldan yozib chiqiladi, `sort`/`container` paketlaridan foydalanmasdan).
 - **5. Concurrency** — 10 ta dars: Goroutines → Channels → Buffered Channels → Select → WaitGroup → Mutex → Worker Pools → Context → sync.Once and Atomic → Race Conditions. Har bir mashq real vaqtga bog'liq bo'lmagan, deterministik natija beradigan qilib loyihalangan (indeksli natijalar, oldindan bekor qilingan context, bitta yuboruvchili kanallar) — bu esa `go test -race` ostida ham barqaror ishlashini ta'minlaydi.
+- **6. Web Development** — 10 ta dars: HTTP Handlers → Query Parameters → JSON Responses → Reading JSON Request Bodies → HTTP Status Codes → Routing and Path Parameters → Middleware → Form Data → HTTP Client → Building a REST API (faqat standart `net/http` va `net/http/httptest` paketlari bilan, tashqi framework'siz; barcha mashqlar haqiqiy tarmoq/port ochmasdan, `httptest.NewRecorder`/`httptest.NewServer` orqali sinaladi).
 
-To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 474 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.
+To'liq oqim (menyu → theory → task → Vim → test → hint → progress → next lesson) barcha 484 ta dars uchun ishlaydi. Yangi dars qo'shish yuqoridagi "How to add a new lesson" bo'yicha bosqichma-bosqich amalga oshiriladi.

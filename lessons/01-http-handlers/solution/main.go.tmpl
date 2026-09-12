@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// salomHandler javob sifatida "Salom, Go!" matnini yozadi.
+func salomHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Salom, Go!")
+}
+
+func main() {
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+
+	salomHandler(rec, req)
+
+	fmt.Println(rec.Body.String())
+}

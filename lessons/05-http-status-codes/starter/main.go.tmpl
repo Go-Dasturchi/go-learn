@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// yoshTekshirHandler yosh parametrini tekshirib, mos status va xabar qaytaradi.
+func yoshTekshirHandler(w http.ResponseWriter, r *http.Request) {
+	// TODO: yosh bo'sh bo'lsa 400, aks holda 200 status bilan javob bering
+}
+
+func main() {
+	req1 := httptest.NewRequest("GET", "/tekshir?yosh=25", nil)
+	rec1 := httptest.NewRecorder()
+	yoshTekshirHandler(rec1, req1)
+	fmt.Println(rec1.Code, rec1.Body.String())
+
+	req2 := httptest.NewRequest("GET", "/tekshir", nil)
+	rec2 := httptest.NewRecorder()
+	yoshTekshirHandler(rec2, req2)
+	fmt.Println(rec2.Code, rec2.Body.String())
+}

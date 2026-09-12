@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// logMiddleware keyingi handler'ni chaqirishdan oldin X-Ishladi
+// sarlavhasini o'rnatadigan yangi handler qaytaradi.
+func logMiddleware(keyingi http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("X-Ishladi", "true")
+		keyingi.ServeHTTP(w, r)
+	})
+}
+
+func main() {
+	asosiy := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Salom!")
+	})
+
+	oraladi := logMiddleware(asosiy)
+
+	req := httptest.NewRequest("GET", "/salom", nil)
+	rec := httptest.NewRecorder()
+	oraladi.ServeHTTP(rec, req)
+
+	fmt.Println(rec.Header().Get("X-Ishladi"))
+	fmt.Println(rec.Body.String())
+}

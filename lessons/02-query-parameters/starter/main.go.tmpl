@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+)
+
+// salomlashHandler "ism" query parametrini o'qib, shaxsiy salomlashuv yozadi.
+func salomlashHandler(w http.ResponseWriter, r *http.Request) {
+	// TODO: "ism" query parametrini o'qing, bo'sh bo'lsa "mehmon" qiling, javob yozing
+}
+
+func main() {
+	req1 := httptest.NewRequest("GET", "/salom?ism=Ali", nil)
+	rec1 := httptest.NewRecorder()
+	salomlashHandler(rec1, req1)
+	fmt.Println(rec1.Body.String())
+
+	req2 := httptest.NewRequest("GET", "/salom", nil)
+	rec2 := httptest.NewRecorder()
+	salomlashHandler(rec2, req2)
+	fmt.Println(rec2.Body.String())
+}

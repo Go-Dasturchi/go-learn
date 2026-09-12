@@ -1,0 +1,55 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"strings"
+)
+
+// Kitob — REST API orqali boshqariladigan resurs.
+type Kitob struct {
+	Nomi string `json:"nomi"`
+}
+
+// KitoblarDukoni — kitoblar ro'yxatini saqlovchi do'kon.
+type KitoblarDukoni struct {
+	Kitoblar []Kitob
+}
+
+// Handler GET (ro'yxatni qaytarish) va POST (yangi kitob qo'shish)
+// so'rovlarini boshqaradi.
+func (d *KitoblarDukoni) Handler(w http.ResponseWriter, r *http.Request) {
+	switch r.Method {
+	case http.MethodGet:
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(d.Kitoblar)
+	case http.MethodPost:
+		var yangi Kitob
+		if err := json.NewDecoder(r.Body).Decode(&yangi); err != nil {
+			http.Error(w, "Noto'g'ri JSON", http.StatusBadRequest)
+			return
+		}
+		d.Kitoblar = append(d.Kitoblar, yangi)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusCreated)
+		json.NewEncoder(w).Encode(yangi)
+	default:
+		w.WriteHeader(http.StatusMethodNotAllowed)
+	}
+}
+
+func main() {
+	dukon := &KitoblarDukoni{}
+
+	postReq := httptest.NewRequest("POST", "/kitoblar", strings.NewReader(`{"nomi":"O'tkan kunlar"}`))
+	postRec := httptest.NewRecorder()
+	dukon.Handler(postRec, postReq)
+	fmt.Println(postRec.Code, postRec.Body.String())
+
+	getReq := httptest.NewRequest("GET", "/kitoblar", nil)
+	getRec := httptest.NewRecorder()
+	dukon.Handler(getRec, getReq)
+	fmt.Println(getRec.Code, getRec.Body.String())
+}
